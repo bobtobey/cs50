@@ -3,11 +3,12 @@
 
 int main(void)
 {
+    const int n = get_int("What Size? ");
     int i = 0;
-    while(i < 3)
+    while(i < n)
     {
-        printf("Hello");
-        printf("\n");
+        printf("Hello ");
         i++;
     }
+    printf("\n");
 }
