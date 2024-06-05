@@ -21,7 +21,7 @@ int main(void)
         {
             int blockwidth = 8;
             string blocks = "#";
-            printf("%d", j);
+            //printf("%d", j);
             printf("%s ", blocks);
         }
         printf("\n");
