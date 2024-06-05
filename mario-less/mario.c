@@ -19,7 +19,7 @@ int main(void)
         printf("%d ", i);
         //assigns the variable for # of blocks in each row
         int blockwidth = i;
-        //second loop creates the n of blocks 
+        //second loop creates the n of blocks in each row
         for(int j=0; j < blockwidth; j++)
         {
             string blocks = "#";
