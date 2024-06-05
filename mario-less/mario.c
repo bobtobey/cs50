@@ -13,7 +13,7 @@ int main(void)
     //checking the variable for a positive integer
     while(blockheight < 1);
 
-    const int n = blockheight;
+    int n = blockheight;
     for(int i=0; i < n; i++)
     {
         printf("%d ", i);
