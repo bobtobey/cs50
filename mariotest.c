@@ -26,7 +26,7 @@ int main(void)
 }
 
 //build row function
-void buildrow(i)
+void buildrow(int i)
 {
     //assigns the variable for # of blocks
     int blockwidth = i;
