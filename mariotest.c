@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int buildfor();
+void buildrow();
 
 int main(void)
 {
@@ -24,7 +24,7 @@ int main(void)
     }
 }
 
-int buildrow(i)
+void buildrow(i)
 {
     //assigns the variable for # of blocks
     int blockwidth = i;
