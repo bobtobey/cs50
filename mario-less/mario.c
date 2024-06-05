@@ -19,7 +19,8 @@ int main(void)
         printf("%d ", i);
         for(int j=0; j < n; j++)
         {
-            printf("#");
+            string blocks = "MMM";
+            printf("#%d", blocks);
         }
         printf("\n");
     }
