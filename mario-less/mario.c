@@ -4,21 +4,22 @@
 int main(void)
 {
     //declareing the variable
-    int myheight;
+    int blockheight;
     do
     {
         //assigning the variable
-        myheight = get_int("How tall is your pyramid? ");
+        blockheight = get_int("How tall is your pyramid? ");
     }
     //checking the variable for a positive integer
-    while(myheight < 1);
+    while(blockheight < 1);
 
-    const int n = myheight;
+    const int n = blockheight;
     for(int i=0; i < n; i++)
     {
         printf("%d ", i);
         for(int j=0; j < n; j++)
         {
+            int blockwidth = 
             string blocks = "#";
             printf("%d", j);
             printf("%s ", blocks);
