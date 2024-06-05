@@ -19,7 +19,7 @@ int main(void)
     for(int i=0; i < blockheight; i++)
     {
         //Print row #
-        printf("%d ", i);
+        printf("%d    ", i);
         //build each row
         buildrow(i);
     }
