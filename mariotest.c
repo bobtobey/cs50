@@ -16,6 +16,7 @@ int main(void)
     //first loop creates the n of rows in the pyramid
     for(int i=0; i < blockheight; i++)
     {
+        //Print row #
         printf("%d ", i);
         //assigns the variable for # of blocks
         int blockwidth = i;
