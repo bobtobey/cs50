@@ -12,7 +12,7 @@ int main(void){
     //checking the variable for a positive integer
     while(myheight < 1);
 
-    const int n = myheight;
+    const int n = 4;
     for(int i=0; i < n; i++)
     {
          printf("%d\n", i);
