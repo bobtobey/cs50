@@ -20,10 +20,12 @@ int main(void)
     {
         //Print row #
         printf("%d ", i);
+        //build each row
         buildrow(i);
     }
 }
 
+//build row function
 void buildrow(i)
 {
     //assigns the variable for # of blocks
