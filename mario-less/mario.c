@@ -18,7 +18,7 @@ int main(void)
     for(int i=0; i < n; i++)
     {
         printf("%d ", i);
-        int blockwidth = n;
+        int blockwidth = i;
         for(int j=0; j < blockwidth; j++)
         {
             string blocks = "#";
