@@ -20,7 +20,6 @@ int main(void)
         int blockwidth = n--;
         for(int j=0; j < blockwidth; j++)
         {
-
             string blocks = "#";
             //printf("%d", j);
             printf("%s ", blocks);
