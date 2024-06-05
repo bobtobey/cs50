@@ -2,11 +2,21 @@
 #include <stdio.h>
 
 int main(void){
-int main() {
-    const int n = 4;  // Define a constant integer n
-    for(int i = 0; i < n; i++) {  // Loop from 0 to n-1
-        printf("%d\n", i);  // Print the value of i followed by a newline
+    //declareing the variable
+    int myheight;
+    do
+    {
+        //assigning the variable
+        myheight = get_int("How tall is your pyramid? ");
     }
-    return 0;  // Return 0 to indicate successful execution
-}
+    //checking the variable for a positive integer
+    while(myheight < 1);
+
+    const int n = myheight;
+    for(int i=0; i < n; i++)
+    {
+        printf("%d ", i);
+        printf("?");
+        printf("\n");
+    }
 }

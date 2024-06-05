@@ -16,7 +16,7 @@ int main(void)
     const int n = myheight;
     for(int i=0; i < n; i++)
     {
-        printf(i);
+        printf("%d ", i);
         for(int j=0; j < n; j++)
         {
             printf("#");
