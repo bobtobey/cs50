@@ -21,7 +21,7 @@ int main(void)
         //Print row #
         printf("%d    ", i);
         //build each row
-        buildrow(i+1);
+        buildrow(i);
     }
 }
 
