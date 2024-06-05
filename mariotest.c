@@ -30,3 +30,8 @@ int main(void)
         printf("\n");
     }
 }
+
+int buildrow(void)
+{
+    
+}
