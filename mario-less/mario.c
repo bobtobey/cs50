@@ -19,7 +19,7 @@ int main(void)
         printf("%d ", i);
         for(int j=0; j < n; j++)
         {
-            int blockwidth = 
+            int blockwidth = 8;
             string blocks = "#";
             printf("%d", j);
             printf("%s ", blocks);
