@@ -20,7 +20,7 @@ int main(void)
         for(int j=0; j < n; j++)
         {
             string blocks = "MMM";
-            printf("#%d", blocks);
+            printf("#%s", blocks);
         }
         printf("\n");
     }
