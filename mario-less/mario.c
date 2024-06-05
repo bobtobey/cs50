@@ -17,7 +17,7 @@ int main(void)
     for(int i=0; i < n; i++)
     {
         printf("%d ", i);
-        int blockwidth = 8;
+        int blockwidth = n--;
         for(int j=0; j < blockwidth; j++)
         {
 
