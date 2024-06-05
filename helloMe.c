@@ -13,6 +13,7 @@ int main(void){
     while(myheight < 1);
 
     const int n = myheight;
+    //for(int j=n; j >= 0; j--)
     for(int i=0; i < n; i++)
     {
         printf("%d ", i);
