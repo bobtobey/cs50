@@ -17,6 +17,7 @@ int main(void)
     for(int i=0; i < blockheight; i++)
     {
         printf("%d ", i);
+        //assigns the variable for # of blocks in each row
         int blockwidth = i;
         for(int j=0; j < blockwidth; j++)
         {
