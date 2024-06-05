@@ -1,6 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
 
+int buildfor(void);
+
 int main(void)
 {
     //declareing the variable
@@ -18,20 +20,20 @@ int main(void)
     {
         //Print row #
         printf("%d ", i);
-        //assigns the variable for # of blocks
-        int blockwidth = i;
-        //second loop creates the n of blocks in each row
-        for(int j=0; j < blockwidth; j++)
-        {
-            string blocks = "#";
-            //printf("%d", j);
-            printf("%s ", blocks);
-        }
-        printf("\n");
+        build();
     }
 }
 
 int buildrow(void)
 {
-    
+    //assigns the variable for # of blocks
+    int blockwidth = i;
+    //second loop creates the n of blocks in each row
+    for(int j=0; j < blockwidth; j++)
+    {
+        string blocks = "#";
+        //printf("%d", j);
+        printf("%s ", blocks);
+    }
+    printf("\n");
 }
