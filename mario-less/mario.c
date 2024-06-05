@@ -14,6 +14,7 @@ int main(void)
     while(blockheight < 1);
 
     int n = blockheight;
+    //first loop creates the n of rows in the pyramid
     for(int i=0; i < n; i++)
     {
         printf("%d ", i);
