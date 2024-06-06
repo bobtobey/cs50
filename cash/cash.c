@@ -22,7 +22,7 @@ int main(void)
     // otherwise take the modulus and * it by first coin value, then divide it by the next highest coin value
     // repeat
     // Final Step print result
-    printf("%i\n", coins_back);
+    printf("%f\n", coins_back);
 }
 
 // Divide function
@@ -33,6 +33,7 @@ int divide_it(int change)
 
     // divide change by coin value .01
     int x = change / 1;
+
     // get modulus by coin value .25
     float y = (float) change % 25;
 
