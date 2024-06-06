@@ -8,5 +8,5 @@ int main(void)
     {
         change_due = get_int("Change due, please: ");
     }
-    while(change_due > 0);
+    while(change_due < 1);
 }
