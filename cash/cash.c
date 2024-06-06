@@ -33,6 +33,9 @@ int divide_it(int change)
     {
         int z = change / 25;
     }
+    else {
+        int z = change
+    }
     // divide change by coin value .01
     int x = change / 1;
     // divide change by coin value .25
