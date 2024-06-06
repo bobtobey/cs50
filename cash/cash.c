@@ -29,13 +29,8 @@ int main(void)
 int divide_it(int change)
 {
     // divide change by the highest coin value available
-    if(change / 25 = 2)
-    {
-        int z = change / 25;
-    }
-    else {
-        float z = (float) change % 25;
-    }
+    int z = change / 25;
+
     // divide change by coin value .01
     int x = change / 1;
     // divide change by coin value .25
