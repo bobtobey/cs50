@@ -39,7 +39,7 @@ void buildrow(int i)
         string space = "8";
         //printf("%d", j);
         //printf("%s", space);
-        printf("%s", blocks);
+        printf("%s\x20", blocks);
     }
     //printf("\n");
 }
