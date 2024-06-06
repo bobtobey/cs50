@@ -37,7 +37,7 @@ void buildrow(int blockcount, string blockmaterial)
     for(int j=0; j < blockcount; j++)
     {
         string blocks = blockmaterial;
-        printf("%s\x20", blocks);
+        printf("%s", blockmaterial);
     }
     //printf("\n");
 }
