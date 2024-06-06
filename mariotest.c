@@ -35,7 +35,7 @@ void buildrow(int i, string blockmaterial)
     //second loop creates the n of blocks in each row
     for(int j=0; j < blockwidth; j++)
     {
-        string blocks = "#";
+        string blocks = blockmaterial;
         string space = "8";
         //printf("%d", j);
         //printf("%s", space);
