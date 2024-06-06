@@ -22,7 +22,7 @@ int main(void)
     printf("%i\n", coins_back);
 }
 
-// Divide function
+// Subtract function
 int divide_it(int change)
 {
     int p = 0;
