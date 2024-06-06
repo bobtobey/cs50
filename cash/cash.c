@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int divide_it(int change);
+int subtract_it(int change);
 
 int main(void)
 {
@@ -17,13 +17,13 @@ int main(void)
 
     // find minimum # of coins to give back as change
     // FIRST divide change_due by coin values
-    int coins_back = divide_it(change_due);
+    int subtract_it = divide_it(change_due);
     // Final Step print result
     printf("%i\n", coins_back);
 }
 
 // Subtract function
-int divide_it(int change)
+int subtract_it(int change)
 {
     int p = 0;
     // First see if change is under .05
