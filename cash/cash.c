@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    const int change_due;
+    int change_due;
     do
     {
         change_due = get_int("Change due, please: ");
