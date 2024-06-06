@@ -23,7 +23,7 @@ int main(void)
 
         //build each row
         //buildrow(blockheight - i, 'k');
-        buildrow(i, '#');
+        buildrow(i, "#");
         printf("\n");
     }
 }
