@@ -17,7 +17,7 @@ int main(void)
 
     // find minimum # of coins to give back as change
     // FIRST divide change_due by coin values
-    int subtract_it = divide_it(change_due);
+    int coins_back = subtract_it(change_due);
     // Final Step print result
     printf("%i\n", coins_back);
 }
@@ -25,6 +25,6 @@ int main(void)
 // Subtract function
 int subtract_it(int change)
 {
-    
-    return p;
+    //subtract 
+    return total_coin_number;
 }
