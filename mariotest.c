@@ -18,12 +18,12 @@ int main(void)
     //first loop creates the n of rows in the pyramid
     for(int i=1; i < blockheight; i++)
     {
-        printf("%d ", i);
-        buildrow(blockheight - i);
         //Print row #
         printf("%d ", i);
         //build each row
+        buildrow(blockheight - i);
         buildrow(i);
+        printf("\n");
     }
 }
 
@@ -41,5 +41,5 @@ void buildrow(int i)
         //printf("%s", space);
         printf("%s", blocks);
     }
-    printf("\n");
+    //printf("\n");
 }
