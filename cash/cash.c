@@ -34,13 +34,13 @@ int divide_it(int change)
         int z = change / 25;
     }
     else {
-        int z = change
+        float z = (float) change % 25;
     }
     // divide change by coin value .01
     int x = change / 1;
     // divide change by coin value .25
     float y = (float) change / 25;
 
-    printf("%f\n", y);
-    return y;
+    printf("%f\n", z);
+    return z;
 }
