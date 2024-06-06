@@ -22,7 +22,7 @@ int main(void)
     // otherwise take the modulus and * it by first coin value, then divide it by the next highest coin value
     // repeat
     // Final Step print result
-    printf("%i",)
+    printf("%i\n",)
 }
 
 // Divide function
