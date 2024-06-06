@@ -28,7 +28,9 @@ int main(void)
 // Divide function
 int divide_it(int change)
 {
-    // divide change by coin value
-    int x = change / 1;
-    return x;
+    // divide change by coin value .01
+    int penny = change / 1;
+    // divide change by coin value .25
+    int quarter = change / 25;
+    return quarter;
 }
