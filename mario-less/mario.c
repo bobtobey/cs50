@@ -1,6 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
 
+void buildrow(int blockcount, string blockmaterial);
+
 int main(void)
 {
     //declareing the variable
@@ -16,16 +18,22 @@ int main(void)
     //first loop creates the n of rows in the pyramid
     for(int i=0; i < blockheight; i++)
     {
-        printf("%d ", i);
-        //assigns the variable for # of blocks
-        int blockwidth = i;
-        //second loop creates the n of blocks in each row
-        for(int j=0; j < blockwidth; j++)
-        {
-            string blocks = "#";
-            //printf("%d", j);
-            printf("%s ", blocks);
-        }
+        //Print row #
+        //printf("%d ", i);
+
+        //build each row with correct amount of spaces and blocks
+        buildrow(blockheight - i, " ");
+        buildrow(i+1, "#");
         printf("\n");
+    }
+}
+
+//build row function
+void buildrow(int blockcount, string blockmaterial)
+{
+    //second loop creates the n of blocks and spaces in each row
+    for(int j=0; j < blockcount; j++)
+    {
+        printf("%s", blockmaterial);
     }
 }
