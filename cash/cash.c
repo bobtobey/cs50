@@ -31,7 +31,7 @@ int divide_it(int change)
     // divide change by the highest coin value available
     if(change % 25 = 0)
     {
-        printf()
+        int z = change
     }
     // divide change by coin value .01
     int x = change / 1;
