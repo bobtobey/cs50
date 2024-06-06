@@ -25,29 +25,6 @@ int main(void)
 // Subtract function
 int subtract_it(int change)
 {
-    int p = 0;
-    // First see if change is under .05
-    if(change < 5){
-        printf("test");
-        p = change / 1;
-    }
-    else {
-        // divide change by the highest coin value available
-        float y = (float) change / 25;
-        // SECOND no remainder = done
-        // otherwise take the modulus and * it by first coin value, then divide it by the next highest coin value
-        int z = change % 25;
-        if(z != 0){
-            printf("modulus is %i\n", z);
-        }
-        // repeat
-
-        // divide change by coin value .01
-        int x = change / 1;
-
-
-        //printf("%i\n", z);
-        printf("%.2f\n", y);
-    }
+    
     return p;
 }
