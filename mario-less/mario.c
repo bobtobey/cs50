@@ -19,11 +19,11 @@ int main(void)
     for (int i = 0; i < blockheight; i++)
     {
         // Print row #
-         printf("%i", i);
+        // printf("%i", i);
 
         // build each row with correct amount of spaces and blocks
-        int k = blockheight
-        buildrow(blockheight - i, "8");
+        int k = blockheight - 1;
+        buildrow(k - i, " ");
         buildrow(i + 1, "#");
         printf("\n");
     }
