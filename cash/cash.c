@@ -25,7 +25,7 @@ int main(void)
 // Divide function
 int divide_it(int change)
 {
-    int p;
+    int p = 0;
     // First see if change is under .05
     if(change < 5){
         printf("test");
