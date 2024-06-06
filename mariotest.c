@@ -20,6 +20,7 @@ int main(void)
     {
         //Print row #
         printf("%d ", i);
+        
         //build each row
         buildrow(blockheight - i, 'k');
         buildrow(i, '#');
