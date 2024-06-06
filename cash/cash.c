@@ -29,10 +29,11 @@ int subtract_it(int change)
     // calculate the # of quarters (highest coin value) to give back and subtract it from the change amount
     int quarters = (change / 25);
     remaining_change = change - (quarters * 25);
-    printf("remaining %i\n", remaining_change);
+    printf("remaining Q %i\n", remaining_change);
     // calculate the # of dimes (next highest coin value) to give back and subtract it from the remaining change amount
     int dimes = remaining_change / 10;
-    remaining_change = change - (quarters * 25);
+    remaining_change = remaining_change - (dimes * 10);
+    printf("remaining D %i\n", remaining_change);
     // calculate the # of nickels (next highest coin value) to give back and subtract it from the change amount
     int nickels = 0;
     // calculate the # of pennies (next highest coin value) to give back and subtract it from the change amount
