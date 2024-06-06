@@ -22,7 +22,7 @@ int main(void)
         printf("%d ", i);
 
         //build each row
-        //buildrow(blockheight - i, 'k');
+        buildrow(blockheight - i, " ");
         buildrow(i, "#");
         printf("\n");
     }
