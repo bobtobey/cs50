@@ -25,10 +25,11 @@ int main(void)
 // Divide function
 int divide_it(int change)
 {
+    int p;
     // First see if change is under .05
     if(change < 5){
         printf("test");
-        int y = change / 1;
+        p = change / 1;
     }
     else {
         // divide change by the highest coin value available
@@ -48,5 +49,5 @@ int divide_it(int change)
         //printf("%i\n", z);
         printf("%.2f\n", y);
     }
-    return y;
+    return p;
 }
