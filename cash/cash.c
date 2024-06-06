@@ -29,7 +29,7 @@ int divide_it(int change)
     float y = (float) change / 25;
     // SECOND no remainder = done
     // otherwise take the modulus and * it by first coin value, then divide it by the next highest coin value
-    float z = (float) change % (float) 25;
+    int z = change % 25;
     printf("%f\n is Z", z);
     // repeat
 
