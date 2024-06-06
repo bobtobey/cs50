@@ -28,7 +28,7 @@ int subtract_it(int change)
     // calculate the # of quarters (highest coin value) to give back and subtract it from the change amount
     int quarters = (change / 25);
     // calculate the # of dimes (next highest coin value) to give back and subtract it from the change amount
-    int dimes = (quarters * 25) / 10;
+    int dimes = (quarters * 25) - / 10;
     // calculate the # of nickels (next highest coin value) to give back and subtract it from the change amount
     int nickels = 0;
     // calculate the # of pennies (next highest coin value) to give back and subtract it from the change amount
