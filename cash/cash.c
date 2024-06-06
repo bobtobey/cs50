@@ -35,7 +35,7 @@ int divide_it(int change)
     int x = change / 1;
 
     // get modulus by coin value .25
-    float y = (float) change % 25;
+    float y = (float) change / 25;
 
     //printf("%i\n", z);
     printf("%f\n", y);
