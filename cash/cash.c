@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int divide_it(change);
+int divide_it(int change);
 
 int main(void)
 {
@@ -17,16 +17,16 @@ int main(void)
 
     // find minimum # of coins to give back as change
     // FIRST divide change_due by the highest coin value available
-    divide_it(change_due);
+    int coins_back = divide_it(change_due);
     // SECOND no remainder = done
     // otherwise take the modulus and * it by first coin value, then divide it by the next highest coin value
     // repeat
     // Final Step print result
-    printf("%i\n",)
+    printf("%i\n", coins_back);
 }
 
 // Divide function
-int divide_it(change)
+int divide_it(int change)
 {
     // divide change by coin value
     return change / 1;
