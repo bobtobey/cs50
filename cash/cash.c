@@ -30,7 +30,7 @@ int divide_it(int change)
     // SECOND no remainder = done
     // otherwise take the modulus and * it by first coin value, then divide it by the next highest coin value
     int z = change % 25;
-    printf("%f\n is Z", z);
+    printf("%i\n is Z", z);
     // repeat
 
     // divide change by coin value .01
