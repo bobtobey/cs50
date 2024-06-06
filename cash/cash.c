@@ -29,5 +29,6 @@ int main(void)
 int divide_it(int change)
 {
     // divide change by coin value
-    return change / 1;
+    int x = change / 1;
+    return x;
 }
