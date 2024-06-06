@@ -38,11 +38,13 @@ int calculate_change(int change)
     printf("remaining D %i\n", remaining_change);
     // calculate the # of nickels (next highest coin value) to give back and subtract it from the change amount
     int nickels = remaining_change / 5;
-    remaining_change = remaining_change - (nickels * 5);
+    // remaining_change = remaining_change - (nickels * 5);
+    remaining_change = change % 5;
     printf("remaining N %i\n", remaining_change);
     // calculate the # of pennies (next highest coin value) to give back and subtract it from the change amount
     int pennies = remaining_change / 1;
-    remaining_change = remaining_change - (pennies * 1);
+    // remaining_change = remaining_change - (pennies * 1);
+    remaining_change = change % 1;
     printf("remaining P %i\n", remaining_change);
 
     // find the sum total of all the coins needed
