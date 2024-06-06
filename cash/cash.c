@@ -3,5 +3,10 @@
 
 int main(void)
 {
-    
+    const int change_due;
+    do
+    {
+        change_due = get_int("Change due, please: ");
+    }
+    while(change_due > 0);
 }
