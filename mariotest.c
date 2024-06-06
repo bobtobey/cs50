@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-void buildrow(int i, string blockmaterial);
+void buildrow(int blockcount, string blockmaterial);
 
 int main(void)
 {
@@ -29,17 +29,14 @@ int main(void)
 }
 
 //build row function
-void buildrow(int i, string blockmaterial)
+void buildrow(int blockcount, string blockmaterial)
 {
     //assigns the variable for # of blocks
-    int blockwidth = i;
+    //int blockwidth = i;
     //second loop creates the n of blocks in each row
-    for(int j=0; j < blockwidth; j++)
+    for(int j=0; j < blockcount; j++)
     {
         string blocks = blockmaterial;
-        string space = "8";
-        //printf("%d", j);
-        //printf("%s", space);
         printf("%s\x20", blocks);
     }
     //printf("\n");
