@@ -25,6 +25,16 @@ int main(void)
 // Subtract function
 int subtract_it(int change)
 {
-    //subtract 
+    // calculate the # of quarters (highest coin value) to give back and subtract it from the change amount
+    int quarters = change / 25;
+    // calculate the # of dimes (next highest coin value) to give back and subtract it from the change amount
+    int dimes = 0;
+    // calculate the # of nickels (next highest coin value) to give back and subtract it from the change amount
+    int nickels = 0;
+    // calculate the # of pennies (next highest coin value) to give back and subtract it from the change amount
+    int pennies = 0;
+    // find the sum total of all the coins needed
+    int total_coin_number = quarters + dimes + nickels + pennies;
+    // return the total # of coins
     return total_coin_number;
 }
