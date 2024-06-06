@@ -32,7 +32,8 @@ int divide_it(int change)
     int z = change % 25;
     if(z != 0){
         printf("modulus is %i\n", z);
-        int 
+        int m = z * 25;
+        printf("m is %i\n", m);
     }
     // repeat
 
