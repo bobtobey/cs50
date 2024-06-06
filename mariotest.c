@@ -22,6 +22,7 @@ int main(void)
         printf("%d    ", i);
         //build each row
         buildrow(i);
+        buildrow(i);
     }
 }
 
@@ -34,7 +35,7 @@ void buildrow(int i)
     for(int j=0; j < blockwidth; j++)
     {
         string blocks = "#";
-        printf("%d", j);
+        //printf("%d", j);
         printf("%s ", blocks);
     }
     printf("\n");
