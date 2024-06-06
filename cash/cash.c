@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int subtract_it(int change);
+int calculate_change(int change);
 
 int main(void)
 {
@@ -16,14 +16,14 @@ int main(void)
     while(change_due < 1);
 
     // find minimum # of coins to give back as change
-    // FIRST divide change_due by coin values
-    int coins_back = subtract_it(change_due);
+    // Call calculate_change function
+    int coins_back = calculate_change(change_due);
     // Final Step print result
     printf("%i\n", coins_back);
 }
 
 // Subtract function
-int subtract_it(int change)
+int calculate_change(int change)
 {
     int remaining_change;
     // calculate the # of quarters (highest coin value) to give back and subtract it from the change amount
@@ -45,7 +45,7 @@ int subtract_it(int change)
 
     // find the sum total of all the coins needed
     int total_coin_number = quarters + dimes + nickels + pennies;
-    
+
     // return the total # of coins
     return total_coin_number;
 }
