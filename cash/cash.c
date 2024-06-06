@@ -38,6 +38,6 @@ int divide_it(int change)
     float y = (float) change / 25;
 
     //printf("%i\n", z);
-    printf("%.20f\n", y);
+    printf("%.2f\n", y);
     return y;
 }
