@@ -22,7 +22,7 @@ int main(void)
         // printf("%i", i);
 
         // build each row with correct amount of spaces and blocks
-        int k = blockheight - 1;
+        int spacecount = blockheight - 1 - i;
         buildrow(blockheight - 1 - i, " ");
         buildrow(i + 1, "#");
         printf("\n");
