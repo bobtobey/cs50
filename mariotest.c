@@ -28,7 +28,7 @@ int main(void)
 }
 
 //build row function
-void buildrow(int i)
+void buildrow(int i, string blockmaterial)
 {
     //assigns the variable for # of blocks
     int blockwidth = i;
