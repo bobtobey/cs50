@@ -19,7 +19,7 @@ int main(void)
     for (int i = 0; i < blockheight; i++)
     {
         // Print row #
-        // printf("%i ", i);
+         printf("%i", i);
 
         // build each row with correct amount of spaces and blocks
         buildrow(blockheight - i, "\x20");
