@@ -25,23 +25,28 @@ int main(void)
 // Divide function
 int divide_it(int change)
 {
-    // divide change by the highest coin value available
-    float y = (float) change / 25;
-    // SECOND no remainder = done
-    // otherwise take the modulus and * it by first coin value, then divide it by the next highest coin value
-    int z = change % 25;
-    if(z != 0){
-        printf("modulus is %i\n", z);
-        int m = z / 25;
-        printf("m is %i\n", m);
+    // First see if change is under .05
+    if(change < 5){
+        printf("test");
+        int y = change / 1;
     }
-    // repeat
+    else {
+        // divide change by the highest coin value available
+        float y = (float) change / 25;
+        // SECOND no remainder = done
+        // otherwise take the modulus and * it by first coin value, then divide it by the next highest coin value
+        int z = change % 25;
+        if(z != 0){
+            printf("modulus is %i\n", z);
+        }
+        // repeat
 
-    // divide change by coin value .01
-    int x = change / 1;
+        // divide change by coin value .01
+        int x = change / 1;
 
 
-    //printf("%i\n", z);
-    printf("%.2f\n", y);
+        //printf("%i\n", z);
+        printf("%.2f\n", y);
+    }
     return y;
 }
