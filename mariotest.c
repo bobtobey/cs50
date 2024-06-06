@@ -36,9 +36,10 @@ void buildrow(int i)
     for(int j=0; j < blockwidth; j++)
     {
         string blocks = "#";
-        string space = "  ";
+        string space = "8";
         //printf("%d", j);
-        printf("%s%s", space, blocks);
+        printf("%s", space);
+        printf("%s", blocks);
     }
     printf("\n");
 }
