@@ -31,13 +31,9 @@ int main(void)
 //build row function
 void buildrow(int blockcount, string blockmaterial)
 {
-    //assigns the variable for # of blocks
-    //int blockwidth = i;
-    //second loop creates the n of blocks in each row
+    //second loop creates the n of blocks and spaces in each row
     for(int j=0; j < blockcount; j++)
     {
-        string blocks = blockmaterial;
         printf("%s", blockmaterial);
     }
-    //printf("\n");
 }
