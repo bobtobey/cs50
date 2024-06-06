@@ -16,7 +16,7 @@ int main(void)
     while(change_due < 1);
 
     // find minimum # of coins to give back as change
-    // FIRST divide change_due by the highest coin value available
+    // FIRST divide change_due by coin values
     int coins_back = divide_it(change_due);
     // SECOND no remainder = done
     // otherwise take the modulus and * it by first coin value, then divide it by the next highest coin value
@@ -28,6 +28,7 @@ int main(void)
 // Divide function
 int divide_it(int change)
 {
+    // divide change by the highest coin value available
     // divide change by coin value .01
     int x = change / 1;
     // divide change by coin value .25
