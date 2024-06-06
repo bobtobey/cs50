@@ -21,7 +21,7 @@ int main(void)
         //Print row #
         printf("%d ", i);
         //build each row
-        buildrow(blockheight - i, '8');
+        buildrow(blockheight - i, 'k');
         buildrow(i, '#');
         printf("\n");
     }
