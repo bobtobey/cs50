@@ -36,6 +36,6 @@ int divide_it(int change)
     // divide change by coin value .25
     float y = (float) change / 25;
 
-    printf("%f\n", z);
+    printf("%i\n", z);
     return z;
 }
