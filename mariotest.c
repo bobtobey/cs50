@@ -37,7 +37,7 @@ void buildrow(int i)
     {
         string blocks = "#";
         //printf("%d", j);
-        printf(" %s", blocks);
+        printf("%s %s", blocks);
     }
     printf("\n");
 }
