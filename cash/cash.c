@@ -30,7 +30,7 @@ int calculate_change(int change)
     int quarters = (change / 25);
     remaining_change = change - (quarters * 25);
     printf("remaining Q %i\n", remaining_change);
-    // calculate # of dimes (next highest coin value) to give back and subtract it from the remaining change
+    // calculate # of dimes (next highest coin value) to give back and subtract it from remaining change
     int dimes = remaining_change / 10;
     remaining_change = remaining_change - (dimes * 10);
     printf("remaining D %i\n", remaining_change);
