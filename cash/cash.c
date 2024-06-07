@@ -13,7 +13,7 @@ int main(void)
         change_due = get_int("Change due, please: ");
     }
     // validate the change variable
-    while (change_due < 1);
+    while (change_due < 1 && change_due );
 
     // find minimum # of coins to give back as change
     // Call calculate_change function
