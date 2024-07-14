@@ -3,6 +3,12 @@
 
 int main(int argc, string argv[])
 {
-    printf("hello, %s\n", argv[2]);
+    if (argc != 2)
+    {
+        printf("Missing command line argument\n");
+        return 1;
+    }
+    printf("hello, %s\n", argv[1]);
     printf("Array of words count: %i\n", argc);
+    return 0;
 }
