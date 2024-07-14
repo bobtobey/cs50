@@ -5,5 +5,5 @@
 
 int main(int argc, string argv[])
 {
-
+    printf("hello, %s\n", argv[1]);
 }
