@@ -12,5 +12,5 @@ int main(void)
     printf("Player 1 %s\n", player1);
     printf("Player 2 %s\n", player2);
     // Print out the winner
-    printf(")
+    printf("wins!");
 }
