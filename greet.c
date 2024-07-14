@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int main(void)
+int main(int argc, string argv[])
 {
-    
+
 }
