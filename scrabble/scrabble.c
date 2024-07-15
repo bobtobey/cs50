@@ -12,7 +12,13 @@ int main(void)
     printf("Player 1 %s\n", player1);
     printf("Player 2 %s\n", player2);
     // compare scores and determine the winner
-    
+
     // Print out the winners name
     printf("wins!");
+}
+
+// Score words function
+int score_scrabble_words (string word)
+{
+    // Score words
 }
