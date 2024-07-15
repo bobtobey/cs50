@@ -38,6 +38,8 @@ int main(void)
 // Score words function
 int score_words(string word)
 {
+    // get word length
+    int word_length = strlen(word);
     // Score words
     int word_score = 5;
     // return score
