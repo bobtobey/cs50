@@ -24,4 +24,7 @@ int main(void)
 int score_words(string word)
 {
     // Score words
+    int word_score = 5;
+    // return score
+    return word_score;
 }
