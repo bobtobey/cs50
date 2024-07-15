@@ -41,6 +41,7 @@ int score_words(string word)
 
     // get word length
     int word_length = strlen(word);
+
     // array of letters with score of 1
     string scrabble_score1[5];
     scrabble_score1[0] = A;
@@ -52,10 +53,6 @@ int score_words(string word)
     // Loop through arrays
    for (int i = 0; i < word_length; i++)
     {
-        if(scrabble_score1[i] == word)
-        {
-
-        }
         scrabble_score1[i]
         printf(")
     }
