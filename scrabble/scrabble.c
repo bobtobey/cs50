@@ -40,7 +40,7 @@ int score_words(string word)
 {
     // Track Score
     int score = 0;
-    
+
     // get word length
     int word_length = strlen(word);
 
