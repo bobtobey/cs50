@@ -43,12 +43,7 @@ int score_words(string word)
     int word_length = strlen(word);
 
     // array of letters with score of 1
-    char scrabble_score1[5];
-    scrabble_score1[0] = 'A';
-    scrabble_score1[1] = 'E';
-    scrabble_score1[2] = 'I';
-    scrabble_score1[3] = 'O';
-    scrabble_score1[4] = 'U';
+    string scrabble_score1 = "AEIOU";
 
     // Loop through arrays
    for (int i = 0; i < word_length; i++)
