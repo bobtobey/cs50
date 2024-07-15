@@ -30,7 +30,7 @@ int main(void)
         printf("Tie!\n");
     }
 
-    // Print out the winners name
+    // Print out the scores
     printf("Player 1 scores %i!\n", player1score);
     printf("Player 2 scores %i!\n", player2score);
 }
@@ -40,6 +40,7 @@ int score_words(string word)
 {
     // get word length
     int word_length = strlen(word);
+    
     // Score words
     int word_score = word_length;
     // return score
