@@ -58,8 +58,8 @@ int score_words(string word)
     for (int i = 0; i < word_length; i++)
     {
 
-        printf("%c", scrabble_score1[i]);
-        printf("\n");
+        // printf("%c", scrabble_score1[i]);
+        // printf("\n");
         printf("%c", toupper(word[i]));
     }
     printf("\n");
