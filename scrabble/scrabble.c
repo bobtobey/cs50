@@ -50,11 +50,11 @@ int score_words(string word)
     // Loop through arrays
     for (int i = 0; i < word_length; i++)
     {
+        // convert all character to uppercase
+        char letter = toupper(word[i]);
 
-        // printf("%c", scrabble_score1[i]);
-        // printf("\n");
-        printf("%c", toupper(word[i]));
-        printf("%i", toupper(word[i]));
+        printf("%c", letter);
+        printf("%i", letter);
     }
     printf("\n");
 
