@@ -18,7 +18,7 @@ int main(void)
     int score = score_words(player1word);
 
     // Print out the winners name
-    printf("%wins!");
+    printf("%i wins!", score);
 }
 
 // Score words function
