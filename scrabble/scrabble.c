@@ -44,11 +44,11 @@ int score_words(string word)
 
     // array of letters with score of 1
     string scrabble_score1[5];
-    scrabble_score1[0] = A;
-    scrabble_score1[1] = E;
-    scrabble_score1[2] = I;
-    scrabble_score1[3] = O;
-    scrabble_score1[4] = U;
+    scrabble_score1[0] = 'A';
+    scrabble_score1[1] = 'E';
+    scrabble_score1[2] = 'I';
+    scrabble_score1[3] = 'O';
+    scrabble_score1[4] = 'U';
 
     // Loop through arrays
    for (int i = 0; i < word_length; i++)
@@ -56,7 +56,7 @@ int score_words(string word)
         printf(scrabble_score1[i]);
         printf(word[i]);
     }
-    
+
     // Score words
     int word_score = word_length;
     // return score
