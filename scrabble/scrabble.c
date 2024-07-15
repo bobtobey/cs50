@@ -17,11 +17,11 @@ int main(void)
     int player2score = score_words(player2word);
 
     // compare scores and determine the winner
-    if(player1score < player2score)
+    if(player1score > player2score)
     {
         printf("Player 1 wins!");
     }
-    else if(player1score > player2score)
+    else if(player1score < player2score)
     {
          printf("Player 2 wins!");
     }
@@ -41,7 +41,7 @@ int score_words(string word)
     // get word length
     int word_length = strlen(word);
     // Score words
-    int word_score = 5;
+    int word_score = word_length;
     // return score
     return word_score;
 }
