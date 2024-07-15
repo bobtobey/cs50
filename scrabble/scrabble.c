@@ -1,6 +1,9 @@
 #include <cs50.h>
 #include <stdio.h>
 
+// Initialize Score words function
+int score_words(string word);
+
 int main(void)
 {
     // Prompt players for their scrabble word
@@ -18,7 +21,7 @@ int main(void)
 }
 
 // Score words function
-int score_scrabble_words (string word)
+int score_words(string word)
 {
     // Score words
 }
