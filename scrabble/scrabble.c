@@ -61,7 +61,7 @@ int score_words(string word)
         // printf("%c", scrabble_score1[i]);
         // printf("\n");
         printf("%c", toupper(word[i]));
-        printf(word[i] - 'A');
+        printf("%i", toupper(word[i]));
     }
     printf("\n");
 
