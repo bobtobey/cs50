@@ -45,14 +45,7 @@ int score_words(string word)
     int word_length = strlen(word);
 
     // array of letters with score of 1
-    string scrabble_score1 = "AEILNORSTU";
-    string scrabble_score2 = "DG";
-    string scrabble_score3 = "BCMP";
-    string scrabble_score4 = "FHVWY";
-    string scrabble_score5 = "K";
-    string scrabble_score8 = "JX";
-    string scrabble_score10 = "QZ";
-    printf("%c test\n", toupper(word[0]));
+    int p[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
 
     // Loop through arrays
     for (int i = 0; i < word_length; i++)
