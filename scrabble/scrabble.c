@@ -51,7 +51,10 @@ int score_words(string word)
     // Loop through arrays
    for (int i = 0; i < word_length; i++)
     {
-        if(scrabble_score1[i] == )
+        if(scrabble_score1[i] == word)
+        {
+            
+        }
         scrabble_score1[i]
         printf(")
     }
