@@ -42,7 +42,7 @@ int score_words(string word)
     // get word length
     int word_length = strlen(word);
     // array of letters with score of 1
-    string scrabble_score1[];
+    string scrabble_score1[5];
     scrabble_score1[0] = A;
     scrabble_score1[1] = E;
     scrabble_score1[2] = I;
