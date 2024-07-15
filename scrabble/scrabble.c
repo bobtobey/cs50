@@ -19,7 +19,15 @@ int main(void)
     // compare scores and determine the winner
     if(player1word < player2word)
     {
-        printf("Player 1 wins!", player1score);
+        printf("Player 1 wins!");
+    }
+    else if(player1word > player2word)
+    {
+         printf("Player 2 wins!");
+    }
+    else
+    {
+        printf("Tie!");
     }
 
     // Print out the winners name
