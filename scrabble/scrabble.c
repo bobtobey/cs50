@@ -49,7 +49,10 @@ int score_words(string word)
     scrabble_score1[4] = U;
 
     // Loop through arrays
-    
+   for (int i = 0; i < word_length; i++)
+    {
+        printf(")
+    }
     // Score words
     int word_score = word_length;
     // return score
