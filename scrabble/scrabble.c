@@ -38,7 +38,6 @@ int main(void)
 // Score words function
 int score_words(string word)
 {
-
     // get word length
     int word_length = strlen(word);
 
@@ -48,7 +47,7 @@ int score_words(string word)
     // Loop through arrays
    for (int i = 0; i < word_length; i++)
     {
-        printf(scrabble_score1[i]);
+        //printf(scrabble_score1[i]);
         printf(word[i]);
     }
 
