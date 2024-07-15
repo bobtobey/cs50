@@ -9,13 +9,11 @@ int main(void)
     // Prompt players for their scrabble word
     string player1word = get_string("Player 1: ");
     string player2word = get_string("Player 2: ");
+    
     // score players word
     int player1score = score_words(player1word);
     int player2score = score_words(player2word);
 
-    // Print out players words
-    printf("Player 1 %s\n", player1word);
-    printf("Player 2 %s\n", player2word);
     // compare scores and determine the winner
     if(player1score < player2score)
     {
