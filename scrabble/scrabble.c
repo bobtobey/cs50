@@ -38,6 +38,7 @@ int main(void)
 // Score words function
 int score_words(string word)
 {
+
     // get word length
     int word_length = strlen(word);
     // array of letters with score of 1
@@ -53,7 +54,7 @@ int score_words(string word)
     {
         if(scrabble_score1[i] == word)
         {
-            
+
         }
         scrabble_score1[i]
         printf(")
