@@ -7,17 +7,18 @@ int score_words(string word);
 int main(void)
 {
     // Prompt players for their scrabble word
-    string player1 = get_string("Player 1 input your word: ");
-    string player2 = get_string("Player 2 input your word: ");
+    string player1word = get_string("Player 1 input your word: ");
+    string player2word = get_string("Player 2 input your word: ");
     // score players word
 
     // Print out players words
-    printf("Player 1 %s\n", player1);
-    printf("Player 2 %s\n", player2);
+    printf("Player 1 %s\n", player1word);
+    printf("Player 2 %s\n", player2word);
     // compare scores and determine the winner
+    int score = score_words(player1word);
 
     // Print out the winners name
-    printf("wins!");
+    printf("%wins!");
 }
 
 // Score words function
