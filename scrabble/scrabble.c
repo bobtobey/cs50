@@ -39,7 +39,7 @@ int main(void)
 int score_words(string word)
 {
     // Track Score
-    int score = 0;
+    int word_score = 0;
 
     // get word length
     int word_length = strlen(word);
@@ -52,18 +52,18 @@ int score_words(string word)
     {
         // convert all character to uppercase
         char letter = toupper(word[i]);
-
+        // find the index of each letter
         int index_value = letter - 'A';
-        score += lettervalues[index_value];
+        // get score value and add them together
+        word_score += lettervalues[index_value];
 
         printf("%c", letter);
         printf("%i", letter);
-        printf("%i", score);
     }
     printf("\n");
 
     // Score words
-    int word_score = word_length;
+    printf("Word Score for %s: %i\n", word, word_score);
     // return score
     return word_score;
 }
