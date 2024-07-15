@@ -54,7 +54,11 @@ int score_words(string word)
     // Loop through arrays
     for (int i = 0; i < word_length; i++)
     {
-        while ()
+        int j = 0;
+        while (j < 9)
+        {
+            toupper(word[i]);
+        }
         printf("%c", scrabble_score1[i]);
         //printf("%c\n", toupper(word[i]));
     }
