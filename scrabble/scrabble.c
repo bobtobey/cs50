@@ -57,7 +57,7 @@ int score_words(string word)
         int j = 0;
         while (j < 9)
         {
-            toupper(word[i]);
+            if(toupper(word[i]) == ;
         }
         printf("%c", scrabble_score1[i]);
         //printf("%c\n", toupper(word[i]));
