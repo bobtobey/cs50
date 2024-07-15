@@ -58,7 +58,7 @@ int score_words(string word)
 
         printf("%c", letter);
         printf("%i", letter);
-        printf("%i)
+        printf("%i", score);
     }
     printf("\n");
 
