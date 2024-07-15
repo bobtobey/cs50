@@ -45,6 +45,10 @@ int score_words(string word)
     string scrabble_score1 = "AEILNORSTU";
     string scrabble_score2 = "DG";
     string scrabble_score3 = "BCMP";
+    string scrabble_score4 = "FHVWY";
+    string scrabble_score5 = "K";
+    string scrabble_score8 = "JX";
+    string scrabble_score10 = "QZ";
     printf("%c test\n", toupper(word[0]));
 
     // Loop through arrays
