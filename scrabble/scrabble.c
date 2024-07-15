@@ -1,5 +1,7 @@
+#include <ctype.h>
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 // Initialize Score words function
 int score_words(string word);
