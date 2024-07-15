@@ -53,9 +53,12 @@ int score_words(string word)
         // convert all character to uppercase
         char letter = toupper(word[i]);
         // find the index of each letter
-        int index_value = letter - 'A';
-        // get score value and add them together
-        word_score += letter_values[index_value];
+        if(isalpha(letter))
+        {
+            int index_value = letter - 'A';
+            // get score value and add them together
+            word_score += letter_values[index_value];
+        }
 
         printf("%c", letter);
         printf("%i", letter);
