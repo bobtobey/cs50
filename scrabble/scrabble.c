@@ -43,13 +43,13 @@ int score_words(string word)
 
     // array of letters with score of 1
     string scrabble_score1 = "AEIOU";
-
+    printf(word[0]);
     // Loop through arrays
-   for (int i = 0; i < word_length; i++)
-    {
-        //printf(scrabble_score1[i]);
-        printf(word[i]);
-    }
+    // for (int i = 0; i < word_length; i++)
+    // {
+    //     //printf(scrabble_score1[i]);
+    //     printf(word[i]);
+    // }
 
     // Score words
     int word_score = word_length;
