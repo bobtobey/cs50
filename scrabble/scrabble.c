@@ -44,8 +44,8 @@ int score_words(string word)
     // get word length
     int word_length = strlen(word);
 
-    // array of letters with score of 1
-    int p[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
+    // array of letter score values
+    int lettervalues[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
 
     // Loop through arrays
     for (int i = 0; i < word_length; i++)
