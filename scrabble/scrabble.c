@@ -53,6 +53,7 @@ int score_words(string word)
         // convert all character to uppercase
         char letter = toupper(word[i]);
 
+        score += letter - 'A';
         printf("%c", letter);
         printf("%i", letter);
     }
