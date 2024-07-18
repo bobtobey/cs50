@@ -59,9 +59,9 @@ int score_words(string word)
             // get score value and add them together
             word_score += letter_values[index_value];
         }
-
-        printf("%c", letter);
-        printf("%i", letter);
+        // Prints out the letter and number
+        // printf("%c", letter);
+        // printf("%i", letter);
     }
     printf("\n");
 
