@@ -16,16 +16,17 @@ int main(void)
     string textsample = get_string("Text: ");
     printf("Text Sample: %s\n", textsample);
 
-    // Find formula factors to get the equation Coleman-Liau: index = 0.0588 * L - 0.296 * S - 15.8
+    // Find formula factors to get the equation
     // get the average number of letters per 100 words
     int L = get_letter_avg(textsample);
     // get the average number of sentences per 100 words
     int S = get_sentence_avg(textsample);
-    // Formula Calculations
-    gradelevel = 
+    // Formula Calculations- Coleman-Liau: index = 0.0588 * L - 0.296 * S - 15.8
+    gradelevel = 0.0588 * L - 0.296 * S - 15.8;
 
     // Print out the grade level index value for the text provided
-    printf("Grade %i\n and %i\n", L , S);
+    printf("Average L/S: %i\n and %i\n", L , S);
+    printf("Grade %i\n", gradelevel);
 }
 
 // Get Average # of letters in text sample
