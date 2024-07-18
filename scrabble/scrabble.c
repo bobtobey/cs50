@@ -52,7 +52,7 @@ int score_words(string word)
     {
         // convert all character to uppercase
         char letter = toupper(word[i]);
-        // find the index of each letter
+        // verify if it is find the index of each letter
         if(isalpha(letter))
         {
             int index_value = letter - 'A';
