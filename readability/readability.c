@@ -5,5 +5,7 @@
 
 int main(void)
 {
-    // Place code here
+    // Prompt for reading level text sample to review
+    string textsample = get_string("Text: ");
+    printf("Text Sample: %s", textsample);
 }
