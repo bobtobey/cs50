@@ -1,5 +1,5 @@
-#include <ctype.h>
 #include <cs50.h>
+#include <ctype.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -17,11 +17,11 @@ int main(void)
     int player2score = score_words(player2word);
 
     // compare scores and determine the winner
-    if(player1score > player2score)
+    if (player1score > player2score)
     {
         printf("Player 1 wins!\n");
     }
-    else if(player1score < player2score)
+    else if (player1score < player2score)
     {
          printf("Player 2 wins!\n");
     }
@@ -53,7 +53,7 @@ int score_words(string word)
         // convert all character to uppercase
         char letter = toupper(word[i]);
         // verify letters is alphabetical and find the index of each letter
-        if(isalpha(letter))
+        if (isalpha(letter))
         {
             int index_value = letter - 'A';
             // get score value and add them together
