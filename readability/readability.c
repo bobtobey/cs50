@@ -11,6 +11,10 @@ int main(void)
     // Prompt for reading level text sample to review
     string textsample = get_string("Text: ");
     printf("Text Sample: %s\n", textsample);
-    // Get 
+    // Find formula factors to get the equation index
+    // get the average number of letters per 100 words
+    // get the average number of sentences per 100 words
+
+    //
     printf("Grade %i\n", gradelevel);
 }
