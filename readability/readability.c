@@ -21,6 +21,8 @@ int main(void)
     int L = get_letter_avg(textsample);
     // get the average number of sentences per 100 words
     int S = get_sentence_avg(textsample);
+    // Formula Calculations
+    gradelevel = 
 
     // Print out the grade level index value for the text provided
     printf("Grade %i\n and %i\n", L , S);
