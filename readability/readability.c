@@ -33,7 +33,7 @@ int main(void)
 int get_letter_avg(string text)
 {
     // calculate average
-    int letter_average = 450;
+    int letter_average = 500;
 
     // return Letter Average
     return letter_average;
