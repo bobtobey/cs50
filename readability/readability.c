@@ -11,5 +11,6 @@ int main(void)
     // Prompt for reading level text sample to review
     string textsample = get_string("Text: ");
     printf("Text Sample: %s\n", textsample);
+    // Get 
     printf("Grade %i\n", gradelevel);
 }
