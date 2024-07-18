@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void main(void)
+int main(void)
 {
-    // Place code here  
+    // Place code here
 }
