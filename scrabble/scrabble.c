@@ -65,7 +65,7 @@ int score_words(string word)
     }
     printf("\n");
 
-    // Score words
+    // Return word score
     // printf("Word Score for %s: %i\n", word, word_score);
     // return word score
     return word_score;
