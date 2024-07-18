@@ -31,8 +31,8 @@ int main(void)
     }
 
     // Print out the scores
-    printf("Player 1 scores %i!\n", player1score);
-    printf("Player 2 scores %i!\n", player2score);
+    // printf("Player 1 scores %i!\n", player1score);
+    // printf("Player 2 scores %i!\n", player2score);
 }
 
 // Score words function
