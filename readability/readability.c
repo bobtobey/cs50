@@ -15,6 +15,6 @@ int main(void)
     // get the average number of letters per 100 words
     // get the average number of sentences per 100 words
 
-    //
+    // Print out the grade level index value for the text provided
     printf("Grade %i\n", gradelevel);
 }
