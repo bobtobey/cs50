@@ -25,7 +25,7 @@ int main(void)
     gradelevel = 0.0588 * L - 0.296 * S - 15.8;
 
     // Print out the grade level index value for the text provided
-    printf("Average L/S: %i\n and %i\n", L , S);
+    printf("Average L/S: %i and %i\n", L , S);
     printf("Grade %i\n", gradelevel);
 }
 
