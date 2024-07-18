@@ -32,6 +32,7 @@ int main(void)
 // Get Average # of letters in text sample
 int get_letter_avg(string text)
 {
+    // find 
     // calculate average
     int letter_average = 500;
 
