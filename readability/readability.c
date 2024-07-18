@@ -33,7 +33,7 @@ int main(void)
 int get_letter_avg(string text)
 {
     // find numbe of words in the text sample
-    
+    int num
     // calculate average
     int letter_average = 500;
 
