@@ -14,8 +14,9 @@ int main(void)
 {
     // Prompt for reading level text sample to review
     string textsample = get_string("Text: ");
-    string text2[] = 
+    string text2[] = {textsample};
     printf("Text Sample: %s\n", textsample);
+    printf("%s\n", text2[0]);
 
     //for(int i = 0; textsample[i] != '\0'; i++)
     for(int i = 0, length = strlen(textsample); i < length; i++)
