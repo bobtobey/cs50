@@ -53,8 +53,3 @@ int get_sentence_avg(string text)
     // return Sentence Average
     return sentence_average;
 }
-
-float mult_float(float a, float b)
-{
-    a * b
-}
