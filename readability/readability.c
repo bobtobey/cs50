@@ -25,10 +25,13 @@ int main(void)
         if(isblank(textsample[i]))
         {
             printf("BLANK\n");
-        } else
+        } else if(isalpha(textsample[i]))
         {
             j++;
             printf("%i : %c\n", i+1, textsample[i]);
+        } else
+        {
+            printf("NO GO\n");
         }
     }
     printf("Char count: %i\n", j);
