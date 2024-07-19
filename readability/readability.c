@@ -45,6 +45,7 @@ int get_letter_avg(string text)
     {
         if(isblank(text[i]))
         {
+            num_words++;
             printf("BLANK\n");
         }
         else if(isalpha(text[i]))
@@ -58,7 +59,8 @@ int get_letter_avg(string text)
             printf("NO GO\n");
         }
     }
-    printf("Char count: %i\n", num_letters);
+    printf("Letter count: %i\n", num_letters);
+    printf("Word count: %i\n", num_words);
 
     // calculate average
     int letter_average = 500;
