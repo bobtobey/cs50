@@ -17,7 +17,8 @@ int main(void)
     printf("Text Sample: %s\n", textsample);
 
     int length = strlen(textsample);
-    printf("%i\n", length);
+    int j = 0;
+    printf("Length: %i\n", length);
     //for(int i = 0; textsample[i] != '\0'; i++)
     for(int i = 0; i < length; i++)
     {
@@ -26,9 +27,11 @@ int main(void)
             printf("BLANK\n");
         } else
         {
+            j++;
             printf("%i : %c\n", i+1, textsample[i]);
         }
     }
+    printf("Char count: %i\n", j);
 
     // Find formula factors to get the equation
     // get the average number of letters per 100 words
