@@ -9,9 +9,9 @@ int valid_triangle(double a, double b, double c);
 int main(void)
 {
     // Call Triangle function
-    int istriangle = valid_triangle(2, 2, 2);
+    bool istriangle = valid_triangle(2, 2, 2);
     // Print result
-    printf("Is it a triangle: %b", istriangle);
+    printf("Is it a triangle: %b\n", istriangle);
 }
 
 int valid_triangle(double a, double b, double c)
