@@ -18,9 +18,9 @@ int main(void)
 
     for(int i = 0; textsample[i] != '\0'; i++)
     {
-        printf("%i\n", i);
+        printf("%i : %c\n", i, i);
     }
-    
+
     // Find formula factors to get the equation
     // get the average number of letters per 100 words
     int L = get_letter_avg(textsample);
