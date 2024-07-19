@@ -16,6 +16,7 @@ int main(void)
 
 int valid_triangle(double a, double b, double c)
 {
+    int triange_calc = a + b
     // return result
     return false;
 }
