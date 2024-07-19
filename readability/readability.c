@@ -16,6 +16,11 @@ int main(void)
     string textsample = get_string("Text: ");
     printf("Text Sample: %s\n", textsample);
 
+
+    for(int i = 0; i < 5; i++)
+    {
+        string textsamplearray[] = {};
+    }
     // Find formula factors to get the equation
     // get the average number of letters per 100 words
     int L = get_letter_avg(textsample);
