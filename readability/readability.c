@@ -18,9 +18,9 @@ int main(void)
 
     for(int i = 0; textsample[i] != '\0'; i++)
     {
-        if(isblank(i))
+        if(isblank(textsample[i]))
         {
-            printf("BLANK");
+            printf("BLANK\n");
         } else
         {
             printf("%i : %c\n", i, textsample[i]);
