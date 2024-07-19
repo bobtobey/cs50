@@ -23,7 +23,7 @@ int main(void)
             printf("BLANK\n");
         } else
         {
-            printf("%i : %c\n", i, textsample[i]);
+            printf("%i : %c\n", i+1, textsample[i]);
         }
     }
 
