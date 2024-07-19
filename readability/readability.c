@@ -16,25 +16,7 @@ int main(void)
     string textsample = get_string("Text: ");
     printf("Text Sample: %s\n", textsample);
 
-    int length = strlen(textsample);
-    int j = 0;
-    printf("Length: %i\n", length);
-    //for(int i = 0; textsample[i] != '\0'; i++)
-    for(int i = 0; i < length; i++)
-    {
-        if(isblank(textsample[i]))
-        {
-            printf("BLANK\n");
-        } else if(isalpha(textsample[i]))
-        {
-            j++;
-            printf("%i : %c\n", i+1, textsample[i]);
-        } else
-        {
-            printf("NO GO\n");
-        }
-    }
-    printf("Char count: %i\n", j);
+
 
     // Find formula factors to get the equation
     // get the average number of letters per 100 words
@@ -56,6 +38,26 @@ int get_letter_avg(string text)
     int num_letters = 10;
     int num_words = 5;
     int num_sentences = 1;
+
+    int length = strlen(text);
+    int j = 0;
+    printf("Length: %i\n", length);
+    //for(int i = 0; text[i] != '\0'; i++)
+    for(int i = 0; i < length; i++)
+    {
+        if(isblank(text[i]))
+        {
+            printf("BLANK\n");
+        } else if(isalpha(text[i]))
+        {
+            j++;
+            printf("%i : %c\n", i+1, text[i]);
+        } else
+        {
+            printf("NO GO\n");
+        }
+    }
+    printf("Char count: %i\n", j);
 
     // calculate average
     int letter_average = 500;
