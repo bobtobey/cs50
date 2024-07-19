@@ -35,7 +35,7 @@ int main(void)
 int get_letter_avg(string text)
 {
     // find numbe of words in the text sample
-    int num_letters = 10;
+    int num_letters = 0;
     int num_words = 5;
     int num_sentences = 1;
 
@@ -50,7 +50,7 @@ int get_letter_avg(string text)
             printf("BLANK\n");
         } else if(isalpha(text[i]))
         {
-            j++;
+            num_letters++;
             printf("%i : %c\n", i+1, text[i]);
         } else
         {
