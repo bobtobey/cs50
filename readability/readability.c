@@ -18,7 +18,7 @@ int main(void)
 
     for(int i = 0; textsample[i] != '\0'; i++)
     {
-        printf("%i : %c\n", i, i);
+        printf("%i : %c\n", i, textsample[i]);
     }
 
     // Find formula factors to get the equation
