@@ -39,25 +39,26 @@ int get_letter_avg(string text)
     int num_words = 5;
     int num_sentences = 1;
 
-    int length = strlen(text);
-    int j = 0;
-    printf("Length: %i\n", length);
+    int textlength = strlen(text);
+    printf("Length: %i\n", textlength);
     //for(int i = 0; text[i] != '\0'; i++)
-    for(int i = 0; i < length; i++)
+    for(int i = 0; i < textlength; i++)
     {
         if(isblank(text[i]))
         {
             printf("BLANK\n");
-        } else if(isalpha(text[i]))
+        }
+        else if(isalpha(text[i]))
         {
             num_letters++;
             printf("%i : %c\n", i+1, text[i]);
-        } else
+        }
+        else
         {
             printf("NO GO\n");
         }
     }
-    printf("Char count: %i\n", j);
+    printf("Char count: %i\n", num_letters);
 
     // calculate average
     int letter_average = 500;
