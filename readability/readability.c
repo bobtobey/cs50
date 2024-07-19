@@ -36,11 +36,10 @@ int get_letter_avg(string text)
 {
     // find numbe of words in the text sample
     int num_letters = 0;
-    int num_words = 5;
+    int num_words = 0;
     int num_sentences = 1;
 
     int textlength = strlen(text);
-    printf("Length: %i\n", textlength);
     //for(int i = 0; text[i] != '\0'; i++)
     for(int i = 0; i < textlength; i++)
     {
@@ -50,6 +49,7 @@ int get_letter_avg(string text)
         }
         else if(isalpha(text[i]))
         {
+            // Get # of letters
             num_letters++;
             printf("%i : %c\n", i+1, text[i]);
         }
