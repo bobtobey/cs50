@@ -36,7 +36,7 @@ int get_letter_avg(string text)
     int num_letters = 10;
     int num_words = 5;
     int num_sentences = 1;
-    
+
     // calculate average
     int letter_average = 500;
 
@@ -52,4 +52,9 @@ int get_sentence_avg(string text)
 
     // return Sentence Average
     return sentence_average;
+}
+
+float mult_float(float a, float b)
+{
+    a * b
 }
