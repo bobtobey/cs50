@@ -16,8 +16,10 @@ int main(void)
     string textsample = get_string("Text: ");
     printf("Text Sample: %s\n", textsample);
 
+    int length = strlen(textsample);
+    printf("%i\n", length);
     //for(int i = 0; textsample[i] != '\0'; i++)
-    for(int i = 0, length = strlen(textsample); i < length; i++)
+    for(int i = 0; i < length; i++)
     {
         if(isblank(textsample[i]))
         {
