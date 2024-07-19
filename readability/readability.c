@@ -37,7 +37,7 @@ int get_letter_avg(string text)
     // find numbe of words in the text sample
     int num_letters = 0;
     int num_words = 0;
-    int num_sentences = 1;
+    int num_sentences = 0;
 
     int textlength = strlen(text);
     //for(int i = 0; text[i] != '\0'; i++)
