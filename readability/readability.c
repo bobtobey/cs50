@@ -34,24 +34,24 @@ int main(void)
 // Get Average # of letters in text sample
 int get_letter_avg(string text)
 {
-    // find numbe of words in the text sample
+    // initialize variables
     int num_letters = 0;
     int num_words = 0;
     int num_sentences = 0;
 
+    // find length of text
     int textlength = strlen(text);
-    //for(int i = 0; text[i] != '\0'; i++)
     for(int i = 0; i < textlength; i++)
     {
         if(isblank(text[i]))
         {
-            // get # of words in the text
+            // get # of words in the text by counting space between words
             num_words++;
             printf("BLANK\n");
         }
         else if(isalpha(text[i]))
         {
-            // Get # of letters in the text
+            // Get # of letters in the text by counting alphabet characters
             num_letters++;
             printf("%i : %c\n", i+1, text[i]);
         }
