@@ -6,7 +6,7 @@
 // Initialize functions
 int valid_triangle(double a, double b, double c);
 
-ing main(void)
+int main(void)
 {
     // Call Triangle function
     int istriangle = valid_triangle(2, 2, 2);
