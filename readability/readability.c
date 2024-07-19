@@ -64,7 +64,7 @@ int get_letter_avg(string text)
     }
     printf("Letter count: %i\n", num_letters);
     printf("Word count: %i\n", num_words+1);
-    printf("Sentence count: %i\n", num_sentences+1);
+    printf("Sentence count: %i\n", num_sentences);
 
     // calculate average
     int letter_average = 500;
