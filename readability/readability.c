@@ -6,6 +6,7 @@
 // Initialize functions
 double get_letter_avg(string text);
 double get_sentence_avg(string text);
+double get_grade_index(double l, double s);
 
 // Globabl grade level variable
 int gradelevel = 0;
@@ -81,11 +82,13 @@ double get_letter_avg(string text)
 }
 
 // Calculate the index
-double get_index(double l, double s)
+double get_grade_index(double l, double s)
 {
     // Formula Calculations- Coleman-Liau: index = 0.0588 * L - 0.296 * S - 15.8
     gradelevel = 0.0588 * L - 0.296 * S - 15.8;
 
+    // return grade level index
+    return gradelevel;
 }
 
 // Get Average # of sentences in text sample
