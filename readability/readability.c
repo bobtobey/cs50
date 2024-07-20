@@ -13,17 +13,22 @@ int main(void)
     string textsample = get_string("Text: ");
 
     // Find formula factors to plug into the equation
-    // Get the grade level index for text sample
+    // Get the grade level index for the text sample
     double gradelevel = get_grade_index(textsample);
 
+    // Print out the grade level for the text sample provided
     if (gradelevel < 1)
     {
-        // Print out the grade level index value for the text provided
+        printf("Before Grade 1\n");
+    }
+    else if (gradelevel >= 16)
+    {
+        printf("Grade 16+\n");
+    }
+    else
+    {
         printf("Grade %.0f\n", gradelevel);
     }
-
-    // Print out the grade level index value for the text provided
-    printf("Grade %.0f\n", gradelevel);
 }
 
 // Get Average # of letters, words, and sentences in text sample to return grade index
