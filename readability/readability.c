@@ -78,8 +78,6 @@ double get_letter_avg(string text)
 // Get Average # of sentences in text sample
 double get_sentence_avg(string text)
 {
-    // Formula Calculations- Coleman-Liau: index = 0.0588 * L - 0.296 * S - 15.8
-    gradelevel = 0.0588 * L - 0.296 * S - 15.8;
     // calculate average # of sentences per 100 words
     int sentence_average = 10;
 
