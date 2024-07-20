@@ -34,9 +34,9 @@ int main(void)
 double get_letter_avg(string text)
 {
     // initialize variables
-    int num_letters = 0;
-    int num_words = 0;
-    int num_sentences = 0;
+    float num_letters = 0;
+    float num_words = 0;
+    float num_sentences = 0;
 
     // find length of text
     int textlength = strlen(text);
