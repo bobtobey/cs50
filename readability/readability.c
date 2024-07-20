@@ -61,7 +61,7 @@ double get_letter_avg(string text)
         }
         else
         {
-            // do nothing
+            // if there is any other unaccounted for element do nothing
             printf("NO GO\n");
         }
     }
