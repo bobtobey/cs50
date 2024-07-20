@@ -79,7 +79,8 @@ double get_letter_avg(string text)
 
     // Get the grade
     double index = get_grade_index(letter_average, sentence_average);
-    
+    printf("%f\n", index);
+
     // return Letter Average
     return letter_average;
 }
