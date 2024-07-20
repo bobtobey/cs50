@@ -81,7 +81,7 @@ double get_grade_index(string text)
 double calc_grade_index(double L, double S)
 {
     // Formula Calculations- Coleman-Liau: index = 0.0588 * L - 0.296 * S - 15.8
-    double gradelevel = 0.0588 * L - 0.296 * S - 15.8;
+    double gradelevel = (0.0588 * L) - 0.296 * S - 15.8;
     printf("Index: %f\n", gradelevel);
 
     // return grade level index
