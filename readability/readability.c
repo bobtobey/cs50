@@ -67,16 +67,16 @@ double get_grade_index(string text)
             printf("NO GO\n");
         }
     }
-    printf("Letter count: %f\n", (float)num_letters);
-    printf("Word count: %f\n", (float)num_words+1);
-    printf("Sentence count: %f\n", (float)num_sentences);
+    printf("Letter count: %f\n", (float) num_letters);
+    printf("Word count: %f\n", (float) num_words + 1);
+    printf("Sentence count: %f\n", (float) num_sentences);
 
     // calculate average # of letters per 100 words
-    double letter_average = ((double)num_letters / (double)(num_words + 1)) * 100;
+    double letter_average = ((double) num_letters / (double) (num_words + 1)) * 100;
 
     // calculate average # of sentences per 100 words
-    double sentence_average = ((double)num_sentences / (double)(num_words + 1)) * 100;
-    printf("Average L/S: %f and %f\n", letter_average , sentence_average);
+    double sentence_average = ((double) num_sentences / (double) (num_words + 1)) * 100;
+    printf("Average L/S: %f and %f\n", letter_average, sentence_average);
 
     // Get the Coleman-Liau index
     double cl_grade_index = calc_grade_index(letter_average, sentence_average);
