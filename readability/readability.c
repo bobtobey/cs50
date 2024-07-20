@@ -14,7 +14,6 @@ int main(void)
 {
     // Prompt for reading level text sample to review
     string textsample = get_string("Text: ");
-    printf("Text Sample: %s\n", textsample);
 
     // Find formula factors to plug into the equation
     // get the average number of letters per 100 words
