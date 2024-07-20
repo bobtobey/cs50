@@ -44,7 +44,7 @@ double get_grade_index(string text)
             num_words++;
             printf("BLANK\n");
         }
-        else if (ispunct(text[i]) && text[i] == '.' || text[i] == '!')
+        else if (text[i] == '.' || text[i] == '!')
         {
             // Get # of sentences in the text
             num_sentences++;
