@@ -4,8 +4,8 @@
 #include <string.h>
 
 // Initialize functions
-int get_letter_avg(string text);
-int get_sentence_avg(string text);
+double get_letter_avg(string text);
+double get_sentence_avg(string text);
 
 // Globabl grade level variable
 int gradelevel = 0;
@@ -16,9 +16,7 @@ int main(void)
     string textsample = get_string("Text: ");
     printf("Text Sample: %s\n", textsample);
 
-
-
-    // Find formula factors to get the equation
+    // Find formula factors to plug into the equation
     // get the average number of letters per 100 words
     double L = get_letter_avg(textsample);
     // get the average number of sentences per 100 words
@@ -27,7 +25,7 @@ int main(void)
     gradelevel = 0.0588 * L - 0.296 * S - 15.8;
 
     // Print out the grade level index value for the text provided
-    printf("Average L/S: %i and %i\n", L , S);
+    printf("Average L/S: %f and %f\n", L , S);
     printf("Grade %i\n", gradelevel);
 }
 
