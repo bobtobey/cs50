@@ -53,10 +53,15 @@ double get_letter_avg(string text)
             num_letters++;
             printf("%i : %c\n", i+1, text[i]);
         }
-        else if ()
+        else if (ispunct(text[i]))
         {
             // Get # of sentences in the text
-            num_sentences++;ispunct 
+            num_sentences++;
+            printf("Punct\n");
+        }
+        else
+        {
+            // do nothing
             printf("NO GO\n");
         }
     }
