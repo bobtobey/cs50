@@ -68,6 +68,8 @@ double get_letter_avg(string text)
     // calculate average # of letters per 100 words
     double letter_average = ((double)num_letters / (double)(num_words + 1)) * 100;
     printf("aver %f\n", letter_average);
+    // calculate average # of sentences per 100 words
+    double sentence_average = ((double)num_sentences / (double)(num_words + 1)) * 100;
 
     // return Letter Average
     return letter_average;
@@ -76,8 +78,6 @@ double get_letter_avg(string text)
 // Get Average # of sentences in text sample
 double get_sentence_avg(string text)
 {
-    // calculate average # of sentences per 100 words
-    double sentence_average = ((double)num_sentences / (double)(num_words + 1)) * 100;
     // calculate average # of sentences per 100 words
     int sentence_average = 10;
 
