@@ -45,7 +45,7 @@ double get_letter_avg(string text)
         {
             // get # of words in the text by counting space between words
             num_words++;
-            printf("BLANK\n");
+            printf("\nBLANK\n");
         }
         else if (isalpha(text[i]))
         {
@@ -57,12 +57,12 @@ double get_letter_avg(string text)
         {
             // Get # of sentences in the text
             num_sentences++;
-            printf("Punct\n");
+            printf("\nPunct\n");
         }
         else
         {
             // do nothing
-            printf("NO GO\n");
+            printf("\nNO GO\n");
         }
     }
     printf("Letter count: %f\n", (float)num_letters);
