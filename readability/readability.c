@@ -17,7 +17,7 @@ int main(void)
     double gradelevel = get_grade_index(textsample);
 
     // Print out the grade level index value for the text provided
-    printf("Grade %f\n", gradelevel);
+    printf("Grade %.0f\n", gradelevel);
 }
 
 // Get Average # of letters, words, and sentences in text sample to return grade index
