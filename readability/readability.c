@@ -72,17 +72,17 @@ double get_grade_index(string text)
     printf("Average L/S: %f and %f\n", l_letter_average , s_sentence_average);
 
     // Get the Coleman-Liau index
-    double cl_index = get_grade_index(l_letter_average, s_sentence_average);
+    double cl_index = calc_grade_index(l_letter_average, s_sentence_average);
 
     // return Letter Average
-    return letter_average;
+    return cl_index;
 }
 
 // Calculate the Coleman-Liau index
 double calc_grade_index(double L, double S)
 {
     // Formula Calculations- Coleman-Liau: index = 0.0588 * L - 0.296 * S - 15.8
-    gradelevel = 0.0588 * L - 0.296 * S - 15.8;
+    double gradelevel = 0.0588 * L - 0.296 * S - 15.8;
     printf("Index: %f\n", gradelevel);
 
     // return grade level index
