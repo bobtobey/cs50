@@ -39,24 +39,24 @@ double get_letter_avg(string text)
 
     // find length of text
     int textlength = strlen(text);
-    for(int i = 0; i < textlength; i++)
+    for (int i = 0; i < textlength; i++)
     {
-        if(isblank(text[i]))
+        if (isblank(text[i]))
         {
             // get # of words in the text by counting space between words
             num_words++;
             printf("BLANK\n");
         }
-        else if(isalpha(text[i]))
+        else if (isalpha(text[i]))
         {
             // Get # of letters in the text by counting alphabet characters
             num_letters++;
             printf("%i : %c\n", i+1, text[i]);
         }
-        else
+        else if ()
         {
             // Get # of sentences in the text
-            num_sentences++;
+            num_sentences++;ispunct 
             printf("NO GO\n");
         }
     }
