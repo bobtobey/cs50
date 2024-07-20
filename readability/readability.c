@@ -7,9 +7,6 @@
 double get_grade_index(string text);
 double calc_grade_index(double L, double S);
 
-// Globabl grade level variable
-int gradelevelx = 0;
-
 int main(void)
 {
     // Prompt for reading level text sample to review
@@ -71,7 +68,7 @@ double get_grade_index(string text)
     printf("Average L/S: %f and %f\n", letter_average , sentence_average);
 
     // Get the Coleman-Liau index
-    double cl_grade_index = calc_grade_index(500, 10);
+    double cl_grade_index = calc_grade_index(letter_average, sentence_average);
 
     // return Letter Average
     return cl_grade_index;
