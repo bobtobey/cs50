@@ -83,7 +83,9 @@ double get_letter_avg(string text)
 // Calculate the index
 double get_index(double l, double s)
 {
-    
+    // Formula Calculations- Coleman-Liau: index = 0.0588 * L - 0.296 * S - 15.8
+    gradelevel = 0.0588 * L - 0.296 * S - 15.8;
+
 }
 
 // Get Average # of sentences in text sample
