@@ -13,8 +13,14 @@ int main(void)
     string textsample = get_string("Text: ");
 
     // Find formula factors to plug into the equation
-    // get the average number of letters per 100 words
+    // Get the grade level index for text sample
     double gradelevel = get_grade_index(textsample);
+
+    if (gradelevel < 1)
+    {
+        // Print out the grade level index value for the text provided
+        printf("Grade %.0f\n", gradelevel);
+    }
 
     // Print out the grade level index value for the text provided
     printf("Grade %.0f\n", gradelevel);
