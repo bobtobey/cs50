@@ -8,7 +8,7 @@ double get_grade_index(string text);
 double calc_grade_index(double L, double S);
 
 // Globabl grade level variable
-int gradelevel = 0;
+int gradelevelx = 0;
 
 int main(void)
 {
@@ -20,7 +20,7 @@ int main(void)
     double gradelevel = get_grade_index(textsample);
 
     // Print out the grade level index value for the text provided
-    printf("Grade %i\n", gradelevel);
+    printf("Grade %f\n", gradelevel);
 }
 
 // Get Average # of letters, words, and sentences in text sample to return grade index
@@ -65,7 +65,7 @@ double get_grade_index(string text)
 
     // calculate average # of letters per 100 words
     double l_letter_average = ((double)num_letters / (double)(num_words + 1)) * 100;
-    printf("aver %f\n", letter_average);
+    printf("aver %f\n", l_letter_average);
 
     // calculate average # of sentences per 100 words
     double s_sentence_average = ((double)num_sentences / (double)(num_words + 1)) * 100;
