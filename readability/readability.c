@@ -30,7 +30,7 @@ int main(void)
     printf("Grade %i\n", gradelevel);
 }
 
-// Get Average # of letters, words, and sentences in text sample
+// Get Average # of letters, words, and sentences in text sample to return grade index
 double get_letter_avg(string text)
 {
     // initialize variables
