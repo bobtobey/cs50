@@ -41,17 +41,17 @@ double get_letter_avg(string text)
     int textlength = strlen(text);
     for (int i = 0; i < textlength; i++)
     {
-        if (isblank(text[i]))
-        {
-            // get # of words in the text by counting space between words
-            num_words++;
-            printf("BLANK\n");
-        }
-        else if (isalpha(text[i]))
+        if (isalpha(text[i]))
         {
             // Get # of letters in the text by counting alphabet characters
             num_letters++;
             printf("%c\n", text[i]);
+        }
+        else if (isblank(text[i]))
+        {
+            // get # of words in the text by counting space between words
+            num_words++;
+            printf("BLANK\n");
         }
         else if (ispunct(text[i]) && text[i] == '.')
         {
