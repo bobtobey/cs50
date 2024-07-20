@@ -77,6 +77,7 @@ double get_letter_avg(string text)
     // calculate average # of sentences per 100 words
     double sentence_average = ((double)num_sentences / (double)(num_words + 1)) * 100;
 
+    // Get the g
     // return Letter Average
     return letter_average;
 }
