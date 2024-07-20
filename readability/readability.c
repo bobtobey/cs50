@@ -77,7 +77,9 @@ double get_letter_avg(string text)
     // calculate average # of sentences per 100 words
     double sentence_average = ((double)num_sentences / (double)(num_words + 1)) * 100;
 
-    // Get the grade 
+    // Get the grade
+    double index = get_grade_index(letter_average, sentence_average);
+    
     // return Letter Average
     return letter_average;
 }
