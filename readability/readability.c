@@ -4,9 +4,9 @@
 #include <string.h>
 
 // Initialize functions
-double get_letter_avg(string text);
+double get_grade_index(string text);
 double get_sentence_avg(string text);
-double get_grade_index(double L, double S);
+double calc_grade_index(double L, double S);
 
 // Globabl grade level variable
 int gradelevel = 0;
@@ -18,7 +18,7 @@ int main(void)
 
     // Find formula factors to plug into the equation
     // get the average number of letters per 100 words
-    double L = get_letter_avg(textsample);
+    double L = get_grade_index(textsample);
     // get the average number of sentences per 100 words
     double S = get_sentence_avg(textsample);
 
@@ -31,7 +31,7 @@ int main(void)
 }
 
 // Get Average # of letters, words, and sentences in text sample to return grade index
-double get_letter_avg(string text)
+double get_grade_index(string text)
 {
     // initialize variables
     int num_letters = 0;
@@ -85,7 +85,7 @@ double get_letter_avg(string text)
 }
 
 // Calculate the Coleman-Liau index
-double get_grade_index(double L, double S)
+double calc_grade_index(double L, double S)
 {
     // Formula Calculations- Coleman-Liau: index = 0.0588 * L - 0.296 * S - 15.8
     gradelevel = 0.0588 * L - 0.296 * S - 15.8;
