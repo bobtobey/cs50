@@ -34,39 +34,39 @@ int main(void)
 double get_letter_avg(string text)
 {
     // initialize variables
-    double num_letters = 22;
-    double num_words = 6;
-    double num_sentences = 0;
+    int num_letters = 0;
+    int num_words = 0;
+    int num_sentences = 0;
 
     // find length of text
-    // int textlength = strlen(text);
-    // for(int i = 0; i < textlength; i++)
-    // {
-    //     if(isblank(text[i]))
-    //     {
-    //         // get # of words in the text by counting space between words
-    //         num_words++;
-    //         printf("BLANK\n");
-    //     }
-    //     else if(isalpha(text[i]))
-    //     {
-    //         // Get # of letters in the text by counting alphabet characters
-    //         num_letters++;
-    //         printf("%i : %c\n", i+1, text[i]);
-    //     }
-    //     else
-    //     {
-    //         // Get # of sentences in the text
-    //         num_sentences++;
-    //         printf("NO GO\n");
-    //     }
-    // }
-    printf("Letter count: %f\n", num_letters);
-    printf("Word count: %f\n", num_words+1);
-    printf("Sentence count: %f\n", num_sentences);
+    int textlength = strlen(text);
+    for(int i = 0; i < textlength; i++)
+    {
+        if(isblank(text[i]))
+        {
+            // get # of words in the text by counting space between words
+            num_words++;
+            printf("BLANK\n");
+        }
+        else if(isalpha(text[i]))
+        {
+            // Get # of letters in the text by counting alphabet characters
+            num_letters++;
+            printf("%i : %c\n", i+1, text[i]);
+        }
+        else
+        {
+            // Get # of sentences in the text
+            num_sentences++;
+            printf("NO GO\n");
+        }
+    }
+    printf("Letter count: %i\n", num_letters);
+    printf("Word count: %i\n", num_words+1);
+    printf("Sentence count: %i\n", num_sentences);
 
     // calculate average # of letters per 100 words
-    double letter_average = num_letters/num_words * 100;
+    double letter_average = ((double)num_letters/(double)num_words) * 100;
     printf("aver %f\n", letter_average);
 
     // return Letter Average
