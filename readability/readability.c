@@ -20,7 +20,7 @@ int main(void)
 
     // Find formula factors to get the equation
     // get the average number of letters per 100 words
-    int L = get_letter_avg(textsample);
+    double L = get_letter_avg(textsample);
     // get the average number of sentences per 100 words
     int S = get_sentence_avg(textsample);
     // Formula Calculations- Coleman-Liau: index = 0.0588 * L - 0.296 * S - 15.8
@@ -67,7 +67,7 @@ int get_letter_avg(string text)
     printf("Sentence count: %i\n", num_sentences);
 
     // calculate average # of letters per 100 words
-    int letter_average = (num_letters/num_words) * 100;
+    double letter_average = (num_letters/num_words) * 100;
 
     // return Letter Average
     return letter_average;
@@ -76,7 +76,7 @@ int get_letter_avg(string text)
 // Get Average # of sentences in text sample
 int get_sentence_avg(string text)
 {
-    // calculate average
+    // calculate average # of sentences per 100 words
     int sentence_average = 10;
 
     // return Sentence Average
