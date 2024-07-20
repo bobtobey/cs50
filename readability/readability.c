@@ -71,15 +71,14 @@ double get_letter_avg(string text)
     printf("Sentence count: %f\n", (float)num_sentences);
 
     // calculate average # of letters per 100 words
-    double letter_average = ((double)num_letters / (double)(num_words + 1)) * 100;
+    double l_letter_average = ((double)num_letters / (double)(num_words + 1)) * 100;
     printf("aver %f\n", letter_average);
 
     // calculate average # of sentences per 100 words
-    double sentence_average = ((double)num_sentences / (double)(num_words + 1)) * 100;
+    double s_sentence_average = ((double)num_sentences / (double)(num_words + 1)) * 100;
 
-    // Get the grade
-    double index = get_grade_index(letter_average, sentence_average);
-    printf("Index: %f\n", index);
+    // Get the Coleman-Liau index
+    double index = get_grade_index(l_letter_average, s_sentence_average);
 
     // return Letter Average
     return letter_average;
@@ -90,6 +89,7 @@ double get_grade_index(double L, double S)
 {
     // Formula Calculations- Coleman-Liau: index = 0.0588 * L - 0.296 * S - 15.8
     gradelevel = 0.0588 * L - 0.296 * S - 15.8;
+    printf("Index: %f\n", index);
 
     // return grade level index
     return gradelevel;
