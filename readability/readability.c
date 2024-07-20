@@ -51,7 +51,7 @@ double get_letter_avg(string text)
         {
             // Get # of letters in the text by counting alphabet characters
             num_letters++;
-            printf("%i : %c\n", i+1, text[i]);
+            printf("%c", i+1, text[i]);
         }
         else if (ispunct(text[i]))
         {
