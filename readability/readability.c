@@ -66,7 +66,7 @@ double get_letter_avg(string text)
     printf("Sentence count: %f\n", num_sentences);
 
     // calculate average # of letters per 100 words
-    double letter_average = (double)22/(double)num_words * 100;
+    double letter_average = (double)22/(double)6 * 100;
     printf("aver %f\n", letter_average);
 
     // return Letter Average
