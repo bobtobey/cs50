@@ -20,7 +20,8 @@ int main(void)
     // get the average number of letters per 100 words
     double L = get_letter_avg(textsample);
     // get the average number of sentences per 100 words
-    int S = get_sentence_avg(textsample);
+    double S = get_sentence_avg(textsample);
+
     // Formula Calculations- Coleman-Liau: index = 0.0588 * L - 0.296 * S - 15.8
     gradelevel = 0.0588 * L - 0.296 * S - 15.8;
 
@@ -29,8 +30,8 @@ int main(void)
     printf("Grade %i\n", gradelevel);
 }
 
-// Get Average # of letters in text sample
-int get_letter_avg(string text)
+// Get Average # of letters, words, and sentences in text sample
+double get_letter_avg(string text)
 {
     // initialize variables
     int num_letters = 0;
@@ -72,7 +73,7 @@ int get_letter_avg(string text)
 }
 
 // Get Average # of sentences in text sample
-int get_sentence_avg(string text)
+double get_sentence_avg(string text)
 {
     // calculate average # of sentences per 100 words
     int sentence_average = 10;
