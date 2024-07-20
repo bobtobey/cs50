@@ -6,7 +6,7 @@
 // Initialize functions
 double get_letter_avg(string text);
 double get_sentence_avg(string text);
-double get_grade_index(double l, double s);
+double get_grade_index(double L, double S);
 
 // Globabl grade level variable
 int gradelevel = 0;
@@ -81,8 +81,8 @@ double get_letter_avg(string text)
     return letter_average;
 }
 
-// Calculate the index
-double get_grade_index(double l, double s)
+// Calculate the Coleman-Liau index
+double get_grade_index(double L, double S)
 {
     // Formula Calculations- Coleman-Liau: index = 0.0588 * L - 0.296 * S - 15.8
     gradelevel = 0.0588 * L - 0.296 * S - 15.8;
