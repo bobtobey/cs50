@@ -69,6 +69,7 @@ double get_grade_index(string text)
 
     // calculate average # of sentences per 100 words
     double s_sentence_average = ((double)num_sentences / (double)(num_words + 1)) * 100;
+    printf("Average L/S: %f and %f\n", l_letter_average , s_sentence_average);
 
     // Get the Coleman-Liau index
     double cl_index = get_grade_index(l_letter_average, s_sentence_average);
@@ -86,14 +87,4 @@ double calc_grade_index(double L, double S)
 
     // return grade level index
     return gradelevel;
-}
-
-// Get Average # of sentences in text sample
-double get_sentence_avg(string text)
-{
-    // calculate average # of sentences per 100 words
-    int sentence_average = 10;
-
-    // return Sentence Average
-    return sentence_average;
 }
