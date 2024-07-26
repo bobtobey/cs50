@@ -21,6 +21,6 @@ int main(int argc, string argv[])
     else
     {
         printf("Hello, %s\n", argv[1]);
-        printf("digit: %i\n", isdigit("p"));
+        printf("digit: %c\n", isdigit("p"));
     }
 }
