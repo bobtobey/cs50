@@ -33,6 +33,7 @@ int check_fordecimals(string argvalue)
 {
     for (int i = 0; i < strlen(argvalue); i++)
     {
+        if ()
         printf("eye: %c\n", argvalue[i]);
     }
     return 3;
