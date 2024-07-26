@@ -3,6 +3,9 @@
 #include <stdio.h>
 #include <string.h>
 
+// initialize functions
+int check_fordecimals(string argvalue);
+
 int main(int argc, string argv[])
 {
     // error check for a minimum of 2 words typed
@@ -26,4 +29,7 @@ int main(int argc, string argv[])
 }
 
 // Check for non decimal values in the argument
-int check_fordecimals()
+int check_fordecimals(string argvalue)
+{
+    return 3;
+}
