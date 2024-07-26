@@ -8,7 +8,8 @@ int main(int argc, string argv[])
     // error check for a minimum of 2 words typed
     if (argc == 1 || argc > 2)
     {
-        printf("Error  words: %i\n", argc);
+        printf("There is an error with your key, message nummber: %i\n", argc);
+        return 1;
     }
     else
     {
