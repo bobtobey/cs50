@@ -15,7 +15,7 @@ int main(int argc, string argv[])
         printf("There is an error with your key, message nummber: %i\n", argc);
         return 1;
     }
-    else if (isdigit(8))
+    else if (check_fordecimals(5))
     {
         // if any character in the command-line argument is not a decimal digit
         printf("Usage: %s key\n", argv[0]);
