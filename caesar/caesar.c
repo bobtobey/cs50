@@ -31,9 +31,9 @@ int main(int argc, string argv[])
 // Check for non decimal values in the argument
 int check_fordecimals(string argvalue)
 {
-    for (int i = 0; i < argvalue; i++)
+    for (int i = 0; i < strlen(argvalue); i++)
     {
-        printf("eye: %c\n", i);
+        printf("eye: %s\n", i);
     }
     return 3;
 }
