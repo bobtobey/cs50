@@ -26,4 +26,4 @@ int main(int argc, string argv[])
 }
 
 // Check for non decimal values in the argument
-int 
+int check_fordecimals()
