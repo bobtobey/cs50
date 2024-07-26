@@ -58,26 +58,24 @@ double get_grade_index(string text)
         }
         else if (text[i] == '.' || text[i] == '!' || text[i] == '?')
         {
-            // Get # of sentences in the text
+            // Get # of sentences in the text by counting punctuations
             num_sentences++;
-            printf("Punct: %c\n", text[i]);
         }
         else
         {
             // if there is any other unaccounted for element do nothing
-            printf("NO GO\n");
         }
     }
-    printf("Letter count: %f\n", (float) num_letters);
-    printf("Word count: %f\n", (float) num_words + 1);
-    printf("Sentence count: %f\n", (float) num_sentences);
+    // printf("Letter count: %f\n", (float) num_letters);
+    // printf("Word count: %f\n", (float) num_words + 1);
+    // printf("Sentence count: %f\n", (float) num_sentences);
 
     // calculate average # of letters per 100 words
     double letter_average = ((double) num_letters / (double) (num_words + 1)) * 100;
 
     // calculate average # of sentences per 100 words
     double sentence_average = ((double) num_sentences / (double) (num_words + 1)) * 100;
-    printf("Average L/S: %f and %f\n", letter_average, sentence_average);
+    // printf("Average L/S: %f and %f\n", letter_average, sentence_average);
 
     // Get the Coleman-Liau index
     double cl_grade_index = calc_grade_index(letter_average, sentence_average);
@@ -91,7 +89,6 @@ double calc_grade_index(double L, double S)
 {
     // Formula Calculations- Coleman-Liau: index = 0.0588 * L - 0.296 * S - 15.8
     double gradeindex = (0.0588 * L) - 0.296 * S - 15.8;
-    printf("Index: %f\n", gradeindex);
 
     // return grade level index
     return gradeindex;
