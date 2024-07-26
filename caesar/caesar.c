@@ -35,7 +35,7 @@ int check_fordecimals(string argvalue)
     {
         if (isdigit(argvalue[i]))
         {
-            printf("YO");
+            printf("YO\n");
         }
         else
         {
