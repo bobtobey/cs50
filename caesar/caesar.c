@@ -8,7 +8,7 @@ int main(int argc, string argv[])
     // error check for a minimum of 2 words typed
     if (argc == 1 || argc > 2)
     {
-        printf("You did not input enough words: %i\n", argc);
+        printf("Error  words: %i\n", argc);
     }
     else
     {
