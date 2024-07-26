@@ -6,6 +6,10 @@
 int main(int argc, string argv[])
 {
     // do something here
+    if (argc == 2)
+    {
+        
+    }
     printf("Hello, %s\n", argv[1]);
     printf("%i\n", argc);
 }
