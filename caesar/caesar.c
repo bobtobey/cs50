@@ -33,8 +33,14 @@ int check_fordecimals(string argvalue)
 {
     for (int i = 0; i < strlen(argvalue); i++)
     {
-        if ()
-        printf("eye: %c\n", argvalue[i]);
+        if (isdigit(argvalue[i]))
+        {
+            printf("YO");
+        }
+        else
+        {
+            printf("eye: %c\n", argvalue[i]);
+        }
     }
     return 3;
 }
