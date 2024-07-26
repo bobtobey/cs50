@@ -31,17 +31,18 @@ int main(int argc, string argv[])
 // Check for non decimal values in the argument
 int check_fordecimals(string argvalue)
 {
-    int 
+    int get_digit_value = 0;
     for (int i = 0; i < strlen(argvalue); i++)
     {
         if (isdigit(argvalue[i]))
         {
             printf("YO\n");
+            get_digit_value++;
         }
         else
         {
             printf("eye: %c\n", argvalue[i]);
         }
     }
-    return 3;
+    return get_digit_value;
 }
