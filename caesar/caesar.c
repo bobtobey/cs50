@@ -7,4 +7,5 @@ int main(int argc, string argv[])
 {
     // do something here
     printf("Hello, %s\n", argv[1]);
+    printf("%i\n", argc);
 }
