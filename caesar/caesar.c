@@ -23,8 +23,8 @@ int main(int argc, string argv[])
     }
     else
     {
-        printf("Hello, %s\n", argv[1]);
-        printf("digit: %c\n", isdigit(9));
+        printf("Plaintext: %s\n", argv[1]);
+        printf("Ciphertext: %s\n", argv[1]);
     }
 }
 
