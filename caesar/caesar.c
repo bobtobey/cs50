@@ -5,11 +5,13 @@
 
 int main(int argc, string argv[])
 {
-    // do something here
-    if (argc == 2)
+    // error check for a minimum of 2 words typed
+    if (argc < 2)
     {
-        
+        printf("You did not input enough words: %i\n", argc);
     }
-    printf("Hello, %s\n", argv[1]);
-    printf("%i\n", argc);
+    else
+    {
+        printf("Hello, %s\n", argv[1]);
+    }
 }
