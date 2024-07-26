@@ -41,6 +41,7 @@ int check_fordecimals(string argvalue)
         else
         {
             printf("eye: %c\n", argvalue[i]);
+            return 0;
         }
     }
 }
