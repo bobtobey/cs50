@@ -31,6 +31,7 @@ int main(int argc, string argv[])
 // Check for non decimal values in the argument
 int check_fordecimals(string argvalue)
 {
+    int 
     for (int i = 0; i < strlen(argvalue); i++)
     {
         if (isdigit(argvalue[i]))
