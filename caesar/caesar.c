@@ -8,7 +8,7 @@ int main(int argc, string argv[])
     // error check for a minimum of 2 words typed
     if (argc == 1 || argc > 2)
     {
-        // no command-line argument or more than 1 provided
+        // 0 or more than 1 command-line argument provided
         printf("There is an error with your key, message nummber: %i\n", argc);
         return 1;
     }
