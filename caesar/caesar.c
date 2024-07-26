@@ -36,11 +36,11 @@ int check_fordecimals(string argvalue)
         if (isdigit(argvalue[i]))
         {
             printf("YO\n");
+            return 1;
         }
         else
         {
             printf("eye: %c\n", argvalue[i]);
         }
     }
-    return 3;
 }
