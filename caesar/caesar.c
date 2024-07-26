@@ -24,3 +24,6 @@ int main(int argc, string argv[])
         printf("digit: %c\n", isdigit("p"));
     }
 }
+
+// Check for non decimal values in the argument
+int 
