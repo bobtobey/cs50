@@ -60,7 +60,7 @@ double get_grade_index(string text)
         {
             // Get # of sentences in the text
             num_sentences++;
-            printf("Punct\n");
+            printf("Punct: %c\n", text[i]);
         }
         else
         {
