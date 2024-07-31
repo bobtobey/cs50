@@ -67,8 +67,8 @@ string encrypt_text(int key, string plaintext)
     // Get text length
     int textlength = strlen(plaintext);
 
-    char ciphertext[textlength];
-    printf("ciber %c\n", ciphertext[textlength]);
+    char ciphertext[] = "JOE";
+    printf("ciber %c\n", ciphertext[1]);
 
     printf("Use key: %i to encrypt text: %s\n", key, plaintext);
     printf("CHAR me %c, %i\n", plaintext[2], plaintext[2]);
