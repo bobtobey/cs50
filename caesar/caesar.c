@@ -89,7 +89,7 @@ string encrypt_text(int key, string plaintext)
     printf("my X %c\n", sum);
     // printf("my Cipher %s\n", ciphertextarray);
     printf("plain: %s\n", plaintext);
-    printf("cipher: %s\n", plaintext);
+    printf("cipher: %s\n", ciphertextarray);
 
     string ciphertext1 = plaintext;
     return ciphertext1;
