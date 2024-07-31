@@ -58,7 +58,7 @@ int check_fordecimals(string argvalue)
     return get_digit_value;
 }
 
-// Encrypt text with cipher key
+// Encrypt text with cipher key rotation
 string encrypt_text(string key, string plaintext)
 {
     // Apply cipher to plain text
