@@ -37,11 +37,11 @@ int check_fordecimals(string argvalue)
         if (isdigit(argvalue[i]))
         {
             printf("YO\n");
-            get_digit_value++;
         }
         else
         {
             printf("eye: %c\n", argvalue[i]);
+            get_digit_value++;
         }
     }
     printf("D Value: %i\n", get_digit_value);
