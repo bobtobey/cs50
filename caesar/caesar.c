@@ -78,7 +78,9 @@ string encrypt_text(int key, string plaintext)
     for (int j = 0; j < textlength; j++)
     {
         // string x[] = (plaintext[j] + 1);
-        ciphertext[j] = plaintext[j] + 1;
+        ciphertextarray[j] = plaintext[j] + 1;
+        printf("cypher: %c\n", ciphertextarray[j]);
+        
         sum = plaintext[j] + key;
         printf("x = %c and %i\n", sum, sum);
         printf("E Char me %c, %i\n", plaintext[j], plaintext[j]);
