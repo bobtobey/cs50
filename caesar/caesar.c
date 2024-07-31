@@ -67,7 +67,7 @@ string encrypt_text(string key, string plaintext)
     // Loop through plaintext and apply caesar key
     for (int j = 0; j < strlen(ciphertext); j++)
     {
-        string x = ciphertext[j] + 1;
+        char x = ciphertext[j] + 1;
         printf("E Char me %c, %i\n", x, x);
     }
     return x;
