@@ -25,9 +25,8 @@ int main(int argc, string argv[])
     }
     else
     {
-        printf("Argument Key: %s\n", argv[1]);
+        // convert argument to int
         int key = atoi(argv[1]);
-        printf("Argument Key: %i\n", key);
 
         printf("Plaintext: ");
         // prompt user for plain text to encrypt
@@ -67,7 +66,6 @@ string encrypt_text(int key, string plaintext)
     // Apply cipher to plain text
     // Get text length
     int textlength = strlen(plaintext);
-    // int keyP = atoi(key);
 
     char ciphertext[textlength];
 
