@@ -6,10 +6,9 @@
 // initialize functions
 int check_fordecimals(string argvalue);
 
-// the program must accept a single command-line argument, a non-negative integer.
 int main(int argc, string argv[])
 {
-    // error check for a minimum of 2 arguements typed
+    // error check for a single, a non-negative integer command-line arguement typed
     if (argc == 1 || argc > 2)
     {
         // 0 or more than 1 command-line argument provided
