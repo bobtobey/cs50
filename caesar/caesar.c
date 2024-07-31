@@ -71,9 +71,11 @@ string encrypt_text(string key, string plaintext)
     {
         // string x[] = (plaintext[j] + 1);
         sum = plaintext[j] + 1;
+        ciphertext[j] = plaintext[j] + 1;
         printf("x = %c and %i\n", sum, sum);
         printf("E Char me %c, %i\n", plaintext[j], plaintext[j]);
     }
     printf("my X %c\n", sum);
+    printf("my Cipher %i\n", ciphertext);
     return ciphertext;
 }
