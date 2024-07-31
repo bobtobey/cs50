@@ -5,6 +5,7 @@
 
 // initialize functions
 int check_fordecimals(string argvalue);
+string encrypt_text(string plaintext);
 
 int main(int argc, string argv[])
 {
@@ -25,8 +26,11 @@ int main(int argc, string argv[])
     {
         printf("Argument Key: %s\n", argv[1]);
         printf("Plaintext: ");
+        // prompt user for plain text to encrypt
         string plaintext = get_string(" ");
-        printf("Ciphertext: %s\n", argv[1]);
+        // encrypt plain text
+        string ciphertext = encrypt_text(plaintext);
+        printf("Ciphertext: %s\n", ciphertext);
     }
 }
 
@@ -51,4 +55,13 @@ int check_fordecimals(string argvalue)
     }
     printf("D Value: %i\n", get_digit_value);
     return get_digit_value;
+}
+
+// Encrypt text
+string encrypt_text(string plaintext)
+{
+    // Apply cipher to plain text
+    string ciphertext = plaintext;
+    printf("Text value is: %s\n", ciphertext);
+    return ciphertext;
 }
