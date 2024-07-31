@@ -72,5 +72,6 @@ string encrypt_text(string key, string plaintext)
         printf("x = %c and %i\n", x, x);
         printf("E Char me %c, %i\n", plaintext[j], plaintext[j]);
     }
+    printf("my X %c\n", x);
     return ciphertext;
 }
