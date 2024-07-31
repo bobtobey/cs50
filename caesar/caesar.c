@@ -71,7 +71,6 @@ string encrypt_text(string key, string plaintext)
     {
         // string x[] = (plaintext[j] + 1);
         sum = plaintext[j] +1;
-        int x += sum;
         printf("x = %c and %i\n", sum, sum);
         printf("E Char me %c, %i\n", plaintext[j], plaintext[j]);
     }
