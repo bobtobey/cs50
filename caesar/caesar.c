@@ -87,7 +87,7 @@ string encrypt_text(int key, string plaintext)
         printf("E Char me %c, %i\n", plaintext[j], plaintext[j]);
     }
     printf("my X %c\n", sum);
-    printf("my Cipher %s\n", ciphertextarray[0][1]);
+    printf("my Cipher %s\n", ciphertextarray);
 
     string ciphertext1 = plaintext;
     return ciphertext1;
