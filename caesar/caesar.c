@@ -23,7 +23,7 @@ int main(int argc, string argv[])
     }
     else
     {
-        printf("Argument Key: %i\n", )
+        printf("Argument Key: %s\n", argv[1]);
         string plaintext = get_string("Enter plain text: ");
         printf("Plaintext: %s\n", argv[1]);
         printf("Ciphertext: %s\n", argv[1]);
