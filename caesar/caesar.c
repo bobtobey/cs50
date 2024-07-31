@@ -63,6 +63,7 @@ string encrypt_text(string key, string plaintext)
     // Apply cipher to plain text
     string ciphertext1 = plaintext;
     char ciphertext[strlen(plaintext)];
+    
     printf("Use key: %s to encrypt text: %s\n", key, ciphertext);
     printf("CHAR me %c, %i\n", ciphertext[2], ciphertext[2]);
 
