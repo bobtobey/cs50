@@ -23,6 +23,7 @@ int main(int argc, string argv[])
     }
     else
     {
+        string plaintext = get_string("Enter)
         printf("Plaintext: %s\n", argv[1]);
         printf("Ciphertext: %s\n", argv[1]);
     }
