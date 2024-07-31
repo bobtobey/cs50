@@ -61,8 +61,8 @@ int check_fordecimals(string argvalue)
 string encrypt_text(string key, string plaintext)
 {
     // Apply cipher to plain text
-    string ciphertext = plaintext;
-    string ciphertext = plaintext;
+    string ciphertext1 = plaintext;
+    char ciphertext[strlen(plaintext)];
     printf("Use key: %s to encrypt text: %s\n", key, ciphertext);
     printf("CHAR me %c, %i\n", ciphertext[2], ciphertext[2]);
 
@@ -78,5 +78,5 @@ string encrypt_text(string key, string plaintext)
     }
     printf("my X %c\n", sum);
     printf("my Cipher %i\n", ciphertext);
-    return ciphertext;
+    return ciphertext1;
 }
