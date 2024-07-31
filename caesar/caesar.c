@@ -79,7 +79,7 @@ string encrypt_text(int key, string plaintext)
     // Loop through plaintext and apply caesar key
     for (int j = 0; j < textlength; j++)
     {
-        ciphertextarray[j] = plaintext[j] + 1;
+        ciphertextarray[j] = plaintext[j] + key;
         printf("cypher: %c\n", ciphertextarray[j]);
 
         sum = plaintext[j] + key;
