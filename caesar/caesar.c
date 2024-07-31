@@ -63,6 +63,7 @@ string encrypt_text(string key, string plaintext)
 {
     // Apply cipher to plain text
     string ciphertext1 = plaintext;
+    int textlength = strlen(plaintext);
     char ciphertext[strlen(plaintext)];
 
     printf("Use key: %s to encrypt text: %s\n", key, ciphertext);
@@ -70,7 +71,7 @@ string encrypt_text(string key, string plaintext)
 
     int sum = 0;
     // Loop through plaintext and apply caesar key
-    for (int j = 0; j < strlen(plaintext); j++)
+    for (int j = 0; j < textlength; j++)
     {
         // string x[] = (plaintext[j] + 1);
         sum = plaintext[j] + atoi(key);
