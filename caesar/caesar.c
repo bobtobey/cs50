@@ -37,13 +37,13 @@ int check_fordecimals(string argvalue)
         // checks for digits in the arguement
         if (isdigit(argvalue[i]))
         {
-            // Only digits present in argument
-            printf("Only digits entered.\n");
+            // Check for digits in argument
+            printf("Digit entered.\n");
         }
         else
         {
-            // Something other than digits are present in the argument
-            printf("eye: %c\n", argvalue[i]);
+            // Add 1 if something other than digits are present in the argument
+            printf("EyeSpy: %c\n", argvalue[i]);
             get_digit_value++;
         }
     }
