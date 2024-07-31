@@ -25,7 +25,7 @@ int main(int argc, string argv[])
     {
         printf("Argument Key: %s\n", argv[1]);
         printf("Plaintext: ");
-        string plaintext = get_string("Enter plain text: ");
+        string plaintext = get_string(" ");
         printf("Ciphertext: %s\n", argv[1]);
     }
 }
