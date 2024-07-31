@@ -64,12 +64,12 @@ string encrypt_text(string key, string plaintext)
     string ciphertext = plaintext;
     printf("Use key: %s to encrypt text: %s\n", key, ciphertext);
     printf("CHAR me %c, %i\n", ciphertext[2], ciphertext[2]);
-    string sum = 0;
+    int sum = 0;
     // Loop through plaintext and apply caesar key
     for (int j = 0; j < strlen(plaintext); j++)
     {
         // string x[] = (plaintext[j] + 1);
-        sum += plaintext[j];
+        sum = plaintext[j] +1;
         printf("x = %c and %i\n", sum, sum);
         printf("E Char me %c, %i\n", plaintext[j], plaintext[j]);
     }
