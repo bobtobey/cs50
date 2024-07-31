@@ -70,7 +70,7 @@ string encrypt_text(string key, string plaintext)
     for (int j = 0; j < strlen(plaintext); j++)
     {
         // string x[] = (plaintext[j] + 1);
-        string sum[] = plaintext[j] +1;
+        string sum[j] = plaintext[j] +1;
         printf("x = %c and %i\n", sum, sum);
         printf("E Char me %c, %i\n", plaintext[j], plaintext[j]);
     }
