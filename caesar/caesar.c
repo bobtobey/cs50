@@ -44,5 +44,6 @@ int check_fordecimals(string argvalue)
             printf("eye: %c\n", argvalue[i]);
         }
     }
+    printf("D Value: %i\n", get_digit_value);
     return get_digit_value;
 }
