@@ -67,8 +67,8 @@ string encrypt_text(int key, string plaintext)
     // Get text length
     int textlength = strlen(plaintext);
 
-    
-    int ciphertextarray[textlength];
+
+    string ciphertextarray[textlength];
     int sum = 0;
     // Loop through plaintext and apply caesar key
     for (int j = 0; j < textlength; j++)
