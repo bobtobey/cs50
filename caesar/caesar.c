@@ -6,7 +6,7 @@
 
 // initialize functions
 int check_fordecimals(string argvalue);
-string encrypt_text(string key, string plaintext);
+string encrypt_text(int key, string plaintext);
 
 int main(int argc, string argv[])
 {
@@ -26,14 +26,14 @@ int main(int argc, string argv[])
     else
     {
         printf("Argument Key: %s\n", argv[1]);
-        int pkey = atoi(argv[1]);
-        printf("Argument Key: %i\n", pkey);
-        
+        int key = atoi(argv[1]);
+        printf("Argument Key: %i\n", key);
+
         printf("Plaintext: ");
         // prompt user for plain text to encrypt
         string plaintext = get_string(" ");
         // encrypt plain text
-        string ciphertext = encrypt_text(argv[1], plaintext);
+        string ciphertext = encrypt_text(key, plaintext);
         printf("Ciphertext: %s\n", ciphertext);
     }
 }
@@ -62,16 +62,16 @@ int check_fordecimals(string argvalue)
 }
 
 // Encrypt text with cipher key rotation
-string encrypt_text(string key, string plaintext)
+string encrypt_text(int key, string plaintext)
 {
     // Apply cipher to plain text
     // Get text length
     int textlength = strlen(plaintext);
-    int keyP = atoi(key);
+    // int keyP = atoi(key);
 
     char ciphertext[textlength];
 
-    printf("Use key: %i to encrypt text: %s\n", keyP, plaintext);
+    printf("Use key: %i to encrypt text: %s\n", key, plaintext);
     printf("CHAR me %c, %i\n", plaintext[2], plaintext[2]);
 
     int sum = 0;
@@ -80,7 +80,7 @@ string encrypt_text(string key, string plaintext)
     {
         // string x[] = (plaintext[j] + 1);
         //ciphertext[j] = plaintext[j] + 1;
-        sum = plaintext[j] + atoi(key);
+        sum = plaintext[j] + key;
         printf("x = %c and %i\n", sum, sum);
         printf("E Char me %c, %i\n", plaintext[j], plaintext[j]);
     }
