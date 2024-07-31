@@ -6,7 +6,7 @@
 
 // initialize functions
 int check_fordecimals(string argvalue);
-string encrypt_text(string key, string plaintext);
+string encrypt_text(string key, char plaintext);
 
 int main(int argc, string argv[])
 {
@@ -59,7 +59,7 @@ int check_fordecimals(string argvalue)
 }
 
 // Encrypt text with cipher key rotation
-string encrypt_text(string key, string plaintext)
+string encrypt_text(string key, char plaintext)
 {
     // Apply cipher to plain text
     string ciphertext1 = plaintext;
