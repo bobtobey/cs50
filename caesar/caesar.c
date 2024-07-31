@@ -34,9 +34,11 @@ int check_fordecimals(string argvalue)
     int get_digit_value = 0;
     for (int i = 0; i < strlen(argvalue); i++)
     {
+        // checks for digits in the arguement
         if (isdigit(argvalue[i]))
         {
-            printf("YO\n");
+            // argument is true
+            printf("Only digits entered.\n");
         }
         else
         {
