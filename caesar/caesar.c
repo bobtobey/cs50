@@ -64,10 +64,11 @@ string encrypt_text(string key, string plaintext)
     // Apply cipher to plain text
     // Get text length
     int textlength = strlen(plaintext);
-
+    key = atoi(key);
+    
     char ciphertext[textlength];
 
-    printf("Use key: %s to encrypt text: %s\n", key, ciphertext);
+    printf("Use key: %s to encrypt text: %s\n", key, plaintext);
     printf("CHAR me %c, %i\n", ciphertext[2], ciphertext[2]);
 
     int sum = 0;
