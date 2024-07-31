@@ -26,6 +26,9 @@ int main(int argc, string argv[])
     else
     {
         printf("Argument Key: %s\n", argv[1]);
+        int pkey = atoi(argv[1]);
+        printf("Argument Key: %i\n", pkey);
+        
         printf("Plaintext: ");
         // prompt user for plain text to encrypt
         string plaintext = get_string(" ");
