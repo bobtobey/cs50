@@ -43,7 +43,7 @@ int check_fordecimals(string argvalue)
         // checks for digits in the arguement
         if (isdigit(argvalue[i]))
         {
-            // Check for digits in argument
+            // Check for digits in argument and do nothing
             printf("Digit entered.\n");
         }
         else
