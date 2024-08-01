@@ -105,4 +105,8 @@ string encrypt_text(int key, string plaintext)
 }
 
 // Conversion Formula to alphabetical index
-int conversion_index(int)
+int conversion_index(int key, int index)
+{
+    // conversion
+    ((plaintext[j] - 65) + key) % 26
+}
