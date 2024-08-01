@@ -62,7 +62,6 @@ int check_fordecimals(string argvalue)
 // Encrypt text with cipher key rotation
 string encrypt_text(int key, string plaintext)
 {
-    // Apply cipher to plain text
     // Get text length
     int textlength = strlen(plaintext);
 
