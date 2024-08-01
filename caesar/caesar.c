@@ -70,7 +70,7 @@ string encrypt_text(int key, string plaintext)
     printf("Use key: %i to encrypt text: %s\n", key, plaintext);
 
     // Create a new array of characters to hold the encrypted plaintext
-    char ciphertext[textlength];
+    char ciphertext[textlength + 1];
 
     // Loop through plaintext and apply caesar key
     for (int j = 0; j < textlength; j++)
