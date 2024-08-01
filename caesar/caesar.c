@@ -104,5 +104,5 @@ string encrypt_text(int key, string plaintext)
     return ciphertext2;
 }
 
-// Conversion Formula
-int convert
+// Conversion Formula to alphabetical index
+int conversion_index(int)
