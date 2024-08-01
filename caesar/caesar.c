@@ -84,7 +84,7 @@ string encrypt_text(int key, string plaintext)
         else if (isalpha(plaintext[j]) && islower(plaintext[j]))
         {
             // add the cipher key value to each plaintext character
-            ciphertext[j] = (plaintext[j] + key);
+            ciphertext[j] = conversion_index(key, plaintext[j]);
             printf("Modi %c : %i\n", conversion_index(key, plaintext[j]), conversion_index(key, plaintext[j]));
             printf("Plain= %c : %i to Cipher= %c : %i\n", plaintext[j], plaintext[j], ciphertext[j], ciphertext[j]);
         }
