@@ -108,5 +108,6 @@ string encrypt_text(int key, string plaintext)
 int conversion_index(int key, int index)
 {
     // conversion
-    ((plaintext[j] - 65) + key) % 26
+    int x (index - 65) + key) % 26;
+    return x;
 }
