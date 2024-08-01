@@ -74,7 +74,6 @@ string encrypt_text(int key, string plaintext)
     // Loop through plaintext and apply caesar key
     for (int j = 0; j < textlength; j++)
     {
-        // formula c[j]=(p[j] + k) % 26
         if (isalpha(plaintext[j]) && isupper(plaintext[j]))
         {
             // add the cipher key value to each plaintext character
@@ -109,7 +108,7 @@ string encrypt_text(int key, string plaintext)
 // Conversion Formula to alphabetical index
 int conversion_index(int key, int index)
 {
-    // conversion
+    // conversion formula c[i]=(p[i] + k) % 26
     int x = ((index - 65) + key) % 26;
     return x;
 }
