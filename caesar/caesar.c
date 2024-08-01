@@ -103,3 +103,6 @@ string encrypt_text(int key, string plaintext)
     string ciphertext2 = ciphertext;
     return ciphertext2;
 }
+
+// Conversion Formula
+int convert
