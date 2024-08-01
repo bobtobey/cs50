@@ -85,13 +85,13 @@ string encrypt_text(int key, string plaintext)
         {
             // add the cipher key value to each plaintext character
             ciphertext[j] = (plaintext[j] + key);
+            printf("Modi %c : %i\n", conversion_index(key, plaintext[j]), conversion_index(key, plaintext[j]));
             printf("Plain= %c : %i to Cipher= %c : %i\n", plaintext[j], plaintext[j], ciphertext[j], ciphertext[j]);
         }
         else
         {
             // for non-alpha characters do nothing
             ciphertext[j] = plaintext[j];
-            printf("Modi %c : %i\n", conversion_index(key, plaintext[j]), conversion_index(key, plaintext[j]));
             printf("Plain= %c : %i to Cipher= %c : %i\n", plaintext[j], plaintext[j], ciphertext[j], ciphertext[j]);
         }
     }
