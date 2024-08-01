@@ -109,6 +109,7 @@ string encrypt_text(int key, string plaintext)
 int conversion_index(int key, int index)
 {
     // conversion formula c[i]=(p[i] + k) % 26
+    printf("index: %c\n", index);
     int x = ((index - 65) + key) % 26;
     // reverse conversion
     x = x + 65;
