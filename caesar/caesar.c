@@ -47,16 +47,15 @@ int check_fordecimals(string argvalue)
         if (isdigit(argvalue[i]))
         {
             // Check for digits in argument and do nothing
-            printf("Digit entered.\n");
+            // printf("Digit entered.\n");
         }
         else
         {
             // Add 1 if something other than digits are present in the argument
-            printf("EyeSpy: %c\n", argvalue[i]);
+            // printf("EyeSpy: %c\n", argvalue[i]);
             get_digit_value++;
         }
     }
-    printf("D Value: %i\n", get_digit_value);
     return get_digit_value;
 }
 
