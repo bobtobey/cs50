@@ -84,5 +84,5 @@ string encrypt_text(int key, string plaintext)
     printf("cipher: %s\n", ciphertext);
 
     string ciphertext2 = plaintext;
-    return ciphertext2;
+    return ciphertext;
 }
