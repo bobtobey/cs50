@@ -108,10 +108,21 @@ string encrypt_text(int key, string plaintext)
 // Conversion Formula to alphabetical index
 int conversion_index(int key, int index)
 {
+    int x;
     // conversion formula c[i]=(p[i] + k) % 26
+    // wrap around Z to A or z to a
     printf("index: %c\n", index);
-    int x = ((index - 65) + key) % 26;
-    // reverse conversion
-    x = x + 65;
+    if (isupper(index))
+    {
+        x = ((index - 65) + key) % 26;
+        // reverse conversion
+        x = x + 65;
+    }
+    else
+    {
+        x = ((index - 97) + key) % 26;
+        // reverse conversion
+        x = x + 97;
+    }
     return x;
 }
