@@ -79,6 +79,7 @@ string encrypt_text(int key, string plaintext)
         ciphertext[j] = plaintext[j] + key;
         printf("Plain= %c : %i to Cipher= %c : %i\n", plaintext[j], plaintext[j], ciphertext[j], ciphertext[j]);
     }
+    ciphertext[length] = '\0';
     printf("Plain: %s\n", plaintext);
     printf("Cipher: %s\n", ciphertext);
 
