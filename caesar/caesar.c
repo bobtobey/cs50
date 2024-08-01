@@ -81,6 +81,12 @@ string encrypt_text(int key, string plaintext)
             ciphertext[j] = (plaintext[j] + key);
             printf("Plain= %c : %i to Cipher= %c : %i\n", plaintext[j], plaintext[j], ciphertext[j], ciphertext[j]);
         }
+        else if (isalpha(plaintext[j]) && islower(plaintext[j]))
+        {
+            // add the cipher key value to each plaintext character
+            ciphertext[j] = (plaintext[j] + key);
+            printf("Plain= %c : %i to Cipher= %c : %i\n", plaintext[j], plaintext[j], ciphertext[j], ciphertext[j]);
+        }
         else
         {
             // for non-alpha characters do nothing
