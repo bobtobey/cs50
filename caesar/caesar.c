@@ -110,5 +110,7 @@ int conversion_index(int key, int index)
 {
     // conversion formula c[i]=(p[i] + k) % 26
     int x = ((index - 65) + key) % 26;
+    // reverse conversion
+    x = x + 65;
     return x;
 }
