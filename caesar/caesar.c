@@ -74,6 +74,7 @@ string encrypt_text(int key, string plaintext)
     // Loop through plaintext and apply caesar key
     for (int j = 0; j < textlength; j++)
     {
+        
         if (isalpha(plaintext[j]) && isupper(plaintext[j]))
         {
             // add the cipher key value to each plaintext character
@@ -109,7 +110,6 @@ int conversion_index(int key, int index)
     int x;
     // conversion formula c[i]=(p[i] + k) % 26
     // wrap around Z to A or z to a
-    printf("index: %c\n", index);
     if (isupper(index))
     {
         // set index to base 0
