@@ -7,6 +7,7 @@
 // initialize functions
 int check_fordecimals(string argvalue);
 string encrypt_text(int key, string plaintext);
+int conversion_index(int key, int index);
 
 int main(int argc, string argv[])
 {
