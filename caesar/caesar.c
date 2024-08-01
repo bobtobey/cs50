@@ -112,12 +112,14 @@ int conversion_index(int key, int index)
     printf("index: %c\n", index);
     if (isupper(index))
     {
+        // set index to base 0
         x = ((index - 65) + key) % 26;
         // reverse conversion
         x = x + 65;
     }
     else
     {
+        // set index to base 0
         x = ((index - 97) + key) % 26;
         // reverse conversion
         x = x + 97;
