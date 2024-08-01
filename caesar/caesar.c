@@ -96,6 +96,8 @@ string encrypt_text(int key, string plaintext)
     ciphertext[textlength] = '\0';
     printf("Plain: %s\n", plaintext);
     printf("Cipher: %s\n", ciphertext);
+    int x = (25 + 1) % 26;
+    printf("Test: %i\n", x);
 
     string ciphertext2 = ciphertext;
     return ciphertext2;
