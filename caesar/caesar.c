@@ -36,6 +36,7 @@ int main(int argc, string argv[])
         string ciphertext = encrypt_text(key, plaintext);
         printf("Ciphertext: %s\n", ciphertext);
     }
+    return 0;
 }
 
 // Check for non decimal values in the argument
