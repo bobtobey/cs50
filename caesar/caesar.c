@@ -80,19 +80,22 @@ string encrypt_text(int key, string plaintext)
         {
             // add the cipher key value to each uppercase plaintext character
             ciphertext[j] = conversion_index(key, index_value);
-            // printf("Plain= %c : %i to Cipher= %c : %i\n", index_value, index_value, ciphertext[j], ciphertext[j]);
+            // printf("Plain= %c : %i to Cipher= %c : %i\n", index_value, index_value,
+            // ciphertext[j], ciphertext[j]);
         }
         else if (isalpha(index_value) && islower(index_value))
         {
             // add the cipher key value to each lowercase plaintext character
             ciphertext[j] = conversion_index(key, index_value);
-            // printf("Plain= %c : %i to Cipher= %c : %i\n", index_value, index_value, ciphertext[j], ciphertext[j]);
+            // printf("Plain= %c : %i to Cipher= %c : %i\n", index_value, index_value,
+            // ciphertext[j], ciphertext[j]);
         }
         else
         {
             // for non-alpha characters do nothing
             ciphertext[j] = index_value;
-            // printf("Plain= %c : %i to Cipher= %c : %i\n", index_value, index_value, ciphertext[j], ciphertext[j]);
+            // printf("Plain= %c : %i to Cipher= %c : %i\n", index_value, index_value,
+            // ciphertext[j], ciphertext[j]);
         }
     }
     ciphertext[textlength] = '\0';
