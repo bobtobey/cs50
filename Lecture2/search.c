@@ -2,6 +2,7 @@
 #include <stdio.h>
 
 //  Linear Search example
+// a correct implementation of linear search that goes from left to right, looking for a value that may or may not be there
 int main(void)
 {
     // This declares an array of values when I know in advance what the values are
