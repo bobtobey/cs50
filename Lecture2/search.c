@@ -7,10 +7,10 @@ int main(void)
     // This declares an array of values when I know in advance what the values are
     int numbers[] = {20, 500, 10, 5, 100, 1, 50};
     int n = get_int("Number: ");
-    
+
     for(int i = 0; i < 7; i++)
     {
-        if (numbers[i] == 50)
+        if (numbers[i] == n)
         {
             printf("Found\n");
             // end 'main' function with 0 if n is found
