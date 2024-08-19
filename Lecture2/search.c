@@ -7,6 +7,11 @@ int main(void)
     int n = get_int("Number: ");
     for(int i = 0; i < numbers; i++)
     {
-        if (i)
+        if (number[i] == 50)
+        {
+            printf("TRUE");
+            return true;
+        }
+        return false;
     }
 }
