@@ -11,9 +11,9 @@ int main(void)
     {
         if (strcmp(strings[i], s) == 0)
         {
-            printf("Found\n);
+            printf("Found\n");
             return 0;
         }
     }
-    printf("Not Found\n);
+    printf("Not Found\n");
 }
