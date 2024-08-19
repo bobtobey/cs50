@@ -9,7 +9,7 @@ int main(void)
     {
         if (numbers[i] == 50)
         {
-            printf("TRUE\n");
+            printf("Found\n");
             return 0;
         }
     }
