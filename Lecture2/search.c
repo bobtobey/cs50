@@ -20,5 +20,5 @@ int main(void)
     }
     // conclude 'not found' after loop finishes
     printf("Not Found\n");
-    return false;
+    return 1;
 }
