@@ -20,5 +20,6 @@ int main(void)
     }
     // conclude 'not found' after loop finishes
     printf("Not Found\n");
+    // even though this does not functionally change the program it is good practice
     return 1;
 }
