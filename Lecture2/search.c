@@ -15,6 +15,7 @@ int main(void)
         {
             printf("Found\n");
             // end 'main' function with 0 if n is found
+            // when you return a value, it immediately exits that function
             return 0;
         }
     }
