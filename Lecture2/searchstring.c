@@ -5,7 +5,7 @@
 int main(void)
 {
     string strings[] = {"battleship", "boot", "cannon", "iron", "thimble", "top hat"};
-    string s = get_string("string: ");
+    string s = get_string("String: ");
 
     for (int i = 0; i < 6; i++)
     {
@@ -16,4 +16,5 @@ int main(void)
         }
     }
     printf("Not Found\n");
+    return 1;
 }
