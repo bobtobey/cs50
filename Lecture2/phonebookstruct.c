@@ -11,6 +11,7 @@ typedef struct
 
 int main(void)
 {
+    // This now creates 1 array of type person called people
     person people[3];
 
     string name = get_string("Name: ");
