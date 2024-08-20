@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-// create data type person
+// create data type person and this creates the structure for it
 typedef struct
 {
     string name;
