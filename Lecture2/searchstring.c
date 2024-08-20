@@ -8,7 +8,7 @@ int main(void)
     string s = get_string("String: ");
 
     // get word length
-    int array_length = strlen(strings);
+    string array_length = strlen(strings);
 
     for (int i = 0; i < 6; i++)
     {
