@@ -22,9 +22,12 @@ int main(void)
     person people[2].name = "John";
     person people[2].number = "+1-555-555-5558";
 
+    // capture users name
     string name = get_string("Name: ");
+    // iterate over every persons name
     for (int i = 0; i < 3; i++)
     {
+        // find the users name in the array
         if (strcmp(people[i].name, name) == 0)
         {
             printf("Found %s\n", people[i].number);
