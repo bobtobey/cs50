@@ -7,8 +7,8 @@ int main(void)
     string strings[] = {"battleship", "boot", "cannon", "iron", "thimble", "top hat"};
     string s = get_string("String: ");
 
-    // get word length
-    int array_length = strings[];
+    // get array length
+    int array_length = sizeof(strings) / sizeof(strings[0]);
 
     for (int i = 0; i < 6; i++)
     {
