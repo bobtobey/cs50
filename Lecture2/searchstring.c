@@ -9,6 +9,7 @@ int main(void)
 
     // get array length
     int array_length = sizeof(strings) / sizeof(strings[0]);
+    printf("Array Length: %i\n", array_length);
 
     for (int i = 0; i < 6; i++)
     {
