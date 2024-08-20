@@ -15,12 +15,12 @@ int main(void)
     person people[3];
 
     // Initialize people - set a person's name and number-- like, how can we access those values
-    person people[0].name = "Carter";
-    person people[0].number = "+1-555-555-5556";
-    person people[1].name = "David";
-    person people[1].number = "+1-555-555-5557";
-    person people[2].name = "John";
-    person people[2].number = "+1-555-555-5558";
+    people[0].name = "Carter";
+    people[0].number = "+1-555-555-5556";
+    people[1].name = "David";
+    people[1].number = "+1-555-555-5557";
+    people[2].name = "John";
+    people[2].number = "+1-555-555-5558";
 
     // capture users name
     string name = get_string("Name: ");
