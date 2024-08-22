@@ -19,11 +19,12 @@ void draw(int n)
     // first loop provides the height n times/layers
     for (int i = 0; i < n; i++)
     {
-        // second loop prints out n number of bricks per layer plus 1
-        for (int j = 0; j < n + 1; j++)
+        // second loop prints out i number of bricks per layer plus 1
+        for (int j = 0; j < i + 1; j++)
         {
             printf("#");
         }
+        // start new layer
         printf("\n");
     }
 }
