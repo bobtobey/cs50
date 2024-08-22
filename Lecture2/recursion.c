@@ -16,7 +16,7 @@ int main(void)
 
 void draw(int n)
 {
-    // base case - if there is nothing to draw stop
+    // base case - if there is nothing to draw (not 0 or negative #) stop
     if (n <= 0)
     {
         return;
