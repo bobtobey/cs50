@@ -16,6 +16,11 @@ int main(void)
 
 void draw(int n)
 {
+    // base case - if there is nothing to draw stop
+    if (n <= 0)
+    {
+        return;
+    }
     // Print pyramid of height n - 1
     draw(n - 1);
 
