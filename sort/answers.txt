@@ -1,11 +1,11 @@
 sort1 uses: Bubble Sort
 
-How do you know?: It was usually the fastest for the sorted text files, and only needed to swap numbers once.
-while it was slowest for the reversed text files, because it needed to execute more steps to swap them all.
+How do you know?: It was usually the fastest for the sorted text files, and only needed to swap numbers once achieving a Big Omega of n.
+While it was slowest for the reversed text files, because it needed to execute more steps to swap them all for Big O of n squared.
 
 sort2 uses: Merge Sort
 
-How do you know?: It was the fastest performing on the random text files, and reverse text
+How do you know?: It was the fastest performing on the random text files, and reverse text with (n log n)
 
 sort3 uses: Selection Sort
 
