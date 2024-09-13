@@ -67,13 +67,13 @@ bool vote(string name)
 {
     // TODO
     printf("VOTE Name value: %s\n", name);
+
     // Validate for parameter 'name', check for name value and return it.
     // Iterate over candidates Struct to validate for name
     for (int i = 0; i < candidate_count; i++)
     {
         // Look for candicate name and return true if found.
         if (strcmp(candidates[i].name, name) == 0) {
-            printf("True");
             printf("Found %s\n", candidates[i].name);
         }
         else
