@@ -66,7 +66,6 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
-    printf("Found %s\n", candidates[1].name);
     printf("VOTE Name value: %s\n", name);
     // Validate for parameter 'name', check for name value and return it.
     // Iterate over candidates Struct to validate for name
@@ -75,13 +74,14 @@ bool vote(string name)
         // Look for candicate name and return true if found.
         if (strcmp(candidates[i].name, name) == 0) {
             printf("True");
-            return true;
+            printf("Found %s\n", candidates[i].name);
         }
         else
         {
-            return false;
+            printf("Lost %s\n", candidates[i].name);
         }
     }
+    return true;
 }
 
 // Print the winner (or winners) of the election
