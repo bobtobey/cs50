@@ -66,7 +66,7 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
-    printf("Found %s\n", people[i].number);
+    printf("Found %s\n", candidates[1].name);
     printf("VOTE Name value: %s\n", name);
     return false;
 }
