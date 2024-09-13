@@ -68,6 +68,10 @@ bool vote(string name)
     // TODO
     // Validate for parameter 'name', check for name value and return it.
     // Iterate over candidates array for name
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if ()
+    }
     printf("Found %s\n", candidates[1].name);
     printf("VOTE Name value: %s\n", name);
     return true;
