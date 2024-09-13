@@ -75,13 +75,14 @@ bool vote(string name)
         // Look for candicate name and return true if found.
         if (strcmp(candidates[i].name, name) == 0) {
             printf("Found %s\n", candidates[i].name);
+            return true;
         }
         else
         {
             printf("Lost %s\n", candidates[i].name);
         }
     }
-    return true;
+    return false;
 }
 
 // Print the winner (or winners) of the election
