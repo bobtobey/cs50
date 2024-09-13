@@ -9,4 +9,4 @@ How do you know?: It was the fastest performing on the random text files, and re
 
 sort3 uses: Selection Sort
 
-How do you know?: The times were fairly consistent for all the text files, because its Big O and Big Omega are both ()
+How do you know?: The times were fairly consistent for all the text files, because its Big O and Big Omega are both
