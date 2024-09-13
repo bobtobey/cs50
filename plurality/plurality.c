@@ -70,7 +70,9 @@ bool vote(string name)
     // Iterate over candidates array for name
     for (int i = 0; i < candidate_count; i++)
     {
-        if ()
+        if (candidates[i].name) {
+            printf("True");
+        }
     }
     printf("Found %s\n", candidates[1].name);
     printf("VOTE Name value: %s\n", name);
