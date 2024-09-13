@@ -90,6 +90,8 @@ void print_winner(void)
 {
     // TODO
     printf("Print Winner Test!\n");
-    // Iterate over the candidate Struct for the 
+    // Iterate over the candidate Struct for the total votes per name
+    for (int i = 0; i < candidate_count; i++)
+    {
     return;
 }
