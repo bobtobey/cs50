@@ -89,9 +89,11 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
-    printf("Print Winner Test!\n");
     // Iterate over the candidate Struct for the total votes per name
     for (int i = 0; i < candidate_count; i++)
     {
+        printf("Votes %i\n", candidates[i].votes);
+    }
+    printf("Print Winner Test!\n");
     return;
 }
