@@ -66,9 +66,11 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
+    // Validate for parameter 'name', check for name value and return it.
+    // Iterate over candidates array for name
     printf("Found %s\n", candidates[1].name);
     printf("VOTE Name value: %s\n", name);
-    return false;
+    return true;
 }
 
 // Print the winner (or winners) of the election
