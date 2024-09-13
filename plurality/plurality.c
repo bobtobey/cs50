@@ -77,7 +77,8 @@ bool vote(string name)
             printf("True");
             return true;
         }
-        else {
+        else
+        {
             return false;
         }
     }
