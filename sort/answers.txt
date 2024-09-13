@@ -1,11 +1,12 @@
-sort1 uses: TODO
+sort1 uses: Bubble Sort
 
-How do you know?: TODO
+How do you know?: It was usually the fastest for the sorted text files, and only needed to swap numbers once.
+while it was slowest for the reversed text files, because it needed to execute more steps to swap them all.
 
-sort2 uses: TODO
+sort2 uses: Merge Sort
 
-How do you know?: TODO
+How do you know?: It was the fastest performing on the random text files, and reverse text
 
-sort3 uses: TODO
+sort3 uses: Selection Sort
 
-How do you know?: TODO
+How do you know?: The times were fairly consistent for all the text files, because its Big O and Big Omega are both ()
