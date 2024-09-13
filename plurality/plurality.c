@@ -74,6 +74,6 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
-    printf("Test");
+    printf("Test\n");
     return;
 }
