@@ -66,7 +66,7 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
-    printf("Name value: %s\n", name);
+    printf("VOTE Name value: %s\n", name);
     return false;
 }
 
@@ -74,6 +74,6 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
-    printf("Test\n");
+    printf("Print Winner Test!\n");
     return;
 }
