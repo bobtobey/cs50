@@ -44,7 +44,7 @@ int main(int argc, string argv[])
         candidates[i].votes = 0;
     }
 
-2    int voter_count = get_int("Number of voters: ");
+    int voter_count = get_int("Number of voters: ");
 
     // Loop over all voters
     for (int i = 0; i < voter_count; i++)
@@ -75,7 +75,7 @@ bool vote(string name)
         // Look for candicate name and return true if found.
         if (strcmp(candidates[i].name, name) == 0) {
             printf("Found %s\n", candidates[i].name);
-            candidates[i].votes = 1;
+            candidates[i].votes += 1;
             printf("Found Count %i\n", i);
             return true;
         }
