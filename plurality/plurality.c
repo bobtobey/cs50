@@ -49,7 +49,7 @@ int main(int argc, string argv[])
     // Loop over all voters
     for (int i = 0; i < voter_count; i++)
     {
-        string name = get_string("Vote: ");
+M        string name = get_string("Vote: ");
 
         // Check for invalid vote
         if (!vote(name))
