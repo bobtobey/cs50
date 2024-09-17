@@ -72,14 +72,14 @@ bool vote(string name)
     {
         // Look for candicate name and return true if found.
         if (strcmp(candidates[i].name, name) == 0) {
-            printf("Looking for: %s\n and Found: %s\n at i value: %i\n", name, candidates[i].name, i);
+            printf("Looking for: %s and Found: %s\n at i value: %i\n", name, candidates[i].name, i);
             // Add 1 Vote to candidate found
             candidates[i].votes += 1;
             return true;
         }
         else
         {
-            printf("Lost %s\n i value %i\n", candidates[i].name, i);
+            printf("Lost %s i value %i\n", candidates[i].name, i);
         }
     }
     return false;
@@ -92,8 +92,7 @@ void print_winner(void)
     // Iterate over the candidate Struct for the total votes per name
     for (int i = 0; i < candidate_count; i++)
     {
-        printf("Votes %i\n", candidates[i].votes);
-        printf("Votes %s\n", candidates[i].name);
+        printf("Votes %i for %s\n", candidates[i].votes, candidates[i].name);
     }
     printf("Print Winner Test!\n");
     return;
