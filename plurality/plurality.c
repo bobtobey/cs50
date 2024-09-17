@@ -94,11 +94,12 @@ void print_winner(void)
     if (candidate_count == 1) {
         printf("There is only one candidate!\n The winner is %s\n", candidates[0].name);
     };
-    
+
     // Iterate over the candidate Struct for the total votes per name
     for (int i = 0; i < candidate_count; i++)
     {
         printf("Votes %i for %s\n", candidates[i].votes, candidates[i].name);
+        if ()
     }
     printf("Print Winner Test!\n");
     return;
