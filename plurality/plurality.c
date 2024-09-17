@@ -49,7 +49,7 @@ int main(int argc, string argv[])
     // Loop over all voters
     for (int i = 0; i < voter_count; i++)
     {
-M        string name = get_string("Vote: ");
+        string name = get_string("Vote: ");
 
         // Check for invalid vote
         if (!vote(name))
@@ -66,7 +66,7 @@ M        string name = get_string("Vote: ");
 bool vote(string name)
 {
     // TODO
-    printf("VOTE Name value: %s\n", name);
+    printf("VOTE Name value: %s\n and %i\n", name, candidate_count);
 
     // Validate for parameter 'name', check for name value and return it.
     // Iterate over candidates Struct to validate for name
