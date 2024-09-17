@@ -95,6 +95,8 @@ void print_winner(void)
     {
         printf("Votes %i for %s\n", candidates[i].votes, candidates[i].name);
     }
+    // Base case - if there is only one candidate
+    if ()
     printf("Print Winner Test!\n");
     return;
 }
