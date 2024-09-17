@@ -75,13 +75,13 @@ bool vote(string name)
             printf("Looking for: %s\n and Found: %s\n", name, candidates[i].name);
             // Add 1 Vote to candidate found
             candidates[i].votes += 1;
-            printf("Found Count %i\n", i);
+            printf("Found i value %i\n", i);
             return true;
         }
         else
         {
             printf("Lost %s\n", candidates[i].name);
-            printf("Lost Count %i\n", i);
+            printf("Lost i value %i\n", i);
         }
     }
     return false;
