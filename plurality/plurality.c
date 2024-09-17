@@ -79,7 +79,7 @@ bool vote(string name)
         }
         else
         {
-            printf("Lost %s i value %i\n", candidates[i].name, i);
+            printf("Lost %s i at value %i\n", candidates[i].name, i);
         }
     }
     return false;
