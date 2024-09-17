@@ -72,16 +72,14 @@ bool vote(string name)
     {
         // Look for candicate name and return true if found.
         if (strcmp(candidates[i].name, name) == 0) {
-            printf("Looking for: %s\n and Found: %s\n", name, candidates[i].name);
+            printf("Looking for: %s\n and Found: %s\n at i value: %i\n", name, candidates[i].name, i);
             // Add 1 Vote to candidate found
             candidates[i].votes += 1;
-            printf("Found i value %i\n", i);
             return true;
         }
         else
         {
-            printf("Lost %s\n", candidates[i].name);
-            printf("Lost i value %i\n", i);
+            printf("Lost %s\n i value %i\n", candidates[i].name, i);
         }
     }
     return false;
