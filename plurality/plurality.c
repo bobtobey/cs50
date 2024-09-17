@@ -97,7 +97,7 @@ void print_winner(void)
     }
     // Base case - if there is only one candidate
     if (candidate_count == 1) {
-        printf("There is only one candidate!\n");
+        printf("There is only one candidate!\n The winner is %s\n", candidates[0].name);
     };
     printf("Print Winner Test!\n");
     return;
