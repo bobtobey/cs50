@@ -66,7 +66,6 @@ int main(int argc, string argv[])
 // Update vote totals given a new vote
 bool vote(string name)
 {
-    // TODO
     // Validate for parameter 'name', check for name value and return true
     // Iterate over candidates Struct to validate for name
     for (int i = 0; i < candidate_count; i++)
@@ -90,7 +89,6 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    // TODO
     // Base case - if there is only one candidate
     if (candidate_count == 1) {
         printf("There is only one candidate!\n The winner is %s\n", candidates[0].name);
