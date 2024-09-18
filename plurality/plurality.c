@@ -105,7 +105,7 @@ void print_winner(void)
         if (candidates[i].votes > currenthighvote)
         {
             currenthighvote = candidates[i].votes;
-            printf("Current high vote = %s\n", candidates[i].name);
+            // printf("Current high vote = %s\n", candidates[i].name);
         }
     }
 
