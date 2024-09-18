@@ -115,7 +115,6 @@ void print_winner(void)
         {
             // Skip over candidates with 0 votes
             printf("SKIPPED %s\n", candidates[j].name);
-            printf("%s\n", candidates[j].name);
         }
         else if (candidates[j].votes == total_votes)
         {
