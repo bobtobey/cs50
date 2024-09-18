@@ -99,12 +99,12 @@ void print_winner(void)
     // Iterate over the candidate Struct for the total votes per name
     for (int i = 0; i < candidate_count; i++)
     {
-        printf("%i votes for %s\n", candidates[i].votes, candidates[i].name);
+        // printf("%i votes for %s\n", candidates[i].votes, candidates[i].name);
         total_votes += candidates[i].votes;
         if (candidates[i].votes > currenthighvote)
         {
             currenthighvote = candidates[i].votes;
-            printf("Current high vote = %s\n", candidates[i].name);
+            // printf("Current high vote = %s\n", candidates[i].name);
         }
     }
 
