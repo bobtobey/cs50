@@ -122,7 +122,7 @@ void print_winner(void)
         else if (candidates[j].votes == currenthighvote)
         {
             // currenthighvote = candidates[j].votes;
-            printf("Winner with %i\n votes %s!\n", candidates[j].votes, candidates[j].name);
+            printf("Winner with %i votes %s!\n", candidates[j].votes, candidates[j].name);
         }
         else
         {
