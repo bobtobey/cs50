@@ -104,6 +104,7 @@ void print_winner(void)
         total_votes += candidates[i].votes;
         if (candidates[i].votes > currentHighVote)
         {
+            // set candidate with highest vote count
             currentHighVote = candidates[i].votes;
             // printf("Current high vote = %s\n", candidates[i].name);
         }
@@ -114,7 +115,6 @@ void print_winner(void)
         if (candidates[j].votes == 0)
         {
             // Skip over candidates with 0 votes
-            // printf("SKIPPED %s\n", candidates[j].name);
         }
         else if (candidates[j].votes == total_votes)
         {
