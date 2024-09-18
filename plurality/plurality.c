@@ -132,7 +132,7 @@ void print_winner(void)
             // printf("Other %s!\n", candidates[j].name);
         }
     }
-    printf("Total Votes: %i\n", total_votes);
-    printf("Print Winner Test!\n");
+    // printf("Total Votes: %i\n", total_votes);
+    // printf("Print Winner Test!\n");
     return;
 }
