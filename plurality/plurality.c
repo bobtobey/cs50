@@ -109,6 +109,7 @@ void print_winner(void)
         if (candidates[j].votes == total_votes)
         {
             printf("Total Winner is %s!\n", candidates[j].name);
+            return;
         }
         else if (candidates[j].votes > 0 && candidates[j].votes > currenthighvote)
         {
