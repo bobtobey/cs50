@@ -101,6 +101,11 @@ void print_winner(void)
     {
         printf("%i votes for %s\n", candidates[i].votes, candidates[i].name);
         total_votes += candidates[i].votes;
+        if (candidates[i].votes > currenthighvote)
+        {
+            currenthighvote = candidates[i].votes;
+            printf("Current high vote = %s\n", candidates[i].name);
+        }
     }
 
     for (int j = 0; j < candidate_count; j++) {
@@ -116,7 +121,7 @@ void print_winner(void)
         }
         else if (candidates[j].votes > currenthighvote)
         {
-            currenthighvote = candidates[j].votes;
+            // currenthighvote = candidates[j].votes;
             printf("Winner with most votes %s!\n", candidates[j].name);
         }
         else
