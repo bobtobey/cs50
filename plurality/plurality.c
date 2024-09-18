@@ -102,9 +102,9 @@ void print_winner(void)
     {
         // printf("%i votes for %s\n", candidates[i].votes, candidates[i].name);
         total_votes += candidates[i].votes;
-        if (candidates[i].votes > currenthighvote)
+        if (candidates[i].votes > currentHighVote)
         {
-            currenthighvote = candidates[i].votes;
+            currentHighVote = candidates[i].votes;
             // printf("Current high vote = %s\n", candidates[i].name);
         }
     }
@@ -123,7 +123,7 @@ void print_winner(void)
             printf("%s\n", candidates[j].name);
             return;
         }
-        else if (candidates[j].votes == currenthighvote)
+        else if (candidates[j].votes == currentHighVote)
         {
             // printf("Winner with %i votes %s!\n", candidates[j].votes, candidates[j].name);
             printf("%s\n", candidates[j].name);
