@@ -111,18 +111,20 @@ void print_winner(void)
     for (int j = 0; j < candidate_count; j++) {
         if (candidates[j].votes == 0) {
             // Skip over candidates with 0 votes
-            printf("SKIPPED %s\n", candidates[j].name);
+            // printf("SKIPPED %s\n", candidates[j].name);
+            printf("%s\n", candidates[j].name);
         }
         else if (candidates[j].votes == total_votes)
         {
             // Declare and return winner if candidate has max votes
-            printf("Total Winner is %s!\n", candidates[j].name);
+            // printf("Total Winner is %s!\n", candidates[j].name);
+            printf("%s\n", candidates[j].name);
             return;
         }
         else if (candidates[j].votes == currenthighvote)
         {
-            // currenthighvote = candidates[j].votes;
-            printf("Winner with %i votes %s!\n", candidates[j].votes, candidates[j].name);
+            // printf("Winner with %i votes %s!\n", candidates[j].votes, candidates[j].name);
+            printf("%s\n", candidates[j].name);
         }
         else
         {
