@@ -103,7 +103,11 @@ void print_winner(void)
         printf("Votes %i for %s\n", candidates[i].votes, candidates[i].name);
         total_votes += candidates[i].votes;
     }
-    if (total_votes ==)
+
+    for (int i = 0; i < candidate_count; i++) {
+        
+    }
+    if (total_votes >= candidates[i].votes) {}
     printf("Total Votes: %i\n", total_votes);
     printf("Print Winner Test!\n");
     return;
