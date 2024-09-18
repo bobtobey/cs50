@@ -126,6 +126,7 @@ void print_winner(void)
         }
         else
         {
+            // 
             printf("Other %s!\n", candidates[j].name);
         }
     }
