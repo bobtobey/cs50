@@ -117,7 +117,7 @@ void print_winner(void)
         }
         else
         {
-            printf("Other");
+            printf("Other\n");
         }
     }
     printf("Total Votes: %i\n", total_votes);
