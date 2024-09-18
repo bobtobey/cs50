@@ -73,15 +73,14 @@ bool vote(string name)
         // Look for candicate name and return true if found.
         if (strcasecmp(candidates[i].name, name) == 0)
         {
-            printf("Looking for: %s and Found: %s at i value: %i\n", name, candidates[i].name, i);
+            // printf("Looking for: %s and Found: %s at i value: %i\n", name, candidates[i].name, i);
             // Add 1 Vote to candidate found
             candidates[i].votes += 1;
             return true;
         }
         else
         {
-            // Do nothing
-            printf("Lost %s i at value %i\n", candidates[i].name, i);
+            // Do nothing ane return false
         }
     }
     return false;
@@ -101,12 +100,12 @@ void print_winner(void)
     // Iterate over the candidate Struct for the total votes per name
     for (int i = 0; i < candidate_count; i++)
     {
-        // printf("%i votes for %s\n", candidates[i].votes, candidates[i].name);
+        printf("%i votes for %s\n", candidates[i].votes, candidates[i].name);
         total_votes += candidates[i].votes;
         if (candidates[i].votes > currenthighvote)
         {
             currenthighvote = candidates[i].votes;
-            // printf("Current high vote = %s\n", candidates[i].name);
+            printf("Current high vote = %s\n", candidates[i].name);
         }
     }
 
@@ -115,19 +114,19 @@ void print_winner(void)
         if (candidates[j].votes == 0)
         {
             // Skip over candidates with 0 votes
-            // printf("SKIPPED %s\n", candidates[j].name);
+            printf("SKIPPED %s\n", candidates[j].name);
             printf("%s\n", candidates[j].name);
         }
         else if (candidates[j].votes == total_votes)
         {
             // Declare and return winner if candidate has max votes
-            // printf("Total Winner is %s!\n", candidates[j].name);
+            printf("Total Winner is %s!\n", candidates[j].name);
             printf("%s\n", candidates[j].name);
             return;
         }
         else if (candidates[j].votes == currenthighvote)
         {
-            // printf("Winner with %i votes %s!\n", candidates[j].votes, candidates[j].name);
+            printf("Winner with %i votes %s!\n", candidates[j].votes, candidates[j].name);
             printf("%s\n", candidates[j].name);
         }
         else
