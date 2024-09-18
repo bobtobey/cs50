@@ -104,10 +104,14 @@ void print_winner(void)
         total_votes += candidates[i].votes;
     }
 
+    int currenthighvote = 0;
     for (int j = 0; j < candidate_count; j++) {
         if (candidates[j].votes == total_votes)
         {
             printf("Winner is %s!\n", candidates[j].name);
+        }
+        else if (candidates[j].votes > 0)
+        {
 
         }
     }
