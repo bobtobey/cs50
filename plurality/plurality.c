@@ -111,7 +111,7 @@ void print_winner(void)
         {
             printf("Winner is %s!\n", candidates[j].name);
         }
-        else if (candidates[j].votes > 0)
+        else if (candidates[j].votes > 0 && candidates[j].votes > currenthighvote)
         {
             printf("Winner with most votes %s!\n", candidates[j].name);
         }
