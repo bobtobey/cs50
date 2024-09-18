@@ -126,7 +126,7 @@ void print_winner(void)
         }
         else
         {
-            // 
+            // Catch all
             printf("Other %s!\n", candidates[j].name);
         }
     }
