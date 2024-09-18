@@ -129,7 +129,7 @@ void print_winner(void)
         else
         {
             // Catch all
-            printf("Other %s!\n", candidates[j].name);
+            // printf("Other %s!\n", candidates[j].name);
         }
     }
     printf("Total Votes: %i\n", total_votes);
