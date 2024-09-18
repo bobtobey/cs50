@@ -96,7 +96,7 @@ void print_winner(void)
     };
 
     int total_votes = 0;
-    int currenthighvote = 0;
+    int currentHighVote = 0;
     // Iterate over the candidate Struct for the total votes per name
     for (int i = 0; i < candidate_count; i++)
     {
