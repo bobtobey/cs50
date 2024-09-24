@@ -155,7 +155,7 @@ void tabulate(void)
 
 // Print the winner of the election, if there is one
 bool print_winner(void)
-
+{
     // Base case - if there is only one candidate
     if (candidate_count == 1)
     {
