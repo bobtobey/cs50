@@ -148,7 +148,7 @@ void tabulate(void)
 {
     // TODO
             printf("Tabulate Me\n");
-    return;
+    return false;
 }
 
 // Print the winner of the election, if there is one
