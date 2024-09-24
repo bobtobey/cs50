@@ -167,7 +167,7 @@ bool print_winner(void)
             return true;
         }
     }
-    return false;
+    return true;
 }
 
 // Return the minimum number of votes any remaining candidate has
