@@ -129,10 +129,14 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
-    // Look for candicate name and return true if found.
-    if (strcasecmp(candidates[i].name, name) == 0)
+    // Iterate over candidates Struct to validate for name
+    for (int i = 0; i < candidate_count; i++)
     {
-        printf("VOTE Yes\n");
+        // Look for candicate name and return true if found.
+        if (strcasecmp(candidates[i].name, name) == 0)
+        {
+            printf("VOTE Yes\n");
+        }
     }
     return false;
 }
