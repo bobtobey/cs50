@@ -146,6 +146,7 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // TODO
+            printf("Tabulate Me\n");
     return;
 }
 
@@ -153,6 +154,7 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
+            printf("Winner is?\n");
     return false;
 }
 
@@ -160,6 +162,7 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO
+            printf("Min Votes\n");
     return 0;
 }
 
