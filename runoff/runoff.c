@@ -1,5 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
+#include <strings.h>
 
 // Max voters and candidates
 #define MAX_VOTERS 100
@@ -127,6 +129,11 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
+    // Look for candicate name and return true if found.
+    if (strcasecmp(candidates[i].name, name) == 0)
+    {
+        printf("VOTE Yes\n");
+    }
     return false;
 }
 
