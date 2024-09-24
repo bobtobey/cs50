@@ -170,6 +170,7 @@ int find_min(void)
 bool is_tie(int min)
 {
     // TODO
+            printf("Tie\n");
     return false;
 }
 
@@ -177,5 +178,6 @@ bool is_tie(int min)
 void eliminate(int min)
 {
     // TODO
+            printf("Eliminated\n");
     return;
 }
