@@ -128,7 +128,6 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-    // TODO
     // Iterate over candidates Struct to validate for name
     for (int i = 0; i < candidate_count; i++)
     {
