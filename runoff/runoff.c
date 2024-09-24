@@ -136,6 +136,8 @@ bool vote(int voter, int rank, string name)
         if (strcasecmp(candidates[i].name, name) == 0)
         {
             printf("VOTE Yes\n");
+            candidates[i].votes += 1;
+            return true;
         }
     }
     return false;
