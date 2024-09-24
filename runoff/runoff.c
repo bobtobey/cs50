@@ -157,6 +157,7 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
+    for (int i = 0; )
             printf("Winner is?\n");
     return false;
 }
