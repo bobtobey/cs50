@@ -134,10 +134,10 @@ bool vote(int voter, int rank, string name)
         // Look for candicate name and return true if found.
         if (strcasecmp(candidates[i].name, name) == 0)
         {
-            printf("VOTE Yes\n");
+            printf("VOTE %s\n", name);
             printf("Voter %i : rank %i\n", voter, rank);
             candidates[i].votes += 1;
-            preferences[voter][rank] = i;
+            preferences[voter][i] = rank;
             return true;
         }
     }
