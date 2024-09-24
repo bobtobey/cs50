@@ -157,6 +157,11 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
+    // Base case - if there is only one candidate
+    if (candidate_count == 1)
+    {
+        printf("There is only one candidate!\n The winner is %s\n", candidates[0].name);
+    };
     for (int i = 0; i < candidate_count; i++){
             printf("Winner is?\n");
             return true;
