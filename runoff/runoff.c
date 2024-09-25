@@ -136,7 +136,7 @@ bool vote(int voter, int rank, string name)
         {
             printf("Voter %i : ranks %s as choice %i\n", voter, name, rank);
             // Add 1 Vote to candidate found
-            candidates[i].votes += 1;
+            // candidates[i].votes += 1;
             // Set voter rank preference
             preferences[voter][i] = rank;
             return true;
@@ -155,7 +155,7 @@ void tabulate(void)
     {
         printf("Tabulate voter %i : Prefers candidate %i first.\n", i, preferences[i][0]);
         candidates[preferences[i][0]] += 1;
-        printf("Add me\n");
+        printf("Add candidate 0 up %i\n", candidates[0]);
     }
     printf("Voter 0 - candidate Choices: %i first, %i second, %i third.\n", preferences[0][0], preferences[0][1], preferences[0][2]);
     printf("Voter 1 - candidate Choices: %i first, %i second, %i third.\n", preferences[1][0], preferences[1][1], preferences[1][2]);
