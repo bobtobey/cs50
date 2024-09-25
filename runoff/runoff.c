@@ -156,6 +156,8 @@ void tabulate(void)
         printf("Tab me\n");
         printf("Tabulate voter %i : Prefers candidate %i first.\n", i, preferences[i][0]);
     }
+    printf("Voter 0 - candidate Choices: %i first, %i second, %i third.\n", preferences[0][0], preferences[0][1], preferences[0][2]);
+    printf("Voter 1 - candidate Choices: %i first, %i second, %i third.\n", preferences[1][0], preferences[1][1], preferences[1][2]);
     return;
 }
 
