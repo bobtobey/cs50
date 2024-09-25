@@ -154,6 +154,7 @@ void tabulate(void)
     for (int i = 0; i < candidate_count; i++)
     {
         printf("Tab me\n");
+        printf("Tabulate Me : Preference %i\n", preferences[0][0]);
     }
             printf("Tabulate Me : Preference %i\n", preferences[0][0]);
     return;
