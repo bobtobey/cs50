@@ -153,8 +153,9 @@ void tabulate(void)
     // Add up votes for non-eliminated candidates
     for (int i = 0; i < voter_count; i++)
     {
-        printf("Tab me\n");
         printf("Tabulate voter %i : Prefers candidate %i first.\n", i, preferences[i][0]);
+        preferences[i][candidates[]]
+        printf("Add me\n");
     }
     printf("Voter 0 - candidate Choices: %i first, %i second, %i third.\n", preferences[0][0], preferences[0][1], preferences[0][2]);
     printf("Voter 1 - candidate Choices: %i first, %i second, %i third.\n", preferences[1][0], preferences[1][1], preferences[1][2]);
