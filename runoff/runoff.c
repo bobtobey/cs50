@@ -151,6 +151,10 @@ void tabulate(void)
     // TODO
     // Loop through preferences array
     // Add up votes for non-eliminated candidates
+    for (int i = 0; i < candidate_count; i++)
+    {
+        printf("Tab me\n");
+    }
             printf("Tabulate Me : Preference %i\n", preferences[0][0]);
     return;
 }
