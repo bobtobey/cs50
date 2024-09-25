@@ -149,7 +149,9 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // TODO
-            printf("Tabulate Me\n");
+    // Loop through preferences array
+    // Add up votes for non-eliminated candidates
+            printf("Tabulate Me : Preference %i\n", preferences[0][0]);
     return;
 }
 
@@ -161,9 +163,9 @@ bool print_winner(void)
     {
         printf("There is only one candidate!\n The winner is %s\n", candidates[0].name);
     };
-    for (int i = 0; i < candidate_count; i++){
-        if (candidates[i].votes > 1) {
-            printf("Winner is %i?\n", candidates[i].votes);
+    for (int i = 0; i < candidate_count; i++) {
+        if (candidates[i].votes >= 1) {
+            printf("Winning count is %i?\n", candidates[i].votes);
             return true;
         }
     }
