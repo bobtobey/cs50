@@ -156,7 +156,6 @@ void tabulate(void)
         printf("Tab me\n");
         printf("Tabulate %i : Preference %i\n", i, preferences[i][0]);
     }
-            printf("Tabulate Me : Preference %i\n", preferences[0][0]);
     return;
 }
 
