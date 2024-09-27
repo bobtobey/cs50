@@ -169,12 +169,13 @@ bool print_winner(void)
     {
         printf("There is only one candidate!\n The winner is %s\n", candidates[0].name);
     };
+    // number needed for victory
+    float victoryNum = voter_count/2.0;
     // Loop through candidate vote count
     for (int i = 0; i < candidate_count; i++) {
-        if (candidates[i].votes >= 1) {
+        if (candidates[i].votes >= victoryNum) {
             printf("Winning count is %i?\n", candidates[i].votes);
-            float x = voter_count/2.0;
-            printf("Total votes %f\n", x);
+            printf("Total votes %f\n", victoryNum);
             return true;
         }
     }
