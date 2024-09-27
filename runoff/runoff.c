@@ -178,7 +178,7 @@ bool print_winner(void)
         {
             printf("Total votes = %i and half amount to win %f | Candidate votes num: %i\n", voter_count, victoryNum, candidates[i].votes);
             printf("Winning vote count is %i?\n", candidates[i].votes);
-            printf("%s\n", candidates[i].name);
+            printf("x %i %s\n", i, candidates[i].name);
             return true;
         }
     }
