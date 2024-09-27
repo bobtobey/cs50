@@ -174,7 +174,7 @@ bool print_winner(void)
         if (candidates[i].votes >= 1) {
             printf("Winning count is %i?\n", candidates[i].votes);
             int x = voter_count/2;
-            printf("Total votes %i\n", x);
+            printf("Total votes %f\n", x);
             return true;
         }
     }
