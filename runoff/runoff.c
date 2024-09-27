@@ -173,8 +173,8 @@ bool print_winner(void)
     float victoryNum = voter_count/2.0;
     // Loop through candidate vote count
     for (int i = 0; i < candidate_count; i++) {
-        if (candidates[i].votes >= victoryNum) {
-            printf("Total votes = %i and half amount to win %f\n | Candidate votes num: %i\n", voter_count, victoryNum, candidates[i].votes);
+        if (candidates[i].votes > victoryNum) {
+            printf("Total votes = %i and half amount to win %f | Candidate votes num: %i\n", voter_count, victoryNum, candidates[i].votes);
             printf("Winning vote count is %i?\n", candidates[i].votes);
             printf("%s\n", candidates[i].name);
             return true;
