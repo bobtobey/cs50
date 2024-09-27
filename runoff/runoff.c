@@ -173,7 +173,7 @@ bool print_winner(void)
     for (int i = 0; i < candidate_count; i++) {
         if (candidates[i].votes >= 1) {
             printf("Winning count is %i?\n", candidates[i].votes);
-            float x = voter_count/2;
+            float x = voter_count/2.0;
             printf("Total votes %f\n", x);
             return true;
         }
