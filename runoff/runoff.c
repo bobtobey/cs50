@@ -194,7 +194,7 @@ int find_min(void)
             printf("Min Votes %s has %i\n", candidates[i].name, candidates[i].votes);
             return true;
     }
-    return 0;
+    return true;
 }
 
 // Return true if the election is tied between all candidates, false otherwise
