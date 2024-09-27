@@ -172,8 +172,10 @@ bool print_winner(void)
     // number needed for victory
     float victoryNum = voter_count/2.0;
     // Loop through candidate vote count
-    for (int i = 0; i < candidate_count; i++) {
-        if (candidates[i].votes > victoryNum) {
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes > victoryNum)
+        {
             printf("Total votes = %i and half amount to win %f | Candidate votes num: %i\n", voter_count, victoryNum, candidates[i].votes);
             printf("Winning vote count is %i?\n", candidates[i].votes);
             printf("%s\n", candidates[i].name);
@@ -187,7 +189,10 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO
+    for (int i = 0; i < candidate_count; i++)
+    {
             printf("Min Votes\n");
+    }
     return 0;
 }
 
