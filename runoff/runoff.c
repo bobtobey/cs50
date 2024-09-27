@@ -201,7 +201,8 @@ bool is_tie(int min)
 {
     // TODO
             printf("Tie\n");
-    return false;
+    // return false;
+    return true;
 }
 
 // Eliminate the candidate (or candidates) in last place
