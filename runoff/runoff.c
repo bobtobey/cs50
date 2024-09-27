@@ -169,7 +169,7 @@ bool print_winner(void)
     {
         printf("There is only one candidate!\n The winner is %s\n", candidates[0].name);
     };
-    for (i = 0; i > vote)
+    // Loop through candidate vote count
     for (int i = 0; i < candidate_count; i++) {
         if (candidates[i].votes >= 1) {
             printf("Winning count is %i?\n", candidates[i].votes);
