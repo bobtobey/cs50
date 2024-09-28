@@ -195,10 +195,11 @@ int find_min(void)
         if (candidates[i].votes > lowestVoteCount)
         {
             lowestVoteCount = candidates[i].votes;
+            printf("low Vote Count %i %i\n", i, lowestVoteCount);
         }
         else if (candidates[i].votes == lowestVoteCount)
         {
-            printf("Tie %s\n", candidates[i].name);
+            printf("MIN %s\n", candidates[i].name);
         }
         else
         {
