@@ -238,6 +238,11 @@ bool is_tie(int min)
 void eliminate(int min)
 {
     // TODO
+    printf("Elim min = %i\n", min);
+    // Loop through candidates list
+    for (int i = 0; i < candidate_count; i++)
+    {
+    }
             printf("Eliminated\n");
     return;
 }
