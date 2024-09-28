@@ -156,8 +156,6 @@ void tabulate(void)
         candidates[preferences[i][0]].votes += 1;
         printf("Add candidate %s votes up for a total of %i\n", candidates[i].name, candidates[i].votes);
     }
-    printf("Voter 0 - candidate Choices: %i first, %i second, %i third.\n", preferences[0][0], preferences[0][1], preferences[0][2]);
-    printf("Voter 1 - candidate Choices: %i first, %i second, %i third.\n", preferences[1][0], preferences[1][1], preferences[1][2]);
     return;
 }
 
