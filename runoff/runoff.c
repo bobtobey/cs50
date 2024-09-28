@@ -198,9 +198,13 @@ int find_min(void)
         }
         else if (candidates[i].votes == lowestVoteCount)
         {
-
+            printf("Tie %s\n", candidates[i].name);
         }
-            printf("Min Votes %s has %i\n", candidates[i].name, candidates[i].votes);
+        else
+        {
+            printf("else?\n");
+        }
+        printf("Min Votes %s has %i\n", candidates[i].name, candidates[i].votes);
     }
     return true;
 }
