@@ -191,6 +191,7 @@ int find_min(void)
     // TODO
     for (int i = 0; i < candidate_count; i++)
     {
+        int min
             printf("Min Votes %s has %i\n", candidates[i].name, candidates[i].votes);
     }
     return true;
