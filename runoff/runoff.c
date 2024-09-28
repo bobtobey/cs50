@@ -189,9 +189,13 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO
+    int lowestVoteCount = 0;
     for (int i = 0; i < candidate_count; i++)
     {
-        int min
+        if (candidates[i].votes)
+        {
+            // go
+        }
             printf("Min Votes %s has %i\n", candidates[i].name, candidates[i].votes);
     }
     return true;
