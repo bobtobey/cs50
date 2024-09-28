@@ -226,10 +226,10 @@ bool is_tie(int min)
         }
         else
         {
-            printf("False");
+            printf("False\n");
+            return false;
         }
     }
-            printf("Tie\n");
     // return false;
     return true;
 }
