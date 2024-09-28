@@ -129,7 +129,7 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // Iterate over candidates Struct to validate for name
-f    for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         // Look for candicate name and return true if found.
         if (strcasecmp(candidates[i].name, name) == 0)
