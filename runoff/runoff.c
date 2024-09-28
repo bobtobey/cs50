@@ -214,11 +214,16 @@ int find_min(void)
 bool is_tie(int min)
 {
     // TODO
+    printf("min = %i\n", min);
     for (int i = 0; i < candidate_count; i++)
     {
         if (min == candidates[i].votes)
         {
             printf("Tie Me %s at %i\n", candidates[i].name, candidates[i].votes);
+        }
+        else
+        {
+            printf("False");
         }
     }
             printf("Tie\n");
