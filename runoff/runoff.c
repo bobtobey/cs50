@@ -242,7 +242,11 @@ void eliminate(int min)
     // Loop through candidates list
     for (int i = 0; i < candidate_count; i++)
     {
+        if (min == candidates[i].votes)
+        {
+            // elminate me
+            printf("Eliminated: %s\n", candidates[i].name);
+        }
     }
-            printf("Eliminated\n");
     return;
 }
