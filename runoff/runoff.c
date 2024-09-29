@@ -201,7 +201,7 @@ int find_min(void)
         {
             lowestVoteCount = 0;
             printf("low Vote Count %i %i\n", i, lowestVoteCount);
-            // return true;
+            return true;
         }
         else if (lowestVoteCount < candidates[i].votes)
         {
