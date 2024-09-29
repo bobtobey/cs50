@@ -252,9 +252,9 @@ void eliminate(int min)
         {
             // elminate me
             printf("Eliminated: %s\n", candidates[i].name);
-            printf("Really Eliminated: %s\n", candidates[i].eliminated);
-            candidates[i].elminated = true;
-            printf("Oh Yes Eliminated: %s\n", candidates[i].eliminated);
+            printf("Really Eliminated: %i\n", candidates[i].eliminated);
+            candidates[i].eliminated = true;
+            printf("Oh Yes Eliminated: %i\n", candidates[i].eliminated);
         }
     }
     return;
