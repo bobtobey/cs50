@@ -135,9 +135,9 @@ bool vote(int voter, int rank, string name)
         // Look for candicate name and return true if found.
         if (strcasecmp(candidates[i].name, name) == 0)
         {
-            printf("Voter %i : ranks %s as choice %i\n", voter, name, rank);
             // Set voter rank preference for candidate i
             preferences[voter][rank] = i;
+            printf("Voter %i : ranks %s (%i) as choice %i\n", voter, name, preferences[voter][rank], rank);
             printf("Preference %i\n", preferences[voter][rank]);
             return true;
         }
