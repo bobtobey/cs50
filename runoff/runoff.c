@@ -202,7 +202,7 @@ int find_min(void)
         }
         else
         {
-            printf("else?\n");
+            printf("else? %s \n", candidates[i].name);
         }
         printf("Min Votes %s has %i\n", candidates[i].name, candidates[i].votes);
     }
