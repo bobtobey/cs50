@@ -136,7 +136,7 @@ bool vote(int voter, int rank, string name)
         if (strcasecmp(candidates[i].name, name) == 0)
         {
             printf("Voter %i : ranks %s as choice %i\n", voter, name, rank);
-            // Set voter rank preference
+            // Set voter rank preference for candidate i
             preferences[voter][rank] = i;
             return true;
         }
