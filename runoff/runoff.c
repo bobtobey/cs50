@@ -172,6 +172,7 @@ bool print_winner(void)
     // Loop through candidate vote count
     for (int i = 0; i < candidate_count; i++)
     {
+        printf("Talley candidate %s votes up for a total of %i\n", candidates[i].name, candidates[i].votes);
         if (candidates[i].votes > victoryNum)
         {
             printf("Total votes = %i and half amount to win %f | Candidate votes num: %i\n", voter_count, victoryNum, candidates[i].votes);
