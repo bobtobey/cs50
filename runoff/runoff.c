@@ -137,7 +137,7 @@ bool vote(int voter, int rank, string name)
         {
             printf("Voter %i : ranks %s as choice %i\n", voter, name, rank);
             // Set voter rank preference
-            preferences[voter][i] = rank;
+            preferences[voter][rank] = i;
             return true;
         }
     }
