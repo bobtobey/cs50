@@ -149,7 +149,7 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // Loop through preferences array
-    for (int i = 0; i < voter_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         printf("Tabulate voter %i : Prefers candidate %i first.\n", i, preferences[i][0]);
         // Add up votes for non-eliminated candidates
