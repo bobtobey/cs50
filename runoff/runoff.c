@@ -180,13 +180,13 @@ bool print_winner(void)
     for (int i = 0; i < candidate_count; i++)
     {
         printf("Talley candidate %s votes up for a total of %i\n", candidates[i].name, candidates[i].votes);
-        if (candidates[i].votes > victoryNum)
-        {
-            printf("Total votes = %i and half amount to win %f | Candidate votes num: %i\n", voter_count, victoryNum, candidates[i].votes);
-            printf("Winning vote count is %i?\n", candidates[i].votes);
-            printf("x %i %s\n", i, candidates[i].name);
-            return true;
-        }
+        // if (candidates[i].votes > victoryNum)
+        // {
+        //     printf("Total votes = %i and half amount to win %f | Candidate votes num: %i\n", voter_count, victoryNum, candidates[i].votes);
+        //     printf("Winning vote count is %i?\n", candidates[i].votes);
+        //     printf("x %i %s\n", i, candidates[i].name);
+        //     return true;
+        // }
     }
     return false;
 }
