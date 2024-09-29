@@ -195,15 +195,16 @@ int find_min(void)
             lowestVoteCount = 0;
             printf("low Vote Count %i %i\n", i, lowestVoteCount);
         }
-        else if (candidates[i].votes == lowestVoteCount)
+        else if (candidates[i].votes < candidates[i+1].votes)
         {
-            printf("MIN %s\n", candidates[i].name);
+            printf("MIN less %s\n", candidates[i].name);
+            lowestVoteCount = candidates[i].votes;
         }
         else
         {
             printf("else?\n");
         }
-        printf("Min Votes %s has %i\n", candidates[i + 1].name, candidates[i].votes);
+        printf("Min Votes %s has %i\n", candidates[i].name, candidates[i].votes);
     }
     return true;
 }
