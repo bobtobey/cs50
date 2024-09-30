@@ -214,6 +214,7 @@ int find_min(void)
 bool is_tie(int min)
 {
     printf("min = %i\n", min);
+    bool flag = true;
     // Loop through candidates list
     for (int i = 0; i < candidate_count; i++)
     {
@@ -225,9 +226,10 @@ bool is_tie(int min)
         else
         {
             printf("False\n");
+            flag = false;
         }
     }
-    return false;
+    return flag;
 }
 
 // Eliminate the candidate (or candidates) in last place
