@@ -152,7 +152,7 @@ void tabulate(void)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            if (preferences[i].eliminated != true)
+            if (preferences[i][j].eliminated != true)
             {
                 printf("Tabulate voter %i : Ranks candidate %s as rank %i.\n", i, candidates[i].name, preferences[i][0]);
                 // Add up votes for non-eliminated candidates
