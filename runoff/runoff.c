@@ -159,13 +159,9 @@ void tabulate(void)
             if (candidates[preferences[i][j]].eliminated != true)
             {
                 // Add up votes for non-eliminated candidates
-                candidates[preferences[i][0]].votes += 1;
+                candidates[preferences[i][j]].votes += 1;
                 printf("Tabulate voter %i : Ranks candidate %s with %i votes\n", i, candidates[preferences[i][0]].name, candidates[preferences[i][0]].votes);
                 break;
-            }
-            else
-            {
-                candidates[preferences[i][0]].votes += 1;
             }
         }
     }
