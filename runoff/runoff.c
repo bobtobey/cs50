@@ -227,7 +227,7 @@ bool is_tie(int min)
             printf("False\n");
         }
     }
-    return true;
+    return false;
 }
 
 // Eliminate the candidate (or candidates) in last place
