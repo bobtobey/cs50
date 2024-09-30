@@ -156,6 +156,7 @@ void tabulate(void)
             if (candidates[preferences[i][j]].eliminated != true)
             {
                 printf("candidate %s\n", candidates[j].name);
+                printf("candidate info %s\n", candidates[preferences[i][j]].name);
                 // Add up votes for non-eliminated candidates
                 candidates[preferences[i][j]].votes += 1;
                 // printf("Add candidate %s votes up for a total of %i\n", candidates[i].name, candidates[i].votes);
