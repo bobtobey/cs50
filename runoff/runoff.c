@@ -225,7 +225,6 @@ bool is_tie(int min)
         else
         {
             printf("False\n");
-            return false;
         }
     }
     return true;
