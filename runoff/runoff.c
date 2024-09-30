@@ -217,6 +217,7 @@ int find_min(void)
         }
         printf("Min Votes %s has %i\n", candidates[i].name, candidates[i].votes);
     }
+    printf("lowestvotecount %i\n", lowestVoteCount);
     return lowestVoteCount;
 }
 
