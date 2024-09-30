@@ -184,8 +184,8 @@ bool print_winner(void)
         if (candidates[i].votes > victoryNum)
         {
             printf("Total votes = %i and half amount to win %f | Candidate votes num: %i\n", voter_count, victoryNum, candidates[i].votes);
-            printf("Winning vote count is %i?\n", candidates[i].votes);
-            printf("x %i %s\n", i, candidates[i].name);
+            printf("Winning vote count is %i.\n", candidates[i].votes);
+            printf("%s\n", candidates[i].name);
             return true;
         }
     }
