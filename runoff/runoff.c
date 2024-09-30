@@ -222,10 +222,15 @@ bool is_tie(int min)
         if (min == candidates[i].votes)
         {
             printf("Tie Me %s at %i\n", candidates[i].name, candidates[i].votes);
-            return true;
+        }
+        else
+        {
+            printf("False\n");
+            return false;
         }
     }
-    return false;
+    // return false;
+    return true;
 }
 
 // Eliminate the candidate (or candidates) in last place
