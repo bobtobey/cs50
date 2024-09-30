@@ -218,7 +218,7 @@ bool is_tie(int min)
     for (int i = 0; i < candidate_count; i++)
     {
         // If every candidate had equal votes return Tie is true
-        if (min == candidates[i].votes)
+        if (min == candidates[i].votes && !candidates[i].eliminated)
         {
             printf("Tie Me %s at %i\n", candidates[i].name, candidates[i].votes);
         }
