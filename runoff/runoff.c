@@ -213,8 +213,6 @@ int find_min(void)
 // Return true if the election is tied between all candidates, false otherwise
 bool is_tie(int min)
 {
-    // TODO
-    printf("min = %i\n", min);
     // Loop through candidates list
     for (int i = 0; i < candidate_count; i++)
     {
@@ -222,7 +220,6 @@ bool is_tie(int min)
         if (min == candidates[i].votes)
         {
             printf("Tie Me %s at %i\n", candidates[i].name, candidates[i].votes);
-            tie = 1;
         }
         else
         {
