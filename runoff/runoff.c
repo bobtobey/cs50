@@ -218,11 +218,12 @@ bool is_tie(int min)
     // Loop through candidates list
     for (int i = 0; i < candidate_count; i++)
     {
-        int 
+        int tie;
         // If every candidate had equal votes return Tie is true
         if (min == candidates[i].votes)
         {
             printf("Tie Me %s at %i\n", candidates[i].name, candidates[i].votes);
+            tie = 1;
         }
         else
         {
