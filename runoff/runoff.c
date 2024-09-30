@@ -150,11 +150,11 @@ void tabulate(void)
     // Loop through preferences array
     for (int i = 0; i < voter_count; i++)
     {
+        printf("voter %i\n", i);
         for (int j = 0; j < candidate_count; j++)
         {
             if (candidates[preferences[i][j]].eliminated != true)
             {
-                printf("Tabulate voter %i : Ranks candidate %s as rank %i.\n", i, candidates[j].name, candidates[preferences[i][j]].votes);
                 // Add up votes for non-eliminated candidates
                 candidates[preferences[i][j]].votes += 1;
                 // printf("Add candidate %s votes up for a total of %i\n", candidates[i].name, candidates[i].votes);
