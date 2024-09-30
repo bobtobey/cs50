@@ -218,7 +218,6 @@ bool is_tie(int min)
     // Loop through candidates list
     for (int i = 0; i < candidate_count; i++)
     {
-        int tie;
         // If every candidate had equal votes return Tie is true
         if (min == candidates[i].votes)
         {
