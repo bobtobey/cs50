@@ -158,7 +158,7 @@ void tabulate(void)
                 printf("candidate name %s has %i votes\n", candidates[preferences[i][j]].name, candidates[preferences[i][j]].votes);
                 // Add up votes for non-eliminated candidates
                 candidates[preferences[i][0]].votes += 1;
-                printf("Tabulate voter %i : Ranks candidate %s with %i votes\n", i, candidates[preferences[i][j]].name, candidates[preferences[i][j]].votes);
+                printf("Tabulate voter %i : Ranks candidate %s with %i votes\n", i, candidates[preferences[i][j]].name, candidates[preferences[i][0]].votes);
             }
         }
     }
