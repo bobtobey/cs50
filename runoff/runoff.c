@@ -195,7 +195,7 @@ bool print_winner(void)
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
-    // TODO
+    // Initialize variable to hold minimum vote #
     int lowestVoteCount = INT_MAX;
     for (int i = 0; i < candidate_count; i++)
     {
