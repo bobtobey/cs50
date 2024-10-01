@@ -198,11 +198,14 @@ bool print_winner(void)
 int find_min(void)
 {
     // Initialize variable to hold minimum vote #
+    // Set to INT_MAX represents the maximum value an int can hold.
     int lowestVoteCount = INT_MAX;
     for (int i = 0; i < candidate_count; i++)
     {
+        // Check if candidate is eliminated and for lowest vote count
         if (!candidates[i].eliminated && lowestVoteCount > candidates[i].votes)
         {
+            // Set vote count to lowest vote #
             lowestVoteCount = candidates[i].votes;
             printf("Min Vote Check: %s has %i\n", candidates[i].name, candidates[i].votes);
         }
@@ -215,6 +218,7 @@ int find_min(void)
 bool is_tie(int min)
 {
     printf("min = %i\n", min);
+    // Set flag for a tie to true
     bool flag = true;
     // Loop through candidates list
     for (int i = 0; i < candidate_count; i++)
