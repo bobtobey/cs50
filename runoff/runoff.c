@@ -181,7 +181,6 @@ bool print_winner(void)
     // Loop through candidate vote count
     for (int i = 0; i < candidate_count; i++)
     {
-        // printf("Talley candidate %s votes up for a total of %i\n", candidates[i].name, candidates[i].votes);
         // Check if candidate has majority vote
         if (candidates[i].votes > victoryNum)
         {
