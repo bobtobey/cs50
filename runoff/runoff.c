@@ -223,9 +223,10 @@ bool is_tie(int min)
     // Loop through candidates list
     for (int i = 0; i < candidate_count; i++)
     {
-        // If every candidate had equal votes return Tie is true
+        // Check every candidate for equal votes and return Tie if true
         if (min == candidates[i].votes && !candidates[i].eliminated)
         {
+            // Do nothing for tie
             printf("Tie Me %s at %i\n", candidates[i].name, candidates[i].votes);
         }
         else if (!candidates[i].eliminated)
@@ -241,11 +242,11 @@ bool is_tie(int min)
 // Eliminate the candidate (or candidates) in last place
 void eliminate(int min)
 {
-    // TODO
     printf("Elim min = %i\n", min);
     // Loop through candidates list
     for (int i = 0; i < candidate_count; i++)
     {
+        // If candidate has lowest vote set eliminated value to true
         if (min == candidates[i].votes)
         {
             // elminate me
