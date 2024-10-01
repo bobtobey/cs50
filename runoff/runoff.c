@@ -249,10 +249,9 @@ void eliminate(int min)
         // If candidate has lowest vote set eliminated value to true
         if (min == candidates[i].votes)
         {
-            // elminate me
-            printf("Eliminated: %s\n", candidates[i].name);
+            // Set eliminated value for candidate to true
             candidates[i].eliminated = true;
-            printf("Oh Yes Eliminated: %i\n", candidates[i].eliminated);
+            printf("Eliminated: %s (%i)\n", candidates[i].name, candidates[i].eliminated);
         }
     }
     return;
