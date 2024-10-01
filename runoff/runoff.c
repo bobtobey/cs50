@@ -94,7 +94,6 @@ int main(int argc, string argv[])
         bool won = print_winner();
         if (won)
         {
-            printf("winner\n");
             break;
         }
 
