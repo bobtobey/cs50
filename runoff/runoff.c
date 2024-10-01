@@ -184,8 +184,7 @@ bool print_winner(void)
         // Check if candidate has majority vote
         if (candidates[i].votes > victoryNum)
         {
-            printf("Total votes = %i and half amount to win %f | Candidate votes num: %i\n", voter_count, victoryNum, candidates[i].votes);
-            printf("Winning vote count is %i.\n", candidates[i].votes);
+            // printf("Total votes = %i and half amount to win %f | Candidate votes num: %i\n", voter_count, victoryNum, candidates[i].votes);
             // Print winners name
             printf("%s\n", candidates[i].name);
             return true;
@@ -207,17 +206,15 @@ int find_min(void)
         {
             // Set vote count to lowest vote #
             lowestVoteCount = candidates[i].votes;
-            printf("Min Vote Check: %s has %i\n", candidates[i].name, candidates[i].votes);
+            // printf("Min Vote Check: %s has %i\n", candidates[i].name, candidates[i].votes);
         }
     }
-    printf("lowestvotecount %i\n", lowestVoteCount);
     return lowestVoteCount;
 }
 
 // Return true if the election is tied between all candidates, false otherwise
 bool is_tie(int min)
 {
-    printf("min = %i\n", min);
     // Set flag for a tie to true
     bool flag = true;
     // Loop through candidates list
@@ -227,11 +224,10 @@ bool is_tie(int min)
         if (min == candidates[i].votes && !candidates[i].eliminated)
         {
             // Do nothing for tie
-            printf("Tie for candidate: %s at %i\n", candidates[i].name, candidates[i].votes);
+            // printf("Tie for candidate: %s at %i\n", candidates[i].name, candidates[i].votes);
         }
         else if (!candidates[i].eliminated)
         {
-            printf("False\n");
             // If there is not a complete tie set flag false
             flag = false;
         }
@@ -242,7 +238,6 @@ bool is_tie(int min)
 // Eliminate the candidate (or candidates) in last place
 void eliminate(int min)
 {
-    printf("Elim min = %i\n", min);
     // Loop through candidates list
     for (int i = 0; i < candidate_count; i++)
     {
@@ -251,7 +246,7 @@ void eliminate(int min)
         {
             // Set eliminated value for candidate to true
             candidates[i].eliminated = true;
-            printf("Eliminated: %s (%i)\n", candidates[i].name, candidates[i].eliminated);
+            // printf("Eliminated: %s (%i)\n", candidates[i].name, candidates[i].eliminated);
         }
     }
     return;
