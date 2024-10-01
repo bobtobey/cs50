@@ -137,7 +137,8 @@ bool vote(int voter, int rank, string name)
         {
             // Set voter rank preference for candidate i
             preferences[voter][rank] = i;
-            // printf("Voter %i : ranks %s (%i) as choice %i\n", voter, name, preferences[voter][rank], rank);
+            // printf("Voter %i : ranks %s (%i) as choice %i\n", voter, name,
+            // preferences[voter][rank], rank);
             return true;
         }
     }
@@ -158,7 +159,8 @@ void tabulate(void)
             {
                 // Add up votes for non-eliminated candidates
                 candidates[preferences[i][j]].votes += 1;
-                // printf("Tabulate voter %i : Ranks candidate %s with %i votes\n", i, candidates[preferences[i][j]].name, candidates[preferences[i][j]].votes);
+                // printf("Tabulate voter %i : Ranks candidate %s with %i votes\n", i,
+                // candidates[preferences[i][j]].name, candidates[preferences[i][j]].votes);
                 break;
             }
         }
