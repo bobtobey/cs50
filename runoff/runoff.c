@@ -148,11 +148,10 @@ bool vote(int voter, int rank, string name)
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
-    // Loop through voter choices
+    // Outer loop through voters
     for (int i = 0; i < voter_count; i++)
     {
-        printf("voter %i\n", i);
-        // Loop through candidates
+        // Inner loop through candidates
         for (int j = 0; j < candidate_count; j++)
         {
             // Count votes for non-eliminated candidates
