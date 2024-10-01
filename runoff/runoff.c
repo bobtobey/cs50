@@ -232,7 +232,7 @@ bool is_tie(int min)
         else if (!candidates[i].eliminated)
         {
             printf("False\n");
-            // If is not a complete tie set flag false
+            // If there is not a complete tie set flag false
             flag = false;
         }
     }
