@@ -138,7 +138,7 @@ bool vote(int voter, int rank, string name)
         {
             // Set voter rank preference for candidate i
             preferences[voter][rank] = i;
-            printf("Voter %i : ranks %s (%i) as choice %i\n", voter, name, preferences[voter][rank], rank);
+            // printf("Voter %i : ranks %s (%i) as choice %i\n", voter, name, preferences[voter][rank], rank);
             return true;
         }
     }
@@ -159,7 +159,7 @@ void tabulate(void)
             {
                 // Add up votes for non-eliminated candidates
                 candidates[preferences[i][j]].votes += 1;
-                printf("Tabulate voter %i : Ranks candidate %s with %i votes\n", i, candidates[preferences[i][j]].name, candidates[preferences[i][j]].votes);
+                // printf("Tabulate voter %i : Ranks candidate %s with %i votes\n", i, candidates[preferences[i][j]].name, candidates[preferences[i][j]].votes);
                 break;
             }
         }
@@ -180,7 +180,7 @@ bool print_winner(void)
     // Loop through candidate vote count
     for (int i = 0; i < candidate_count; i++)
     {
-        printf("Talley candidate %s votes up for a total of %i\n", candidates[i].name, candidates[i].votes);
+        // printf("Talley candidate %s votes up for a total of %i\n", candidates[i].name, candidates[i].votes);
         // Check if candidate has majority vote
         if (candidates[i].votes > victoryNum)
         {
