@@ -12,4 +12,7 @@ int main(void)
     // Print strings
     printf("%s\n", s);
     printf("%s\n", t);
+    // Print locations
+    printf("%p\n", s);
+    printf("%p\n", t);
 }
