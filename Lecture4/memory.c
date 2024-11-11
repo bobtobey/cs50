@@ -9,5 +9,5 @@ int main(void)
     x[0] = 72;
     x[1] = 73;
     x[2] = 33;
-    Free(x);
+    free(x);
 }
