@@ -44,18 +44,12 @@ int main(int argc, char *argv[])
     // buffer variable temp storage for wav sample
     int16_t buffer;
 
-    // read wav sample into buffer variable
-    // fread(&buffer, sizeof(int16_t), 1, input);
-
-    // modify volume of wav sample
-    // buffer *= factor;
-
-    // write modified wav sample into output
-    // fwrite(&buffer, sizeof(int16_t), 1, output);
-
+    // loop through reading wav sample into buffer variable 1 byte per loop
     while (fread(&buffer, sizeof(int16_t), 1, input) != 0)
     {
+        // modify volume of wav sample by factor variable
         buffer *= factor;
+        // write modified wav sample into output 1 byte per loop
         fwrite(&buffer, sizeof(int16_t), 1, output);
     }
 
