@@ -36,7 +36,11 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
         // loop through array[width]
         for(int j = 0; j < width; j++)
         {
-            // do something
+            // get Sepia values
+            int sepiaRed = .393 * image[i][j].rgbtRed + .769 * originalGreen + .189 * originalBlue;
+
+            // update pixel values
+
         }
     }
     return;
