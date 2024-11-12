@@ -14,7 +14,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
             int redValue = image[i][j].rgbtRed;
             int greenValue = image[i][j].rgbtGreen;
             int blueValue = image[i][j].rgbtBlue;
-            int pixelAverage = (redValue + greenValue + blueValue);
+            int pixelAverage = (redValue + greenValue + blueValue)/3;
             // printf("Red value: %i - ", redValue);
             printf("Pixel average: %i - ", pixelAverage);
             // update pixel values
