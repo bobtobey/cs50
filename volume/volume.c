@@ -35,9 +35,9 @@ int main(int argc, char *argv[])
 
     // TODO: Copy header from input file to output file
     uint8_t header[HEADER_SIZE];
-    // read from input into the header
+    // read bytes from input and load into temp header
     fread(header, HEADER_SIZE, 1, input);
-    // 
+    // write bytes from temp header and load into output
     fwrite(header, HEADER_SIZE, 1, output);
 
     // TODO: Read samples from input file and write updated data to output file
