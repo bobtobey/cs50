@@ -3,8 +3,10 @@
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
+    // loop through array[height]
     for (int i = 0; i < height; i++)
     {
+        // loop through array[width]
         for(int j = 0; j < width; j++)
         {
             // get average of rgb
