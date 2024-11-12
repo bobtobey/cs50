@@ -46,13 +46,14 @@ int main(int argc, char *argv[])
     // fread(&buffer, sizeof(int16_t), 1, input);
 
     // modify volume of wav sample
-    buffer *= factor;
+    // buffer *= factor;
 
     // write modified wav sample into output
     // fwrite(&buffer, sizeof(int16_t), 1, output);
 
     while (fread(&buffer, sizeof(int16_t), 1, input) != 0)
     {
+        buffer *= factor;
         fwrite(&buffer, sizeof(int16_t), 1, output);
     }
 
