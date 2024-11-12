@@ -18,8 +18,8 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
             printf("Pixel average: %i - ", pixelAverage);
 
             // update pixel values
-            FILE *src = fopen(argv[1], "rb");
-            FILE *dst = fopen(argv[2], "rb");
+            FILE *src = fopen(image[i][j], "rb");
+            FILE *dst = fopen(image[i][j], "rb");
             BYTE buffer;
 
             while (fread(&buffer, sizeof(buffer), 1, src) != 0)
