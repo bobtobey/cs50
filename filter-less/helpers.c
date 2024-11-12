@@ -17,6 +17,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
             int pixelAverage = (redValue + greenValue + blueValue) / 3.0;
             printf("Pixel average: %i - ", pixelAverage);
             // update pixel values
+            
         }
     }
     return;
