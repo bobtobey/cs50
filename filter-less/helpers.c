@@ -130,16 +130,19 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     if (ni >= 0 && ni < height && nj >= 0 && nj < width)
                     {
                         // Access the pixel at (ni, nj)
-                        // get average of rgb
-                        ninj_red += [ni][nj].rgbtRed;
-                        ninj_green += [ni][nj].rgbtGreen;
-                        ninj_blue += [ni][nj].rgbtBlue;
-                        ninj_pixel_average = round(ninj_red + ninj_green + ninj_blue) / 3.0);
-                        counter++
 
+                        ninj_sum_red += [ni][nj].rgbtRed;
+                        ninj_sum_green += [ni][nj].rgbtGreen;
+                        ninj_sum_blue += [ni][nj].rgbtBlue;
+                        counter++;
                     }
                 }
             }
+            // get average of rgb
+            ninj_avg_red = round(ninj_sum_red / counter);
+            ninj_avg_green = round(ninj_sum_green / counter);
+            ninj_avg_blue = round(ninj_sum_blue / counter);
+
             // int blur_pixel_value = (copy[i][j] + copy[i][j] + 1) * 2;
 
             // blur image pixel with average of colr
