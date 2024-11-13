@@ -80,12 +80,11 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     // loop through array[height]
     for (int i = 0; i < height; i++)
     {
-        image[i]
         // loop through array[width]
         for(int j = 0; j < width; j++)
         {
             // Reflect pixel locations on horizontal opposite sides
-
+            image[j]
         }
     }
     return;
