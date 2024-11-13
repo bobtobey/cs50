@@ -50,7 +50,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             sepiaGreen = checkSepiaCap(sepiaGreen);
             sepiaBlue = checkSepiaCap(sepiaBlue);
 
-            printf("Sepia R-G-B: %i-%i-%i | ", sepiaRed, sepiaGreen, sepiaBlue);
+            // printf("Sepia R-G-B: %i-%i-%i | ", sepiaRed, sepiaGreen, sepiaBlue);
 
             // update pixel values
             image[i][j].rgbtRed = sepiaRed;
@@ -61,7 +61,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     }
     return;
 }
-
+// Check Sepia values to be clamped at 0 to 255
 int checkSepiaCap (int sepiaColor){
     if (sepiaColor > 255)
     {
