@@ -112,8 +112,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             copy[i][j] = image[i][j];
 
             // Blur pixel values around sample average
+            // targets the current, above, and below rows
             for (int di = -1; di <= 1; di++)
             {
+                // targets the current, left, and right columns
                 for (int dj = -1; dj <= 1; dj++)
                 {
                     int ni = i + di;
@@ -126,7 +128,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         int red_value = image[i][j].rgbtRed;
                         int green_value = image[i][j].rgbtGreen;
                         int blue_value = image[i][j].rgbtBlue;
-                        
+
                     }
                 }
             }
