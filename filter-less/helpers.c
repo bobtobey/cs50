@@ -107,7 +107,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     int ninj_red = 0;
     int ninj_green = 0;
     int ninj_blue = 0;
-    
+
     // loop through array[height]
     for (int i = 0; i < height; i++)
     {
@@ -129,13 +129,13 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     // Check if ni and nj are within bounds
                     if (ni >= 0 && ni < height && nj >= 0 && nj < width)
                     {
-                        counter++
                         // Access the pixel at (ni, nj)
                         // get average of rgb
-                        int ninj_red = [ni][nj].rgbtRed;
-                        int ninj_green = [ni][nj].rgbtGreen;
-                        int ninj_blue = [ni][nj].rgbtBlue;
+                        ninj_red += [ni][nj].rgbtRed;
+                        ninj_green += [ni][nj].rgbtGreen;
+                        ninj_blue += [ni][nj].rgbtBlue;
                         ninj_pixel_average = round(ninj_red + ninj_green + ninj_blue) / 3.0);
+                        counter++
 
                     }
                 }
