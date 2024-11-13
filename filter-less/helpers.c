@@ -104,6 +104,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     RGBTRIPLE copy[height][width];
     // initialization
     int counter = 0;
+    int ninj_red = 0;
+    int ninj_green = 0;
+    int ninj_blue = 0;
+    
     // loop through array[height]
     for (int i = 0; i < height; i++)
     {
