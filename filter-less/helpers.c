@@ -78,7 +78,7 @@ int checkSepiaCap (int sepiaColor){
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     // buffer variable temp storage for reflection
-    uint32_t buffer;
+    RGBTRIPLE buffer;
 
     // loop through array[height]
     for (int i = 0; i < height; i++)
