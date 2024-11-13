@@ -46,9 +46,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             int sepiaBlue = round(.272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 * image[i][j].rgbtBlue);
 
             // Ensure Sepia values are between 0 to 255
-            checkSepiaCap(sepiaRed);
-            checkSepiaCap(sepiaGreen);
-            checkSepiaCap(sepiaBlue);
+            sepiaRed = checkSepiaCap(sepiaRed);
+            sepiaGreen = checkSepiaCap(sepiaGreen);
+            sepiaBlue = checkSepiaCap(sepiaBlue);
 
             printf("Sepia R-G-B: %i-%i-%i | ", sepiaRed, sepiaGreen, sepiaBlue);
 
