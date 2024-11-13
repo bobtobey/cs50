@@ -8,9 +8,6 @@ int checkSepiaCap (int sepiaColor);
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
-    // buffer variable temp storage for reflection
-    int16_t buffer;
-
     // loop through array[height]
     for (int i = 0; i < height; i++)
     {
@@ -80,6 +77,9 @@ int checkSepiaCap (int sepiaColor){
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
+    // buffer variable temp storage for reflection
+    uint32_t buffer;
+    
     // loop through array[height]
     for (int i = 0; i < height; i++)
     {
