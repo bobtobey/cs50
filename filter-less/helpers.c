@@ -15,10 +15,10 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         for(int j = 0; j < width; j++)
         {
             // get average of rgb
-            int redValue = image[i][j].rgbtRed;
-            int greenValue = image[i][j].rgbtGreen;
-            int blueValue = image[i][j].rgbtBlue;
-            int pixel_average = round((redValue + greenValue + blueValue) / 3.0);
+            int red_value = image[i][j].rgbtRed;
+            int green_value = image[i][j].rgbtGreen;
+            int blue_value = image[i][j].rgbtBlue;
+            int pixel_average = round((red_value + green_value + blue_value) / 3.0);
             // printf("Pixel average: %i - ", pixel_average);
 
             // update pixel values
