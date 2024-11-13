@@ -110,7 +110,21 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             // make a copy of image
             copy[i][j] = image[i][j];
+            
             // Blur pixel values around sample average
+            for (int di = -1; di <= 1; di++)
+            {
+                for (int dj = -1; dj <= 1; dj++)
+                {
+                    int ni = i + di;
+                    int nj = j + dj;
+                    // Check if ni and nj are within bounds
+                    if (ni >= 0 && ni < height && nj >= 0 && nj < width)
+                    {
+                        // Access the pixel at (ni, nj)
+                    }
+                }
+            }
             int blur_pixel_value = (copy[i][j] + copy[i][j] + 1) * 2;
 
             // blur image pixel with average of colr
