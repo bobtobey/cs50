@@ -84,7 +84,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     for (int i = 0; i < height; i++)
     {
         // loop through array[width]
-        for(int j = 0; j < width; j++)
+        for(int j = 0; j < width / 2; j++)
         {
             // Reflect pixel locations on horizontal opposite sides
             buffer = image[i][(width - 1) - j];
