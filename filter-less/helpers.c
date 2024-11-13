@@ -41,21 +41,21 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
         for(int j = 0; j < width; j++)
         {
             // get Sepia values
-            int sepiaRed = round(.393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtGreen + .189 * image[i][j].rgbtBlue);
-            int sepiaGreen = round(.349 * image[i][j].rgbtRed + .686 * image[i][j].rgbtGreen + .168 * image[i][j].rgbtBlue);
-            int sepiaBlue = round(.272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 * image[i][j].rgbtBlue);
+            int sepia_red = round(.393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtGreen + .189 * image[i][j].rgbtBlue);
+            int sepia_green = round(.349 * image[i][j].rgbtRed + .686 * image[i][j].rgbtGreen + .168 * image[i][j].rgbtBlue);
+            int sepia_blue = round(.272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 * image[i][j].rgbtBlue);
 
             // Ensure Sepia values are between 0 to 255
-            sepiaRed = checkSepiaCap(sepiaRed);
-            sepiaGreen = checkSepiaCap(sepiaGreen);
-            sepiaBlue = checkSepiaCap(sepiaBlue);
+            sepia_red = checkSepiaCap(sepia_red);
+            sepia_green = checkSepiaCap(sepia_green);
+            sepia_blue = checkSepiaCap(sepia_blue);
 
-            // printf("Sepia R-G-B: %i-%i-%i | ", sepiaRed, sepiaGreen, sepiaBlue);
+            // printf("Sepia R-G-B: %i-%i-%i | ", sepia_red, sepia_green, sepia_blue);
 
             // update pixel values
-            image[i][j].rgbtRed = sepiaRed;
-            image[i][j].rgbtGreen = sepiaGreen;
-            image[i][j].rgbtBlue = sepiaBlue;
+            image[i][j].rgbtRed = sepia_red;
+            image[i][j].rgbtGreen = sepia_green;
+            image[i][j].rgbtBlue = sepia_blue;
 
         }
     }
