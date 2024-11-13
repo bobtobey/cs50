@@ -111,7 +111,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             // make a copy of image
             copy[i][j] = image[i][j];
             // Blur pixel values around sample
-            int blur_value = copy[i][j]
+            int blur_pixel_value = (copy[i][j] + copy[i][j] + 1) * 3;
 
         }
     }
