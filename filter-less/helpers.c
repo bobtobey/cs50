@@ -52,7 +52,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             checkSepiaCap(sepiaRed);
             checkSepiaCap(sepiaGreen);
             checkSepiaCap(sepiaBlue);
-            
+
             printf("Sepia R-G-B: %i-%i-%i | ", sepiaRed, sepiaGreen, sepiaBlue);
 
             // update pixel values
@@ -65,7 +65,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-int checkSepiaCap (sepiaColor){
+int checkSepiaCap (int sepiaColor){
     if (sepiaColor > 255)
     {
         sepiaColor = 255;
@@ -74,6 +74,7 @@ int checkSepiaCap (sepiaColor){
     {
         sepiaColor = 0;
     }
+    return sepiaColor;
 }
 
 // Reflect image horizontally
