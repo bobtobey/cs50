@@ -122,6 +122,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     if (ni >= 0 && ni < height && nj >= 0 && nj < width)
                     {
                         // Access the pixel at (ni, nj)
+                        // get average of rgb
+                        int red_value = image[i][j].rgbtRed;
+                        int green_value = image[i][j].rgbtGreen;
+                        int blue_value = image[i][j].rgbtBlue;
+                        
                     }
                 }
             }
