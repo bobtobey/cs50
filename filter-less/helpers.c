@@ -63,15 +63,15 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 }
 // Check Sepia values to be clamped at 0 to 255
 int checkSepiaCap (int sepiaColor){
-    if (sepiaColor > 255)
+    if (sepia_color > 255)
     {
-        sepiaColor = 255;
+        sepia_color = 255;
     }
-    if (sepiaColor < 0)
+    if (sepia_color < 0)
     {
-        sepiaColor = 0;
+        sepia_color = 0;
     }
-    return sepiaColor;
+    return sepia_color;
 }
 
 // Reflect image horizontally
