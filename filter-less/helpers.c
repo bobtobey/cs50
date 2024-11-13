@@ -128,7 +128,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             // int blur_pixel_value = (copy[i][j] + copy[i][j] + 1) * 2;
 
             // blur image pixel with average of colr
-            image[i][j] = blur_pixel_value;
+            // image[i][j] = blur_pixel_value;
         }
     }
     return;
