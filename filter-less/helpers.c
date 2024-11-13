@@ -79,7 +79,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     // buffer variable temp storage for reflection
     uint32_t buffer;
-    
+
     // loop through array[height]
     for (int i = 0; i < height; i++)
     {
@@ -87,7 +87,8 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         for(int j = 0; j < width; j++)
         {
             // Reflect pixel locations on horizontal opposite sides
-            image[i][j] = image[i][(width - 1) - j];
+            buffer = image[i][(width - 1) - j];
+            image[i][j] = buffer;
         }
     }
     return;
