@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 // Function prototypes
-int checkSepiaCap (int sepiaColor);
+int checkSepiaCap (int sepia_color);
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -62,7 +62,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 // Check Sepia values to be clamped at 0 to 255
-int checkSepiaCap (int sepiaColor){
+int checkSepiaCap (int sepia_color){
     if (sepia_color > 255)
     {
         sepia_color = 255;
