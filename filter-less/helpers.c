@@ -104,9 +104,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     RGBTRIPLE copy[height][width];
     // initialization
     int counter = 0;
-    int ninj_red = 0;
-    int ninj_green = 0;
-    int ninj_blue = 0;
+    int ninj_sum_red = 0;
+    int ninj_sum_green = 0;
+    int ninj_sum_blue = 0;
 
     // loop through array[height]
     for (int i = 0; i < height; i++)
@@ -139,9 +139,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
             // get average of rgb
-            ninj_avg_red = round(ninj_sum_red / counter);
-            ninj_avg_green = round(ninj_sum_green / counter);
-            ninj_avg_blue = round(ninj_sum_blue / counter);
+            int ninj_avg_red = round(ninj_sum_red / counter);
+            int ninj_avg_green = round(ninj_sum_green / counter);
+            int ninj_avg_blue = round(ninj_sum_blue / counter);
 
             // int blur_pixel_value = (copy[i][j] + copy[i][j] + 1) * 2;
 
