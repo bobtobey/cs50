@@ -88,7 +88,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         {
             // Reflect pixel locations on horizontal opposite sides
             *buffer = image[i][(width - 1) - j];
-            image[i][j] = buffer;
+            image[i][j] = *buffer;
         }
     }
     return;
