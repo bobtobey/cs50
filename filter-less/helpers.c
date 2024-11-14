@@ -154,7 +154,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
     // transfer stored color averages from the copy to the image
-     for (int k = 0; k < height; k++)
+    for (int k = 0; k < height; k++)
     {
         // loop through array[width]
         for (int l = 0; l < width; l++)
