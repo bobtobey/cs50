@@ -126,6 +126,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     int ni = i + di;
                     int nj = j + dj;
+
+                    ninj_sum_red = 0;
+                    ninj_sum_green = 0;
+                    ninj_sum_blue = 0;
                     // Check if ni and nj are within bounds
                     if (ni >= 0 && ni < height && nj >= 0 && nj < width)
                     {
