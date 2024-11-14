@@ -131,9 +131,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     {
                         // Access the pixel at (ni, nj)
 
-                        ninj_sum_red += [ni][nj].rgbtRed;
-                        ninj_sum_green += [ni][nj].rgbtGreen;
-                        ninj_sum_blue += [ni][nj].rgbtBlue;
+                        ninj_sum_red += image[ni][nj].rgbtRed;
+                        ninj_sum_green += image[ni][nj].rgbtGreen;
+                        ninj_sum_blue += image[ni][nj].rgbtBlue;
                         counter++;
                     }
                 }
