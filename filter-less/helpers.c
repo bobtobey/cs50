@@ -40,9 +40,12 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             // get Sepia values
-            int sepia_red = round(.393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtGreen + .189 * image[i][j].rgbtBlue);
-            int sepia_green = round(.349 * image[i][j].rgbtRed + .686 * image[i][j].rgbtGreen + .168 * image[i][j].rgbtBlue);
-            int sepia_blue = round(.272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 * image[i][j].rgbtBlue);
+            int sepia_red = round(.393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtGreen +
+                                  .189 * image[i][j].rgbtBlue);
+            int sepia_green = round(.349 * image[i][j].rgbtRed + .686 * image[i][j].rgbtGreen +
+                                    .168 * image[i][j].rgbtBlue);
+            int sepia_blue = round(.272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen +
+                                   .131 * image[i][j].rgbtBlue);
 
             // Ensure Sepia values are between 0 to 255
             sepia_red = checkSepiaCap(sepia_red);
@@ -141,9 +144,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
             // get average of rgb
-            int ninj_avg_red = round((float)ninj_sum_red / (float)counter);
-            int ninj_avg_green = round((float)ninj_sum_green / (float)counter);
-            int ninj_avg_blue = round((float)ninj_sum_blue / (float)counter);
+            int ninj_avg_red = round((float) ninj_sum_red / (float) counter);
+            int ninj_avg_green = round((float) ninj_sum_green / (float) counter);
+            int ninj_avg_blue = round((float) ninj_sum_blue / (float) counter);
             // store new color averages in the temp copy image
             copy[i][j].rgbtRed = ninj_avg_red;
             copy[i][j].rgbtGreen = ninj_avg_green;
