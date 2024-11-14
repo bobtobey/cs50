@@ -118,12 +118,12 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
             // Blur pixel values around sample average
             counter = 0;
+            ninj_sum_red = 0;
+            ninj_sum_green = 0;
+            ninj_sum_blue = 0;
             // targets the current, above, and below rows
             for (int di = -1; di <= 1; di++)
             {
-                ninj_sum_red = 0;
-                ninj_sum_green = 0;
-                ninj_sum_blue = 0;
                 // targets the current, left, and right columns
                 for (int dj = -1; dj <= 1; dj++)
                 {
