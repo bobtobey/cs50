@@ -143,7 +143,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     }
                 }
             }
-            // get average of rgb
+            // get average of rgb and account for floating point calc
             int ninj_avg_red = round((float) ninj_sum_red / (float) counter);
             int ninj_avg_green = round((float) ninj_sum_green / (float) counter);
             int ninj_avg_blue = round((float) ninj_sum_blue / (float) counter);
@@ -156,7 +156,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     // transfer stored color averages from the copy to the image
     for (int k = 0; k < height; k++)
     {
-        // loop through array[width]
         for (int l = 0; l < width; l++)
         {
             image[k][l].rgbtRed = copy[k][l].rgbtRed;
