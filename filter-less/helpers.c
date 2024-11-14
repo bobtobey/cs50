@@ -147,8 +147,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
     // transfer stored color averages from the copy to the image
-    image[i][j].rgbtRed = copy[i][j].rgbtRed;
-    image[i][j].rgbtGreen = copy[i][j].rgbtGreen;
-    image[i][j].rgbtBlue = copy[i][j].rgbtBlue;
+     for (int k = 0; k < height; k++)
+    {
+        // loop through array[width]
+        for (int l = 0; l < width; l++)
+        {
+            image[i][j].rgbtRed = copy[k][l].rgbtRed;
+            image[i][j].rgbtGreen = copy[k][l].rgbtGreen;
+            image[i][j].rgbtBlue = copy[k][l].rgbtBlue;
+        }
+    }
     return;
 }
