@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 // Function prototypes
-int checkSepiaCap (int sepia_color);
+int checkSepiaCap(int sepia_color);
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -12,7 +12,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     for (int i = 0; i < height; i++)
     {
         // loop through array[width]
-        for(int j = 0; j < width; j++)
+        for (int j = 0; j < width; j++)
         {
             // get average of rgb
             int red_value = image[i][j].rgbtRed;
@@ -25,7 +25,6 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
             image[i][j].rgbtRed = pixel_average;
             image[i][j].rgbtGreen = pixel_average;
             image[i][j].rgbtBlue = pixel_average;
-
         }
     }
     return;
@@ -38,7 +37,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     for (int i = 0; i < height; i++)
     {
         // loop through array[width]
-        for(int j = 0; j < width; j++)
+        for (int j = 0; j < width; j++)
         {
             // get Sepia values
             int sepia_red = round(.393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtGreen + .189 * image[i][j].rgbtBlue);
@@ -56,13 +55,13 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             image[i][j].rgbtRed = sepia_red;
             image[i][j].rgbtGreen = sepia_green;
             image[i][j].rgbtBlue = sepia_blue;
-
         }
     }
     return;
 }
 // Check Sepia values to be clamped at 0 to 255
-int checkSepiaCap (int sepia_color){
+int checkSepiaCap(int sepia_color)
+{
     if (sepia_color > 255)
     {
         sepia_color = 255;
@@ -85,7 +84,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     for (int i = 0; i < height; i++)
     {
         // loop through array[width]
-        for(int j = 0; j < width / 2; j++)
+        for (int j = 0; j < width / 2; j++)
         {
             // Reflect pixel locations on horizontal opposite sides
             buffer = image[i][(width - 1) - j];
@@ -112,7 +111,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     for (int i = 0; i < height; i++)
     {
         // loop through array[width]
-        for(int j = 0; j < width; j++)
+        for (int j = 0; j < width; j++)
         {
             // make a copy of image
             copy[i][j] = image[i][j];
