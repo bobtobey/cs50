@@ -120,6 +120,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             // targets the current, above, and below rows
             for (int di = -1; di <= 1; di++)
             {
+                counter = 0;
                 // targets the current, left, and right columns
                 for (int dj = -1; dj <= 1; dj++)
                 {
