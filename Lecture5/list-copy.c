@@ -4,7 +4,7 @@
 // copying everything from the old array to the new array
 int main(void)
 {
-    // re-declare list to be a pointer to address of a chunk of memory. And I could ask malloc for a chunk of memory namely of size 3 but not 3 per se, three integers
+    // re-declare list to be a pointer to address of a chunk of memory - of three integers
     int list = malloc(3);
 
     list[0] = 1;
