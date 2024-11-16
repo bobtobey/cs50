@@ -3,6 +3,7 @@
 
 int main(void)
 {
+    // an array of size 3
     int list[3];
 
     list[0] = 1;
