@@ -20,7 +20,8 @@ int main(void)
     int *tmp = malloc(4 * sizeof(int));
     if (list == NULL)
     {
-        // abort
+        // free memory and then abort
+        free(list);
         return 1;
     }
 
