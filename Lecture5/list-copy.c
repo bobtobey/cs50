@@ -1,5 +1,5 @@
-
 #include <stdio.h>
+#include <stdlib.h>
 
 // copying everything from the old array to the new array
 int main(void)
