@@ -1,6 +1,7 @@
 
 #include <stdio.h>
 
+// copying everything from the old array to the new array
 int main(void)
 {
     int list[3];
