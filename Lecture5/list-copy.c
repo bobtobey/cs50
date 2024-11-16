@@ -18,6 +18,11 @@ int main(void)
 
     // temporary pointer to address of memory size 4
     int *tmp = malloc(4 * sizeof(int));
+    if (list == NULL)
+    {
+        // abort
+        return 1;
+    }
 
     for (int i = 0; i < 3; i++)
     {
