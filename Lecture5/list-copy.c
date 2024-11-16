@@ -4,7 +4,8 @@
 // copying everything from the old array to the new array
 int main(void)
 {
-    int list[3];
+    // 
+    int list = malloc(3);
 
     list[0] = 1;
     list[1] = 2;
