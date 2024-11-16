@@ -25,8 +25,25 @@ int main(void)
         return 1;
     }
 
-    for (int i = 0; i < 3; i++)
+    // copy list array to temp memory
+    for (int h = 0; h < 3; h++)
+    {
+        tmp[h] = list[h];
+    }
+    // assign 4 to temp array
+    tmp[3] = 4;
+
+    // free list memory/empty
+    free(list);
+
+    // Update list to point to the new chuck of memory
+    list = tmp;
+
+    for (int i = 0; i < 4; i++)
     {
         printf("%i\n", list[i]);
     }
+
+    free(list);
+    return 0;
 }
