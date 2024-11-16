@@ -5,7 +5,7 @@
 int main(void)
 {
     // re-declare list to be a pointer to address of a chunk of memory - of three integers
-    int list = malloc(3 * sizeof(int));
+    int *list = malloc(3 * sizeof(int));
     if (list == NULL)
     {
         // abort
