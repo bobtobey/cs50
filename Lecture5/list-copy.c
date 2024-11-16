@@ -6,6 +6,11 @@ int main(void)
 {
     // re-declare list to be a pointer to address of a chunk of memory - of three integers
     int list = malloc(3 * sizeof(int));
+    if (list == NULL)
+    {
+        // abort
+        return 1;
+    }
 
     list[0] = 1;
     list[1] = 2;
