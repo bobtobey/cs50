@@ -16,5 +16,6 @@ int main(int argc, char *argv[])
         // convert string to #
         int number = atoi(argv[i]);
         printf("%i\n", number);
+        node *n = malloc(sizeof(node));
     }
 }
