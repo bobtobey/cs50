@@ -27,6 +27,8 @@ int main(int argc, char *argv[])
         // go into n. I can follow that pointer to the number field and set it equal to the actual number
         n->number = number;
         n->next = NULL;
-        
+
+        n->next = list;
+        list = n;
     }
 }
