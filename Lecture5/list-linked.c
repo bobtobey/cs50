@@ -16,6 +16,11 @@ int main(int argc, char *argv[])
         // convert string to #
         int number = atoi(argv[i]);
         printf("%i\n", number);
+        // creates pointer 'n' and get and assign memory
         node *n = malloc(sizeof(node));
+        if (n == NULL)
+        {
+            // free memory
+        }
     }
 }
