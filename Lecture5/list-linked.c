@@ -24,6 +24,9 @@ int main(int argc, char *argv[])
             return 1;
         }
         // go to next number and set it = n
+        // go into n. I can follow that pointer to the number field and set it equal to the actual number
         n->number = number;
+        n->next = NULL;
+        
     }
 }
