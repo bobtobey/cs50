@@ -32,5 +32,9 @@ int main(int argc, char *argv[])
         list = n;
     }
     // Print whole list
-    no
+    node *ptr = list;
+    while (ptr != NULL)
+    {
+        printf("%i\n", ptr->number);
+    }
 }
