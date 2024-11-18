@@ -21,6 +21,9 @@ int main(int argc, char *argv[])
         if (n == NULL)
         {
             // free memory
+            return 1;
         }
+        // go to next number and set it = n
+        n->number = number;
     }
 }
