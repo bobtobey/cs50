@@ -31,4 +31,6 @@ int main(int argc, char *argv[])
         n->next = list;
         list = n;
     }
+    // Print whole list
+    no
 }
