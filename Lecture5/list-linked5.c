@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
                 // If at end of list
                 if (ptr->next == NULL)
                 {
-                    // Append node
+                    // Append node to end of list without going past it
                     ptr->next = n;
                     break;
                 }
