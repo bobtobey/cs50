@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
         // n is pointing to a chunk of memory, n arrow number means go to that chunk of memory and update that number
         n->number = number;
         // n arrow next should be at this point initialized to null
-        // n->next = NULL;
+        n->next = NULL;
 
         // current node (arrow, next) and set that = to list first. (strictly speaking I don't need to initialize it to null. I can initialize the next field of this new node to point at the existing list.)
         // this insert a new node in front of any nodes that already exist (saying set the node's next field equal to whatever the list currently is)
