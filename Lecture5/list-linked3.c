@@ -33,6 +33,27 @@ int main(int argc, char *argv[])
         n->next = list;
         list = n;
     }
+    // if list is empty
+    if (list == NULL)
+    {
+        // this node is the whole list
+        list = n;
+    }
+    // if list has numbers alredy
+    else
+    {
+        // iterate over nodes in list
+        for (node *ptr = list; ptr != NULL; ptr = ptr->next)
+        {
+            // if at end of list
+            if (ptr->next == NULL)
+            {
+                // Append node
+                ptr->next = n;
+                break;
+            }
+        }
+    }
 
     // Print numbers
     node *ptr = list;
