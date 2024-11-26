@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
     // build the list by getting #'s from the command line
     for (int i = 1; i < argc; i++)
     {
-        // convert string to #
+        // atoi - convert string to int
         int number = atoi(argv[i]);
         printf("%i\n", number);
         // creates pointer 'n' and get and assign memory
