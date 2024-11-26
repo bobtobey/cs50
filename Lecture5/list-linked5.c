@@ -46,6 +46,7 @@ int main(int argc, char *argv[])
             n->next = list;
             // then update the linked list variable to equal the address of this new node
             list = n;
+            // The effect is no matter how long the existing list is if this new node's number is smaller than everything else in the list, I splice it in at the beginning.
         }
 
         // If number belongs later in list
