@@ -38,6 +38,7 @@ int main(int argc, char *argv[])
 
         // current node (arrow, next) and set that = to list first. (strictly speaking I don't need to initialize it to null. I can initialize the next field of this new node to point at the existing list.)
         n->next = list;
+        // then update the list to n
         list = n;
     }
     // Print whole list
