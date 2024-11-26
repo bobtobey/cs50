@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
         // go into n. I can follow that pointer to the number field and set it equal to the actual number
         // n is pointing to a chunk of memory, n arrow number means go to that chunk of memory and update that number
         n->number = number;
-        // n arrow next should probably be at this point initialized to null
+        // n arrow next should be at this point initialized to null
         n->next = NULL;
 
         n->next = list;
