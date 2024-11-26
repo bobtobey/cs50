@@ -1,9 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// create data type
 typedef struct node
 {
+    // store numbers
     int number;
+    // points to the next node
     struct node *next;
 } node;
 
