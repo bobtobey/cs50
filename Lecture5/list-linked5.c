@@ -68,6 +68,7 @@ int main(int argc, char *argv[])
                 // If the new node's number is less than the number in the next node
                 if (n->number < ptr->next->number)
                 {
+                    // update the new node's next pointer to be equal to whatever the current node I'm pointing at next pointer so that I can then update that pointer's next field to equal the new node
                     n->next = ptr->next;
                     ptr->next = n;
                     break;
