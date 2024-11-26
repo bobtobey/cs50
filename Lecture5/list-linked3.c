@@ -32,29 +32,29 @@ int main(int argc, char *argv[])
         // Prepend node to list
         n->next = list;
         list = n;
-    }
-    // if list is empty
-    if (list == NULL)
-    {
-        // this node is the whole list
-        list = n;
-    }
-    // if list has numbers alredy
-    else
-    {
-        // iterate over nodes in list
-        for (node *ptr = list; ptr != NULL; ptr = ptr->next)
+
+        // if list is empty
+        if (list == NULL)
         {
-            // if at end of list
-            if (ptr->next == NULL)
+            // this node is the whole list
+            list = n;
+        }
+        // if list has numbers alredy
+        else
+        {
+            // iterate over nodes in list
+            for (node *ptr = list; ptr != NULL; ptr = ptr->next)
             {
-                // Append node
-                ptr->next = n;
-                break;
+                // if at end of list
+                if (ptr->next == NULL)
+                {
+                    // Append node
+                    ptr->next = n;
+                    break;
+                }
             }
         }
     }
-
     // Print numbers
     node *ptr = list;
     while (ptr != NULL)
