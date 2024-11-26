@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
             list = n;
         }
 
-        // If list has numbers already
+        // If list has numbers or one node already
         else
         {
             // Iterate over nodes in list
