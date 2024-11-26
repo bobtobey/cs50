@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
         // atoi - convert string to int
         int number = atoi(argv[i]);
         printf("%i\n", number);
-        // creates temp. pointer 'n' and get and assign memory
+        // creates temp. pointer 'n' and get and assign memory the size of one node
         node *n = malloc(sizeof(node));
         if (n == NULL)
         {
