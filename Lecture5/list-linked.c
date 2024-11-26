@@ -35,7 +35,8 @@ int main(int argc, char *argv[])
         n->number = number;
         // n arrow next should be at this point initialized to null
         n->next = NULL;
-    
+
+        // go to this current node, arrow, next, and actually set that equal to list. So strictly speaking, I don't actually need to initialize it to null. I can initialize the next field of this new node to point at the existing list. 
         n->next = list;
         list = n;
     }
