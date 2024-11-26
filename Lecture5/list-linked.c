@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
         n->number = number;
         // n arrow next should be at this point initialized to null
         n->next = NULL;
-
+    
         n->next = list;
         list = n;
     }
