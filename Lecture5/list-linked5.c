@@ -42,8 +42,9 @@ int main(int argc, char *argv[])
         // If the new node's number is less than the list's number then it belongs at the beginning of the list because it's smaller than any of the numbers already there.
         else if (n->number < list->number)
         {
-            // update new node's next field to point at the current linked list. And then I'm going to update the linked list variable to equal the address of this new node
+            // update new node's next field to point at the current linked list.
             n->next = list;
+            // then update the linked list variable to equal the address of this new node
             list = n;
         }
 
