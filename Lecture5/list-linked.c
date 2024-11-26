@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
         n->next = NULL;
 
         // current node (arrow, next) and set that = to list first. (strictly speaking I don't need to initialize it to null. I can initialize the next field of this new node to point at the existing list.)
-        // this insert a new node in front of any nodes that already exist (saying set the node's next field equal to whatever the list currently is)
+        // this prepends/inserts a new node in front of any nodes that already exist (saying set the node's next field equal to whatever the list currently is)
         n->next = list;
         // then update the list to n (prepends list)
         list = n;
