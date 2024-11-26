@@ -65,6 +65,7 @@ int main(int argc, char *argv[])
                 }
 
                 // If in middle of list
+                // If the new node's number is less than the number in the next node
                 if (n->number < ptr->next->number)
                 {
                     n->next = ptr->next;
