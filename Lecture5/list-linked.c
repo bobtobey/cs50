@@ -21,8 +21,10 @@ int main(int argc, char *argv[])
         // atoi - convert string to int
         int number = atoi(argv[i]);
 
-        // allocate node for number
+        // print number as we add to the list
         printf("%i\n", number);
+
+        // allocate node for number
         // creates temp. pointer 'n' and get and assign memory the size of one node
         node *n = malloc(sizeof(node));
         // check if we have a valid address n equals NULL
@@ -45,6 +47,7 @@ int main(int argc, char *argv[])
         list = n;
     }
     // Print whole list
+    printf("Print whole list.\n");
     // specify a pointer to a node with the star and initialize to the list
     node *ptr = list;
     while (ptr != NULL)
