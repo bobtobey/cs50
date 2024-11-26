@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
         // If list is empty
         if (list == NULL)
         {
+            // there is no list yet, we can prepend or append to update list
             list = n;
         }
 

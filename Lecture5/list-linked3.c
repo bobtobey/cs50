@@ -35,6 +35,7 @@ int main(int argc, char *argv[])
         if (list == NULL)
         {
             // This node is the whole list
+            // there is no list yet, we can prepend or append to update list
             list = n;
         }
 
