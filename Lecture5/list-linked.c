@@ -8,7 +8,8 @@ typedef struct node
     int number;
     // points to the next node
     struct node *next;
-} node;
+}
+node;
 
 int main(int argc, char *argv[])
 {
