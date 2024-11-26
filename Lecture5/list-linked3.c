@@ -43,9 +43,12 @@ int main(int argc, char *argv[])
         else
         {
             // Iterate over nodes in list with a temporary variable called ptr that's initialized to the beginning of the list
+            // On every iteration update pointer variable to point to the next node, pointing one node ahead.
             for (node *ptr = list; ptr != NULL; ptr = ptr->next)
             {
                 // If at end of list
+                // On each iteration sure the pointer variable is not null.
+                // Because if it is null, that means I'm pointing past the end of the list or, that is, the list has ended.
                 if (ptr->next == NULL)
                 {
                     // Append node to end
