@@ -23,6 +23,7 @@ int main(int argc, char *argv[])
         printf("%i\n", number);
         // creates temp. pointer 'n' and get and assign memory the size of one node
         node *n = malloc(sizeof(node));
+        // check if we have a valid address n equals NULL
         if (n == NULL)
         {
             // free memory
