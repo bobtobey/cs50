@@ -52,6 +52,7 @@ int main(int argc, char *argv[])
                 if (ptr->next == NULL)
                 {
                     // Append node to end
+                    // at the end of the list without going past it. So at that point, if my goal is to append this new node, I'm going to go ahead and set pointer arrow next, which is currently null, but set it equal to the address of this new node effectively appending that node to the end of the list
                     ptr->next = n;
                     break;
                 }
