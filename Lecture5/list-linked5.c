@@ -66,6 +66,7 @@ int main(int argc, char *argv[])
 
                 // If in middle of list
                 // If the new node's number is less than the number in the next node
+                // that is to say, if my foam fingers pointing here, but the number I'm trying to insert is smaller than the next node over there and implicitly the same as or greater than the current node's number, well, then I'm going to go ahead and do this.
                 if (n->number < ptr->next->number)
                 {
                     // update the new node's next pointer to be equal to whatever the current node I'm pointing at next pointer so that I can then update that pointer's next field to equal the new node
