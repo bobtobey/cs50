@@ -43,6 +43,7 @@ int main(int argc, char *argv[])
         list = n;
     }
     // Print whole list
+    // specify a pointer to a node with the star and initialize to the list
     node *ptr = list;
     while (ptr != NULL)
     {
