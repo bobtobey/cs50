@@ -12,8 +12,10 @@ typedef struct node
 
 int main(int argc, char *argv[])
 {
+    // declare a linked list called list and initialize it to null
     node *list = NULL;
 
+    // build the list by getting #'s from the command line
     for (int i = 1; i < argc; i++)
     {
         // convert string to #
