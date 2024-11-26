@@ -1,3 +1,5 @@
+// Implements a list of numbers using a linked list
+
 #include <cs50.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -29,23 +31,20 @@ int main(int argc, char *argv[])
         n->number = number;
         n->next = NULL;
 
-        // Prepend node to list
-        n->next = list;
-        list = n;
-
-        // if list is empty
+        // If list is empty
         if (list == NULL)
         {
-            // this node is the whole list
+            // This node is the whole list
             list = n;
         }
-        // if list has numbers alredy
+
+        // If list has numbers already
         else
         {
-            // iterate over nodes in list
+            // Iterate over nodes in list
             for (node *ptr = list; ptr != NULL; ptr = ptr->next)
             {
-                // if at end of list
+                // If at end of list
                 if (ptr->next == NULL)
                 {
                     // Append node
@@ -55,11 +54,19 @@ int main(int argc, char *argv[])
             }
         }
     }
+
     // Print numbers
+    for (node *ptr = list; ptr != NULL; ptr = ptr->next)
+    {
+        printf("%i\n", ptr->number);
+    }
+
+    // Free memory
     node *ptr = list;
     while (ptr != NULL)
     {
-        printf("%i\n", ptr->number);
-        ptr = ptr->next;
+        node *next = ptr->next;
+        free(ptr);
+        ptr = next;
     }
 }
