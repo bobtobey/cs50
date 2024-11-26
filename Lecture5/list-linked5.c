@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
         // If number belongs later in list
         else
         {
-            // Iterate over nodes in list
+            // Iterate over nodes in list with a temporary variable called ptr that's initialized to the beginning of the list
             for (node *ptr = list; ptr != NULL; ptr = ptr->next)
             {
                 // If at end of list

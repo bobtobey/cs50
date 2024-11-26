@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
         // If list has numbers or one node already
         else
         {
-            // Iterate over nodes in list
+            // Iterate over nodes in list with a temporary variable called ptr that's initialized to the beginning of the list
             for (node *ptr = list; ptr != NULL; ptr = ptr->next)
             {
                 // If at end of list
