@@ -56,7 +56,14 @@ bool load(const char *dictionary)
     }
 
     // storing the address of the node memory in 'n'
-    // node *n = malloc(sizeof(node));
+    // Allocate node for number
+    node *n = malloc(sizeof(node));
+    if (n == NULL)
+    {
+        return 1;
+    }
+    n->number = number;
+    n->next = NULL;
     // strcpy(n->word, "Hello");
     // n->next = NULL;
     return false;
