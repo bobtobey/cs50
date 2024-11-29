@@ -38,6 +38,7 @@ bool load(const char *dictionary)
     // TODO storing the address of the node memory in 'n'
     node *n = malloc(sizeof(node));
     strcpy(n->word, "Hello");
+    n->next = NULL;
     return false;
 }
 
