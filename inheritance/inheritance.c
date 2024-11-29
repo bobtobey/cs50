@@ -59,7 +59,7 @@ person *create_family(int generations)
         new_person->alleles[1] = parent1->alleles[rand() % 2];
     }
 
-    // If there are no generations left to create
+    // If there are no generations (no parent data) left to create
     else
     {
         // TODO: Set parent pointers to NULL
