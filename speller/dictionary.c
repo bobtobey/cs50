@@ -68,9 +68,9 @@ bool load(const char *dictionary)
         strcpy(n->word, word);
         n->next = NULL;
 
-        // Hash the word to obtain an index
+        // set the index using the hash function
         unsigned int index = hash(word);
-
+        // insert the new node into the hash table.
         n->next = table[index];
         // update table to point to new node
         table[index] = n;
