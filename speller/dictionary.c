@@ -70,8 +70,9 @@ bool load(const char *dictionary)
 
         // Hash the word to obtain an index
         unsigned int index = hash(word);
-        
+
         n->next = table[index];
+        // 
 
     }
     // Close the dictionary file
