@@ -72,7 +72,8 @@ bool load(const char *dictionary)
         unsigned int index = hash(word);
 
         n->next = table[index];
-        // 
+        // update table to point to new node
+        table[index] = n;
 
     }
     // Close the dictionary file
