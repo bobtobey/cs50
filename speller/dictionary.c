@@ -62,7 +62,7 @@ bool load(const char *dictionary)
         {
             return 1;
         }
-        n->number = number;
+        n->word = word;
         strcpy(n->word, word);
         n->next = NULL;
 
