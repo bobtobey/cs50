@@ -46,11 +46,12 @@ bool load(const char *dictionary)
     }
 
     char word[LENGTH + 1];
-    debug
+
     // Read words from the file
     while (fscanf(input, "%s", word) != EOF)
     {
         // TODO: Insert the word into your data structure
+        printf("File opened successfully.\n");
         printf("%s\n", word);
     }
 
