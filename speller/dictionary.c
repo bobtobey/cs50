@@ -54,7 +54,7 @@ bool load(const char *dictionary)
     {
         // TODO: Insert the word into your data structure
         // printf("File opened successfully.\n");
-        printf("%s\n", word);
+        // printf("%s\n", word);
 
         // storing the address of the node memory in 'n'
         // Allocate node for number
