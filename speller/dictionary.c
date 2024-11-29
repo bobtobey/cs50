@@ -51,7 +51,7 @@ bool load(const char *dictionary)
     while (fscanf(input, "%s", word) != EOF)
     {
         // TODO: Insert the word into your data structure
-        printf("File opened successfully.\n");
+        // printf("File opened successfully.\n");
         printf("%s\n", word);
 
         // storing the address of the node memory in 'n'
@@ -62,7 +62,7 @@ bool load(const char *dictionary)
             return 1;
         }
         n->number = number;
-        strcpy(n->word, "Hello");
+        strcpy(n->word, word);
         n->next = NULL;
 
     }
