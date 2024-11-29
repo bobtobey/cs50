@@ -67,6 +67,7 @@ bool load(const char *dictionary)
         }
         strcpy(n->word, word);
         n->next = NULL;
+        n->next = table[index];
 
     }
     // Close the dictionary file
