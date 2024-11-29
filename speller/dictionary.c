@@ -64,8 +64,9 @@ bool load(const char *dictionary)
     }
     n->number = number;
     n->next = NULL;
-    // strcpy(n->word, "Hello");
-    // n->next = NULL;
+    strcpy(n->word, "Hello");
+    n->next = NULL;
+    
     return false;
 }
 
