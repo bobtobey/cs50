@@ -44,6 +44,15 @@ bool load(const char *dictionary)
         return 1;
     }
 
+    char word[LENGTH + 1];
+
+    // Read words from the file
+    while (fscanf(input, "%s", word) != EOF)
+    {
+        // TODO: Insert the word into your data structure
+        printf()
+    }
+
     // storing the address of the node memory in 'n'
     node *n = malloc(sizeof(node));
     strcpy(n->word, "Hello");
