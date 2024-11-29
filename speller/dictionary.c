@@ -53,19 +53,19 @@ bool load(const char *dictionary)
         // TODO: Insert the word into your data structure
         printf("File opened successfully.\n");
         printf("%s\n", word);
-    }
 
-    // storing the address of the node memory in 'n'
-    // Allocate node for number
-    node *n = malloc(sizeof(node));
-    if (n == NULL)
-    {
-        return 1;
-    }
-    n->number = number;
-    strcpy(n->word, "Hello");
-    n->next = NULL;
+        // storing the address of the node memory in 'n'
+        // Allocate node for number
+        node *n = malloc(sizeof(node));
+        if (n == NULL)
+        {
+            return 1;
+        }
+        n->number = number;
+        strcpy(n->word, "Hello");
+        n->next = NULL;
 
+    }
     return false;
 }
 
