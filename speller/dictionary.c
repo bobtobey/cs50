@@ -37,7 +37,7 @@ bool load(const char *dictionary)
 {
     // TODO
     // Open files and determine scaling factor
-    FILE *input = fopen(argv[1], "r");
+    FILE *input = fopen(dictionary, "r");
     if (input == NULL)
     {
         printf("Could not open file.\n");
