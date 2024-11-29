@@ -63,14 +63,13 @@ bool load(const char *dictionary)
         {
             return 1;
         }
-        n->word = word;
         strcpy(n->word, word);
         n->next = NULL;
 
     }
     // Close the dictionary file
     fclose(input);
-    
+
     return false;
 }
 
