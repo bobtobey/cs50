@@ -68,6 +68,9 @@ bool load(const char *dictionary)
         n->next = NULL;
 
     }
+    // Close the dictionary file
+    fclose(input);
+    
     return false;
 }
 
