@@ -35,7 +35,16 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    // TODO storing the address of the node memory in 'n'
+    // TODO
+    // Open files and determine scaling factor
+    FILE *input = fopen(argv[1], "r");
+    if (input == NULL)
+    {
+        printf("Could not open file.\n");
+        return 1;
+    }
+
+    // storing the address of the node memory in 'n'
     node *n = malloc(sizeof(node));
     strcpy(n->word, "Hello");
     n->next = NULL;
