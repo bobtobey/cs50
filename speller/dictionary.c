@@ -37,11 +37,11 @@ bool check(const char *word)
     {
         if (strcasecmp(ptr->word, word) == 0)
         {
-            print("checks out");
+            printf("checks out");
             return true;
         }
     }
-    print("does not check out");
+    printf("does not check out");
     return false;
 }
 
