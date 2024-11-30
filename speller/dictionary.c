@@ -37,9 +37,9 @@ unsigned int hash(const char *word)
     // TODO: Improve this hash function
     if (isalpha(word[0]))
     {
-        printf(")
-        return toupper(word[0]) - 'A';
+        printf("%i\n",word[0]);
     }
+        return toupper(word[0]) - 'A';
 
 }
 
