@@ -78,7 +78,7 @@ bool load(const char *dictionary)
     if (input == NULL)
     {
         printf("Could not open file.\n");
-        return 1;
+        return false;
     }
 
     char word[LENGTH + 1];
