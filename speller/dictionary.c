@@ -36,7 +36,7 @@ bool check(const char *word)
     {
         if (strcasecmp(ptr->word, word) == 0)
         {
-
+            return true;
         }
         printf("%i\n", ptr->number);
     }
