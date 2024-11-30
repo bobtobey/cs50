@@ -34,8 +34,10 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    // TODO: Improve this hash function
-    
+    // TODO: Improve this hash function by checking 2 letters
+    int first_letter = 0;
+    int second_letter = 0;
+
     if (isalpha(word[0]))
     {
         printf("%i\n", word[0]);
