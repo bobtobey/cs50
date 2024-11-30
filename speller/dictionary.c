@@ -130,14 +130,19 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    // Free memory
-    node *ptr = list;
-    while (ptr != NULL)
+    for (int i = 0; i < N; i++)
     {
-        node *next = ptr->next;
-        free(ptr);
-        ptr = next;
+        // Free memory
+        node *ptr = table[i];
+        while (ptr != NULL)
+        {
+            // save next node
+            node *next = ptr->next;
+            // free active node
+            free(ptr);
+            // move to next node
+            ptr = next;
+        }
     }
-
     return false;
 }
