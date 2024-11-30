@@ -82,7 +82,7 @@ bool load(const char *dictionary)
     }
     // Close the dictionary file
     fclose(input);
-
+    size();
     return false;
 }
 
@@ -90,7 +90,7 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
-    printf("%int)
+    printf("%i\n", word_count);
     return word_count;
     // return 0;
 }
