@@ -41,9 +41,17 @@ unsigned int hash(const char *word)
     if (isalpha(word[0]))
     {
         printf("%i\n", word[0]);
+        first_letter = toupper(word[0]) - 'A';
     }
-        return toupper(word[0]) - 'A';
-
+    if (isalpha(word[1]))
+    {
+        printf("%i\n", word[1]);
+        second_letter = toupper(word[1]) - 'A';
+    }
+    // combine letters 1 & 2
+    unsigned int hash_2ltr_value = first_letter + second_letter;
+    // make sure value fits in table size
+    return hash_2ltr_value % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
