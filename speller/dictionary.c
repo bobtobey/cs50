@@ -34,9 +34,9 @@ bool check(const char *word)
     // Print numbers
     for (node *ptr = table[index_ck]; ptr != NULL; ptr = ptr->next)
     {
-        if (strcasecmp(s1, s2) == 0)
+        if (strcasecmp(ptr, table[index_ck]) == 0)
         {
-            
+
         }
         printf("%i\n", ptr->number);
     }
