@@ -38,13 +38,7 @@ bool check(const char *word)
         {
             return true;
         }
-        printf("%i\n", ptr->number);
     }
-
-
-        // insert the new node into the hash table.
-        table[index];
-
     return false;
 }
 
