@@ -30,6 +30,10 @@ bool check(const char *word)
     // TODO
         // set the index using the hash function
         unsigned int index = hash(word);
+
+        // insert the new node into the hash table.
+        table[index];
+
     return false;
 }
 
