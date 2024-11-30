@@ -32,6 +32,8 @@ bool check(const char *word)
     for (node *ptr = list; ptr != NULL; ptr = ptr->next)
     {
         printf("%i\n", ptr->number);
+        // set the index using the hash function
+        unsigned int index = hash(word);
     }
 
         // set the index using the hash function
