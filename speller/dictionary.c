@@ -28,6 +28,8 @@ unsigned int word_count = 0;
 bool check(const char *word)
 {
     // TODO
+        // set the index using the hash function
+        unsigned int index = hash(word);
     return false;
 }
 
