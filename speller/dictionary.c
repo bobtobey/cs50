@@ -28,6 +28,12 @@ unsigned int word_count = 0;
 bool check(const char *word)
 {
     // TODO
+    // Print numbers
+    for (node *ptr = list; ptr != NULL; ptr = ptr->next)
+    {
+        printf("%i\n", ptr->number);
+    }
+
         // set the index using the hash function
         unsigned int index = hash(word);
 
