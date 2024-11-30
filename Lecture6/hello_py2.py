@@ -1,3 +1,5 @@
+from cs50 import get_string
+
 answer = get_string("What is your name? ")
 # this version concatenates with the normal + symbol to join the strings
 print("hello," + answer)
