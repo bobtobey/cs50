@@ -32,7 +32,7 @@ bool check(const char *word)
     unsigned int index_ck = hash(word);
 
     // Print numbers
-    for (node *ptr = list; ptr != NULL; ptr = ptr->next)
+    for (node *ptr = table[index_ck]; ptr != NULL; ptr = ptr->next)
     {
         printf("%i\n", ptr->number);
     }
