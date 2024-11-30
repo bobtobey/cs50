@@ -37,7 +37,7 @@ unsigned int hash(const char *word)
     // TODO: Improve this hash function by checking 2 letters
     int first_letter = 0;
     int second_letter = 0;
-
+    // validate character is a letter
     if (isalpha(word[0]))
     {
         printf("%i\n", word[0]);
