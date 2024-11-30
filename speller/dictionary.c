@@ -37,11 +37,9 @@ bool check(const char *word)
     {
         if (strcasecmp(ptr->word, word) == 0)
         {
-            printf("checks out");
             return true;
         }
     }
-    printf("does not check out");
     return false;
 }
 
@@ -121,7 +119,7 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
-    printf("%i\n", word_count);
+    // printf("%i\n", word_count);
     return word_count;
     // return 0;
 }
