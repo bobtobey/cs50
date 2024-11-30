@@ -28,16 +28,15 @@ unsigned int word_count = 0;
 bool check(const char *word)
 {
     // TODO
+    // set the index using the hash function
+    unsigned int index_ck = hash(word);
+
     // Print numbers
     for (node *ptr = list; ptr != NULL; ptr = ptr->next)
     {
         printf("%i\n", ptr->number);
-        // set the index using the hash function
-        unsigned int index = hash(word);
     }
 
-        // set the index using the hash function
-        unsigned int index = hash(word);
 
         // insert the new node into the hash table.
         table[index];
