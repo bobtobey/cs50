@@ -49,7 +49,8 @@ unsigned int hash(const char *word)
         second_letter = toupper(word[1]) - 'A';
     }
     // combine letters 1 & 2
-    unsigned int hash_2ltr_value = first_letter + second_letter;
+    unsigned int hash_2ltr_value = (first_letter * 26) + second_letter;
+    printf("%i\n", hash_2ltr_value);
     // make sure value fits in table size
     return hash_2ltr_value % N;
 }
