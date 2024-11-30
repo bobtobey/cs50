@@ -76,6 +76,9 @@ bool load(const char *dictionary)
         n->next = table[index];
         // update table to point to new node
         table[index] = n;
+
+        // increment word counter
+        word_count++;
     }
     // Close the dictionary file
     fclose(input);
@@ -87,6 +90,7 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
+    return word_count;
     return 0;
 }
 
