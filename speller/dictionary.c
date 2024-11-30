@@ -43,7 +43,7 @@ unsigned int hash(const char *word)
         printf("%i\n", word[0]);
         first_letter = toupper(word[0]) - 'A';
     }
-    if (isalpha(word[1]) && word[1] )
+    if (word[1] != '\0' && isalpha(word[1]))
     {
         printf("%i\n", word[1]);
         second_letter = toupper(word[1]) - 'A';
