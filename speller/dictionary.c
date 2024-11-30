@@ -132,7 +132,7 @@ bool unload(void)
     // TODO
     // Free memory
     node *ptr = list;
-    while (ptr < N)
+    while (ptr != NULL)
     {
         node *next = ptr->next;
         free(ptr);
