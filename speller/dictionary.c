@@ -129,7 +129,7 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    // TODO
+    // TODO loop through full link list
     for (int i = 0; i < N; i++)
     {
         // Free memory
@@ -144,5 +144,5 @@ bool unload(void)
             ptr = next;
         }
     }
-    return false;
+    return true;
 }
