@@ -54,17 +54,17 @@ unsigned int hash(const char *word)
     // validate character is a letter
     if (isalpha(word[0]))
     {
-        printf("%i\n", word[0]);
+        // printf("%i\n", word[0]);
         first_letter = toupper(word[0]) - 'A';
     }
     if (word[1] != '\0' && isalpha(word[1]))
     {
-        printf("%i\n", word[1]);
+        // printf("%i\n", word[1]);
         second_letter = toupper(word[1]) - 'A';
     }
     // combine letters 1 & 2
     unsigned int hash_2ltr_value = (first_letter * 26) + second_letter;
-    printf("%i\n", hash_2ltr_value);
+    // printf("%i\n", hash_2ltr_value);
     // make sure value fits in table size
     return hash_2ltr_value % N;
 }
@@ -88,7 +88,7 @@ bool load(const char *dictionary)
     {
         // TODO: Insert the word into your data structure
         // printf("File opened successfully.\n");
-        printf("%s\n", word);
+        // printf("%s\n", word);
 
         // storing the address of the node memory in 'n'
         // Allocate node for number
