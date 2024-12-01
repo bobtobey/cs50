@@ -2,7 +2,7 @@
 def meow():
     print("meow 2nd gen!!")
 
-# python loop Meow
+# python loop for Meow
 for i in range(3):
     print("meow 1st gen!")
     meow()
