@@ -1,7 +1,7 @@
 # defines a main function
 def main():
 
-# his defines (def) python function
+# his defines a (def) python function
 def meow():
     # this is a python loop
     for i in range(3):
