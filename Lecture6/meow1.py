@@ -1,8 +1,10 @@
-# loop Meow
-for i in range(3):
-    print("meow 1st gen")
-
+# python function
 def meow():
-    print("meow 2nd gen")
+    print("meow 2nd gen!!")
 
-meow()
+# python loop Meow
+for i in range(3):
+    print("meow 1st gen!")
+    meow()
+
+
