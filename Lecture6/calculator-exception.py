@@ -5,7 +5,9 @@ def get_int(prompt):
         try:
             return int(input(prompt))
         except ValueError:
-            print("Not an integer.")
+            # print("Not an integer.")
+            # using pass does lets you continue trying without interuption
+            pass
 
 
 def main():
