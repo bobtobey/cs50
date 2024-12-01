@@ -5,6 +5,5 @@ print("After: ", end="\n")
 for c in before:
     # adding the 'end=""' paramenter allows you to determine
     print(c.upper(), end="")
-#
+# When you don't pass print() an argument, it automatically gives you a new line
 print()
-    
