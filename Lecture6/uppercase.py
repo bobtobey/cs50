@@ -7,3 +7,4 @@ for c in before:
     print(c.upper(), end="")
 #
 print()
+    
