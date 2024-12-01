@@ -1,7 +1,7 @@
 # this function changes the input to all uppercase
 before = input("Before: ")
 # Python does the backslash n \n for you
-# To change the character that's automatically used at the end of every line, you can literally pass in a second argument called end and set it equal to something else
+# To change this default behavior, you pass in a second argument called end and set it equal to something else
 print("After: ", end="\n")
 for c in before:
     # adding the 'end=""' paramenter allows you to determine
