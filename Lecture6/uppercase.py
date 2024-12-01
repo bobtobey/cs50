@@ -4,7 +4,7 @@ before = input("Before: ")
 # To change this default behavior, you pass in a second argument called end and set it equal to something else
 print("After: ", end="\n")
 for c in before:
-    # adding the 'end=""' paramenter allows you to determine
+    # adding the 'end=""' paramenter allows you to set it to nothing to override \n
     print(c.upper(), end="")
 # When you don't pass print() an argument, it automatically gives you a new line
 print()
