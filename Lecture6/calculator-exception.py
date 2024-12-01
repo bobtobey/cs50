@@ -1,6 +1,10 @@
-# example for exceptions
+# example of how to handle exceptions
 def get_int(prompt):
-    return int(input(prompt))
+    while True:
+        try:
+            return int(input(prompt))
+        except ValueError:
+            print("Not an integer.")
 
 
 def main():
