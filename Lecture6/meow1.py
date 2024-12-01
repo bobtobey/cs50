@@ -6,7 +6,5 @@ def meow():
 for i in range(3):
     # prints meow 3x
     print("meow 1st gen!")
-    # prints out the meow function 1x
+    # prints out the meow function 3x
     meow()
-
-

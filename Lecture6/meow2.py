@@ -1,4 +1,4 @@
-# main
+# defines a main function
 def main():
 
 # python function
