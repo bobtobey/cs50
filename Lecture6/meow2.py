@@ -1,12 +1,12 @@
 # defines a main function
 def main():
 
-# python function
+# his defines (def) python function
 def meow():
-    # python loop for Meow
+    # this is a python loop
     for i in range(3):
-        print("meow 1st gen!")
         meow()
     print("meow 2nd gen!!")
 
+# call main function at the end of program
 main()
