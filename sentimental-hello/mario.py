@@ -6,7 +6,7 @@ def get_int(prompt):
         try:
             n = int(input(prompt))
             # test for positive integer
-            if n > 0:
+            if 0 < n <= 8:
                 return n
             else:
                 print("Please enter a positive integer between 1 and 8.")
