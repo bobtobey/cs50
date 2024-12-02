@@ -10,10 +10,12 @@ def get_string(prompt):
         else:
             print("Please enter a name with at least 1 character.")
 
+
 def main():
     # prompt user for name
     name = get_string("What is your name? ")
     print(f"hello, {name}")
+
 
 # Execute the main program
 main()
