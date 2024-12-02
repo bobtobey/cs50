@@ -1,4 +1,4 @@
-# Phonebook app revisited
+# Phonebook app revisited search for a name in a list
 names = ["Carter", "David", "John"]
 
 name = input("Name: ")
