@@ -3,6 +3,8 @@
 # define a prompt function
 def get_string(prompt):
 
+    # name = input(prompt)
+    # return name
     while True:
         try:
             name = input(prompt)
@@ -10,6 +12,8 @@ def get_string(prompt):
                 return name
             else:
                 print("Please enter a name with at least 1 character.")
+        except ValueError:
+            pass
 
 def main():
     # prompt user for name
