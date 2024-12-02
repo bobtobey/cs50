@@ -1,3 +1,4 @@
+# Mario revisited:
 # define a prompt function
 def get_int(prompt):
     while True:
