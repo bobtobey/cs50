@@ -9,7 +9,7 @@ def get_int(prompt):
 def main():
     n = get_int("height: ")
     print(n)
-    
+   
     for i in range(n):
         print("#")
 
