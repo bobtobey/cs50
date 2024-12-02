@@ -11,7 +11,7 @@ def get_int(prompt):
             pass
 
 def main():
-    # Get height bricks
+    # prompt user for height bricks
     n = get_int("height: ")
     print(f"You entered: {n}")
     # print bricks
