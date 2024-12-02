@@ -6,7 +6,7 @@ n = 5;
 for i in range(n):
     # print spaces
     for j in range(n - i - 1):
-        print("", end="")
+        print(" ", end="")
     # prints brick on each line
     for k in range(i + 1):
         print("#", end="")
