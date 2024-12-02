@@ -1,5 +1,4 @@
 # Implements a phone book as a list of dictionaries, without a variable
-
 from cs50 import get_string
 
 people = [
