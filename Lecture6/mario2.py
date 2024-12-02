@@ -19,5 +19,6 @@ def main():
     for i in range(n):
         print("#")
 
+# checks whether the script is being executed as the main program
 if __name__ == "__main__":
     main()
