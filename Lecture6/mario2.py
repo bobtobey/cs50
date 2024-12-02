@@ -13,6 +13,7 @@ def get_int(prompt):
 def main():
     # Get height bricks
     n = get_int("height: ")
+    print(f"You entered: {n}")
     # print bricks
     for i in range(n):
         print("#")
