@@ -3,8 +3,6 @@
 # define a prompt function
 def get_string(prompt):
 
-    # name = input(prompt)
-    # return name
     while True:
         try:
             name = input(prompt)
