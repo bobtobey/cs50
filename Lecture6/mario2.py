@@ -10,5 +10,6 @@ def main():
     n = get_int("height: ")
     if n > 0:
         break
+    
 for i in range(n):
     print("#")
