@@ -24,7 +24,10 @@ def main():
         # prints brick on each line
         for k in range(i + 1):
             print("#", end="")
-            
+
+    # print new line
+    print()
+
     # for i in range(n):
     #     print("#")
 
