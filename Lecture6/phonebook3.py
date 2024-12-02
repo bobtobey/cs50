@@ -1,6 +1,7 @@
 # Implements a phone book as a list of dictionaries, without a variable
 from cs50 import get_string
 
+# a list of dictionaries
 people = [
     {"name": "Carter", "number": "+1-617-495-1000"},
     {"name": "David", "number": "+1-617-495-1000"},
