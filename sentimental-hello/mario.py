@@ -13,9 +13,9 @@ def get_int(prompt):
 
 # defining main function
 def main():
-    # prompt user for height bricks
+    # prompt user for height of bricks
     n = get_int("Height: ")
-    print(f"You entered: {n}")
+    # print(f"You entered: {n}")
 
     # iterate over each row
     for i in range(n):
@@ -25,12 +25,8 @@ def main():
         # prints brick on each line
         for k in range(i + 1):
             print("#", end="")
-
-    # print new line
-    print()
-
-    # for i in range(n):
-    #     print("#")
+        # print new line
+        print()
 
 # Execute the main program
 main()
