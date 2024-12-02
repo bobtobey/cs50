@@ -16,16 +16,17 @@ def main():
     n = get_int("Height: ")
     print(f"You entered: {n}")
     # print bricks
-# iterate over each row
-for i in range(n):
-    # print spaces
-    for j in range(n - i - 1):
-        print(" ", end="")
-    # prints brick on each line
-    for k in range(i + 1):
-        print("#", end="")
+    # iterate over each row
     for i in range(n):
-        print("#")
+        # print spaces
+        for j in range(n - i - 1):
+            print(" ", end="")
+        # prints brick on each line
+        for k in range(i + 1):
+            print("#", end="")
+            
+    # for i in range(n):
+    #     print("#")
 
 # Execute the main program
 main()
