@@ -8,10 +8,10 @@ def get_string(prompt):
     while True:
         try:
             name = input(prompt)
-            if name > 0:
+            if len(name) > 0:
                 return name
             else:
-                print("Please enter a positive integer")
+                print("Please enter a name with at least 1 character.")
         except ValueError:
             pass
 
