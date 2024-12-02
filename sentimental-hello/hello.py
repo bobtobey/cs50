@@ -1,0 +1,21 @@
+# Creating a Hello program
+
+# define a prompt function
+def get_int(prompt):
+    while True:
+        try:
+            name = input(prompt)
+            if name > 0:
+                return name
+            else:
+                print("Please enter a positive integer")
+        except ValueError:
+            pass
+
+def main():
+    # prompt user for height bricks
+    name = get_int("What is your name? ")
+    print(f"hello, {name}")
+
+# Execute the main program
+    main()
