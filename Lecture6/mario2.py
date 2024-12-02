@@ -5,3 +5,6 @@ def get_int(prompt):
             return int(input(prompt))
         except ValueError:
             pass
+
+def main():
+    n = get_int()
