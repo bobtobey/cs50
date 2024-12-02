@@ -3,19 +3,20 @@
 # define a prompt function
 def get_string(prompt):
 
-            name = input(prompt)
-    while True:
-        try:
-            name = input(prompt)
-            if name > 0:
-                return name
-            else:
-                print("Please enter a positive integer")
-        except ValueError:
-            pass
+    name = input(prompt)
+    return name
+    # while True:
+    #     try:
+    #         name = input(prompt)
+    #         if name > 0:
+    #             return name
+    #         else:
+    #             print("Please enter a positive integer")
+    #     except ValueError:
+    #         pass
 
 def main():
-    # prompt user for height bricks
+    # prompt user for name
     name = get_string("What is your name? ")
     print(f"hello, {name}")
 
