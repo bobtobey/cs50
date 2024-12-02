@@ -21,4 +21,4 @@ def main():
     print(f"hello, {name}")
 
 # Execute the main program
-    main()
+main()
