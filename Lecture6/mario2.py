@@ -2,4 +2,6 @@
 def get_int(prompt):
     while True:
         try:
-            return int("Height: ")
+            return int(input(prompt))
+        except ValueError:
+            pass
