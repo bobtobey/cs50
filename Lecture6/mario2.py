@@ -9,8 +9,9 @@ def get_int(prompt):
 def main():
     n = get_int("height: ")
     print(n)
-
-for i in range(n):
-    print("#")
+    if n > 0:
+        break
+    for i in range(n):
+        print("#")
 
 main()
