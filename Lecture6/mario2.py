@@ -2,14 +2,17 @@
 def get_int(prompt):
     while True:
         try:
-            return int(input(prompt))
+            n = int(input(prompt))
+            if n > 0:
+                return n
+            else:
+                print("Please enter a positive integer")
         except ValueError:
             pass
 
 def main():
     n = get_int("height: ")
-    print(n)
-   
+
     for i in range(n):
         print("#")
 
