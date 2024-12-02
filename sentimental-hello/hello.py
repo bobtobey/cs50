@@ -1,7 +1,9 @@
 # Creating a Hello program
 
 # define a prompt function
-def get_int(prompt):
+def get_string(prompt):
+
+            name = input(prompt)
     while True:
         try:
             name = input(prompt)
@@ -14,7 +16,7 @@ def get_int(prompt):
 
 def main():
     # prompt user for height bricks
-    name = get_int("What is your name? ")
+    name = get_string("What is your name? ")
     print(f"hello, {name}")
 
 # Execute the main program
