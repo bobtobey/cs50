@@ -17,13 +17,11 @@ def main():
     n = get_int("Height: ")
     print(f"You entered: {n}")
 
-    # print bricks
     # iterate over each row
     for i in range(n):
-        print("x")
         # print spaces
         for j in range(n - i - 1):
-            print(" ", end="")
+            print("5 ", end="")
         # prints brick on each line
         for k in range(i + 1):
             print("#", end="")
