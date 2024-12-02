@@ -13,5 +13,5 @@ for i in range(n):
     # prints bricks on pyramid right side per line
     for l in range(i):
         print("#", end="")
-        
+
     print()
