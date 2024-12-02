@@ -11,10 +11,12 @@ def get_int(prompt):
         except ValueError:
             pass
 
+# defining main function
 def main():
     # prompt user for height bricks
     n = get_int("Height: ")
     print(f"You entered: {n}")
+    
     # print bricks
     # iterate over each row
     for i in range(n):
