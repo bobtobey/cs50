@@ -11,6 +11,7 @@ people = [
 name = get_string("Name: ")
 for person in people:
     if person["name"] == name:
+        number = person["number"]
         print(f"Found {person['number']}")
         break
 else:
