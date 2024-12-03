@@ -15,7 +15,7 @@ def get_flt(prompt):
         except ValueError:
             pass
 
-def coins_back(n):
+def calculate_change(n):
     print("Hello" + n)
     return n
 
