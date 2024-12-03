@@ -5,7 +5,7 @@ def get_flt(prompt):
     while True:
         # test for a non-numeric answer
         try:
-            n = int(input(prompt))
+            n = get_float(input(prompt))
             # test for positive integer
             if 0 < n <= 8:
                 return n
