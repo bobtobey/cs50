@@ -11,14 +11,14 @@ def get_flt(prompt):
             if change_due > 0:
                 return change_due
             else:
-                print("Please enter a positive integer between 1 and 99.")
+                print("Please enter a positive dollar amount between .01 and 100")
         except ValueError:
             pass
 
 def calculate_change(change):
     print("Calculate change for: ", + change)
-    dollar = (change / 1)
-    remaining_change = change - (quarters * 25);
+    dollars = (change / 1)
+    remaining_change = change - (dollars * 25);
     quarters = (change / 25);
     remaining_change = change - (quarters * 25);
     dimes = remaining_change / 10;
