@@ -30,7 +30,7 @@ def calculate_change(change):
     remaining_change = remaining_change % 1
 
     # find sum total of all the coins needed
-    print("Quarters:", quarters, "Dimes:", dimes, "Nickels:", nickels, "Pennies: ", pennies)
+    # print("Quarters:", quarters, "Dimes:", dimes, "Nickels:", nickels, "Pennies: ", pennies)
     total_coin_number = quarters + dimes + nickels + pennies
     return total_coin_number
 
@@ -40,7 +40,7 @@ def main():
     n = get_flt("Change: ")
     # find min # of change to return
     coins_back = calculate_change(n);
-    print(f"Amount back: {coins_back}")
+    print(coins_back)
 
 # Execute the main program
 main()
