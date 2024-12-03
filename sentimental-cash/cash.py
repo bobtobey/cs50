@@ -18,8 +18,6 @@ def get_flt(prompt):
 def calculate_change(change):
     # convert change to cents -avoid flt division
     change_to_cents = round(change * 100)
-    print("Calculate change for: ", + change_to_cents)
-
     quarters = (change_to_cents // 25);
     print("Q = ", quarters)
     x = change_to_cents % 25
