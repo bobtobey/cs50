@@ -17,7 +17,7 @@ def get_flt(prompt):
 # defining main function
 def main():
     # prompt user for their change back
-    n = get_flt("Height: ")
+    n = get_flt()
     print(f"You entered: {n}")
 
 # Execute the main program
