@@ -21,6 +21,7 @@ def calculate_change(change):
     print("Calculate change for: ", + change_to_cents)
 
     quarters = (change_to_cents // 25);
+    print("Q = ", quarters)
     remaining_change = change_to_cents - (quarters * 25)
     dimes = remaining_change // 10;
     remaining_change = remaining_change - (dimes * 10)
