@@ -16,17 +16,16 @@ def get_flt(prompt):
             pass
 
 def calculate_change(n):
-    print("Hello ", + n)
+    print("Calculate change for: ", + n)
     return n
 
 # defining main function
 def main():
     # prompt user for their change back
     n = get_flt("Change: ")
-    print(f"You entered: {n:.2f}")
     # find min # of change to return
     coins_back = calculate_change(n);
-    print(f"Hello 2  {coins_back}")
+    print(f"Amount back: {coins_back:.2f}")
 
 # Execute the main program
 main()
