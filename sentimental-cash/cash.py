@@ -38,7 +38,7 @@ def main():
     n = get_flt("Change: ")
     # find min # of change to return
     coins_back = calculate_change(n);
-    print(f"Amount back: {coins_back:.2f}")
+    print(f"Amount back: {coins_back}")
 
 # Execute the main program
 main()
