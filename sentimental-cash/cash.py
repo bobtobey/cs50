@@ -15,9 +15,19 @@ def get_flt(prompt):
         except ValueError:
             pass
 
-def calculate_change(n):
-    print("Calculate change for: ", + n)
-    return n
+def calculate_change(change):
+    print("Calculate change for: ", + change)
+    quarters = (change / 25);
+    remaining_change = change - (quarters * 25);
+    dimes = remaining_change / 10;
+    remaining_change = remaining_change - (dimes * 10);
+    nickels = remaining_change / 5;
+    remaining_change = remaining_change - (nickels * 5);
+    pennies = remaining_change / 1;
+    remaining_change = remaining_change - (pennies * 1);
+    # find sum total of all the coins needed
+    total_coin_number = quarters + dimes + nickels + pennies;
+    return total_coin_number
 
 # defining main function
 def main():
