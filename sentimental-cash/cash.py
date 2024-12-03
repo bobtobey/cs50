@@ -17,6 +17,8 @@ def get_flt(prompt):
 
 def calculate_change(change):
     print("Calculate change for: ", + change)
+    dollar = (change / 1)
+    remaining_change = change - (quarters * 25);
     quarters = (change / 25);
     remaining_change = change - (quarters * 25);
     dimes = remaining_change / 10;
