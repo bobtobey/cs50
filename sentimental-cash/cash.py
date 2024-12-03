@@ -1,3 +1,4 @@
+from cs50 import get_float
 # CASH revisited:
 # define a prompt function
 def get_int(prompt):
