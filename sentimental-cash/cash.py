@@ -27,6 +27,7 @@ def calculate_change(change):
     remaining_change = remaining_change - (nickels * 5);
     pennies = remaining_change / 1;
     remaining_change = remaining_change - (pennies * 1);
+    
     # find sum total of all the coins needed
     total_coin_number = quarters + dimes + nickels + pennies;
     return total_coin_number
