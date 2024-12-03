@@ -5,7 +5,7 @@ def get_flt(prompt):
     while True:
         # test for a non-numeric answer
         try:
-            change_due = get_float("Change: ")
+            change_due = get_float(prompt)
             # test for positive integer
             if 0 < change_due <= 99:
                 return change_due
@@ -17,7 +17,7 @@ def get_flt(prompt):
 # defining main function
 def main():
     # prompt user for their change back
-    n = get_flt()
+    n = get_flt("Change due: ")
     print(f"You entered: {n}")
 
 # Execute the main program
