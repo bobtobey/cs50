@@ -21,8 +21,7 @@ def calculate_change(change):
     # use integer division //
     quarters = (change_to_cents // 25);
     # capture remainder with modulo
-    print("Q = ", quarters)
-    x = change_to_cents % 25
+    remaining_change = change_to_cents % 25
     print("Q% ", x)
     remaining_change = change_to_cents - (quarters * 25)
     print("Q remain ", remaining_change)
@@ -34,6 +33,7 @@ def calculate_change(change):
     remaining_change = remaining_change - (pennies * 1)
 
     # find sum total of all the coins needed
+    print("Q = ", quarters)
     total_coin_number = quarters + dimes + nickels + pennies
     return total_coin_number
 
