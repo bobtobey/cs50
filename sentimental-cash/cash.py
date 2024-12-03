@@ -15,11 +15,17 @@ def get_flt(prompt):
         except ValueError:
             pass
 
+def coins_back(n):
+    print("Hello" + n)
+    return n
+
 # defining main function
 def main():
     # prompt user for their change back
     n = get_flt("Change: ")
     print(f"You entered: {n}")
+    # find min # of change to return
+    coins_back = calculate_change(n);
 
 # Execute the main program
 main()
