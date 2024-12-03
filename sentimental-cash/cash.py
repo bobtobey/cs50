@@ -23,11 +23,11 @@ def calculate_change(change):
     # capture remainder with modulo
     remaining_change = change_to_cents % 25
     dimes = remaining_change // 10;
-    remaining_change = remaining_change - (dimes * 10)
+    remaining_change = remaining_change % 10
     nickels = remaining_change // 5;
-    remaining_change = remaining_change - (nickels * 5)
+    remaining_change = remaining_change % 5
     pennies = remaining_change // 1;
-    remaining_change = remaining_change - (pennies * 1)
+    remaining_change = remaining_change % 1
 
     # find sum total of all the coins needed
     print("Q = ", quarters)
