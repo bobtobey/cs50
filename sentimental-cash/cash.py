@@ -26,7 +26,7 @@ def main():
     print(f"You entered: {n:.5f}")
     # find min # of change to return
     coins_back = calculate_change(n);
-    print("Hello 2" + coins_back)
+    print("Hello 2 " + coins_back)
 
 # Execute the main program
 main()
