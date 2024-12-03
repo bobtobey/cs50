@@ -21,13 +21,13 @@ def calculate_change(change):
     print("Calculate change for: ", + change_to_cents)
 
     quarters = (change_to_cents // .25);
-    remaining_change = change_to_cents - (quarters * .25)
+    remaining_change = change_to_cents - (quarters * 25)
     dimes = remaining_change // .10;
-    remaining_change = remaining_change - (dimes * .10)
+    remaining_change = remaining_change - (dimes * 10)
     nickels = remaining_change // 0.05;
-    remaining_change = remaining_change - (nickels * 0.05)
+    remaining_change = remaining_change - (nickels * 5)
     pennies = remaining_change // 0.01;
-    remaining_change = remaining_change - (pennies * 0.01)
+    remaining_change = remaining_change - (pennies * 1)
 
     # find sum total of all the coins needed
     total_coin_number = quarters + dimes + nickels + pennies
