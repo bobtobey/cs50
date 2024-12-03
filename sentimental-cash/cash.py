@@ -12,3 +12,9 @@ def get_int(prompt):
                 print("Please enter a positive integer between 1 and 8.")
         except ValueError:
             pass
+
+# defining main function
+def main():
+    # prompt user for height of bricks
+    n = get_int("Height: ")
+    # print(f"You entered: {n}")
