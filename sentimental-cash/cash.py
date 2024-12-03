@@ -25,6 +25,7 @@ def calculate_change(change):
     x = change_to_cents % 25
     print("Q% ", x)
     remaining_change = change_to_cents - (quarters * 25)
+    print("Q remain ", remaining_change)
     dimes = remaining_change // 10;
     remaining_change = remaining_change - (dimes * 10)
     nickels = remaining_change // 5;
