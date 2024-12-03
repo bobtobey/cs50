@@ -5,10 +5,10 @@ def get_flt(prompt):
     while True:
         # test for a non-numeric answer
         try:
-            n = get_float(input(prompt))
+            change_due = get_float("Change: ")
             # test for positive integer
-            if 0 < n <= 8:
-                return n
+            if 0 < n <= 99:
+                return change_due
             else:
                 print("Please enter a positive integer between 1 and 8.")
         except ValueError:
@@ -18,4 +18,4 @@ def get_flt(prompt):
 def main():
     # prompt user for height of bricks
     n = get_int("Height: ")
-    # print(f"You entered: {n}")
+    print(f"You entered: {n}")
