@@ -30,7 +30,7 @@ def calculate_change(change):
     remaining_change = remaining_change % 1
 
     # find sum total of all the coins needed
-    print("Q = ", quarters)
+    print("Quarters:", quarters, "Dimes:", dimes, "Nickels:", nickels, "Pennies: ", pennies)
     total_coin_number = quarters + dimes + nickels + pennies
     return total_coin_number
 
