@@ -10,13 +10,13 @@ def get_flt(prompt):
             if 0 < change_due <= 99:
                 return change_due
             else:
-                print("Please enter a positive integer between 1 and 8.")
+                print("Please enter a positive integer between 1 and 99.")
         except ValueError:
             pass
 
 # defining main function
 def main():
-    # prompt user for height of bricks
+    # prompt user for their change back
     n = get_flt("Height: ")
     print(f"You entered: {n}")
 
