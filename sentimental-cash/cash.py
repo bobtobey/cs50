@@ -17,7 +17,7 @@ def get_flt(prompt):
 # defining main function
 def main():
     # prompt user for their change back
-    n = get_flt("Change due: ")
+    n = get_flt("Change: ")
     print(f"You entered: {n}")
 
 # Execute the main program
