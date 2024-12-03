@@ -8,7 +8,7 @@ def get_flt(prompt):
         try:
             change_due = get_float(prompt)
             # test for positive integer
-            if 0 < change_due <= 99:
+            if 0 < change_due < 1:
                 return change_due
             else:
                 print("Please enter a positive integer between 1 and 99.")
