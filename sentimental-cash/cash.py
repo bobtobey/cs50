@@ -23,7 +23,7 @@ def calculate_change(n):
 def main():
     # prompt user for their change back
     n = get_flt("Change: ")
-    print(f"You entered: {n}")
+    print(f"You entered: {n:.50f}")
     # find min # of change to return
     coins_back = calculate_change(n);
     print("Hello 2" + coins_back)
