@@ -17,5 +17,8 @@ def get_flt(prompt):
 # defining main function
 def main():
     # prompt user for height of bricks
-    n = get_int("Height: ")
+    n = get_flt("Height: ")
     print(f"You entered: {n}")
+
+# Execute the main program
+main()
