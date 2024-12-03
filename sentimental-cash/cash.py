@@ -16,10 +16,11 @@ def get_flt(prompt):
             pass
 
 def calculate_change(change):
-    change_in_cents = round(change * 100)
-    print("Calculate change for: ", + change)
-    quarters = (change / .25);
-    remaining_change = change - (quarters * .25);
+    # convert change to cents -avoid flt division
+    change_to_cents = round(change * 100)
+    print("Calculate change for: ", + change_to_cents)
+    quarters = (change_to_cents / .25);
+    remaining_change = change_to_cents - (quarters * .25);
     dimes = remaining_change / .10;
     remaining_change = remaining_change - (dimes * .10);
     nickels = remaining_change / 0.05;
