@@ -19,6 +19,7 @@ def calculate_change(change):
     # convert change to cents -avoid flt division
     change_to_cents = round(change * 100)
     print("Calculate change for: ", + change_to_cents)
+    
     quarters = (change_to_cents / .25);
     remaining_change = change_to_cents - (quarters * .25);
     dimes = remaining_change / .10;
