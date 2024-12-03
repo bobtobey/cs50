@@ -22,7 +22,6 @@ def calculate_change(change):
     quarters = (change_to_cents // 25);
     # capture remainder with modulo
     remaining_change = change_to_cents % 25
-    print("Q% ", x)
     remaining_change = change_to_cents - (quarters * 25)
     print("Q remain ", remaining_change)
     dimes = remaining_change // 10;
