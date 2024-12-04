@@ -31,7 +31,8 @@ def main():
         print(dna_sequence)
 
     # TODO: Find longest match of each STR in DNA sequence
-
+    longest_match(dna_sequence, subsequence)
+    
     # TODO: Check database for matching profiles
 
     return
