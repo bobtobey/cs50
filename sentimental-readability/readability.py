@@ -32,7 +32,10 @@ def main():
         if sentence == '.' or sentence == '!' or sentence == '?':
             num_sentences += 1
     # calculate averages
-    letter_average = num_letters / 
+    letter_average = (num_letters / num_words) * 100
+    sentence_average = (num_sentences / num_words) * 100
+    # implement Coleman-Liau index
+    grade_index = 
     print(f"Grade X {text_length}")
     print(f"# letters {num_letters}")
     print(f"# words {num_words}")
