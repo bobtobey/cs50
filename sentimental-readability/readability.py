@@ -24,6 +24,9 @@ def main():
         if x.isalpha():
             num_letters += 1
 
+    num_words = input.split()
+    num_words = len()
+
     print(f"Grade X {text_length}")
     print(f"# letters {num_letters}")
 
