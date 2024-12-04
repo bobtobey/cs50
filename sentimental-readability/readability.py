@@ -14,8 +14,11 @@ def get_string(prompt):
 def main():
     # prompt user for name
     input = get_string("Text: ")
-    # capture text data
-    num_letters =  
+    # initialize variables
+    num_letters = 0
+    num_words = 0
+    num_sentences = 0
+    text_length = len(input)
     print(f"Grade X {input}")
 
 
