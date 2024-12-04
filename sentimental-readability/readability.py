@@ -17,8 +17,8 @@ def calc_grade_index(text_value):
     num_sentences = 0
 
     # count letters
-    for x in text_value:
-        if x.isalpha():
+    for letters in text_value:
+        if letters.isalpha():
             num_letters += 1
     # count words
     num_words_list = text_value.split()
