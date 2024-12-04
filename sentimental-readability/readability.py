@@ -2,7 +2,7 @@ from cs50 import get_string
 
 # Re-imagining Readability in Python
 # define a prompt function
-def get_string(prompt):
+def getstring(prompt):
 
     while True:
         text = get_string(prompt)
@@ -42,7 +42,7 @@ def calc_grade_index(text_value):
 
 def main():
     # prompt user for name
-    text_value = get_string("Text: ")
+    text_value = getstring("Text: ")
     # calculate grade index #
     grade_index = calc_grade_index(text_value)
 
