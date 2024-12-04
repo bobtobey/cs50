@@ -29,7 +29,6 @@ int main(void)
     {
         printf("Grade %.0f\n", gradelevel);
     }
-        printf("Grade %.0f\n", gradelevel);
 }
 
 // Get Average # of letters, words, and sentences in text sample to return grade index
