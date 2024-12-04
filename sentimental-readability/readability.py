@@ -34,7 +34,7 @@ def calc_grade_index(text_value):
     # Formula Calculation: index = 0.0588 * L - 0.296 * S - 15.8
     calc_index = (0.0588 * letter_average) - 0.296 * sentence_average - 15.8;
 
-    print(f"# letters {num_letters}", "# words {num_words}, "# sentences {num_sentences}")
+    print(f"# letters {num_letters} # words {num_words} # sentences {num_sentences}")
     return calc_index
 
 def main():
