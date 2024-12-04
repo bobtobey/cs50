@@ -19,7 +19,7 @@ def main():
     num_words = 0
     num_sentences = 0
     text_length = len(input)
-    print(f"Grade X {input}")
+    print(f"Grade X {text_length}")
 
 
 # Execute the main program
