@@ -10,10 +10,13 @@ def get_string(prompt):
         else:
             print("Please enter a name with at least 1 character.")
 
+def calc_grade_index(x):
+    print("Hello ", x)
 
 def main():
     # prompt user for name
     text_value = get_string("Text: ")
+    index = calc_grade_index(text_value)
     # initialize variables to 0
     num_letters = 0
     num_words = 0
