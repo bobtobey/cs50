@@ -14,19 +14,20 @@ def get_string(prompt):
 def main():
     # prompt user for name
     input = get_string("Text: ")
-    # initialize variables
+    # initialize variables to 0
     num_letters = 0
     num_words = 0
     num_sentences = 0
     text_length = len(input)
 
+    # count letters
     for x in input:
         if x.isalpha():
             num_letters += 1
-
+    # count words
     num_words_list = input.split()
     num_words = len(num_words_list)
-
+    # count sentences
     for sentence in input:
         if sentence == '.' or sentence == '!' or sentence == '?':
             num_sentences += 1
