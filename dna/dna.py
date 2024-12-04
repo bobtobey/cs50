@@ -15,6 +15,7 @@ def main():
 
     # TODO: Read database file into a variable
     db_file = sys.argv[1]
+    rows = []
     with open(db_file) as file:
         reader = csv.DictReader(file)
         print(reader.fieldnames)
