@@ -1,4 +1,5 @@
 import sys
+
 # how to test for a command line argument and exit with code
 if len(sys.argv) != 2:
     print("Missing command-line argument.")
