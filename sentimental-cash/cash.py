@@ -2,6 +2,8 @@ from cs50 import get_float
 
 # CASH revisited:
 # define a prompt function
+
+
 def get_flt(prompt):
     while True:
         # test for a non-numeric answer
@@ -15,18 +17,19 @@ def get_flt(prompt):
         except ValueError:
             pass
 
+
 def calculate_change(change):
     # convert change to cents -avoid flt division
     change_to_cents = round(change * 100)
     # use integer division //
-    quarters = (change_to_cents // 25);
+    quarters = (change_to_cents // 25)
     # capture remainder with modulo
     remaining_change = change_to_cents % 25
-    dimes = remaining_change // 10;
+    dimes = remaining_change // 10
     remaining_change = remaining_change % 10
-    nickels = remaining_change // 5;
+    nickels = remaining_change // 5
     remaining_change = remaining_change % 5
-    pennies = remaining_change // 1;
+    pennies = remaining_change // 1
     remaining_change = remaining_change % 1
 
     # find sum total of all the coins needed
@@ -35,12 +38,15 @@ def calculate_change(change):
     return total_coin_number
 
 # defining main function
+
+
 def main():
     # prompt user for their change back
     n = get_flt("Change: ")
     # find min # of change to return
-    coins_back = calculate_change(n);
+    coins_back = calculate_change(n)
     print(coins_back)
+
 
 # Execute the main program
 main()
