@@ -2,6 +2,8 @@ from cs50 import get_string
 
 # Re-imagining Readability in Python
 # define a prompt function
+
+
 def getstring(prompt):
 
     while True:
