@@ -10,7 +10,7 @@ def get_string(prompt):
         else:
             print("Please enter a name with at least 1 character.")
 
-def calc_grade_index(x):
+def calc_grade_index(text_value):
     # initialize variables to 0
     num_letters = 0
     num_words = 0
@@ -34,7 +34,7 @@ def calc_grade_index(x):
     # Formula Calculation: index = 0.0588 * L - 0.296 * S - 15.8
     calc_index = (0.0588 * letter_average) - 0.296 * sentence_average - 15.8;
 
-    print(f"Grade {grade_index}")
+    print(f"Grade {calc_index}")
     print(f"# letters {num_letters}")
     print(f"# words {num_words}")
     print(f"# sentences {num_sentences}")
