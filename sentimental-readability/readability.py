@@ -43,7 +43,9 @@ def calc_grade_index(text_value):
 def main():
     # prompt user for name
     text_value = get_string("Text: ")
+    # calculate grade index #
     grade_index = calc_grade_index(text_value)
+    # determing reading level grade
     print(grade_index)
 
 
