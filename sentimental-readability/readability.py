@@ -1,5 +1,6 @@
-# Re-imagining Readability in Python
+from cs50 import get_float
 
+# Re-imagining Readability in Python
 # define a prompt function
 def get_string(prompt):
 
