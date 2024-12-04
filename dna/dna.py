@@ -30,7 +30,7 @@ def main():
     with open(dna_file) as file:
         reader = csv.DictReader(file)
         for dna_row in reader:
-            dna_rows.append(row)
+            dna_rows.append(dna_row)
             print(reader.fieldnames)
 
     # TODO: Find longest match of each STR in DNA sequence
