@@ -45,8 +45,12 @@ def main():
     # calculate grade index #
     grade_index = calc_grade_index(text_value)
     # determine text grade level
-    if 
-    print(grade_index)
+    if grade_index< 1:
+        print(f"1 {grade_index}")
+    elif grade_index >= 16:
+        print(f"2 {grade_index}")
+    else:
+        print(grade_index)
 
 
 # Execute the main program
