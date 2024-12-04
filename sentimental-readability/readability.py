@@ -13,8 +13,8 @@ def get_string(prompt):
 
 def main():
     # prompt user for name
-    text = get_string("Text: ")
-    print(f"Text: {text}")
+    input = get_string("Text: ")
+    print(f"Text: {input}")
 
 
 # Execute the main program
