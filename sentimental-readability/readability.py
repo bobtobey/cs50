@@ -1,11 +1,11 @@
-from cs50 import get_float
+from cs50 import get_string
 
 # Re-imagining Readability in Python
 # define a prompt function
 def get_string(prompt):
 
     while True:
-        text = input(prompt)
+        text = get_string(prompt)
         if len(text) > 0:
             return text
         else:
