@@ -11,17 +11,10 @@ def get_string(prompt):
             print("Please enter a name with at least 1 character.")
 
 def calc_grade_index(x):
-    print("Hello ", x)
-
-def main():
-    # prompt user for name
-    text_value = get_string("Text: ")
-    index = calc_grade_index(text_value)
     # initialize variables to 0
     num_letters = 0
     num_words = 0
     num_sentences = 0
-    text_length = len(text_value)
 
     # count letters
     for x in text_value:
@@ -45,6 +38,13 @@ def main():
     print(f"# letters {num_letters}")
     print(f"# words {num_words}")
     print(f"# sentences {num_sentences}")
+    return calc_index
+
+def main():
+    # prompt user for name
+    text_value = get_string("Text: ")
+    grade_index = calc_grade_index(text_value)
+    print(grade_index)
 
 
 # Execute the main program
