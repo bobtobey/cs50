@@ -31,7 +31,8 @@ def main():
     for sentence in input:
         if sentence == '.' or sentence == '!' or sentence == '?':
             num_sentences += 1
-
+    # calculate averages
+    letter_average = num_letters / 
     print(f"Grade X {text_length}")
     print(f"# letters {num_letters}")
     print(f"# words {num_words}")
