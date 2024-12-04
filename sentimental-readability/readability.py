@@ -34,10 +34,7 @@ def calc_grade_index(text_value):
     # Formula Calculation: index = 0.0588 * L - 0.296 * S - 15.8
     calc_index = (0.0588 * letter_average) - 0.296 * sentence_average - 15.8;
 
-    print(f"Grade {calc_index}")
-    print(f"# letters {num_letters}")
-    print(f"# words {num_words}")
-    print(f"# sentences {num_sentences}")
+    print(f"# letters {num_letters}", "# words {num_words}, "# sentences {num_sentences}")
     return calc_index
 
 def main():
@@ -45,7 +42,7 @@ def main():
     text_value = get_string("Text: ")
     # calculate grade index #
     grade_index = calc_grade_index(text_value)
-    # determing reading level grade
+    # determine text grade level
     print(grade_index)
 
 
