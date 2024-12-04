@@ -44,11 +44,12 @@ def main():
     text_value = get_string("Text: ")
     # calculate grade index #
     grade_index = calc_grade_index(text_value)
+
     # determine text grade level
     if grade_index < 1:
-        print(f"Grade {grade_index}")
+        print(f"Before grade 1 {grade_index}")
     elif grade_index >= 16:
-        print(f"Grade {grade_index}")
+        print(f"Grade 16+ {grade_index}")
     else:
         print(grade_index)
 
