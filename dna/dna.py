@@ -5,9 +5,13 @@ import sys
 def main():
 
     # TODO: Check for command-line usage
+    if len(sys.argv) != 2:
+        print("Missing command-line argument.")
+        # used to exit a program with an exit/error code #
+        sys.exit(1)
 
     # TODO: Read database file into a variable
-    
+
     # TODO: Read DNA sequence file into a variable
 
     # TODO: Find longest match of each STR in DNA sequence
@@ -43,11 +47,11 @@ def longest_match(sequence, subsequence):
             # If there is a match in the substring
             if sequence[start:end] == subsequence:
                 count += 1
-            
+
             # If there is no match in the substring
             else:
                 break
-        
+
         # Update most consecutive matches found
         longest_run = max(longest_run, count)
 
