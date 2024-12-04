@@ -35,8 +35,10 @@ def main():
     letter_average = (num_letters / num_words) * 100
     sentence_average = (num_sentences / num_words) * 100
     # implement Coleman-Liau index
-    grade_index = 
-    print(f"Grade X {text_length}")
+    # Formula Calculation: index = 0.0588 * L - 0.296 * S - 15.8
+    grade_index = (0.0588 * letter_average) - 0.296 * sentence_average - 15.8;
+
+    print(f"Grade {grade_index}")
     print(f"# letters {num_letters}")
     print(f"# words {num_words}")
     print(f"# sentences {num_sentences}")
