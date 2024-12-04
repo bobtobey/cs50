@@ -14,7 +14,7 @@ def get_string(prompt):
 def main():
     # prompt user for name
     input = get_string("Text: ")
-    print(f"Text: {input}")
+    print(f"Grade X {input}")
 
 
 # Execute the main program
