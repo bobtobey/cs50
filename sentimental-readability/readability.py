@@ -51,7 +51,7 @@ def main():
     elif grade_index >= 16:
         print(f"Grade 16+ {grade_index}")
     else:
-        print(grade_index)
+        print(f"Grade {grade_index}")
 
 
 # Execute the main program
