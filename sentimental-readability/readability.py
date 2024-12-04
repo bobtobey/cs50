@@ -13,22 +13,22 @@ def get_string(prompt):
 
 def main():
     # prompt user for name
-    input = get_string("Text: ")
+    text_value = get_string("Text: ")
     # initialize variables to 0
     num_letters = 0
     num_words = 0
     num_sentences = 0
-    text_length = len(input)
+    text_length = len(text_value)
 
     # count letters
-    for x in input:
+    for x in text_value:
         if x.isalpha():
             num_letters += 1
     # count words
-    num_words_list = input.split()
+    num_words_list = text_value.split()
     num_words = len(num_words_list)
     # count sentences
-    for sentence in input:
+    for sentence in text_value:
         if sentence == '.' or sentence == '!' or sentence == '?':
             num_sentences += 1
     # calculate averages
