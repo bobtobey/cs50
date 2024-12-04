@@ -29,6 +29,7 @@ def main():
     with open(dna_file) as file:
         reader = csv.DictReader(file)
         print(reader.fieldnames)
+        
         for dna_row in reader:
             dna_rows.append(dna_row)
             print(dna_row)
