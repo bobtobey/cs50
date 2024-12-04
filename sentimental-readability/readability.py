@@ -43,7 +43,7 @@ def main():
     # prompt user for name
     text_value = get_string("Text: ")
     # calculate grade index #
-    grade_index = calc_grade_index(text_value)
+    grade_index = round(calc_grade_index(text_value))
     # determine text grade level
     if grade_index < 1:
         print(f"Grade {grade_index}")
