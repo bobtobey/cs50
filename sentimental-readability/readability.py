@@ -48,7 +48,7 @@ def main():
     if grade_index< 1:
         print(f"1 {grade_index}")
     elif grade_index >= 16:
-        print(f"2 {grade_index}")
+        print(f"Grade {grade_index}")
     else:
         print(grade_index)
 
