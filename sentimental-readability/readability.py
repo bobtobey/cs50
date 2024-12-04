@@ -27,9 +27,14 @@ def main():
     num_words_list = input.split()
     num_words = len(num_words_list)
 
+    for sentence in input:
+        if sentence == '.' or sentence == '!' or sentence == '?':
+            num_sentences += 1
+
     print(f"Grade X {text_length}")
     print(f"# letters {num_letters}")
     print(f"# words {num_words}")
+    print(f"# sentences {num_sentences}")
 
 
 # Execute the main program
