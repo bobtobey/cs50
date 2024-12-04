@@ -5,6 +5,7 @@ import sys
 def main():
 
     # TODO: Check for command-line usage
+    # use databases/small.csv sequences/1.txt
     if len(sys.argv) != 3:
         print("Missing command-line argument.")
         # used to exit a program with an exit/error code #
@@ -13,8 +14,10 @@ def main():
         print(f"Your {sys.argv[1]} and {sys.argv[2]}")
 
     # TODO: Read database file into a variable
+    db_file = sys.argv[1]
 
     # TODO: Read DNA sequence file into a variable
+    dna_file = argv[2]
 
     # TODO: Find longest match of each STR in DNA sequence
 
