@@ -5,12 +5,12 @@ import sys
 def main():
 
     # TODO: Check for command-line usage
-    if len(sys.argv) != 2:
+    if len(sys.argv) != 3:
         print("Missing command-line argument.")
         # used to exit a program with an exit/error code #
         sys.exit(1)
     else:
-        print(f"Your {argv[1]}")
+        print(f"Your {sys.argv[1]} and {sys.argv[2]}")
 
     # TODO: Read database file into a variable
 
