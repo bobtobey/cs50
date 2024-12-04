@@ -47,9 +47,9 @@ def main():
 
     # determine text grade level
     if grade_index < 1:
-        print(f"Before grade 1 {grade_index}")
+        print(f"Before grade 1")
     elif grade_index >= 16:
-        print(f"Grade 16+ {grade_index}")
+        print(f"Grade 16+")
     else:
         print(f"Grade {grade_index}")
 
