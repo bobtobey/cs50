@@ -19,7 +19,13 @@ def main():
     num_words = 0
     num_sentences = 0
     text_length = len(input)
+
+    for x in input:
+        if x.isalpha():
+            num_letters += 1
+
     print(f"Grade X {text_length}")
+    print(f"# letters {num_letters}")
 
 
 # Execute the main program
