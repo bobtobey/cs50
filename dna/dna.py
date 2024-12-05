@@ -45,9 +45,9 @@ def main():
         for str in strs:
             if person[str] != strs.index(str):
                 match = False
-                print(person[str])
+                print(f"person str {person[str]}")
                 # print(store_matches[str])
-                print(strs.index(str))
+                print(f"strs.index(str) {strs.index(str)}")
                 print(str)
 
     return
