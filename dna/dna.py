@@ -37,6 +37,8 @@ def main():
         # print(f"Match: {dna_match} and {store_matches}")
 
     # TODO: Check database for matching profiles
+    match_found = False
+
     for person in rows:
         match = True
         for str in strs:
@@ -49,6 +51,9 @@ def main():
 
         if match:
             print(f"Match found: {person['name']}")
+            match_found = True
+            break
+
 if not match:
     print(f"No Match")
 
