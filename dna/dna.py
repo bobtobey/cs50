@@ -27,20 +27,20 @@ def main():
     dna_file = sys.argv[2]
     with open(dna_file) as file:
         dna_sequence = file.read()
-        print(dna_sequence)
+        # print(dna_sequence)
 
     # TODO: Find longest match of each STR in DNA sequence
     store_matches = []
     for str in strs:
         dna_match = longest_match(dna_sequence, str)
         store_matches.append(dna_match)
-        print(f"Match: {dna_match} and {store_matches}")
+        # print(f"Match: {dna_match} and {store_matches}")
 
     # TODO: Check database for matching profiles
     for person in rows:
         match = True
         for str in strs:
-            print("Person 2a ", person['name'])
+            print("Person: ", person['name'], person[str])
             print("Person 2b ", person[str])
             print("Seqence? ", store_matches[strs.index(str)])
 
