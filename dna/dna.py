@@ -46,7 +46,7 @@ def main():
             print("Person 2b ", person[str])
             print("Seqence? ", store_matches[strs.index(str)])
 
-            if person[str] != store_matches[strs.index(str)]:
+            if int(person[str]) != store_matches[strs.index(str)]:
                 match = False
                 print(match)
                 break
