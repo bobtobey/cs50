@@ -14,11 +14,15 @@ int main(int argc, char *argv[])
         printf("Command line success\n");
     }
     // Open files and determine scaling factor
-    FILE *input = fopen(argv[1], "r");
-    if (input == NULL)
+    FILE *src = fopen(argv[1], "r");
+    if (src == NULL)
     {
         printf("Could not open file.\n");
         return 1;
+    }
+    else
+    {
+        printf("Open Success.");
     }
 
 
