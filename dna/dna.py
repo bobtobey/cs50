@@ -39,6 +39,7 @@ def main():
         print(f"Match: {dna_match} and {store_matches}")
 
     # TODO: Check database for matching profiles
+    for person in rows:
     # for match in store_matches:
     #     if match == store_matches[match]:
     #         print(f"Match")
