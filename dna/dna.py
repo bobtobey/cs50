@@ -47,8 +47,8 @@ def main():
                 match = False
                 print(f"No Match")
                 break
-            if match:
-                print(f"Match found: {person['name']}")
+        if match:
+            print(f"Match found: {person['name']}")
 
     return
 
