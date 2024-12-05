@@ -13,8 +13,9 @@ def main():
         sys.exit(1)
 
     # TODO: Read database file into a variable
+    # assigns command line arg. to variable
     db_file = sys.argv[1]
-    # creates a list
+    # creates an empty list
     rows = []
     with open(db_file) as file:
         reader = csv.DictReader(file)
