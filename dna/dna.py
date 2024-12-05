@@ -47,7 +47,7 @@ def main():
 
     # TODO: Check database for matching profiles
     match_found = False
-
+    # iterate over each node in rows
     for person in rows:
         match = True
         for str_subseq in strs:
