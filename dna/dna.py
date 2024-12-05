@@ -40,7 +40,7 @@ def main():
         print(f"Match: {dna_match} and {store_matches}")
 
     # TODO: Check database for matching profiles
-
+    for match in 
     print(f"Match")
     return
 
