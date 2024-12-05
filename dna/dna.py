@@ -19,7 +19,7 @@ def main():
     with open(db_file) as file:
         reader = csv.DictReader(file)
         strs = reader.fieldnames[1:]
-        print(reader.fieldnames)
+        # print(reader.fieldnames)
         for row in reader:
             rows.append(row)
             print(row)
@@ -40,7 +40,7 @@ def main():
 
     # TODO: Check database for matching profiles
     for match in store_matches:
-        if match == store_matches[match]
+        if match == store_matches[match]:
             print(f"Match")
     return
 
