@@ -33,6 +33,7 @@ int main(int argc, char *argv[])
     uint8_t jpg_header[HEADER_SIZE];
     // read bytes from input and load into temp header
     fread(jpg_header, HEADER_SIZE, 1, src);
+    // check buffer data for JGP String START with loop
 
     // search through data src for jpg string marker to mark start of file Start LOOP
         // In the LOOP you need to fread(data, sizie, number, inptr);
