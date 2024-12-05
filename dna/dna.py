@@ -41,7 +41,7 @@ def main():
 
     # TODO: Check database for matching profiles
     for match in store_matches:
-        if match == 
+        if match == store_matches
     print(f"Match")
     return
 
