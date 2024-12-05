@@ -53,9 +53,9 @@ int main(int argc, char *argv[])
         Look at buffer data If start of new JPEG
             Detect for JPEGS
                 If start JPEG
-
-            Else
-
+                    start writing/copying sprintf and fwrite
+                Else
+                    if find next jpg close previous jpg file to open new file
 
 
 }
