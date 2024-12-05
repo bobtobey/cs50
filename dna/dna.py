@@ -20,6 +20,7 @@ def main():
     with open(db_file) as file:
         reader = csv.DictReader(file)
         # create list of str dna sequence sans first name element
+        # rows will contain a list of dictionaries for each person
         strs = reader.fieldnames[1:]
         # print(strs)
         for row in reader:
