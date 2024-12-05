@@ -46,7 +46,15 @@ int main(int argc, char *argv[])
     // continure till you find next jpg start string and then close that string and copy it over to new file IF STRING match execute COPY
 
     // then repeat process continue doing the same with the new file CONTINUE LOOP till end
-        
+        // end of file look for end of file
+    open memory card
+    repeat until end of car
+        read 512 bytes into a buffer
+        If start of new JPEG
+            If start JPEG
+
+            Else
+            
 
 
 }
