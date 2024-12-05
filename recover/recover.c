@@ -51,7 +51,8 @@ int main(int argc, char *argv[])
     repeat some process until end of car
         fread 512 bytes into a buffer
         Look at buffer data If start of new JPEG
-            If start JPEG
+            Detect for JPEGS
+                If start JPEG
 
             Else
 
