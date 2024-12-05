@@ -41,8 +41,6 @@ def main():
     # TODO: Check database for matching profiles
     for person in rows:
         match = True
-        print("Person 1a ", person['name'])
-        print("Person 1b ", person[str])
         for str in strs:
             print("Person 2a ", person['name'])
             print("Person 2b ", person[str])
