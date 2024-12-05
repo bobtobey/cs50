@@ -40,8 +40,8 @@ def main():
     for person in rows:
         match = True
         for str in strs:
-            print("Person: ", person['name'], ":", person[str])
-            print("Seqence: ", store_matches[strs.index(str)])
+            # print("Person: ", person['name'], ":", person[str])
+            # print("Seqence: ", store_matches[strs.index(str)])
 
             if int(person[str]) != store_matches[strs.index(str)]:
                 match = False
