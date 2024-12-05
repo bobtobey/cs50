@@ -13,7 +13,8 @@ int main(int argc, char *argv[])
     {
         printf("Command line success\n");
     }
-    // Open files and determine scaling factor
+
+    // Open camera data file
     FILE *src = fopen(argv[1], "r");
     if (src == NULL)
     {
