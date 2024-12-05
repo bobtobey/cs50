@@ -6,6 +6,7 @@ def main():
 
     # TODO: Check for command-line usage
     # use databases/small.csv sequences/1.txt
+    # make sure program takes just 2 arguments
     if len(sys.argv) != 3:
         print("Missing command-line argument.")
         # used to exit a program with an exit/error code #
