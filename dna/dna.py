@@ -13,7 +13,7 @@ def main():
         sys.exit(1)
 
     # TODO: Read database file into a variable
-    # assigns command line arg. to variable
+    # assigns command line arg 1. to variable
     db_file = sys.argv[1]
     # creates an empty list
     rows = []
@@ -29,6 +29,7 @@ def main():
             # print(row)
 
     # TODO: Read DNA sequence file into a variable
+    # assigns command line arg 2. to variable
     dna_file = sys.argv[2]
     with open(dna_file) as file:
         dna_sequence = file.read()
