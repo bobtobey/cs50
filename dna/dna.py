@@ -53,7 +53,7 @@ def main():
         for str_subseq in strs:
             # print("Person: ", person['name'], ":", person[str_subseq])
             # print("Seqence: ", store_matches[strs.index(str_subseq)])
-
+            # compare each person count against the STR count in the dna seq
             if int(person[str_subseq]) != store_matches[strs.index(str_subseq)]:
                 match = False
                 break
