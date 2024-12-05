@@ -40,10 +40,11 @@ def main():
 
     # TODO: Check database for matching profiles
     for person in rows:
+        match = true
         print(person)
         for str in strs:
             print(str)
-            
+
     return
 
 
