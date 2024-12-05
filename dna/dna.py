@@ -19,10 +19,10 @@ def main():
     with open(db_file) as file:
         reader = csv.DictReader(file)
         strs = reader.fieldnames[1:]
+        print(strs)
         for row in reader:
             rows.append(row)
             print(row)
-            print(strs)
 
     # TODO: Read DNA sequence file into a variable
     dna_file = sys.argv[2]
