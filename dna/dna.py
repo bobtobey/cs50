@@ -37,9 +37,11 @@ def main():
         # print(dna_sequence)
 
     # TODO: Find longest match of each STR in DNA sequence
+    # creates an empty list to store longest counts for each STR found
     store_matches = []
     for str in strs:
         dna_match = longest_match(dna_sequence, str)
+        # adds each of the longest matches to the list
         store_matches.append(dna_match)
         # print(f"Match: {dna_match} and {store_matches}")
 
