@@ -19,7 +19,7 @@ def main():
     with open(db_file) as file:
         reader = csv.DictReader(file)
         strs = reader.fieldnames[1:]
-        # print(reader.fieldnames)
+        print(f"test {reader.fieldnames}")
         for row in reader:
             rows.append(row)
             print(row)
