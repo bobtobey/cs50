@@ -59,7 +59,7 @@ def main():
                 break
 
         if match:
-            print(f"Match found: {person['name']}")
+            print(f"{person['name']}")
             match_found = True
             break
 
