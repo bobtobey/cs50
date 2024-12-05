@@ -47,15 +47,13 @@ def main():
             print("Person 2a ", person['name'])
             print("Person 2b ", person[str])
             print("Seqence? ", store_matches[strs.index(str)])
-            
+
             if person[str] != store_matches[strs.index(str)]:
                 match = False
-                print(f"person str {person[str]}")
-                print(store_matches[strs.index(str)])
-                print(f"strs.index(str) {strs.index(str)}")
-                print(str)
+                print(match)
                 break
             if match:
+                print(match)
                 print(f"Match found: {person['name']}")
 
     return
