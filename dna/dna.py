@@ -36,7 +36,7 @@ def main():
     store_matches = []
     for str in strs:
         dna_match = longest_match(dna_sequence, str)
-        str.append(dna_match)
+        store_matches.append(dna_match)
         print(f"Match: {dna_match}")
 
     # TODO: Check database for matching profiles
