@@ -40,9 +40,10 @@ def main():
 
     # TODO: Check database for matching profiles
     for person in rows:
-    # for match in store_matches:
-    #     if match == store_matches[match]:
-    #         print(f"Match")
+        print(person)
+        for str in strs:
+            print(str)
+            
     return
 
 
