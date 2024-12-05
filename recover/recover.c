@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Number of bytes in .jpg header
+const int HEADER_SIZE = 512;
+
 int main(int argc, char *argv[])
 {
     // Check command-line arguments
@@ -25,8 +28,9 @@ int main(int argc, char *argv[])
     {
         printf("Open Success.");
     }
+
     // TEMP storage for data read
-    jpg_header[]
+    jpg_header[HEADER_SIZE];
     // read bytes from input and load into temp header
     fread(header, HEADER_SIZE, 1, input);
 
