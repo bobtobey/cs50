@@ -6,7 +6,7 @@ int main(int argc, char *argv[])
     // Check command-line arguments
     if (argc != 2)
     {
-        printf("Please enter 1 argument.\n");
+        printf("Usage: Please enter 1 argument.\n");
         return 1;
     }
     else
