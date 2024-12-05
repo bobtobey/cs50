@@ -30,7 +30,8 @@ int main(int argc, char *argv[])
         // data is a pointer to where to store data your're reading (some buffer array)
         // size of each element to read
         // number of the elements to read
-        // inptr FILE *
+        // inptr FILE * to read from memory file in 512 byte chunks
+        
     // continure till you find next jpg start string and then close that string and copy it over to new file IF STRING match execute COPY
 
     // then repeat process continue doing the same with the new file CONTINUE LOOP till end
