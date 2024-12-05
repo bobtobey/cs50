@@ -25,7 +25,8 @@ int main(int argc, char *argv[])
     {
         printf("Open Success.");
     }
-
+    // TEMP storage for data read
+    jpg_header[]
     // read bytes from input and load into temp header
     fread(header, HEADER_SIZE, 1, input);
 
