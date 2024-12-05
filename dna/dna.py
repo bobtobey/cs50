@@ -32,7 +32,11 @@ def main():
         dna_sequence = file.read()
         print(dna_sequence)
 
-
+    # TODO: Find longest match of each STR in DNA sequence
+    store_matches = []
+    for str in strs:
+        dna_match = longest_match(dna_sequence, str)
+        store_matches.append(dna_match)
         print(f"Match: {dna_match} and {store_match}")
 
     # TODO: Check database for matching profiles
