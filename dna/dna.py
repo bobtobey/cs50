@@ -10,8 +10,6 @@ def main():
         print("Missing command-line argument.")
         # used to exit a program with an exit/error code #
         sys.exit(1)
-    else:
-        print(f"Your {sys.argv[1]} and {sys.argv[2]}")
 
     # TODO: Read database file into a variable
     db_file = sys.argv[1]
@@ -20,10 +18,10 @@ def main():
         reader = csv.DictReader(file)
         # create list of strs
         strs = reader.fieldnames[1:]
-        print(strs)
+        # print(strs)
         for row in reader:
             rows.append(row)
-            print(row)
+            # print(row)
 
     # TODO: Read DNA sequence file into a variable
     dna_file = sys.argv[2]
