@@ -25,6 +25,11 @@ int main(int argc, char *argv[])
     {
         printf("Open Success.");
     }
+    // search through data src for jpg string marker to mark start of file Start LOOP
+
+    // continure till you find next jpg start string and then close that string and copy it over to new file IF STRING match execute COPY
+
+    // then repeat process continue doing the same with the new file CONTINUE LOOP till end
 
 
 
