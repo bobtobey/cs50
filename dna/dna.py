@@ -54,8 +54,8 @@ def main():
             match_found = True
             break
 
-if not match:
-    print(f"No Match")
+    if not match_found:
+        print(f"No Match")
 
     return
 
