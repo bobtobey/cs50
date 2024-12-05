@@ -18,6 +18,7 @@ def main():
     rows = []
     with open(db_file) as file:
         reader = csv.DictReader(file)
+        # get 
         strs = reader.fieldnames[1:]
         print(strs)
         for row in reader:
