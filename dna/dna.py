@@ -45,6 +45,7 @@ def main():
 
             if int(person[str]) != store_matches[strs.index(str)]:
                 match = False
+                print(f"No Match")
                 break
             if match:
                 print(f"Match found: {person['name']}")
