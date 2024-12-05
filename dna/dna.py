@@ -23,6 +23,7 @@ def main():
         strs = reader.fieldnames[1:]
         # print(strs)
         for row in reader:
+            # adds
             rows.append(row)
             # print(row)
 
