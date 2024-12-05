@@ -43,10 +43,11 @@ def main():
         match = True
         print(person)
         for str in strs:
-            if person[str] != store_matches[str]:
+            if person[str] != strs.index(str):
                 match = False
                 print(person[str])
-                print(store_matches[str])
+                # print(store_matches[str])
+                print(strs.index(str))
                 print(str)
 
     return
