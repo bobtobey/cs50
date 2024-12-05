@@ -32,6 +32,7 @@ def main():
     # assigns command line arg 2. to variable
     dna_file = sys.argv[2]
     with open(dna_file) as file:
+        # contains the dna data
         dna_sequence = file.read()
         # print(dna_sequence)
 
