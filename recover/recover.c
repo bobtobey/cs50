@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <stdint.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 // Number of bytes in .jpg header
@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
                 fclose(img);
             }
             // This is the start of a new JPEG - count matches
-            jpeg_match ++;
+            jpeg_match++;
             // Create a new JPEG file to write data to
             sprintf(filename, "%3i.jpg", jpeg_match);
             // Open the new file
@@ -72,22 +72,20 @@ int main(int argc, char *argv[])
     }
 
     // search through data src for jpg string marker to mark start of file Start LOOP
-        // IF then IF again
-        // set counter to track jpgs found
-        // copy it over to new file IF STRING match execute COPY
-        // start copying at 000.jpg with sprintf(filename, "%03i.jpg", 2);
+    // IF then IF again
+    // set counter to track jpgs found
+    // copy it over to new file IF STRING match execute COPY
+    // start copying at 000.jpg with sprintf(filename, "%03i.jpg", 2);
     // Open new JPEG file
-        // then FILE *img = fopen(filename, "w");
+    // then FILE *img = fopen(filename, "w");
     // Write 512 bytes until a new JPEG if found
-        // use fwrite(data, size, number, outptr);
+    // use fwrite(data, size, number, outptr);
 
-    // continure till you find next jpg start string and then close that string and copy it over to new file IF STRING match execute COPY
-
+    // continure till you find next jpg start string
+    // and then close that string and copy it over to
+    // new file IF STRING match execute COPY
+    
     // then repeat process continue doing the same with the new file CONTINUE LOOP till end
-        // end of file look for end of file
+    // end of file look for end of file
     // stop at end of file
-
-
-
-
 }
