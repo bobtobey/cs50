@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
         if (jpg_header[0] == 0xff && jpg_header[1] == 0xd8 && jpg_header[2] == 0xff && (jpg_header[3] & 0xf0) == 0xe0)
         {
             // Check if there's an image file already open writing data
-            if (img != open)
+            if (img != NULL)
             {
                 fclose(img);
             }
@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
             }
         }
         // Check if new image file is still open
-        if (img != open)
+        if (img != NULL)
         {
             fwrite(jpg_header, HEADER_SIZE, 1, img);
         }
