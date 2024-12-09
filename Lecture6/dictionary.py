@@ -11,6 +11,6 @@ for pie in pizzas:
 # Loop through keys and values by temporarily transforming the dictionary to a list
 for pie, price in pizzas.items():
     print(price)
-# Loop through keys and values
+# Loop through keys and values and print both items but it is not ordered
 for pie, price in pizzas.items():
     print("A whole {} pizza costs ${}".format(pie, price))
