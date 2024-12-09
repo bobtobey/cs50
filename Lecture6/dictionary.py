@@ -7,4 +7,7 @@ pizzas = {
 }
 # Loop through keys
 for pie in pizzas:
+    print(pie)
+# Loop through keys and values
+for pie, price in pizzas.items():
     print(price)
