@@ -14,6 +14,7 @@ student1 = student("Alice", 101)
 
 # Print student details
 student1.print()
+
 # Create a student object
 student2 = student("Bob", 102)
 
