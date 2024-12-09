@@ -49,10 +49,10 @@ int main(int argc, char *argv[])
             {
                 fclose(img);
             }
-            // This is the start of a new JPEG - count matches
-            jpeg_match++;
             // Create a new JPEG file to write data to
             sprintf(filename, "%03i.jpg", jpeg_match);
+            // This is the start of a new JPEG - count matches
+            jpeg_match++;
             // Open the new file
             img = fopen(filename, "w");
             if (img == NULL)
