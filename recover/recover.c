@@ -44,6 +44,11 @@ int main(int argc, char *argv[])
         // Check for JPEG header starter strings
         if (jpg_header[0] == 0xff && jpg_header[1] == 0xd8 && jpg_header[2] == 0xff && (jpg_header[3] & 0xf0) == 0xe0)
         {
+            // Check if there's an image file already open writing data
+            if (img != open)
+            {
+                fclose(img);
+            }
             // This is the start of a new JPEG - count matches
             jpeg_match ++;
             // Create a new JPEG file to write data to
@@ -57,7 +62,11 @@ int main(int argc, char *argv[])
                 return 1;
             }
         }
-        fwrite(jpg_header, HEADER_SIZE, 1, img);
+        // Check if new image file is still open
+        if (img != open)
+        {
+            fwrite(jpg_header, HEADER_SIZE, 1, img);
+        }
 
         printf("Total JPEG headers found: %d\n", jpeg_match);
     }
