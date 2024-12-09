@@ -67,9 +67,8 @@ int main(int argc, char *argv[])
         {
             fwrite(jpg_header, HEADER_SIZE, 1, img);
         }
-
-        printf("Total JPEG headers found: %d\n", jpeg_match);
     }
+    printf("Total JPEG headers found: %d\n", jpeg_match);
 
     // search through data src for jpg string marker to mark start of file Start LOOP
     // IF then IF again
