@@ -49,6 +49,12 @@ int main(int argc, char *argv[])
             sprintf(filename, "%3i.jpg", jpeg_match);
             // Open the new file
             FILE *img = fopen(filename, "w");
+            if (img == NULL)
+            {
+                printf("Could not open file.\n");
+                fclose(src);
+                return 1;
+            }
         }
     }
 
