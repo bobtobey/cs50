@@ -39,6 +39,10 @@ int main(int argc, char *argv[])
     {
         // Check for JPEG header
         printf("%s\n", jpg_header);
+        if (jpg_header[0] == 0xff && jpg_header[1] == 0xd8 && jpg_header[2] == 0xff && (jpg_header[3] & 0xf0) == 0xe0)
+        {
+            // This is the start of a new JPEG
+        }
     }
 
     // search through data src for jpg string marker to mark start of file Start LOOP
