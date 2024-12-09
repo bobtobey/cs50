@@ -42,7 +42,9 @@ int main(int argc, char *argv[])
         if (jpg_header[0] == 0xff && jpg_header[1] == 0xd8 && jpg_header[2] == 0xff && (jpg_header[3] & 0xf0) == 0xe0)
         {
             // This is the start of a new JPEG
-            // Create a JPEG file
+            // Create a new JPEG file
+            sprintf(filename, "%3i.jpg", 2);
+            // Open the new file
             FILE *img = fopen(filename, "w");
         }
     }
