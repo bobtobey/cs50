@@ -56,6 +56,8 @@ int main(int argc, char *argv[])
                 return 1;
             }
         }
+
+        printf("Total JPEG headers found: %d\n", jpeg_match);
     }
 
     // search through data src for jpg string marker to mark start of file Start LOOP
