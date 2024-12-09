@@ -38,12 +38,10 @@ int main(int argc, char *argv[])
     uint8_t jpg_header[HEADER_SIZE];
     // Create variable for the new jpeg img file
     FILE *img = NULL;
-    // read bytes from input and load into temp header
-    fread(jpg_header, HEADER_SIZE, 1, src);
-    // check buffer data for beginning of JPEG string LOOP?
+    // Read bytes from input and load into temp header, while looping through 
     while (fread(jpg_header, HEADER_SIZE, 1, src) == 1)
     {
-        // Check for JPEG header starter strings
+        // Check for JPEG header for beginning of JPEG string
         if (jpg_header[0] == 0xff && jpg_header[1] == 0xd8 && jpg_header[2] == 0xff && (jpg_header[3] & 0xf0) == 0xe0)
         {
             // Check if there's an image file already open writing data
