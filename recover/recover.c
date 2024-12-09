@@ -56,8 +56,8 @@ int main(int argc, char *argv[])
                 fclose(src);
                 return 1;
             }
-            fwrite(jpg_header, HEADER_SIZE, 1, outptr);
         }
+        fwrite(jpg_header, HEADER_SIZE, 1, outptr);
 
         printf("Total JPEG headers found: %d\n", jpeg_match);
     }
