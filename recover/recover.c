@@ -68,6 +68,11 @@ int main(int argc, char *argv[])
             fwrite(jpg_header, HEADER_SIZE, 1, img);
         }
     }
+    // Close last image if open
+    if (img != NULL)
+    {
+        fclose(img);
+    }
     printf("Total JPEG headers found: %d\n", jpeg_match);
 
     // search through data src for jpg string marker to mark start of file Start LOOP
