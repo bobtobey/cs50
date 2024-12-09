@@ -4,6 +4,8 @@
 
 // Number of bytes in .jpg header
 const int HEADER_SIZE = 512;
+// jpeg correct match counter
+int jpeg_match = 0;
 
 int main(int argc, char *argv[])
 {
@@ -41,9 +43,10 @@ int main(int argc, char *argv[])
         printf("%s\n", jpg_header);
         if (jpg_header[0] == 0xff && jpg_header[1] == 0xd8 && jpg_header[2] == 0xff && (jpg_header[3] & 0xf0) == 0xe0)
         {
-            // This is the start of a new JPEG
+            // This is the start of a new JPEG - count matches
+            jpeg_match ++;
             // Create a new JPEG file to write data to
-            sprintf(filename, "%3i.jpg", 2);
+            sprintf(filename, "%3i.jpg", jpeg_match);
             // Open the new file
             FILE *img = fopen(filename, "w");
         }
