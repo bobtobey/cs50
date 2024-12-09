@@ -76,12 +76,5 @@ int main(int argc, char *argv[])
     // Close src file
     fclose(src);
 
-    printf("Total JPEG headers found: %d\n", jpeg_match);
-
-    // continure till you find next jpg start string and then close that string and copy it over to
-    // new file IF STRING match execute COPY
-
-    // then repeat process continue doing the same with the new file CONTINUE LOOP till end
-    // end of file look for end of file
-    // stop at end of file
+    // printf("Total JPEG headers found: %d\n", jpeg_match);
 }
