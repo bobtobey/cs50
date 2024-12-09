@@ -36,6 +36,8 @@ int main(int argc, char *argv[])
 
     // TEMP buffer storage for data read
     uint8_t jpg_header[HEADER_SIZE];
+    // Create variable for the new jpeg img file
+    FILE *img = NULL;
     // read bytes from input and load into temp header
     fread(jpg_header, HEADER_SIZE, 1, src);
     // check buffer data for beginning of JPEG string LOOP?
@@ -54,7 +56,7 @@ int main(int argc, char *argv[])
             // Create a new JPEG file to write data to
             sprintf(filename, "%3i.jpg", jpeg_match);
             // Open the new file
-            FILE *img = fopen(filename, "w");
+            img = fopen(filename, "w");
             if (img == NULL)
             {
                 printf("Could not open file.\n");
