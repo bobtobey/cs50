@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdint.h>
 #include <stdlib.h>
 
 // Number of bytes in .jpg header
@@ -56,7 +57,7 @@ int main(int argc, char *argv[])
         // end of file look for end of file
     // stop at end of file
 
-    
+
 
 
 }
