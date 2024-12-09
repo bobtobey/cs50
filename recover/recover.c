@@ -43,6 +43,7 @@ int main(int argc, char *argv[])
         {
             // This is the start of a new JPEG
             // Create a JPEG file
+            FILE *img = fopen(filename, "w");
         }
     }
 
