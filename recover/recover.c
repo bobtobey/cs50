@@ -75,18 +75,8 @@ int main(int argc, char *argv[])
     }
     // Close src file
     fclose(src);
-    
-    printf("Total JPEG headers found: %d\n", jpeg_match);
 
-    // search through data src for jpg string marker to mark start of file Start LOOP
-    // IF then IF again
-    // set counter to track jpgs found
-    // copy it over to new file IF STRING match execute COPY
-    // start copying at 000.jpg with sprintf(filename, "%03i.jpg", 2);
-    // Open new JPEG file
-    // then FILE *img = fopen(filename, "w");
-    // Write 512 bytes until a new JPEG if found
-    // use fwrite(data, size, number, outptr);
+    printf("Total JPEG headers found: %d\n", jpeg_match);
 
     // continure till you find next jpg start string and then close that string and copy it over to
     // new file IF STRING match execute COPY
