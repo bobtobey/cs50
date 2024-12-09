@@ -41,8 +41,7 @@ int main(int argc, char *argv[])
     // check buffer data for beginning of JPEG string LOOP?
     while (fread(jpg_header, HEADER_SIZE, 1, src) == 1)
     {
-        // Check for JPEG header
-        printf("%s\n", jpg_header);
+        // Check for JPEG header starter strings
         if (jpg_header[0] == 0xff && jpg_header[1] == 0xd8 && jpg_header[2] == 0xff && (jpg_header[3] & 0xf0) == 0xe0)
         {
             // This is the start of a new JPEG - count matches
@@ -57,6 +56,7 @@ int main(int argc, char *argv[])
                 fclose(src);
                 return 1;
             }
+            fwrite(data, size, number, outptr);
         }
 
         printf("Total JPEG headers found: %d\n", jpeg_match);
