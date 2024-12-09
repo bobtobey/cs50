@@ -6,6 +6,8 @@
 const int HEADER_SIZE = 512;
 // jpeg correct match counter
 int jpeg_match = 0;
+// Declare filename for new jpg
+char filename[8];
 
 int main(int argc, char *argv[])
 {
