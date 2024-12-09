@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
             // This is the start of a new JPEG - count matches
             jpeg_match++;
             // Create a new JPEG file to write data to
-            sprintf(filename, "%3i.jpg", jpeg_match);
+            sprintf(filename, "%03i.jpg", jpeg_match);
             // Open the new file
             img = fopen(filename, "w");
             if (img == NULL)
