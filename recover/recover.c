@@ -45,6 +45,8 @@ int main(int argc, char *argv[])
         {
             // This is the start of a new JPEG - count matches
             jpeg_match ++;
+            // Declare filename for new jpg
+            char filename[8];
             // Create a new JPEG file to write data to
             sprintf(filename, "%3i.jpg", jpeg_match);
             // Open the new file
