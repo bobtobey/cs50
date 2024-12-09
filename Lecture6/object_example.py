@@ -8,3 +8,9 @@ class student():
 
     def print(self):
         print("{} - {}".format(self.name, self.id))
+
+# Create a student object
+student1 = student("Alice", 101)
+
+# Print student details
+student1.print()
