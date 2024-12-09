@@ -34,6 +34,11 @@ int main(int argc, char *argv[])
     // read bytes from input and load into temp header
     fread(jpg_header, HEADER_SIZE, 1, src);
     // check buffer data for beginning of JPEG string LOOP?
+    while (fread(jpg_header, HEADER_SIZE, 1, src) == 1)
+    {
+        // Check for JPEG header
+        printf("%s\n", jpg_header);
+    }
 
     // search through data src for jpg string marker to mark start of file Start LOOP
         // IF then IF again
@@ -50,16 +55,8 @@ int main(int argc, char *argv[])
     // then repeat process continue doing the same with the new file CONTINUE LOOP till end
         // end of file look for end of file
     // stop at end of file
+
     
-    open memory card
-    repeat some process until end of car
-        fread 512 bytes into a buffer
-        Look at buffer data If start of new JPEG
-            Detect for JPEGS
-                If start JPEG
-                    start writing/copying sprintf and fwrite
-                Else
-                    if find next jpg close previous jpg file to open new file
 
 
 }
