@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
     uint8_t jpg_header[HEADER_SIZE];
     // Create variable for the new jpeg img file
     FILE *img = NULL;
-    // Read bytes from input and load into temp header, while looping through 
+    // Read bytes from input and load into temp header, while looping through data chunks
     while (fread(jpg_header, HEADER_SIZE, 1, src) == 1)
     {
         // Check for JPEG header for beginning of JPEG string
