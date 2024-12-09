@@ -40,13 +40,17 @@ int main(int argc, char *argv[])
         // set counter to track jpgs found
         // copy it over to new file IF STRING match execute COPY
         // start copying at 000.jpg with sprintf(filename, "%03i.jpg", 2);
+    // Open new JPEG file
         // then FILE *img = fopen(filename, "w");
+    // Write 512 bytes until a new JPEG if found
         // use fwrite(data, size, number, outptr);
 
     // continure till you find next jpg start string and then close that string and copy it over to new file IF STRING match execute COPY
 
     // then repeat process continue doing the same with the new file CONTINUE LOOP till end
         // end of file look for end of file
+    // stop at end of file
+    
     open memory card
     repeat some process until end of car
         fread 512 bytes into a buffer
