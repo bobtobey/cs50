@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
         printf("Command line success\n");
     }
 
-    // Open camera data file
+    // Open memory data file
     FILE *src = fopen(argv[1], "r");
     if (src == NULL)
     {
