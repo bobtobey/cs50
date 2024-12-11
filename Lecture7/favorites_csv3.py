@@ -5,5 +5,6 @@ with open("people-100.csv", "r") as file:
     reader = csv.DictReader(file)
     # this iterates ober reader to create a dictionary
     for row in reader:
-        # this will print out the 2nd row
+        # this now looks to the header of this column for what to print out
+        # making this less fragile
         print(row["Email"])
