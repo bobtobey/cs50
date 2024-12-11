@@ -8,4 +8,4 @@ with open("people-100.csv", "r") as file:
     next(reader)
     for row in reader:
         # this will print out the 2nd row
-        print(row[1])
+        print(row[2])
