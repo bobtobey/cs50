@@ -7,6 +7,6 @@ with open("people-100.csv", "r") as file:
     # next() allows us to skip the header row of a csv file
     next(reader)
     for row in reader:
-        # this will print out the 2nd row
+        # this will print out the 2nd row creating a list of dictionaries
         favorite = row[2]
         print(favorite)
