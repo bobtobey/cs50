@@ -5,4 +5,4 @@ with open("people-100.csv", "r") as file:
     reader = DictReader(file)
     for row in reader:
         # this will print out the 2nd row
-        print(row[2])
+        print(row["Email"])
