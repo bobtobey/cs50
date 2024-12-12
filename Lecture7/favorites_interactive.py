@@ -4,16 +4,17 @@ import csv
 from collections import Counter
 
 with open("people-100.csv", "r") as file:
-    # DictReader analyzes the header row of the file and figures out the columns
+    # Create DictReader
     reader = csv.DictReader(file)
-    # creates an object with counting capabilities built in
+
+    # Counts
     counts = Counter()
 
-    # grab the favorite sex from that row
+    # Iterate over CSV file, counting favorites
     for row in reader:
-        # index into that counter using favorite and increment by 1
         favorite = row["Sex"]
         counts[favorite] += 1
 
+# Print count
 favorite = input("Favorite: ")
 print(f"{favorite}: {counts[favorite]}")
