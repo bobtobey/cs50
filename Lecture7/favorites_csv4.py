@@ -17,3 +17,6 @@ with open("people-100.csv", "r") as file:
             male += 1
         elif f == "Female":
             female += 1
+
+print(f"Male: {male}")
+print(f"Female: {female}")
