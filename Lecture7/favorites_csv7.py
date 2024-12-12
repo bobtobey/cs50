@@ -9,6 +9,7 @@ with open("people-100.csv", "r") as file:
     # creates an object with counting capabilities built in
     counts = Counter()
 
+    # grab the favorite sex from that row
     for row in reader:
         f = row["Sex"]
         counts[f] += 1
