@@ -13,5 +13,5 @@ with open("people-100.csv", "r") as file:
             counts[f] = 1
 
 # Sort by values
-for f in sorted(counts, key=counts.get):
+for f in sorted(counts, key=counts.get, reverse=True):
     print(f"{f}: {counts[f]}")
