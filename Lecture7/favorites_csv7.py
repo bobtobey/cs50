@@ -1,10 +1,12 @@
 import csv
 
+# import Counter method
 from collections import Counter
 
 with open("people-100.csv", "r") as file:
     # DictReader analyzes the header row of the file and figures out the columns
     reader = csv.DictReader(file)
+    # creates an object with counting capabilities built in
     counts = Counter()
 
     for row in reader:
