@@ -11,6 +11,7 @@ with open("people-100.csv", "r") as file:
 
     # grab the favorite sex from that row
     for row in reader:
+        # index into that counter using favorite and increment by 1
         f = row["Sex"]
         counts[f] += 1
 
