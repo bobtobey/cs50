@@ -20,3 +20,5 @@ with open("people-100.csv", "r") as file:
 
 print(f"Male: {male}")
 print(f"Female: {female}")
+
+# In this version I'm using two variables to keep track of 2 things
