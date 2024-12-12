@@ -10,6 +10,7 @@ with open("people-100.csv", "r") as file:
     male, female = 0, 0, 0
 
     for row in reader:
+        # set a variable to the row
         f = row["Sex"]
         # increment counters if found in loop
         if f == "Male":
