@@ -15,6 +15,6 @@ with open("people-100.csv", "r") as file:
         favorite = row["Sex"]
         counts[favorite] += 1
 
-# Sort by values
-for favorite in sorted(counts, key=counts.get, reverse=True):
-    print(f"{favorite}: {counts[favorite]}")
+# Alternate way to Sort utilizing the Counter method
+for favorite, count in counts.most_common():
+    print(f"{favorite}: {count}")
