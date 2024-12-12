@@ -7,7 +7,7 @@ with open("people-100.csv", "r") as file:
     # male = 0
     # female = 0
     # Cleaner way to initialize multiple variables
-    male, female = 0, 0, 0
+    male, female = 0, 0
 
     for row in reader:
         # set a variable to the row
