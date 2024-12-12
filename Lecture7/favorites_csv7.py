@@ -12,9 +12,9 @@ with open("people-100.csv", "r") as file:
     # grab the favorite sex from that row
     for row in reader:
         # index into that counter using favorite and increment by 1
-        f = row["Sex"]
-        counts[f] += 1
+        favorite = row["Sex"]
+        counts[favorite] += 1
 
 # Sort by values
-for f in sorted(counts, key=counts.get, reverse=True):
-    print(f"{f}: {counts[f]}")
+for favorite in sorted(counts, key=counts.get, reverse=True):
+    print(f"{favorite}: {counts[favorite]}")
