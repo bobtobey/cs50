@@ -12,7 +12,7 @@ with open("people-100.csv", "r") as file:
         else:
             counts[f] = 1
 
-for f in counts:
+for f in sorted(counts):
     print(f"{f}: {counts[f]}")
 
 # What is new in this version I'm now using one dictionary instead of two variables to keep track of 2 things
