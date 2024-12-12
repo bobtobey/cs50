@@ -1,6 +1,6 @@
 import csv
 
-from collections inport Counter
+from collections import Counter
 
 with open("people-100.csv", "r") as file:
     # DictReader analyzes the header row of the file and figures out the columns
