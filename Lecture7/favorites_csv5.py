@@ -16,4 +16,4 @@ for f in counts:
     print(f"{f}: {counts[f]}")
 
 # What is new in this version I'm now using one dictionary instead of two variables to keep track of 2 things
-# And once I have that dictionary, whether there's 2 sexes, or, maybe, tomorrow there'll be 4 - this will iterate over all of those keys and print out the values
+# And now it doesn't matter if there's 2 sexes, or 9 - this will iterate over all keys and print out the values
