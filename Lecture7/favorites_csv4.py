@@ -11,4 +11,5 @@ with open("people-100.csv", "r") as file:
     scratch, c, python = 0, 0, 0
 
     for row in reader:
-        favor
+        f = row["Email"]
+        if f == "
