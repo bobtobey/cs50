@@ -3,7 +3,7 @@ import csv
 # import Counter method
 from collections import Counter
 
-with open("people-100.csv", "r") as file:
+with open("favorites.csv", "r") as file:
     # Create DictReader
     reader = csv.DictReader(file)
 
@@ -12,7 +12,7 @@ with open("people-100.csv", "r") as file:
 
     # Iterate over CSV file, counting favorites
     for row in reader:
-        favorite = row["Sex"]
+        favorite = row["problem"]
         counts[favorite] += 1
 
 # Print count
