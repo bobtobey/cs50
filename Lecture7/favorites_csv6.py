@@ -12,9 +12,6 @@ with open("people-100.csv", "r") as file:
         else:
             counts[f] = 1
 
-# Sort by keys
-for f in sorted(counts):
+# Sort by values
+for f in sorted(counts, key=counts.get):
     print(f"{f}: {counts[f]}")
-
-# What is new in this version I'm now using one dictionary instead of two variables to keep track of 2 things
-# And now it doesn't matter if there's 2 sexes, or 9 - this will iterate over all keys and print out the values
