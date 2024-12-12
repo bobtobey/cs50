@@ -11,6 +11,7 @@ with open("people-100.csv", "r") as file:
 
     for row in reader:
         f = row["Sex"]
+        # increment counters if found in loop
         if f == "Male":
             male += 1
         elif f == "Female":
