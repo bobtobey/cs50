@@ -7,4 +7,4 @@ SELECT DISTINCT(name) FROM people WHERE id IN (SELECT year FROM movies WHERE yea
 -- find id for movies in 2004 first, then find the person id for stars in those movies, last find the name id of those
 SELECT name FROM people WHERE id IN
 (SELECT person_id FROM stars
-WHERE movie_id IN (SELECT id FROM movies WHERE year = 2004)) ORDER BY year;
+WHERE movie_id IN (SELECT id FROM movies WHERE year = 2004));
