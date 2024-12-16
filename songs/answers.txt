@@ -1,4 +1,5 @@
 QUESTION: If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
-Based on our one query question
+Based on our 2 query questions:
     SELECT name FROM songs WHERE danceability > 0.75 AND energy > 0.75 AND valence > 0.75;
-If we
+    SELECT AVG(energy) FROM songs;
+If we got the average of all 3 categories
