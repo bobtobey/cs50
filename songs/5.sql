@@ -1,1 +1,1 @@
-SELECT name, energy FROM songs LIMIT 12;
+SELECT AVG(energy) FROM songs;
