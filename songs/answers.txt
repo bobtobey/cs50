@@ -7,5 +7,10 @@ of a persons top 100 songs. Then evalauting where the user's average falls - eit
 Based on where the averages end up Spotify could map them to a particular 'MOOD' or "Aura" scale.
 
 QUESTION 2: Hypothesize about why the way you've calculated this aura might not be very representative of the listener.
-Since everyone is unique and the times that they happen to be listening to Spotify may be 
+Since everyone is unique and the times that users happen to be listening to Spotify may be when they are in particular moods or situations
+already. In that case you may not get an accurate read of how that user's true overall mood or aura is. It could end up giving you their aura
+for only the period of time they listen to Spotify the most. Example the user only listens to Spotify at work and that user is usually in a bad mood at work.
+
 QUESTION 3: What better ways of calculating this aura would you propose?
+A way to improve this might be to increase your data sample by evaluating the users top 200 songs or more.
+Or use it in combination with what artists they listen to the most and map artists to a particular Aura average also?
