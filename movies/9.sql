@@ -9,7 +9,7 @@ SELECT name, COUNT(*) AS c FROM people WHERE id IN
 (SELECT person_id FROM stars
 WHERE movie_id IN (SELECT id FROM movies WHERE year = 2004));
 
-SELECT DISTINCT(name), year FROM people JOIN stars ON people.id = stars.person_id JOIN movies on stars.movie_Id = movies.id WHERE year = 2004 ORDER BY year;
+SELECT DISTINCT(name), birth, year FROM people JOIN stars ON people.id = stars.person_id JOIN movies on stars.movie_Id = movies.id WHERE year = 2004 ORDER BY year;
 
 SELECT name, year, ROW_NUMBER() OVER (ORDER BY year) AS row_num
 FROM people
