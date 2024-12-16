@@ -1,1 +1,1 @@
-SELECT name FROM songs DESC LIMIT 5;
+SELECT name, duration_ms FROM songs DESC LIMIT 5;
