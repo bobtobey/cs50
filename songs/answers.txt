@@ -2,8 +2,10 @@ QUESTION: If songs.db contains the top 100 songs of one listener from 2018, how 
 Based on our 2 query questions and what the Audio Aura article mentions:
     SELECT name FROM songs WHERE danceability > 0.75 AND energy > 0.75 AND valence > 0.75;
     SELECT AVG(energy) FROM songs;
-If we calculated the average of all 3 categories (energy, danceability, and valence) of a persons top 100 songs
+I am guessing that Spotify does something similar by calculating the average of all 3 categories (energy, danceability, and valence)
+of a persons top 100 songs. Then evalauting where the user's average falls - either above or below 0.50 in the different categories.
+Based on where the averages end up Spotify could map them to a particular 'MOOD' or "Aura" scale.
 
 QUESTION 2: Hypothesize about why the way you've calculated this aura might not be very representative of the listener.
-
+Since everyone is unique and the times that they happen to be listening to Spotify may be 
 QUESTION 3: What better ways of calculating this aura would you propose?
