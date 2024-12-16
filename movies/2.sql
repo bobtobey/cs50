@@ -1,1 +1,1 @@
-SELECT name, birth FROM people LIMIT 10;
+SELECT birth FROM people WHERE name = 'Emma Stone';
