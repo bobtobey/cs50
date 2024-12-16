@@ -1,1 +1,1 @@
-SELECT title, year FROM movies WHERE year >= 2018 ORDER BY title LIMIT 10;
+SELECT title FROM movies WHERE year >= 2018 ORDER BY title;
