@@ -2,4 +2,5 @@ SELECT AVG(rating) FROM ratings;
 
 SELECT title, year FROM movies WHERE year = 2012;
 
-SELECT AVG(rating) FROM ratings WHERE rating IN (SELECT year FROM movies WHERE year = 2012);
+SELECT AVG(rating) FROM ratings WHERE movie_id IN (SELECT id FROM movies WHERE year = 2012);
+SELECT AVG(rating) FROM ratings JOIN movies ON id = movie_id WHERE year = 2012;
