@@ -12,7 +12,7 @@ WHERE movie_id IN (SELECT id FROM movies WHERE year = 2004));
 SELECT DISTINCT(name), birth, year FROM people JOIN stars ON people.id = stars.person_id
 JOIN movies on stars.movie_Id = movies.id WHERE year = 2004 ORDER BY birth LIMIT 30;
 
-SELECT name, year, ROW_NUMBER() OVER (ORDER BY year) AS row_num
+SELECT name, year, ROW_NUMBER() OVER (ORDER BY birth) AS row_num
 FROM people
 JOIN stars ON people.id = stars.person_id
 JOIN movies ON stars.movie_id = movies.id
