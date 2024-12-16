@@ -1,1 +1,1 @@
-SELECT name FROM people ORDER BY birth LIMIT 10;
+SELECT DISTINCT(name) FROM people ORDER BY birth LIMIT 10;
