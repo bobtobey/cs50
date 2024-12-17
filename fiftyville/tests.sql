@@ -16,6 +16,7 @@ SELECT * FROM atm_transactions
     WHERE year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw' ORDER BY account_number;
 -- RESULT: 8 atm withdrawls were made on Leggett St. yielding 8 account_numbers
 
+-- ACTION: Cross check atm records for crime location and date with Bank records
 SELECT ba.account_number, ba.person_id FROM bank_accounts AS ba
     JOIN atm_transactions AS atm ON ba.account_number = atm.account_number
         WHERE year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw' ORDER BY ba.account_number;
