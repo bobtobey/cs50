@@ -23,7 +23,7 @@ SELECT account_number, person_id FROM bank_accounts
 
 -- ACTION: find persons name from bank account and store them in a temp table
 CREATE TEMPORARY TABLE temp_people_table AS
-SELECT name, id, phone_number, passport_number, license_plate FROM people WHERE id IN (
+SELECT name, id, phone_number, passport_number, license_plate, account_number FROM people WHERE id IN (
     SELECT person_id FROM bank_accounts
         WHERE account_number IN (
             SELECT account_number FROM atm_transactions
