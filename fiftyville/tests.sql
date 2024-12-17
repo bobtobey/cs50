@@ -31,9 +31,11 @@ SELECT * FROM temp_people_table;
 SELECT * FROM phone_calls WHERE year = 2023 AND month = 7 AND day = 28 AND duration < 60;
 -- ACTION: cross check phone numbers with temp people table
 SELECT temp_people_table.name, temp_people_table.id, phone_number FROM temp_people_table
-    JOIN phone_calls ON temp_people_table.phone_number = phone_calls.caller WHERE year = 2023 AND month = 7 AND day = 28 AND duration < 60;
+    JOIN phone_calls ON temp_people_table.phone_number = phone_calls.caller
+    JOIN bakery_security_logs ON temp_people_table.license_plate = bakery_security_logs.license_plate
 -- RESULTS: there are 5 matching names with atm transactions and phone calls
-    JOIN bakery_security_logs ON temp_people_table.license_plate = bakery_security_logs.license_plate WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND activity LIKE 'exit';
+ WHERE year = 2023 AND month = 7 AND day = 28 AND duration < 60
+ WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND activity LIKE 'exit';
 
 -- Review earliest flights leaving on 7/29 and Airport id's
 SELECT * FROM flights WHERE year = 2023 AND month = 7 AND day = 29 ORDER BY hour, minute;
