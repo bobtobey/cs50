@@ -58,13 +58,13 @@ SELECT 'temp_people_table' AS table_name
     ,tpt.name, tpt.id, pc.caller
     ,ppl.name, pc.receiver
     ,p.passport_number, bsl.license_plate
-    ,tbt.person_id AS bank_id, tbt.account_number
+    -- ,tbt.person_id AS bank_id, tbt.account_number
 FROM temp_people_table AS tpt
     JOIN phone_calls AS pc ON tpt.phone_number = pc.caller
     JOIN people AS ppl ON pc.receiver = ppl.phone_number
     JOIN bakery_security_logs AS bsl ON tpt.license_plate = bsl.license_plate
     JOIN passengers AS p ON tpt.passport_number = p.passport_number
-    JOIN temp_bank_table AS tbt ON tbt.id = tbt.person_id
+    -- JOIN temp_bank_table AS tbt ON tbt.id = tbt.person_id
 -- RESULTS: there are 5 matching names with atm transactions and phone calls
         WHERE pc.year = 2023 AND pc.month = 7 AND pc.day = 28 AND pc.duration < 60
 -- RESULTS: there are 3 matching names with license plate
