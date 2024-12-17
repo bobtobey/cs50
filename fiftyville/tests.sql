@@ -84,6 +84,18 @@ JOIN phone_calls AS pc ON tpt.phone_number = pc.caller
 JOIN people AS ppl ON pc.receiver = ppl.phone_number
 JOIN bakery_security_logs AS bsl ON tpt.license_plate = bsl.license_plate;
 
+SELECT tpt.name, tpt.id, tbt.account_number, pc.caller, ppl.name AS receiver_name, bsl.license_plate, p.passport_number
+FROM temp_people_table AS tpt
+JOIN temp_bank_table AS tbt ON tpt.id = tbt.person_id
+JOIN phone_calls AS pc ON tpt.phone_number = pc.caller
+JOIN people AS ppl ON pc.receiver = ppl.phone_number
+JOIN bakery_security_logs AS bsl ON tpt.license_plate = bsl.license_plate
+JOIN passengers AS p ON tpt.passport_number = p.passport_number
+WHERE pc.year = 2023 AND pc.month = 7 AND pc.day = 28 AND pc.duration < 60
+AND bsl.year = 2023 AND bsl.month = 7 AND bsl.day = 28 AND bsl.hour = 10 AND bsl.activity LIKE 'exit'
+AND p.flight_id = 36;
+
+
 SELECT * FROM people;
 
 -- DROP TEMPORARY TABLE IF EXISTS temp_people;
