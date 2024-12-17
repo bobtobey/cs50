@@ -41,7 +41,7 @@ SELECT * FROM phone_calls WHERE year = 2023 AND month = 7 AND day = 28 AND durat
 -- RESULT: 9 calls were made on this date that lasted less than 1 min. yields 9 callers/receivers
 
 -- ACTION: Match peoples names to their #'s callers or receivers
-SELECT p1.name, caller, p2.name, receiver FROM phone_calls
+SELECT p1.name, caller, p2.name, receiver, duration FROM phone_calls
     JOIN people AS p1 ON phone_calls.caller = p1.phone_number
     JOIN people AS p2 ON phone_calls.receiver = p2.phone_number
         WHERE year = 2023 AND month = 7 AND day = 28 AND duration < 60;
