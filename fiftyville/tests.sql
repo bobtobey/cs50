@@ -60,7 +60,7 @@ SELECT flight_id, pssgr.passport_number, seat, name FROM passengers AS pssgr
 
 -- ACTION: cross check phone numbers and license plates with temp people table
 SELECT 'temp_people_table' AS table_name
-    ,tpt.name, tpt.id, pc.caller AS caller_num
+    ,DISTINCT(tpt.name), tpt.id, pc.caller AS caller_num
     ,p.passport_number, bsl.license_plate
     ,ppl.name AS rec_name, pc.receiver AS rec_num
     -- ,psgr2.passport_number
