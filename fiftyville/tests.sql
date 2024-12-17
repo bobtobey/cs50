@@ -30,5 +30,4 @@ SELECT * FROM passengers WHERE flight_id = 36;
 -- RESULTS: 8 persons found
 
 -- ACTIONS: review remaining tables
-SELECT * FROM bank_accounts;
 SELECT * FROM people;
