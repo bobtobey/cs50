@@ -21,7 +21,7 @@ CREATE TEMPORARY TABLE temp_bank_table AS
 SELECT ba.account_number, ba.person_id, people.id, people.name FROM bank_accounts AS ba
     JOIN atm_transactions AS atm ON ba.account_number = atm.account_number
     JOIN people ON ba.person_id = people.id
-        WHERE year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw' ORDER BY ba.account_number;
+        WHERE year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw' ORDER BY people.name;
 SELECT * FROM temp_bank_table;
 -- RESULTS: mapped names to bank accounts used for 8 atm transactions yields 8 names
 
