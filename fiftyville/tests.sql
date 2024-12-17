@@ -22,4 +22,4 @@ SELECT * FROM airports;
 -- RESULTS: earliest flight leaves at 8:20am going to 4 = LGA LaGuardia Airport NYC
 
 -- ACTIONS: review passenger info
-SELECT * FROM passengers;
+SELECT * FROM passengers WHERE flight_id = 8;
