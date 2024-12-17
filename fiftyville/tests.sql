@@ -17,4 +17,4 @@ SELECT * FROM atm_transactions
 SELECT * FROM phone_calls WHERE year = 2023 AND month = 7 AND day = 28 AND duration < 60;
 
 -- Review earliest flights leaving on 7/29
-SELECT * FROM flights;
+SELECT * FROM flights WHERE year = 2023 AND month = 7 AND day = 29 ORDER BY hour, minute;
