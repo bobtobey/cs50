@@ -32,13 +32,13 @@ SELECT * FROM temp_bank_table;
 -- RESULTS: mapped names to bank accounts used for 8 atm transactions yields 8 names
 
 -- ACTION: find persons name from bank account and store them in a temp table
-CREATE TEMPORARY TABLE temp_suspect_table AS
-SELECT name, id FROM people WHERE id IN (
+CREATE TEMPORARY TABLE temp_people_table AS
+SELECT name, id, phone_number, passport_number, license_plate FROM people WHERE id IN (
     SELECT person_id FROM bank_accounts
         WHERE account_number IN (
             SELECT account_number FROM atm_transactions
             WHERE year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw')
-);
+) ORDER BY name;
 SELECT * FROM temp_people_table;
 -- RESULTS: yield 8 possible names
 
