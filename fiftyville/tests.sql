@@ -102,7 +102,3 @@ FROM phone_calls AS pc
     JOIN people AS p2 ON pc.receiver = p2.phone_number
 WHERE pc.year = 2023 AND pc.month = 7 AND pc.day = 28 AND pc.duration < 60;
 
-SELECT p.name, p.passport_number, f.hour, f.minute, f.destination_airport_id
-FROM passengers AS p
-    JOIN flights AS f ON p.flight_id = f.id
-WHERE f.year = 2023 AND f.month = 7 AND f.day = 29 AND f.id = 36;
