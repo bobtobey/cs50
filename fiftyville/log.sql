@@ -25,7 +25,7 @@ SELECT * FROM atm_transactions
 SELECT account_number, person_id FROM bank_accounts
     WHERE account_number IN (SELECT account_number FROM atm_transactions
         WHERE year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw') ORDER BY account_number;
--- RESULTS: found the matching person id's for the 8 atm transactions
+-- RESULTS: found the matching person id's for the 8 atm transactions yields 8 names
 
 -- ACTION: find persons name from bank account and store them in a temp table
 CREATE TEMPORARY TABLE temp_suspect_table AS
@@ -40,7 +40,7 @@ SELECT * FROM temp_people_table;
 
 -- ACTION: Review phone calls from 10:15am to 10:30am
 SELECT * FROM phone_calls WHERE year = 2023 AND month = 7 AND day = 28 AND duration < 60;
--- RESULT: 9 calls were made on this date that lasted less than 1 min.
+-- RESULT: 9 calls were made on this date that lasted less than 1 min. yields 9 callers/receivers
 
 -- ACTION: Review earliest flights leaving on 7/29 and Airport id's
 SELECT * FROM flights WHERE year = 2023 AND month = 7 AND day = 29 ORDER BY hour, minute;

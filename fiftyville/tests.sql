@@ -34,7 +34,7 @@ SELECT * FROM temp_people_table;
 
 -- Review phone calls from 10:15am to 10:30am
 SELECT * FROM phone_calls WHERE year = 2023 AND month = 7 AND day = 28 AND duration < 60;
--- RESULT: 9 calls were made on this date that lasted less than 1 min.
+-- RESULT: 9 calls were made on this date that lasted less than 1 min. yields 9 callers/receivers
 
 -- Review earliest flights leaving on 7/29 and Airport id's
 SELECT * FROM flights WHERE year = 2023 AND month = 7 AND day = 29 ORDER BY hour, minute;
