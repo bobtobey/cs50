@@ -10,3 +10,8 @@ SELECT name, transcript FROM interviews WHERE year = 2023 AND month = 7 AND day 
 -- RESULT: witness Eugene recognizes the thief from that morning before 10:15am, withdrawing money at the Leggett St. ATM
 -- RESULT: witness Raymond saw the thief leaving the bakery and call someone for less than a minute right after the crime
 -- RESULT: witness Raymond overheard the thief say they wanted the first flight out of town tommorrow and for the accomplice to buy the ticket
+
+-- ACTION: Review bakery security logs for 10:15am to 10:30am
+SELECT hour, activity, license_plate FROM bakery_security_logs
+    WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND activity LIKE 'exit' ORDER BY license_plate;
+-- RESULT: 9 vehicles exited the bakery parking lot at 10 with plate info
