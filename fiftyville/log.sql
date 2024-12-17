@@ -34,6 +34,7 @@ SELECT name, id FROM people WHERE id IN (
             SELECT account_number FROM atm_transactions
             WHERE year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw')
 );
+SELECT * FROM temp_people_table;
 -- RESULTS: yield 8 possible names
 
 -- ACTION: Review phone calls from 10:15am to 10:30am
