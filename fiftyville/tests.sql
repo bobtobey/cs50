@@ -50,7 +50,6 @@ SELECT 'temp_people_table' AS table_name, temp_people_table.name, temp_people_ta
     JOIN phone_calls AS pc ON temp_people_table.phone_number = pc.caller
     JOIN bakery_security_logs AS bsl ON temp_people_table.license_plate = bsl.license_plate
     JOIN passengers AS p ON temp_people_table.passport_number = p.passport_number
-    JOIN atm_transactions AS atm ON temp_people_table.
 -- RESULTS: there are 5 matching names with atm transactions and phone calls
         WHERE pc.year = 2023 AND pc.month = 7 AND pc.day = 28 AND pc.duration < 60
 -- RESULTS: there are 3 matching names with license plate
