@@ -17,7 +17,8 @@ SELECT hour, activity, license_plate FROM bakery_security_logs
 -- RESULT: 9 vehicles exited the bakery parking lot at 10 with plate info
 
 -- ACTION: Review atm transactions from 10:14am or earlier at Leggett st.
-SELECT * FROM atm_transactions WHERE year = 2023 AND month = 7 AND day = 28;
+SELECT * FROM atm_transactions
+    WHERE year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw' ORDER BY account_number;
 -- RESULT: 8 atm withdrawls were made on Leggett St.
 
 -- ACTION: Cross check atm records for crime location and date with Bank records
