@@ -30,7 +30,7 @@ SELECT * FROM temp_people_table;
 -- Review phone calls from 10:15am to 10:30am
 SELECT * FROM phone_calls WHERE year = 2023 AND month = 7 AND day = 28 AND duration < 60;
 -- ACTION: cross check phone numbers with temp people table
-
+SELECT 
 
 -- SELECT temp_people_table.name, id, phone_number FROM temp_people_table
 --     JOIN phone_number ON temp_people_table.id = phone_numbers.person_id;
