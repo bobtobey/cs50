@@ -54,6 +54,7 @@ SELECT * FROM passengers WHERE flight_id = 36;
 -- ACTION: cross check phone numbers and license plates with temp people table
 SELECT 'temp_people_table' AS table_name,
     tpt.name, tpt.id, pc.caller,
+    ppl1.name, 
     ppl.name, pc.receiver,
     p.passport_number, bsl.license_plate
 FROM temp_people_table AS tpt
