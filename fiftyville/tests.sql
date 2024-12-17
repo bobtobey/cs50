@@ -12,5 +12,8 @@ SELECT hour, activity, license_plate FROM bakery_security_logs
 -- Review atm transactions from 10:14am or earlier at Leggett st.
 SELECT * FROM atm_transactions
     WHERE year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw';
+
 -- Review phone calls from 10:15am to 10:30am
 SELECT * FROM phone_calls WHERE year = 2023 AND month = 7 AND day = 28 AND duration < 60;
+
+-- Review earliest flights leaving on 7/29
