@@ -25,7 +25,6 @@ SELECT ba.account_number, ba.person_id, people.id, people.name FROM bank_account
 SELECT * FROM temp_bank_table;
 -- RESULTS: mapped names to bank accounts used for 8 atm transactions yields 8 names
 
-
 -- ACTION: find persons name from bank account and store them in a temp table
 CREATE TEMPORARY TABLE temp_people_table AS
 SELECT name, id, phone_number, passport_number, license_plate FROM people WHERE id IN (
