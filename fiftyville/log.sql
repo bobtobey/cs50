@@ -40,6 +40,10 @@ SELECT * FROM temp_people_table;
 -- ACTION: Review phone calls from 10:15am to 10:30am
 SELECT * FROM phone_calls WHERE year = 2023 AND month = 7 AND day = 28 AND duration < 60;
 -- RESULT: 9 calls were made on this date that lasted less than 1 min.
+-- ACTION: cross check phone numbers with temp people table
+SELECT temp_people_table.name, temp_people_table.id, phone_number FROM temp_people_table
+    JOIN phone_calls ON temp_people_table.phone_number = phone_calls.caller WHERE year = 2023 AND month = 7 AND day = 28 AND duration < 60;
+-- RESULTS: there are 5 matching names with atm transactions and phone calls
 
 -- ACTION: Review earliest flights leaving on 7/29 and Airport id's
 SELECT * FROM flights WHERE year = 2023 AND month = 7 AND day = 29 ORDER BY hour, minute;
