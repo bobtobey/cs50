@@ -7,4 +7,4 @@ SELECT name, transcript FROM interviews WHERE year = 2023 AND month = 7 AND day 
 
 -- Review bakery security logs for 10:15am to 10:30am
 SELECT hour, activity, license_plate FROM bakery_security_logs
-WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND activity LIKE 'exit' ORDER BY license_plate;
+    WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND activity LIKE 'exit' ORDER BY license_plate;
