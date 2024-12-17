@@ -51,10 +51,13 @@ SELECT * FROM passengers WHERE flight_id = 36;
 -- RESULTS: 8 persons found
 
 -- ACTION: cross check phone numbers and license plates with temp people table
-SELECT temp_people_table.name, temp_people_table.id, pc.caller, bsl.license_plate FROM temp_people_table
+SELECT temp_people_table.name, temp_people_table.id, pc.caller, p.passport_number, bsl.license_plate FROM temp_people_table
     JOIN phone_calls AS pc ON temp_people_table.phone_number = pc.caller
     JOIN bakery_security_logs AS bsl ON temp_people_table.license_plate = bsl.license_plate
+    JOIN passengers AS p ON temp_people_table.passport_number = p.passport_number
 -- RESULTS: there are 5 matching names with atm transactions and phone calls
         WHERE pc.year = 2023 AND pc.month = 7 AND pc.day = 28 AND pc.duration < 60
 -- RESULTS: there are 3 matching names with license plate
-        AND bsl.year = 2023 AND bsl.month = 7 AND bsl.day = 28 AND bsl.hour = 10 AND bsl.activity LIKE 'exit';
+        AND bsl.year = 2023 AND bsl.month = 7 AND bsl.day = 28 AND bsl.hour = 10 AND bsl.activity LIKE 'exit'
+-- RESULTS: there are 2 matching names with passports
+        AND p.flight_id = 36;
