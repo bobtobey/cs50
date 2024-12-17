@@ -8,4 +8,4 @@ SELECT description FROM crime_scene_reports WHERE year = 2023 AND month = 7 AND 
 SELECT name, transcript FROM interviews WHERE year = 2023 AND month = 7 AND day = 28 AND transcript LIKE '%bakery%';
 -- RESULT: witness Ruth sees thief leave in a car at 10:25am from bakery parking lot
 -- RESULT: witness Eugene recognizes the thief from that morning before 10:15am, withdrawing money at the Leggett St. ATM
--- RESULT: witness Raymond saw the thief call someone right after the crime
+-- RESULT: witness Raymond saw the thief leaving the bakery and call someone for less than a minute right after the crime
