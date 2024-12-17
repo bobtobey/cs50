@@ -58,7 +58,7 @@ SELECT 'temp_people_table' AS table_name,
     p.passport_number, bsl.license_plate
 FROM temp_people_table AS tpt
     JOIN phone_calls AS pc ON tpt.phone_number = pc.caller
-    JOIN people AS ppl ON tpt.pc.receiver = ppl.phone_number
+    JOIN people AS ppl ON pc.receiver = ppl.phone_number
     JOIN bakery_security_logs AS bsl ON tpt.license_plate = bsl.license_plate
     JOIN passengers AS p ON tpt.passport_number = p.passport_number
 -- RESULTS: there are 5 matching names with atm transactions and phone calls
