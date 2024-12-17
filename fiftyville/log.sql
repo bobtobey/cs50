@@ -61,7 +61,7 @@ SELECT * FROM airports;
 -- ACTIONS: review passenger info for flight 36
 SELECT flight_id, pssgr.passport_number, seat, name FROM passengers AS pssgr
     JOIN people ON pssgr.passport_number = people.passport_number
-    WHERE flight_id = 36;
+    WHERE flight_id = 36 ORDER BY name;
 -- RESULTS: Mapped names to passports for flight 36 - 8 persons found
 
 -- ACTION: cross check phone numbers and license plates with temp people table
