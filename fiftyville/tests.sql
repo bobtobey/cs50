@@ -103,5 +103,5 @@ JOIN people ON passengers.passport_number = people.passport_number
 WHERE flights.destination_airport_id = (
     SELECT id FROM airports WHERE city = 'New York City'
 )
-AND flights.year = 2021 AND flights.month = 7 AND flights.day = 29;
+AND flights.year = 2023 AND flights.month = 7 AND flights.day = 29;
 
