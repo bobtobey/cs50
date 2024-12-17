@@ -56,7 +56,7 @@ SELECT * FROM airports;
 SELECT flight_id, pssgr.passport_number, seat, name FROM passengers AS pssgr
     JOIN people ON pssgr.passport_number = people.passport_number
     WHERE flight_id = 36;
--- RESULTS: 8 persons found
+-- RESULTS: Mapped names to passports for flight 36 - 8 persons found
 
 -- ACTION: cross check phone numbers and license plates with temp people table
 SELECT 'temp_people_table' AS table_name
