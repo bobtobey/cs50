@@ -52,7 +52,7 @@ SELECT * FROM passengers WHERE flight_id = 36;
 -- RESULTS: 8 persons found
 
 -- ACTION: cross check phone numbers and license plates with temp people table
-SELECT 'temp_people_table' AS table_name, temp_people_table.name, temp_people_table.id, pc.caller, pc.receiver, p.passport_number, bsl.license_plate FROM temp_people_table
+SELECT 'temp_people_table' AS tpt, temp_people_table.name, temp_people_table.id, pc.caller, pc.receiver, p.passport_number, bsl.license_plate FROM temp_people_table
     JOIN phone_calls AS pc ON temp_people_table.phone_number = pc.caller
     JOIN bakery_security_logs AS bsl ON temp_people_table.license_plate = bsl.license_plate
     JOIN passengers AS p ON temp_people_table.passport_number = p.passport_number
