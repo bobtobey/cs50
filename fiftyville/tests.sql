@@ -64,7 +64,7 @@ SELECT DISTINCT 'temp_people_table' AS table_name
     ,p.passport_number, bsl.license_plate
     ,ppl.name AS rec_name, pc.receiver AS rec_num
     -- ,psgr2.passport_number
-    ,tbt.person_id AS bank_id, tbt.account_number
+    ,tbt.id AS bank_id, tbt.account_number
 FROM temp_people_table AS tpt
     JOIN phone_calls AS pc ON tpt.phone_number = pc.caller
     JOIN people AS ppl ON pc.receiver = ppl.phone_number
