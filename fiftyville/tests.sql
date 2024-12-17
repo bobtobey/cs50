@@ -50,14 +50,16 @@ SELECT * FROM airports;
 -- RESULTS: earliest flight leaves at 8:20am going to 4 = LGA LaGuardia Airport NYC
 
 -- ACTIONS: review passenger info for flight 36
-SELECT * FROM passengers WHERE flight_id = 36;
+SELECT flight_id, pssgr.passport_number, seat FROM passengers AS pssgr
+    JOIN people ON passengers.passport_number = people.passport_number
+    WHERE flight_id = 36;
 -- RESULTS: 8 persons found
 
 -- ACTION: cross check phone numbers and license plates with temp people table
 SELECT 'temp_people_table' AS table_name
     ,tpt.name, tpt.id, pc.caller AS caller_num
     ,p.passport_number, bsl.license_plate
-    ,ppl.name AS receiver_name, pc.receiver AS receiver_num
+    ,ppl.name AS rec_name, pc.receiver AS rec_num
     -- ,psgr2.passport_number
     -- ,tbt.person_id AS bank_id, tbt.account_number
 FROM temp_people_table AS tpt
