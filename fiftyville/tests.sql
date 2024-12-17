@@ -23,7 +23,7 @@ SELECT account_number, person_id FROM bank_accounts
 
 -- ACTION: find persons name from bank account and store them in a temp table
 CREATE TEMPORARY TABLE temp_people_table AS
-SELECT name, id, phone_number, passport_number, license_plate, account_number FROM people WHERE id IN (
+SELECT name, id, phone_number, passport_number, license_plate FROM people WHERE id IN (
     SELECT person_id FROM bank_accounts
         WHERE account_number IN (
             SELECT account_number FROM atm_transactions
@@ -50,6 +50,7 @@ SELECT 'temp_people_table' AS table_name, temp_people_table.name, temp_people_ta
     JOIN phone_calls AS pc ON temp_people_table.phone_number = pc.caller
     JOIN bakery_security_logs AS bsl ON temp_people_table.license_plate = bsl.license_plate
     JOIN passengers AS p ON temp_people_table.passport_number = p.passport_number
+    JOIN bank_account
 -- RESULTS: there are 5 matching names with atm transactions and phone calls
         WHERE pc.year = 2023 AND pc.month = 7 AND pc.day = 28 AND pc.duration < 60
 -- RESULTS: there are 3 matching names with license plate
