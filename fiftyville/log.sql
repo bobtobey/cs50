@@ -22,11 +22,14 @@ SELECT * FROM atm_transactions
     WHERE year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw' ORDER BY account_number;
 -- RESULT: 8 atm withdrawls were made on Leggett St. yielding 8 account_numbers
 
--- ACTION: Cross check atm records for crime location and date with Bank records
-SELECT account_number, person_id FROM bank_accounts
-    WHERE account_number IN (SELECT account_number FROM atm_transactions
-        WHERE year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw') ORDER BY account_number;
--- RESULTS: found the matching person id's for the 8 atm transactions yields 8 names
+-- ACTION: Cross check Bank records against atm records for crime location and date similarities
+CREATE TEMPORARY TABLE temp_bank_table AS
+SELECT ba.account_number, ba.person_id, people.id, people.name FROM bank_accounts AS ba
+    JOIN atm_transactions AS atm ON ba.account_number = atm.account_number
+    JOIN people ON ba.person_id = people.id
+        WHERE year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw' ORDER BY ba.account_number;
+SELECT * FROM temp_bank_table;
+-- RESULTS: mapped names to bank accounts used for 8 atm transactions yields 8 names
 
 -- ACTION: find persons name from bank account and store them in a temp table
 CREATE TEMPORARY TABLE temp_suspect_table AS
