@@ -18,7 +18,7 @@ SELECT account_number, person_id FROM bank_accounts
         WHERE year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw') ORDER BY account_number;
 -- ACTION: find persons name from bank account and store them in a temp table
 CREATE TEMPORARY TABLE temp_people_table AS
-SELECT name, id FROM people WHERE id IN (
+SELECT name, id, phone_number FROM people WHERE id IN (
     SELECT person_id FROM bank_accounts
         WHERE account_number IN (
             SELECT account_number FROM atm_transactions
@@ -30,10 +30,10 @@ SELECT * FROM temp_people_table;
 -- Review phone calls from 10:15am to 10:30am
 SELECT * FROM phone_calls WHERE year = 2023 AND month = 7 AND day = 28 AND duration < 60;
 -- ACTION: cross check phone numbers with temp people table
-SELECT 
 
--- SELECT temp_people_table.name, id, phone_number FROM temp_people_table
---     JOIN phone_number ON temp_people_table.id = phone_numbers.person_id;
+
+SELECT temp_people_table.name, temp_people_table.id, phone_number FROM temp_people_table
+    JOIN phone_calls ON temp_people_table.id = phone_calls.person_id;
 
 -- Review earliest flights leaving on 7/29 and Airport id's
 SELECT * FROM flights WHERE year = 2023 AND month = 7 AND day = 29 ORDER BY hour, minute;
