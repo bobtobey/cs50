@@ -3,7 +3,6 @@
 +------------------------+
 | Brad Pitt              |
 | Jennifer Aniston       |
-| Kevin Bacon            |
 | Nicolas Cage           |
 | Neve Campbell          |
 | Kevin Costner          |
