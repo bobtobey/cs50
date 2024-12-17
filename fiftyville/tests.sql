@@ -31,7 +31,7 @@ SELECT name, id, phone_number, passport_number, license_plate FROM people WHERE 
     SELECT person_id FROM bank_accounts
         WHERE account_number IN (
             SELECT account_number FROM atm_transactions
-            WHERE year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw')
+            WHERE year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw' ORDER BY id)
 );
 SELECT * FROM temp_people_table;
 -- RESULTS: yield 8 possible names
