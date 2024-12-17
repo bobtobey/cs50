@@ -23,7 +23,7 @@ SELECT ba.account_number, ba.person_id, people.id, people.name FROM bank_account
     JOIN people ON ba.person_id = people.id
         WHERE year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw' ORDER BY ba.account_number;
 SELECT * FROM temp_bank_table;
--- RESULTS: found the matching person id's for the 8 atm transactions yields 8 names
+-- RESULTS: mapped names to bank accounts used for 8 atm transactions yields 8 names
 
 
 -- ACTION: find persons name from bank account and store them in a temp table
