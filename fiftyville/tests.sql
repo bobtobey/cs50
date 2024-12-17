@@ -45,3 +45,5 @@ SELECT * FROM passengers WHERE flight_id = 36;
 
 -- ACTIONS: review remaining tables
 SELECT * FROM people;
+
+-- DROP TEMPORARY TABLE IF EXISTS temp_people;
