@@ -45,8 +45,9 @@ SELECT p1.name, caller, p2.name, receiver FROM phone_calls
     JOIN people AS p1 ON phone_calls.caller = p1.phone_number
     JOIN people AS p2 ON phone_calls.receiver = p2.phone_number
         WHERE year = 2023 AND month = 7 AND day = 28 AND duration < 60;
+-- RESULTS: Mapped names to their phone # for date of the crime
 
--- Review earliest flights leaving on 7/29 and Airport id's
+-- ACTION: Review earliest flights leaving on 7/29 and Airport id's
 SELECT * FROM flights WHERE year = 2023 AND month = 7 AND day = 29 ORDER BY hour, minute;
 SELECT * FROM airports;
 -- RESULTS: earliest flight leaves at 8:20am going to 4 = LGA LaGuardia Airport NYC
