@@ -32,7 +32,7 @@ SELECT name, id, phone_number, passport_number, license_plate FROM people WHERE 
         WHERE account_number IN (
             SELECT account_number FROM atm_transactions
             WHERE year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw')
-);
+) ORDER BY name;
 SELECT * FROM temp_people_table;
 -- RESULTS: yield 8 possible names
 
