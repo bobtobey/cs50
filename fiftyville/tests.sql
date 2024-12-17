@@ -95,3 +95,9 @@ AND p.flight_id = 36;
 SELECT * FROM people LIMIT 5;
 
 -- DROP TEMPORARY TABLE IF EXISTS temp_people;
+SELECT pc.caller AS caller_num, p1.name AS caller_name,
+       pc.receiver AS receiver_num, p2.name AS receiver_name
+FROM phone_calls AS pc
+    JOIN people AS p1 ON pc.caller = p1.phone_number
+    JOIN people AS p2 ON pc.receiver = p2.phone_number
+WHERE pc.year = 2023 AND pc.month = 7 AND pc.day = 28 AND pc.duration < 60;
