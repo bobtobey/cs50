@@ -9,4 +9,4 @@ SELECT name, transcript FROM interviews WHERE year = 2023 AND month = 7 AND day 
 -- RESULT: witness Ruth sees thief leave in a car at 10:25am from bakery parking lot
 -- RESULT: witness Eugene recognizes the thief from that morning before 10:15am, withdrawing money at the Leggett St. ATM
 -- RESULT: witness Raymond saw the thief leaving the bakery and call someone for less than a minute right after the crime
--- RESULT: witness Raymond overheard the thief say they wanted the first flight out of town
+-- RESULT: witness Raymond overheard the thief say they wanted the first flight out of town tommorrow and for the accomplice to buy the ticket
