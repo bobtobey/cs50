@@ -29,7 +29,7 @@ SELECT * FROM temp_people_table;
 
 -- Review phone calls from 10:15am to 10:30am
 SELECT * FROM phone_calls WHERE year = 2023 AND month = 7 AND day = 28 AND duration < 60;
--- ACTION: cross check phone numbers with temp people table
+-- ACTION: cross check phone numbers and license plates with temp people table
 SELECT temp_people_table.name, temp_people_table.id, pc.caller, bsl.license_plate FROM temp_people_table
     JOIN phone_calls AS pc ON temp_people_table.phone_number = pc.caller
     JOIN bakery_security_logs AS bsl ON temp_people_table.license_plate = bsl.license_plate
