@@ -38,9 +38,8 @@ SELECT * FROM phone_calls WHERE year = 2023 AND month = 7 AND day = 28 AND durat
 
 -- ACTION: Match names to call & receivers
 SELECT p1.name, caller, p2.name, receiver FROM phone_calls
-    JOIN people ON phone_calls.receiver = people.phone_number
-SELECT p2.name, caller FROM phone_calls
-    JOIN people ON phone_calls.caller = people.phone_number
+    JOIN people AS p1 ON phone_calls.caller = people.phone_number
+    JOIN people AS p2 ON phone_calls.receiver = people.phone_number
         WHERE year = 2023 AND month = 7 AND day = 28 AND duration < 60;
 
 -- Review earliest flights leaving on 7/29 and Airport id's
