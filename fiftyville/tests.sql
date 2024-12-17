@@ -18,7 +18,6 @@ SELECT * FROM atm_transactions
 
 SELECT ba.account_number, ba.person_id FROM bank_accounts AS ba
     JOIN atm_transactions AS atm ON ba.account_number = atm.account_number
-    WHERE account_number IN (SELECT account_number FROM atm_transactions
         WHERE year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw') ORDER BY account_number;
 
 -- ACTIONS: Cross check atm records for crime location and date with Bank records
