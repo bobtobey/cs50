@@ -58,19 +58,17 @@ SELECT flight_id, pssgr.passport_number, seat, name FROM passengers AS pssgr
     WHERE flight_id = 36 ORDER BY name;
 -- RESULTS: Mapped names to passports for flight 36 - 8 persons found
 
--- ACTION: cross check phone numbers and license plates with temp people table
-SELECT DISTINCT 'temp_people_table' AS table_name
+-- ACTION: Temp Aggregate table cross checks details across tables
+SELECT DISTINCT 'Aggregate' AS table_name
     ,tpt.name, tpt.id, pc.caller AS caller_num
     ,p.passport_number, bsl.license_plate
     ,ppl.name AS rec_name, pc.receiver AS rec_num
-    -- ,psgr2.passport_number
     ,tbt.id AS bank_id, tbt.account_number
 FROM temp_people_table AS tpt
     JOIN phone_calls AS pc ON tpt.phone_number = pc.caller
     JOIN people AS ppl ON pc.receiver = ppl.phone_number
     JOIN bakery_security_logs AS bsl ON tpt.license_plate = bsl.license_plate
     JOIN passengers AS p ON tpt.passport_number = p.passport_number
-    -- JOIN passengers AS psgr2 ON ppl.passport_number = psgr2.passport_number
     JOIN temp_bank_table AS tbt ON tpt.id = tbt.person_id
 -- RESULTS: there are 5 matching names with atm transactions and phone calls
         WHERE pc.year = 2023 AND pc.month = 7 AND pc.day = 28 AND pc.duration < 60
