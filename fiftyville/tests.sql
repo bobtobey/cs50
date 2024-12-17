@@ -72,7 +72,7 @@ FROM temp_people_table AS tpt
 -- RESULTS: there are 3 matching names with license plate
         AND bsl.year = 2023 AND bsl.month = 7 AND bsl.day = 28 AND bsl.hour = 10 AND bsl.activity LIKE 'exit'
 -- RESULTS: there are 2 matching names with passports
-        AND p.flight_id = 36;
+        AND p.flight_id = 36 AND psgr2.flight_id;
 
 -- ACTIONS: review remaining tables
 
