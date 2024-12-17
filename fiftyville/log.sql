@@ -14,7 +14,7 @@ SELECT name, transcript FROM interviews WHERE year = 2023 AND month = 7 AND day 
 -- ACTION: Review bakery security logs for 10:15am to 10:30am
 SELECT hour, activity, license_plate FROM bakery_security_logs
     WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND activity LIKE 'exit' ORDER BY license_plate;
--- RESULT: 9 vehicles exited the bakery parking lot at 10 with plate info
+-- RESULT: 9 vehicles exited the bakery parking lot at 10am yielding 9 license_plate
 
 -- ACTION: Review atm transactions from 10:14am or earlier at Leggett st.
 SELECT * FROM atm_transactions
