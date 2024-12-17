@@ -57,6 +57,7 @@ SELECT * FROM passengers WHERE flight_id = 36;
 SELECT 'temp_people_table' AS table_name
     ,tpt.name, tpt.id, pc.caller
     ,ppl.name, pc.receiver
+    ,
     ,p.passport_number, bsl.license_plate
     -- ,tbt.person_id AS bank_id, tbt.account_number
 FROM temp_people_table AS tpt
