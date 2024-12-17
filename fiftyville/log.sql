@@ -28,3 +28,7 @@ SELECT * FROM phone_calls WHERE year = 2023 AND month = 7 AND day = 28 AND durat
 SELECT * FROM flights WHERE year = 2023 AND month = 7 AND day = 29 ORDER BY hour, minute;
 SELECT * FROM airports;
 -- RESULTS: earliest flight leaves at 8:20am going to 4 = LGA LaGuardia Airport NYC
+
+-- ACTIONS: review passenger info for flight 36
+SELECT * FROM passengers WHERE flight_id = 36;
+-- RESULTS: 8 persons found

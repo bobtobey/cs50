@@ -21,5 +21,10 @@ SELECT * FROM flights WHERE year = 2023 AND month = 7 AND day = 29 ORDER BY hour
 SELECT * FROM airports;
 -- RESULTS: earliest flight leaves at 8:20am going to 4 = LGA LaGuardia Airport NYC
 
--- ACTIONS: review passenger info
-SELECT * FROM passengers WHERE flight_id = 8;
+-- ACTIONS: review passenger info for flight 36
+SELECT * FROM passengers WHERE flight_id = 36;
+-- RESULTS: 8 persons found
+
+-- ACTIONS: review remaining tables
+SELECT * FROM bank_accounts;
+SELECT * FROM people;
