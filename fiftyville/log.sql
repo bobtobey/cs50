@@ -6,4 +6,4 @@ SELECT description FROM crime_scene_reports WHERE year = 2023 AND month = 7 AND 
 
 -- ACTION: Next read interviews for that date of the crime where witness mentions bakery
 SELECT name, transcript FROM interviews WHERE year = 2023 AND month = 7 AND day = 28 AND transcript LIKE '%bakery%';
--- RESULT: witness Ruth sees thief leave in a car at 10:25am
+-- RESULT: witness Ruth sees thief leave in a car at 10:25am from bakery parking lot
