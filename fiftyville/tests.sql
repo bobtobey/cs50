@@ -10,4 +10,4 @@ SELECT hour, activity, license_plate FROM bakery_security_logs
     WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND activity LIKE 'exit' ORDER BY license_plate;
 
 -- Review atm transactions from 10:14am or earlier at Leggett st.
-SELECT * FROM atm_transactions WHERE year = 2023 AND month = 7 AND day = 28;
+SELECT * FROM atm_transactions WHERE year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street';
