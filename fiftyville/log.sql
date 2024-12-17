@@ -12,9 +12,10 @@ SELECT name, transcript FROM interviews WHERE year = 2023 AND month = 7 AND day 
 -- RESULT: witness Raymond overheard the thief say they wanted the first flight out of town tommorrow and for the accomplice to buy the ticket
 
 -- ACTION: Review bakery security logs for 10:15am to 10:30am
-SELECT hour, activity, license_plate FROM bakery_security_logs
-    WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND activity LIKE 'exit' ORDER BY license_plate;
--- RESULT: 9 vehicles exited the bakery parking lot at 10am yielding 9 license_plate
+SELECT hour, activity, bsl.license_plate, people.name FROM bakery_security_logs AS bsl
+    JOIN people ON bsl.license_plate = people.license_plate
+    WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND activity LIKE 'exit' ORDER BY bsl.license_plate;
+-- RESULT: 9 vehicles exit the bakery parking lot at 10am yielding 9 license_plate
 
 -- ACTION: Review atm transactions from 10:14am or earlier at Leggett st.
 SELECT * FROM atm_transactions
