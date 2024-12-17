@@ -59,8 +59,8 @@ SELECT flight_id, pssgr.passport_number, seat, name FROM passengers AS pssgr
 -- RESULTS: Mapped names to passports for flight 36 - 8 persons found
 
 -- ACTION: cross check phone numbers and license plates with temp people table
-SELECT 'temp_people_table' AS table_name
-    ,DISTINCT(tpt.name), tpt.id, pc.caller AS caller_num
+SELECT DISTINCT 'temp_people_table' AS table_name
+    ,tpt.name, tpt.id, pc.caller AS caller_num
     ,p.passport_number, bsl.license_plate
     ,ppl.name AS rec_name, pc.receiver AS rec_num
     -- ,psgr2.passport_number
@@ -75,9 +75,9 @@ FROM temp_people_table AS tpt
 -- RESULTS: there are 5 matching names with atm transactions and phone calls
         WHERE pc.year = 2023 AND pc.month = 7 AND pc.day = 28 AND pc.duration < 60
 -- RESULTS: there are 3 matching names with license plate
-        -- AND bsl.year = 2023 AND bsl.month = 7 AND bsl.day = 28 AND bsl.hour = 10 AND bsl.activity LIKE 'exit'
+        AND bsl.year = 2023 AND bsl.month = 7 AND bsl.day = 28 AND bsl.hour = 10 AND bsl.activity LIKE 'exit'
 -- RESULTS: there are 2 matching names with passports
-        -- AND p.flight_id = 36
+        AND p.flight_id = 36
         ;
 
 -- ACTIONS: review remaining tables
