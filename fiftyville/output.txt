@@ -16,7 +16,6 @@
 +------+----------+---------------+
 | 10   | exit     | 0NTHK55       |
 | 10   | exit     | 1106N58       |
-| 10   | entrance | 13FNH73       |
 | 10   | exit     | 322W7JE       |
 | 10   | exit     | 4328GD8       |
 | 10   | exit     | 5P2BI95       |
@@ -24,8 +23,4 @@
 | 10   | exit     | 94KL13X       |
 | 10   | exit     | G412CB7       |
 | 10   | exit     | L93JTIZ       |
-| 10   | entrance | NRYN856       |
-| 10   | entrance | R3G7486       |
-| 10   | entrance | V47T75I       |
-| 10   | entrance | WD5M8I6       |
 +------+----------+---------------+
