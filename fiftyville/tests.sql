@@ -19,6 +19,8 @@ SELECT * FROM atm_transactions
 SELECT account_number, person_id FROM bank_accounts
     WHERE account_number IN (SELECT account_number FROM atm_transactions
         WHERE year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw') ORDER BY account_number;
+-- RESULTS: found the matching person id's for the 8 atm transactions
+
 -- ACTION: find persons name from bank account and store them in a temp table
 CREATE TEMPORARY TABLE temp_people_table AS
 SELECT name, id, phone_number, passport_number, license_plate FROM people WHERE id IN (
