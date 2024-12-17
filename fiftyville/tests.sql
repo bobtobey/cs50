@@ -64,6 +64,7 @@ FROM temp_people_table AS tpt
     JOIN people AS ppl ON pc.receiver = ppl.phone_number
     JOIN bakery_security_logs AS bsl ON tpt.license_plate = bsl.license_plate
     JOIN passengers AS p ON tpt.passport_number = p.passport_number
+    JOIN passengers AS psgr2 ON ppl.passport_number = psgr2.passport_number
     -- JOIN temp_bank_table AS tbt ON ppl.id = tbt.person_id
 -- RESULTS: there are 5 matching names with atm transactions and phone calls
         WHERE pc.year = 2023 AND pc.month = 7 AND pc.day = 28 AND pc.duration < 60
