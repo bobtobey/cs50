@@ -50,8 +50,8 @@ SELECT * FROM airports;
 -- RESULTS: earliest flight leaves at 8:20am going to 4 = LGA LaGuardia Airport NYC
 
 -- ACTIONS: review passenger info for flight 36
-SELECT flight_id, pssgr.passport_number, seat FROM passengers AS pssgr
-    JOIN people ON passengers.passport_number = people.passport_number
+SELECT flight_id, pssgr.passport_number, seat, name FROM passengers AS pssgr
+    JOIN people ON pssgr.passport_number = people.passport_number
     WHERE flight_id = 36;
 -- RESULTS: 8 persons found
 
