@@ -40,10 +40,6 @@ SELECT * FROM temp_people_table;
 -- ACTION: Review phone calls from 10:15am to 10:30am
 SELECT * FROM phone_calls WHERE year = 2023 AND month = 7 AND day = 28 AND duration < 60;
 -- RESULT: 9 calls were made on this date that lasted less than 1 min.
--- ACTION: cross check phone numbers with temp people table
-SELECT temp_people_table.name, temp_people_table.id, phone_number FROM temp_people_table
-    JOIN phone_calls ON temp_people_table.phone_number = phone_calls.caller WHERE year = 2023 AND month = 7 AND day = 28 AND duration < 60;
--- RESULTS: there are 5 matching names with atm transactions and phone calls
 
 -- ACTION: Review earliest flights leaving on 7/29 and Airport id's
 SELECT * FROM flights WHERE year = 2023 AND month = 7 AND day = 29 ORDER BY hour, minute;
@@ -53,3 +49,12 @@ SELECT * FROM airports;
 -- ACTIONS: review passenger info for flight 36
 SELECT * FROM passengers WHERE flight_id = 36;
 -- RESULTS: 8 persons found
+
+-- ACTION: cross check phone numbers and license plates with temp people table
+SELECT temp_people_table.name, temp_people_table.id, pc.caller, bsl.license_plate FROM temp_people_table
+    JOIN phone_calls AS pc ON temp_people_table.phone_number = pc.caller
+    JOIN bakery_security_logs AS bsl ON temp_people_table.license_plate = bsl.license_plate
+-- RESULTS: there are 5 matching names with atm transactions and phone calls
+        WHERE pc.year = 2023 AND pc.month = 7 AND pc.day = 28 AND pc.duration < 60
+-- RESULTS: there are 3 matching names with license plate
+        AND bsl.year = 2023 AND bsl.month = 7 AND bsl.day = 28 AND bsl.hour = 10 AND bsl.activity LIKE 'exit';
