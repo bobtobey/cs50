@@ -86,6 +86,6 @@ AND bsl.year = 2023 AND bsl.month = 7 AND bsl.day = 28 AND bsl.hour = 10 AND bsl
 AND p.flight_id = 36;
 
 
-SELECT * FROM people LIMIT 5;
+-- SELECT * FROM people LIMIT 5;
 
 -- DROP TEMPORARY TABLE IF EXISTS temp_people;
