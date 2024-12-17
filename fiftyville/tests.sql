@@ -21,7 +21,7 @@ SELECT ba.account_number, ba.person_id FROM bank_accounts AS ba
     JOIN atm_transactions AS atm ON ba.account_number = atm.account_number
         WHERE year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw' ORDER BY ba.account_number;
 
--- ACTIONS: Cross check atm records for crime location and date with Bank records
+-- ACTIONS: Cross check Bank records against atm records with crime location and date
 CREATE TEMPORARY TABLE temp_bank_table AS
 SELECT account_number, person_id FROM bank_accounts
     WHERE account_number IN (SELECT account_number FROM atm_transactions
