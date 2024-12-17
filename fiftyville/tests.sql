@@ -13,6 +13,10 @@ SELECT hour, activity, license_plate FROM bakery_security_logs
 SELECT * FROM atm_transactions
     WHERE year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw';
 
+SELECT * FROM bank_accounts;
+
+SELECT 
+
 -- Review phone calls from 10:15am to 10:30am
 SELECT * FROM phone_calls WHERE year = 2023 AND month = 7 AND day = 28 AND duration < 60;
 
