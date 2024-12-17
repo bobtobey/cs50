@@ -77,6 +77,11 @@ SELECT tpt.name, tpt.id, tbt.account_number
 FROM temp_people_table AS tpt
 JOIN temp_bank_table AS tbt ON tpt.id = tbt.person_id;
 
+SELECT tpt.name, tpt.id, tbt.account_number, pc.caller
+FROM temp_people_table AS tpt
+JOIN temp_bank_table AS tbt ON tpt.id = tbt.person_id
+JOIN phone_calls AS pc ON tpt.phone_number = pc.caller;
+
 
 SELECT * FROM people;
 
