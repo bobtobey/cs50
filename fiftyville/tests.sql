@@ -18,4 +18,4 @@ SELECT * FROM phone_calls WHERE year = 2023 AND month = 7 AND day = 28 AND durat
 
 -- Review earliest flights leaving on 7/29
 SELECT * FROM flights WHERE year = 2023 AND month = 7 AND day = 29 ORDER BY hour, minute;
-SELECT * FROM airports WHERE city = 'Fiftyville';
+SELECT * FROM airports;
