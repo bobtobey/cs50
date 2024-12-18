@@ -8,7 +8,7 @@ SELECT name, transcript FROM interviews WHERE year = 2023 AND month = 7 AND day 
 -- ACTION: Review bakery security logs for 10:15am to 10:30am
 SELECT day, hour, minute, activity, bsl.license_plate, people.name FROM bakery_security_logs AS bsl
     JOIN people ON bsl.license_plate = people.license_plate
-    WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND minute BETWEEN 10 AND 15 AND activity LIKE 'exit' ORDER BY people.name;
+    WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND minute BETWEEN 15 AND 30 AND activity LIKE 'exit' ORDER BY people.name;
 -- RESULT: 9 vehicles exit the bakery parking lot at 10am yielding 9 license_plate
 
 -- ACTION: Review atm transactions from 10:14am or earlier at Leggett st.
