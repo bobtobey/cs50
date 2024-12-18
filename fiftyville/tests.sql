@@ -95,13 +95,3 @@ AND p.flight_id = 36;
 SELECT * FROM people LIMIT 5;
 
 -- DROP TEMPORARY TABLE IF EXISTS temp_people;
--- Query to check flight passengers
-SELECT passengers.passport_number, people.name
-FROM passengers
-JOIN flights ON passengers.flight_id = flights.id
-JOIN people ON passengers.passport_number = people.passport_number
-WHERE flights.destination_airport_id = (
-    SELECT id FROM airports WHERE city = 'New York City'
-)
-AND flights.year = 2023 AND flights.month = 7 AND flights.day = 29;
-
