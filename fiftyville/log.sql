@@ -12,10 +12,10 @@ SELECT name, transcript FROM interviews WHERE year = 2023 AND month = 7 AND day 
 -- RESULT: witness Raymond overheard the thief say they wanted the first flight out of town tommorrow and for the accomplice to buy the ticket
 
 -- ACTION: Review bakery security logs for 10:15am to 10:30am
-SELECT hour, activity, bsl.license_plate, people.name FROM bakery_security_logs AS bsl
+SELECT bsl.day, bsl.hour, bsl.minute, bsl.activity, bsl.license_plate, people.name FROM bakery_security_logs AS bsl
     JOIN people ON bsl.license_plate = people.license_plate
-    WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND activity LIKE 'exit' ORDER BY bsl.license_plate;
--- RESULT: 9 vehicles exit the bakery parking lot at 10am yielding 9 license_plate
+    WHERE bsl.year = 2023 AND bsl.month = 7 AND bsl.day = 28 AND bsl.hour = 10 AND bsl.minute BETWEEN 15 AND 30 AND bsl.activity LIKE 'exit' ORDER BY bsl.minute;
+-- RESULT: 8 vehicles exit the bakery parking lot at 10am yielding 8 license_plate
 
 -- ACTION: Review atm transactions from 10:14am or earlier at Leggett st.
 SELECT * FROM atm_transactions
@@ -27,7 +27,7 @@ CREATE TEMPORARY TABLE temp_bank_table AS
 SELECT ba.account_number, ba.person_id, people.id, people.name FROM bank_accounts AS ba
     JOIN atm_transactions AS atm ON ba.account_number = atm.account_number
     JOIN people ON ba.person_id = people.id
-        WHERE year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw' ORDER BY ba.account_number;
+        WHERE year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw' ORDER BY people.name;
 SELECT * FROM temp_bank_table;
 -- RESULTS: mapped names to bank accounts used for 8 atm transactions yields 8 names
 
