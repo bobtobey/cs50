@@ -11,19 +11,19 @@
 | Eugene  | I don't know the thief's name, but it was someone I recognized. Earlier this morning, before I arrived at Emma's bakery, I was walking by the ATM on Leggett Street and saw the thief there withdrawing some money.                                                                                                 |
 | Raymond | As the thief was leaving the bakery, they called someone who talked to them for less than a minute. In the call, I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other end of the phone to purchase the flight ticket. |
 +---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-+------+----------+---------------+---------+
-| hour | activity | license_plate |  name   |
-+------+----------+---------------+---------+
-| 10   | exit     | 0NTHK55       | Kelsey  |
-| 10   | exit     | 1106N58       | Taylor  |
-| 10   | exit     | 322W7JE       | Diana   |
-| 10   | exit     | 4328GD8       | Luca    |
-| 10   | exit     | 5P2BI95       | Vanessa |
-| 10   | exit     | 6P58WS2       | Barry   |
-| 10   | exit     | 94KL13X       | Bruce   |
-| 10   | exit     | G412CB7       | Sofia   |
-| 10   | exit     | L93JTIZ       | Iman    |
-+------+----------+---------------+---------+
++-----+------+--------+----------+---------------+---------+
+| day | hour | minute | activity | license_plate |  name   |
++-----+------+--------+----------+---------------+---------+
+| 28  | 10   | 23     | exit     | 0NTHK55       | Kelsey  |
+| 28  | 10   | 35     | exit     | 1106N58       | Taylor  |
+| 28  | 10   | 23     | exit     | 322W7JE       | Diana   |
+| 28  | 10   | 19     | exit     | 4328GD8       | Luca    |
+| 28  | 10   | 16     | exit     | 5P2BI95       | Vanessa |
+| 28  | 10   | 18     | exit     | 6P58WS2       | Barry   |
+| 28  | 10   | 18     | exit     | 94KL13X       | Bruce   |
+| 28  | 10   | 20     | exit     | G412CB7       | Sofia   |
+| 28  | 10   | 21     | exit     | L93JTIZ       | Iman    |
++-----+------+--------+----------+---------------+---------+
 +-----+----------------+------+-------+-----+----------------+------------------+--------+
 | id  | account_number | year | month | day |  atm_location  | transaction_type | amount |
 +-----+----------------+------+-------+-----+----------------+------------------+--------+
@@ -144,15 +144,3 @@
 | 221103 | Vanessa | (725) 555-4692 | 2963008352      | 5P2BI95       |
 | 222194 | Ronald  | (321) 555-6083 | 4959515588      | 9XPY28H       |
 +--------+---------+----------------+-----------------+---------------+
-+-----------------+--------+
-| passport_number |  name  |
-+-----------------+--------+
-| 7214083635      | Doris  |
-| 1695452385      | Sofia  |
-| 5773159633      | Bruce  |
-| 1540955065      | Edward |
-| 8294398571      | Kelsey |
-| 1988161715      | Taylor |
-| 9878712108      | Kenny  |
-| 8496433585      | Luca   |
-+-----------------+--------+
