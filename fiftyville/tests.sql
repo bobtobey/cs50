@@ -75,7 +75,7 @@ FROM temp_people_table AS tpt
 -- RESULTS: This narrows it down to 2 matching names with license plate
         AND bsl.year = 2023 AND bsl.month = 7 AND bsl.day = 28 AND bsl.hour = 10 AND bsl.minute BETWEEN 15 AND 30 AND bsl.activity LIKE 'exit'
 -- RESULTS: This narrows it down to 1 matching names with passports
-        AND p.flight_id = 36
+        -- AND p.flight_id = 36
         ;
 
 -- ACTIONS: review remaining tables
