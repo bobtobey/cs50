@@ -51,6 +51,7 @@ SELECT p1.name, caller, p2.name, receiver, duration FROM phone_calls
 SELECT * FROM flights WHERE year = 2023 AND month = 7 AND day = 29 ORDER BY hour, minute;
 SELECT * FROM airports;
 -- RESULTS: earliest flight leaves at 8:20am going to 4 = LGA LaGuardia Airport NYC
+-- ANSWER: LaGuardia Airport NYC is the thief's destination
 
 -- ACTIONS: review passenger info for flight 36
 SELECT flight_id, pssgr.passport_number, seat, name FROM passengers AS pssgr
@@ -77,7 +78,6 @@ FROM temp_people_table AS tpt
 -- RESULTS: This narrows it down to 1 matching name after passport reviews and checking flight #
         AND p.flight_id = 36
         ;
--- RESULTS: Thief is Bruce / Accomplice is Robin / Escaped to NYC
-
+-- RESULTS - ANSWER: Thief is Bruce / Accomplice is Robin / Escaped to NYC
 
 -- DROP TEMPORARY TABLE IF EXISTS temp_people;
