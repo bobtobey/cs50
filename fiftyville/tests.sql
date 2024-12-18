@@ -86,4 +86,5 @@ FROM temp_people_table AS tpt
         ;
 -- RESULTS - ANSWER: Thief is Bruce / Accomplice is Robin / Escaped to NYC
 
--- DROP TEMPORARY TABLE IF EXISTS temp_people;
+-- DROP TEMPORARY TABLE IF EXISTS temp_people_table;
+-- DROP TEMPORARY TABLE IF EXISTS temp_bank_table;
