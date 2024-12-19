@@ -50,14 +50,18 @@
             // store result responses
             const correctResponse = "Correct";
             const incorrectResponse = "Incorrect";
+
             // loop through the node list
             qaBtns.forEach(function(button) {
                 // assign click event listener to those buttons
                 button.addEventListener('click', function() {
                     // capture the id of the element clicked
                     const clickedId = event.target.id;
-                    // reset all q1 buttons to their default color
-                    document.querySelector(".answer-btn").style.backgroundColor = '#d9edff';
+                    // reset all q1 buttons to their default color before next click
+                    qa1Btns.forEach(function() {
+                        document.querySelector(".answer-btn").style.backgroundColor = '#d9edff';
+                    });
+
                     // if question 2 button clicked
                     if(button.id === "question2-btn"){
                         const qst2Answer = document.querySelector("#question2-input");
