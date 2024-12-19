@@ -20,6 +20,7 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <h3>In total, how many major volcanic eruptions have occurred in Iceland since the year 2000?</h3>
+                <p id="question1"></p>
                 <div id="answer-btn-wrapper" class="btn-wrapper">
                     <button type="button" id="answr1-btn" class="qa btn answer-btn" value="5">5 Eruptions</button>
                     <button type="button" id="answr2-btn" class="qa btn answer-btn" value="7">7 Eruptions</button>
@@ -54,15 +55,13 @@
                     if(button.id === "question2-btn"){
                         const qst2Answer = document.querySelector("#question2-input");
                         if(qst2Answer.value === "1296"){
-                            // alert user to result, set bg color to green, set border to green
+                            // alert user to result, set bg color to green
                             document.querySelector("#question2").innerHTML=correctResponse;
                             document.querySelector("#question2-input").style.backgroundColor = '#00ff00';
-                            document.querySelector("#question2-input").style.border = '#009933';
                         } else {
                             // alert user to incorrect result, set bg color to red
                             document.querySelector("#question2").innerHTML=incorrectResponse;
                             document.querySelector("#question2-input").style.backgroundColor = '#ff8080';
-                            document.querySelector("#question2-input").style.border = '#b30000';
                         }
 
                     } else if(button.id === "answr3-btn"){
