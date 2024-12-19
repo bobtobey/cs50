@@ -51,6 +51,7 @@
             qaBtns.forEach(function(button) {
                 // assign click event listener to those buttons
                 button.addEventListener('click', function() {
+                    // capture the id of the element clicked
                     const clickedId = event.target.id;
                     // if question 2 button clicked
                     if(button.id === "question2-btn"){
