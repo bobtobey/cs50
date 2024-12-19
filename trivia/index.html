@@ -53,6 +53,8 @@
                 button.addEventListener('click', function() {
                     // capture the id of the element clicked
                     const clickedId = event.target.id;
+                    // reset all q1 buttons to their default color
+                    document.querySelector(".answer-btn").style.backgroundColor = '#d9edff';
                     // if question 2 button clicked
                     if(button.id === "question2-btn"){
                         const qst2Answer = document.querySelector("#question2-input");
@@ -78,8 +80,6 @@
                         // alert user to result, set bg color to green
                         document.querySelector("#question1-alert").innerHTML=correctResponse;
                         document.querySelector("#question1-alert").style.color = '#33cc33';
-                        // reset all q1 buttons to their default color
-                        document.querySelector(".answer-btn").style.backgroundColor = '#d9edff';
                         document.querySelector("#answr4-btn").style.backgroundColor = '#00ff00';
                     }
                 });
