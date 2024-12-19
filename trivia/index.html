@@ -35,7 +35,7 @@
                 <!-- TODO: Add free response question here -->
                 <h3>The Cathedral of Santa Maria del Fiore (Duomo di Firenze) is Florence's most famous church.
                     In what year did construction began?</h3>
-                    <p id="question2"></p>
+                    <p id="question2-alert"></p>
                 <form>
                     <input type="text" id="question2-input" pattern="^\d{4}$" class="question" placeholder="Type your answer to the year here."  />
                     <button type="button" id="question2-btn" class="qa btn question-btn">Check Answer</button>
@@ -64,13 +64,14 @@
                             document.querySelector("#question2-input").style.backgroundColor = '#ff8080';
                         }
 
-                    } else if(button.id !== "answr3-btn"){
+                    } else if(button.id !== "answr4-btn"){
                         console.log(button.id);
+                        document.querySelector("#question1").innerHTML=incorrectResponse;
                     } else {
                         console.log("correct Answer");
                         // alert user to result, set bg color to green
                         document.querySelector("#question1").innerHTML=correctResponse;
-                        document.querySelector("#answr3-btn").style.backgroundColor = '#00ff00';
+                        document.querySelector("#answr4-btn").style.backgroundColor = '#00ff00';
                     }
                 });
             });
