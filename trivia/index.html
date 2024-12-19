@@ -20,7 +20,7 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <h3>In total, how many major volcanic eruptions have occurred in Iceland since the year 2000?</h3>
-                <p id="question1"></p>
+                <p id="question1-alert"></p>
                 <div id="answer-btn-wrapper" class="btn-wrapper">
                     <button type="button" id="answr1-btn" class="qa btn answer-btn" value="5">5 Eruptions</button>
                     <button type="button" id="answr2-btn" class="qa btn answer-btn" value="7">7 Eruptions</button>
@@ -56,21 +56,21 @@
                         const qst2Answer = document.querySelector("#question2-input");
                         if(qst2Answer.value === "1296"){
                             // alert user to result, set bg color to green
-                            document.querySelector("#question2").innerHTML=correctResponse;
+                            document.querySelector("#question2-alert").innerHTML=correctResponse;
                             document.querySelector("#question2-input").style.backgroundColor = '#00ff00';
                         } else {
                             // alert user to incorrect result, set bg color to red
-                            document.querySelector("#question2").innerHTML=incorrectResponse;
+                            document.querySelector("#question2-alert").innerHTML=incorrectResponse;
                             document.querySelector("#question2-input").style.backgroundColor = '#ff8080';
                         }
 
                     } else if(button.id !== "answr4-btn"){
                         console.log(button.id);
-                        document.querySelector("#question1").innerHTML=incorrectResponse;
+                        document.querySelector("#question1-alert").innerHTML=incorrectResponse;
                     } else {
                         console.log("correct Answer");
                         // alert user to result, set bg color to green
-                        document.querySelector("#question1").innerHTML=correctResponse;
+                        document.querySelector("#question1-alert").innerHTML=correctResponse;
                         document.querySelector("#answr4-btn").style.backgroundColor = '#00ff00';
                     }
                 });
