@@ -71,11 +71,13 @@
                         if(button.id === "question2-btn"){
                             const qst2Answer = document.querySelector("#question2-input");
                             if(qst2Answer.value === "1296"){
+                                console.log("1296");
                                 // alert user to result, set bg color to green
                                 document.querySelector("#question2-alert").innerHTML=correctResponse;
                                 document.querySelector("#question2-alert").style.color = '#33cc33';
                                 document.querySelector("#question2-input").style.backgroundColor = '#00ff00';
                             } else {
+                                console.log("NOT 1296");
                                 // alert user to incorrect result, set bg color to red
                                 document.querySelector("#question2-alert").innerHTML=incorrectResponse;
                                 document.querySelector("#question2-alert").style.color = '#ff8080';
@@ -83,11 +85,13 @@
                             }
 
                         } else if(button.id !== "answr4-btn"){
+                            console.log("Wrong Year");
                             // alert user to incorrect result, set bg color to red
                             document.querySelector("#question1-alert").innerHTML=incorrectResponse;
                             document.querySelector("#question1-alert").style.color = '#ff8080';
                             document.querySelector(`#${clickedId}`).style.backgroundColor = '#ff8080';
                         } else {
+                            console.log("Correct Year");
                             // alert user to result, set bg color to green
                             document.querySelector("#question1-alert").innerHTML=correctResponse;
                             document.querySelector("#question1-alert").style.color = '#33cc33';
