@@ -35,8 +35,8 @@
                 <h3>The Cathedral of Santa Maria del Fiore (Duomo di Firenze) is Florence's most famous church.
                     In what year did construction began?</h3>
                 <form>
-                    <input type="text" id="question2" class="qa question" autofocus placeholder="Type your answer here."  />
-                    <button type="button" id="question2-btn" class="btn question-btn">Check Answer</button>
+                    <input type="text" id="question2" class="question" autofocus placeholder="Type your answer here."  />
+                    <button type="button" id="question2-btn" class="qa btn question-btn">Check Answer</button>
                 </form>
             </div>
         </div>
@@ -44,9 +44,9 @@
         const qaBtns = document.querySelectorAll('.qa');
         qaBtns.forEach(function(button) {
             button.addEventListener('click', function() {
-            // doSomething();
-            console.log("Test");
-            console.log(button.value);
+                // doSomething();
+                console.log("Test");
+                console.log(button.id);
             });
         });
         </script>
