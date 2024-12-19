@@ -50,15 +50,15 @@
                 button.addEventListener('click', function() {
                     // if question 2 button clicked
                     if(button.id === "question2-btn"){
-
-                        if(document.querySelector("#question2-inpt").value === "1296"){
+                        const qst2Answer = document.querySelector("#question2-inpt");
+                        if(qst2Answer.value === "1296"){
                             console.log(button.id);
-                            document.querySelector("#question2").style.backgroundColor = '#00ff00';
-                            document.querySelector("#question2").style.border = '#009933';
+                            qst2Answer.style.backgroundColor = '#00ff00';
+                            qst2Answer.style.border = '#009933';
                         } else {
                             console.log("No GO");
-                            document.querySelector("#question2").style.backgroundColor = '#ff8080';
-                            document.querySelector("#question2").style.border = '#b30000';
+                            qst2Answer.style.backgroundColor = '#ff8080';
+                            qst2Answer.style.border = '#b30000';
                         }
 
                     } else if(button.id === "answr3-btn"){
