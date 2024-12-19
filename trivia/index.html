@@ -44,7 +44,8 @@
         <script>
             // capture a node list of all buttons with class .qa
             const qaBtns = document.querySelectorAll('.qa');
-            const correctResponse = "Lorem ipsum dolor sit amet ONE.";
+            const correctResponse = "Correct";
+            const incorrectResponse = "Incorrect";
             // loop through the node list
             qaBtns.forEach(function(button) {
                 // assign click event listener to those buttons
@@ -54,7 +55,7 @@
                         const qst2Answer = document.querySelector("#question2-input");
                         if(qst2Answer.value === "1296"){
                             console.log(button.id);
-                            document.querySelector("#question2").insertAdjacentHTML("beforeend", sampleResult1);
+                            document.querySelector("#question2").insertAdjacentHTML("beforeend", correctResponse);
                             document.querySelector("#question2-input").style.backgroundColor = '#00ff00';
                             document.querySelector("#question2-input").style.border = '#009933';
                         } else {
