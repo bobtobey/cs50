@@ -44,7 +44,7 @@
             </div>
         </div>
         <script>
-            // execute code after DOM is loaded
+            // Execute code after DOM is loaded
             document.addEventListener('DOMContentLoaded', function() {
 
                 // capture a node list of all buttons with class .qa
@@ -55,7 +55,7 @@
                 const correctResponse = "Correct";
                 const incorrectResponse = "Incorrect";
 
-                // loop through the button node list
+                // START: loop through the button node list
                 qaBtns.forEach(function(button) {
                     // assign click event listener to those buttons
                     button.addEventListener('click', function() {
@@ -95,6 +95,7 @@
                         }
                     });
                 });
+                // END: loop through the button node list
             });
         </script>
     </body>
