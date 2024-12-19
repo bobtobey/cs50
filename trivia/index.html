@@ -42,10 +42,12 @@
         </div>
         <script>
             const qaBtns = document.querySelectorAll('.qa');
-            qaBtns.addEventListener('click', function() {
-                // doSomething();
-                console.log("Test");
-            });
+            qaBtns.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    // doSomething();
+                    console.log("Test");
+                });
+            };
         </script>
     </body>
 </html>
