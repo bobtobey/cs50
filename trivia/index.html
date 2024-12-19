@@ -72,7 +72,7 @@
                         // alert user to incorrect result, set bg color to red
                         document.querySelector("#question1-alert").innerHTML=incorrectResponse;
                         document.querySelector("#question1-alert").style.color = '#ff8080';
-                        document.querySelector("#answr4-btn").style.backgroundColor = '#00ff00';
+                        document.querySelector(`#${event.target.id}`).style.backgroundColor = '#00ff00';
                     } else {
                         console.log("correct Answer");
                         // alert user to result, set bg color to green
