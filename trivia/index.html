@@ -34,8 +34,9 @@
                 <!-- TODO: Add free response question here -->
                 <h3>The Cathedral of Santa Maria del Fiore (Duomo di Firenze) is Florence's most famous church.
                     In what year did construction began?</h3>
+                    <p id="question2>TEST</p>
                 <form>
-                    <input type="text" id="question2" pattern="^\d{4}$" class="question" placeholder="Type your answer to the year here."  />
+                    <input type="text" id="question2-inpt" pattern="^\d{4}$" class="question" placeholder="Type your answer to the year here."  />
                     <button type="button" id="question2-btn" class="qa btn question-btn">Check Answer</button>
                 </form>
             </div>
@@ -50,7 +51,7 @@
                     // if question 2 button clicked
                     if(button.id === "question2-btn"){
 
-                        if(document.querySelector("#question2").value === "1296"){
+                        if(document.querySelector("#question2-inpt").value === "1296"){
                             console.log(button.id);
                             document.querySelector("#question2").style.backgroundColor = '#00ff00';
                             document.querySelector("#question2").style.border = '#009933';
