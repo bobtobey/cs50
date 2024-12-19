@@ -52,7 +52,12 @@ button, input[type="submit"] {
 
 button.qa {
     border: 1px solid #74b4ed;
-    cursor: 
+    cursor: pointer;
+}
+
+button.qa:hover {
+    border: 1px solid #74b4ed;
+    background: #74b4ed;
 }
 
 
