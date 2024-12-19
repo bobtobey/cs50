@@ -53,6 +53,7 @@
                         const qst2Answer = document.querySelector("#question2-input");
                         if(qst2Answer.value === "1296"){
                             console.log(button.id);
+                            document.querySelector("#question2").insertAdjacentHTML("beforeend", sampleResult1);
                             document.querySelector("#question2-input").style.backgroundColor = '#00ff00';
                             document.querySelector("#question2-input").style.border = '#009933';
                         } else {
