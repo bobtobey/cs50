@@ -51,6 +51,8 @@
             qaBtns.forEach(function(button) {
                 // assign click event listener to those buttons
                 button.addEventListener('click', function() {
+                    const clickedId = event.target.id;
+                    document.querySelector(`#${event.target.id}`).style.backgroundColor = '#00ff00';
                     // if question 2 button clicked
                     if(button.id === "question2-btn"){
                         const qst2Answer = document.querySelector("#question2-input");
