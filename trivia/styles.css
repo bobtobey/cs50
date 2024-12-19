@@ -74,5 +74,5 @@ button.qa:hover {
 
 .question-alert {
     font-weight: bold;
-    color: #ff8080; /* default to red */
+    color: #000000; 
 }

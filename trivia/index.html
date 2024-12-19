@@ -57,22 +57,24 @@
                         if(qst2Answer.value === "1296"){
                             // alert user to result, set bg color to green
                             document.querySelector("#question2-alert").innerHTML=correctResponse;
-                            document.querySelector("#question2-alert").style.color = '#00ff00';
+                            document.querySelector("#question2-alert").style.color = '#009933';
                             document.querySelector("#question2-input").style.backgroundColor = '#00ff00';
                         } else {
                             // alert user to incorrect result, set bg color to red
                             document.querySelector("#question2-alert").innerHTML=incorrectResponse;
+                            document.querySelector("#question2-alert").style.color = '#ff8080';
                             document.querySelector("#question2-input").style.backgroundColor = '#ff8080';
                         }
 
                     } else if(button.id !== "answr4-btn"){
-                        console.log(button.id);
+                        // alert user to incorrect result, set bg color to red
                         document.querySelector("#question1-alert").innerHTML=incorrectResponse;
+                        document.querySelector("#question1-alert").style.color = '#ff8080';
                     } else {
                         console.log("correct Answer");
                         // alert user to result, set bg color to green
                         document.querySelector("#question1-alert").innerHTML=correctResponse;
-                        document.querySelector("#question1-alert").style.color = '#00ff00';
+                        document.querySelector("#question1-alert").style.color = '#009933';
                         document.querySelector("#answr4-btn").style.backgroundColor = '#00ff00';
                     }
                 });
