@@ -128,6 +128,37 @@ body {
     background: var(--neutral-50);
 }
 
+/* GENERAL Styles */
+h1, h2, h3, h4, h5 {
+    color: var(--clr-complementary-900);
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+h1 {
+    font-size: 3.5rem;
+}
+h2 {
+    font-size: 2.5rem;
+}
+h3 {
+    font-size: 1.9rem;
+}
+h4 {
+    font-size: 1.7rem;
+}
+h5 {
+    font-size: 1.6rem;
+}
+p {
+    color: var(--primary-text-color, black);
+    color: var(--neutral-900);
+    font-size: var(--default-text-size);
+    margin: 0.5rem 0 1rem 0;
+}
+a {
+    font-size: var(--default-text-size);
+}
+
 /* Grid Styles START */
 .gridwrapper {
     /* background: var(--prime-color-red); */
@@ -163,37 +194,6 @@ body {
     /* background: var(--prime-color-grey); */
 }
 /* Grid Styles END */
-
-/* GENERAL Styles */
-h1, h2, h3, h4, h5 {
-    color: var(--clr-complementary-900);
-    margin: 0 auto;
-    margin-bottom: 2rem;
-}
-h1 {
-    font-size: 3.5rem;
-}
-h2 {
-    font-size: 2.5rem;
-}
-h3 {
-    font-size: 1.9rem;
-}
-h4 {
-    font-size: 1.7rem;
-}
-h5 {
-    font-size: 1.6rem;
-}
-p {
-    color: var(--primary-text-color, black);
-    color: var(--neutral-900);
-    font-size: var(--default-text-size);
-    margin: 0.5rem 0 1rem 0;
-}
-a {
-    font-size: var(--default-text-size);
-}
 
 /* HEADER Styles */
 header {
