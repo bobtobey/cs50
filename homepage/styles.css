@@ -583,3 +583,6 @@ video {
     border-color: var(--clr-complementary-500);
     background: var(--clr-complementary-50);
 }
+.list-group-flush li:hover {
+    background: gold;
+}
