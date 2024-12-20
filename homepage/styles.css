@@ -1,0 +1,52 @@
+:root {
+    /* set the root font-size to 62.5%, which translates to approximately 10px. */
+    /* This makea the mental conversion of the font size easier */
+    /* when using em or rem (e.g. 1 rem = approx. 10 pixels, while 1.8 rem = approx. 18 pixels) */
+    --base-font-size: 62.5%;
+    --default-font-size: 10px;
+    --default-text-size: 1.6rem;
+    --default-header1-size: 3.5rem;
+    --default-header2-size: 3.0rem;
+    --default-header3-size: 2.5rem;
+    --base-font-family-serif: 'Times New Roman', Times, serif;
+    --base-font-family-sans-serif: Verdana, Geneva, Tahoma, sans-serif;
+    --primary-text-color: #000;
+    --secondary-text-color: blue;
+    --alert-color: red;
+    --update-color: green;
+    --information-color: blue;
+    --default-gutter: 5px;
+    --prime-color-red: #a30606;
+    --prime-color-orange: #dd7d24;
+    --prime-color-yellow: #e0be25;
+    --prime-color-green: #1dc018;
+    --prime-color-blue: #2fb8c2;
+    --prime-color-indigo: #5c61aa;
+    --prime-color-violet: #eb18cf;
+    --prime-color-pink: #a30606;
+    --prime-color-grey: #707070;
+    --prime-color-white: #dfdfdf;
+
+}
+/* meyerweb reset START */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video , dl, dt, dd  {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /* font: inherit; */
+    vertical-align: baseline;
+}
+* {
+    box-sizing: border-box; /* include the padding and border in an element's total width and height */
+}
+ol, ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+/* meyerweb reset END */
+/* BASE Styles */
