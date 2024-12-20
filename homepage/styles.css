@@ -526,6 +526,74 @@ aside {
     width: 16rem;
 }
 
+/* ASIDE DASHBOARD Styles */
+aside {
+    position: relative;
+    max-width: 70%;
+    width: 100%;
+    padding: 0 2rem 4rem 2rem;
+    /* background: var(--neutral-50); */
+}
+aside .bgs-sidebar-container {
+    position: relative;
+    padding: 2rem;
+    background: var(--clr-complementary-50);
+    border: 1px solid var(--clr-complementary-900);
+    border-radius: 2rem;
+    width: auto;
+    min-width: fit-content;
+}
+aside .bgs-sidebar {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, auto));
+    justify-items: center;
+    padding: 0;
+    gap: 2rem;
+
+    .bgs-sidebar-item {
+        color: var(--clr-tertiary);
+        background: var(--clr-complementary-100);
+        border: 1px solid var(--clr-complementary-700);
+        border-radius: 1rem;
+        padding: 1.4rem 1rem;
+        text-align: center;
+        width: 10rem;
+
+        .gridItem-link-wrapper {
+            position: relative;
+
+            a {
+                display: inline-block;
+            }
+        }
+
+        img {
+            width: 64px;
+        }
+        svg {
+            width: 64px;
+            color: var(--clr-primary);
+
+            &:hover {
+                color: var(--clr-complementary);
+            }
+        }
+        .page-portfolio & {
+
+            .bgs-sidebar-link-portfolio {
+                cursor: default;
+            }
+            svg {
+
+                &:hover {
+                    color: var(--clr-primary);
+                }
+            }
+        }
+    }
+}
+
+
 /* FOOTER Styles */
 footer {
     height: 42px;
