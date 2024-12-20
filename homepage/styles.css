@@ -600,6 +600,6 @@ video {
     margin: 0; */
     grid-row: span 2 / span 2;
 }
-.article-with-image p {
+.article-with-image div {
     grid-row: span 2 / span 2;
 }
