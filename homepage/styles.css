@@ -594,6 +594,9 @@ video {
       background-color: var(--clr-complementary-500);
     }
 }
+.list-group-item-action:hover {
+    background: var(--clr-complementary-100);
+}
 .list-group-flush li:hover {
     background: gold;
 }
