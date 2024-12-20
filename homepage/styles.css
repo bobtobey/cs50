@@ -229,7 +229,7 @@ header {
         /* font-style: var(--text-logo-fontstyle); */
         display: inline-block;
         position: relative;
-        padding: 0 0 0 46px;
+        padding: 0 0 0 0px;
     }
     .application-name {
         color: var(--clr-primary-700);
