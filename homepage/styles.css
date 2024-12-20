@@ -365,19 +365,6 @@ section {
             ul {
                 padding-left: 0;
             }
-
-            & ul.style-list-on {
-                padding-left: 3.5rem;
-
-                &.style-list-nested {
-                    padding-left: 5.5rem;
-                }
-                & li {
-                    list-style: disc;
-                    padding-bottom: 1rem;
-                    line-height: 1.5;
-                }
-            }
             & ul.style-list-flex {
                 display: flex;
                 flex-direction: column;
