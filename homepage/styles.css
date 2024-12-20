@@ -591,6 +591,7 @@ video {
     &:focus {
       color: var(--#{$prefix}list-group-action-hover-color);
       background-color: var(--#{$prefix}list-group-action-hover-bg);
+      background-color: var(--clr-complementary-500);
     }
 }
 .list-group-flush li:hover {
