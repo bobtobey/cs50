@@ -99,6 +99,65 @@ p {
 a {
     font-size: var(--default-text-size);
 }
+/* HEADER Styles */
+header {
+    background: var(--clr-primary-50, #e3f2ff);
+    border-bottom: 1px solid var(--clr-primary);
+    height: 60px;
+    width: auto;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8rem;
+
+    .header-branding-wrapper {
+        margin-left: 1.4rem;
+
+        h1, h2, h3 {
+            margin-bottom: 0;
+        }
+    }
+
+    img {
+        width: 40px;
+        position: absolute;
+        top: 6px;
+    }
+
+    .logo {
+        color: var(--clr-primary, #0395fe);
+        font-family: var(--text-logo-fontfamily);
+        /* font-style: var(--text-logo-fontstyle); */
+        display: inline-block;
+        position: relative;
+        padding: 0 0 0 46px;
+    }
+    .application-name {
+        color: var(--clr-primary-700);
+        display: inline-block;
+    }
+    .header-user-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80px;
+        margin-right: 2rem;
+    }
+}
+.maincontainer.page-portfolio,
+.maincontainer.page-contact {
+
+    header {
+
+        h1 {
+            font-size: 2.5rem;
+        }
+        h2 {
+            font-size: 3.5rem;
+        }
+    }
+}
 
 /* Grid Styles START */
 .gridwrapper {
