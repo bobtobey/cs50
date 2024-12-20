@@ -588,17 +588,19 @@ video {
 
 .article-with-image {
     display: flex;
-    align-items: flex-start; /* Align text and image at the top */
-    gap: 20px; /* Space between the image and text */
+    align-items: flex-start; /* Align the top of the text and image */
+    gap: 20px; /* Space between the figure and text */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .article-with-image figure {
-    max-width: 40%; /* Adjust the size of the figure */
-    margin: 0; /* Remove default margins */
+    flex: 0 0 40%; /* Fix figure width to 40% and prevent it from shrinking */
+    max-width: 300px; /* Optional: Limit figure size for better visuals */
+    margin: 0; /* Remove default figure margins */
 }
 
 .article-with-image img {
-    width: 100%; /* Make the image responsive to the figure */
+    width: 100%; /* Ensure the image fills the figure */
     height: auto; /* Maintain aspect ratio */
 }
 
@@ -606,9 +608,10 @@ video {
     font-style: italic;
     text-align: center;
     color: #555;
-    margin-top: 8px; /* Add space between the image and caption */
+    margin-top: 8px; /* Space between image and caption */
 }
 
 .article-with-image p {
-    flex: 1; /* Allow the text to take the remaining space */
+    flex: 1; /* Allow the paragraph to take the remaining space */
+    margin: 0; /* Ensure consistent spacing */
 }
