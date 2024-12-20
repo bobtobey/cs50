@@ -650,3 +650,19 @@ video {
 .list-group-item {
     background: gold;
 }
+.list-group-item-action {
+    color: var(--#{$prefix}list-group-action-color);
+
+    // Hover state
+    &:hover,
+    &:focus {
+      color: var(--#{$prefix}list-group-action-hover-color);
+      /* text-decoration: none; */
+      background-color: var(--#{$prefix}list-group-action-hover-bg);
+    }
+
+    &:active {
+      color: var(--#{$prefix}list-group-action-active-color);
+      background-color: var(--#{$prefix}list-group-action-active-bg);
+    }
+  }
