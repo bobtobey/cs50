@@ -648,7 +648,8 @@ video {
 }
 /* Bootstrap Overrides */
 .list-group-item {
-    background: gold;
+    border-color: var(--clr-complementary-50);
+    background: var(--clr-complementary-50);
 }
 .list-group-item-action {
     color: var(--#{$prefix}list-group-action-color);
