@@ -69,7 +69,7 @@ body {
     flex-direction: column;
     background: var(--neutral-50);
 }
-/* GENERAL BGS Styles */
+/* GENERAL Styles */
 h1, h2, h3, h4, h5 {
     color: var(--clr-complementary-900);
     margin: 0 auto;
