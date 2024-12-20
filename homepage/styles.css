@@ -588,32 +588,30 @@ video {
 
 
 .article-with-image {
-    display: flex;
-    flex-direction: row; /* Ensures the figure and text are side by side */
-    align-items: flex-start; /* Aligns the text with the top of the image */
-    gap: 20px; /* Space between the text and the image */
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    display: grid;
+    grid-template-columns: 1fr auto; /* Text occupies 1 fraction, figure takes auto size */
+    gap: 20px; /* Space between columns */
+    align-items: start; /* Align items to the top of the grid */
 }
 
 .article-with-image p {
-    flex: 1; /* Makes the paragraph take up the remaining space */
-    margin: 0; /* Removes default margin */
+    margin: 0 0 20px; /* Space between paragraphs */
 }
 
 .article-with-image figure {
-    flex: 0 0 40%; /* Fixes the width of the figure to 40% */
-    max-width: 300px; /* Optional: Prevents the figure from being too wide */
-    margin: 0; /* Removes default margin */
+    margin: 0; /* Remove default margin for figure */
+    max-width: 300px; /* Optional: Limit figure width */
 }
 
 .article-with-image img {
-    width: 100%; /* Ensures the image fits the figure */
-    height: auto; /* Maintains aspect ratio */
+    width: 100%; /* Ensure the image fills the figure */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .article-with-image figcaption {
-    text-align: center;
     font-style: italic;
+    text-align: center;
     color: #555;
-    margin-top: 8px; /* Adds space between the image and caption */
+    margin-top: 8px;
 }
+
