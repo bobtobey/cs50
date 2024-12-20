@@ -338,6 +338,27 @@ article {
         width: calc(100% - 50px);
     }
 }
+/* SECTION Styles */
+.maincontentwrapper {
+    background: var(--neutral-50);
+}
+section {
+    position: relative;
+    /* background: var(--neutral-50); */
+    max-width: 70%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 4rem;
+    padding: 4rem 2rem;
+
+    article {
+        background: var(--clr-complementary-50);
+        border: 1px solid var(--clr-complementary-900);
+        border-radius: 2rem;
+    }
+}
 
 aside {
     padding: 2rem;
