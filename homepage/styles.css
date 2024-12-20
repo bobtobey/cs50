@@ -585,3 +585,30 @@ video {
 .list-group-flush li:hover {
     background: var(--clr-complementary-100);
 }
+
+.text-with-image {
+    display: flex;
+    align-items: flex-start; /* Align text and image at the top */
+    gap: 20px; /* Space between the image and text */
+}
+
+.text-with-image figure {
+    max-width: 40%; /* Adjust the size of the figure */
+    margin: 0; /* Remove default margins */
+}
+
+.text-with-image img {
+    width: 100%; /* Make the image responsive to the figure */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.text-with-image figcaption {
+    font-style: italic;
+    text-align: center;
+    color: #555;
+    margin-top: 8px; /* Add space between the image and caption */
+}
+
+.text-with-image p {
+    flex: 1; /* Allow the text to take the remaining space */
+}
