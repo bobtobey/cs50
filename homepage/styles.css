@@ -307,3 +307,44 @@ footer {
         margin: 0 0 0 0;
     }
 }
+
+/* FOOTER Styles */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--clr-primary-50);
+    border-top: 1px solid var(--primary0);
+    padding: 2rem 8rem;
+    color: var(--neutral-500);
+
+    p {
+        color: var(--neutral-500);
+    }
+
+    .footer-legal-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: fit-content;
+        margin-right: 2rem;
+
+        i {
+            color: var(--tertiary35);
+        }
+    }
+}
+
+.btn-backtotop-wrapper {
+    position: fixed;
+    bottom: 65px;
+    right: 245px;
+    z-index: 1001;
+    display: none;
+
+    button {
+        svg {
+            width: 45px;
+        }
+    }
+}
