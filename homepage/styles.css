@@ -133,3 +133,84 @@ a {
     /* background: var(--prime-color-grey); */
 }
 /* Grid Styles END */
+
+header {
+    padding: 1rem;
+}
+/* Base Nav Styles */
+nav {
+    width: 100%; /* Ensures the nav fills the width of its container */
+}
+nav ul {
+    list-style: none; /* Removes default list styling */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Aligns the list items horizontally */
+    height: 50px; /* Sets the height of the navbar */
+}
+
+nav li {
+    flex: 1; /* Distributes space evenly among list items */
+    border-right: 1px solid #ccc; /* Creates a line separator between items */
+    display: flex;
+    justify-content: center; /* Center the link horizontally */
+    align-items: center; /* Center the link vertically */
+}
+
+nav li:last-child {
+    border-right: none; /* Removes the border for the last item */
+}
+
+nav a {
+    text-decoration: none; /* Removes the underline from links */
+    color: #333; /* Sets the link color */
+    /* padding: 10px 20px; Adds some padding around the links */
+    display: block; /* Ensures the padding and clickable area is respected */
+    background-color: #ddd; /* Example background color for the links/buttons */
+    transition: background-color 0.3s; /* Adds a transition effect on hover */
+}
+
+nav a:hover {
+    background-color: #ccc; /* Changes background color on hover */
+}
+
+/* Base Semantic Tag Styles */
+section {
+    padding: 2rem;
+}
+
+article {
+    /* display: none; */
+    padding: 2rem;
+    /* background: rgb(173, 240, 146); */
+
+    p {
+        width: calc(100% - 50px);
+    }
+}
+
+aside {
+    padding: 2rem;
+}
+.subgrid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(20px, 1fr)); */
+    gap: 5px;
+    /* color: var(--prime-color-white, #fff); */
+}
+.subgrid-wrapper > .gridItem {
+    border: 1px solid #000;
+    /* background-color: rgb(40, 134, 134); */
+    padding: 0.5rem;
+    width: 16rem;
+}
+
+/* FOOTER Styles */
+footer {
+    height: 42px;
+
+    p {
+        margin: 0 0 0 0;
+    }
+}
