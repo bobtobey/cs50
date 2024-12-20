@@ -646,3 +646,7 @@ video {
     height: auto;     /* Maintain aspect ratio */
     display: block;   /* Remove default inline spacing */
 }
+/* Bootstrap Overrides */
+.list-group-item {
+    background: gold;
+}
