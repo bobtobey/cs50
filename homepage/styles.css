@@ -583,6 +583,16 @@ video {
     border-color: var(--clr-complementary-500);
     background: var(--clr-complementary-50);
 }
+.list-group-item-action {
+    color: var(--#{$prefix}list-group-action-color);
+
+    // Hover state
+    &:hover,
+    &:focus {
+      color: var(--#{$prefix}list-group-action-hover-color);
+      background-color: var(--#{$prefix}list-group-action-hover-bg);
+    }
+}
 .list-group-flush li:hover {
     background: gold;
 }
