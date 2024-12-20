@@ -586,7 +586,7 @@ video {
     background: var(--clr-complementary-100);
 }
 
-.text-with-image {
+.article-with-image {
     display: flex;
     align-items: flex-start; /* Align text and image at the top */
     gap: 20px; /* Space between the image and text */
