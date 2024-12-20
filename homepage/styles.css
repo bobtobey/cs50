@@ -12,20 +12,77 @@
     --base-font-family-sans-serif: Verdana, Geneva, Tahoma, sans-serif;
     --primary-text-color: #000;
     --secondary-text-color: blue;
-    --alert-color: red;
-    --update-color: green;
-    --information-color: blue;
-    --default-gutter: 5px;
-    --prime-color-red: #a30606;
-    --prime-color-orange: #dd7d24;
-    --prime-color-yellow: #e0be25;
-    --prime-color-green: #1dc018;
-    --prime-color-blue: #2fb8c2;
-    --prime-color-indigo: #5c61aa;
-    --prime-color-violet: #eb18cf;
-    --prime-color-pink: #a30606;
-    --prime-color-grey: #707070;
-    --prime-color-white: #dfdfdf;
+    /* Base Variables */
+    --primary100: #ffffff;
+    --primary70: #FF8980;
+    --primary60: #FF544F;
+    --primary50: #DD3837;
+    --primary40: #B91B21;
+    --primary35: #A70817;
+    --primary30: #930011;
+    --primary0: #000000;
+    --secondary80: #FBB5AE;
+    --secondary70: #DD9A94;
+    --secondary60: #BF807B;
+    --secondary50: #A26862;
+    --secondary40: #86504B;
+    --tertiary90: #FFDEA4;
+    --tertiary70: #D2A445;
+    --tertiary60: #B58A2D;
+    --tertiary35: #6C4D00;
+    --tertiary20: #412D00;
+    /* MUI Neutral colors */
+    --neutral-50: #FAFAFA;
+    --neutral-100: #F5F5F5;
+    --neutral-200: #EEEEEE;
+    --neutral-300: #E0E0E0;
+    --neutral-400: #BDBDBD;
+    --neutral-500: #9E9E9E;
+    --neutral-600: #757575;
+    --neutral-700: #616161;
+    --neutral-800: #424242;
+    --neutral-900: #212121;
+    --neutralbg-50: #ECEFF1;
+    --neutralbg-500: #607D8B;
+    --neutralbg-900: #263238;
+    --extcolor-green: #8ABD00;
+    /* CLR Primary colors */
+    --clr-primary-25: #f2f9ff;
+    --clr-primary-50: #e3f2ff;
+	--clr-primary-100: #badefe;
+	--clr-primary-200: #8ecaff;
+	--clr-primary-300: #5eb5fe;
+	--clr-primary-400: #37a5ff;
+	--clr-primary-500: #0395fe;
+	--clr-primary: var(--clr-primary-500);
+	--clr-primary-600: #0a87f0;
+	--clr-primary-700: #0c75dc;
+	--clr-primary-800: #0d64ca;
+	--clr-primary-900: #0b45ab;
+    /* CLR Complementarys */
+	--clr-complementary-50: #fff8e1;
+	--clr-complementary-100: #ffebb2;
+	--clr-complementary-200: #ffde81;
+	--clr-complementary-300: #ffd24d;
+	--clr-complementary-400: #ffc726;
+	--clr-complementary-500: #ffbe03;
+	--clr-complementary-600: #ffb000;
+	--clr-complementary-700: #ff9d00;
+	--clr-complementary-800: #fe8c01;
+	--clr-complementary-900: #fe6b03;
+    /* Supporting Colors */
+    --clr-success-500: #1bfe03;
+    --clr-error-500: #fe0303;
+    --clr-warning-500: #feba03;
+    --clr-information-500: #2c03fe;
+    /* STATIC */
+    --clr-tertiary: #5e5221;
+    --primary-color-white: var(--primary100);
+    --primary-color-black: var(--primary0);
+    --primary-color-grey: var(--neutral-500);
+    /* Text Variables */
+    --text-logo-fontfamily: var(--base-font-family-sans-serif);
+    --text-logo-fontstyle: italic;
 
 }
 /* meyerweb reset START */
