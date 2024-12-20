@@ -660,10 +660,11 @@ video {
       color: var(--#{$prefix}list-group-action-hover-color);
       text-decoration: none;
       background-color: var(--#{$prefix}list-group-action-hover-bg);
+      background-color: var(--clr-complementary-500);
     }
 
     &:active {
       color: var(--#{$prefix}list-group-action-active-color);
       background-color: var(--#{$prefix}list-group-action-active-bg);
     }
-  }
+}
