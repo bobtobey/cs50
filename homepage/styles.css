@@ -235,6 +235,36 @@ nav a:hover {
     background-color: #ccc; /* Changes background color on hover */
 }
 
+/* NAV Styles - FNOL Progress Bar */
+.maincontainer nav {
+    display: block;
+    max-width: 40%;
+    width: 35%;
+
+    ul {
+        justify-content: flex-end;
+        align-items: center;
+
+        li {
+            flex: 0;
+            border-right: none;
+
+            & a {
+                padding: 1rem 2.5rem;
+                background: transparent;
+            }
+            & a.nav-link-active {
+                background: var(--clr-primary-100);
+                border-radius: 2rem;
+                cursor: default;
+            }
+            & a:hover {
+                background: var(--clr-primary-100);
+                border-radius: 2rem;
+            }
+        }
+    }
+}
 /* Base Semantic Tag Styles */
 section {
     padding: 2rem;
