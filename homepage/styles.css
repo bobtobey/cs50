@@ -96,4 +96,40 @@ p {
 }
 a {
     font-size: var(--default-text-size);
-}      
+}
+
+/* Grid Styles START */
+.gridwrapper {
+    /* background: var(--prime-color-red); */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "maincontentwrapper"
+        "footer";
+    row-gap: 0px;
+    flex: 1;
+}
+.gridwrapper header {
+    grid-area: header;
+    /* background: var(--prime-color-grey); */
+}
+.gridwrapper nav {
+    grid-area: nav;
+    /* background: var(--prime-color-grey); */
+}
+.gridwrapper .maincontentwrapper {
+    width: 100%;
+    grid-area: maincontentwrapper;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: var(--prime-color-blue); */
+}
+.gridwrapper footer {
+    grid-area: footer;
+    /* background: var(--prime-color-grey); */
+}
+/* Grid Styles END */
