@@ -427,68 +427,10 @@ section {
                     padding-bottom: 4rem;
                     margin-bottom: 0;
                 }
-                .page-portfolio & {
-                    padding-bottom: 0;
-                }
             }
         }
         &.article-100 {
             grid-column: 1 / span 2;
-        }
-
-        &.article-portfolio {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto;
-
-            .portfolio-intro {
-                grid-column: 1/-1;
-                justify-self: start;
-                width: 100%;
-
-                p {
-                    line-height: 1.5;
-                    padding-right: 2rem;
-                }
-            }
-
-            .portfolio-summary,
-            .portfolio-details-wrapper {
-                h3, h4, h5 {
-                    color: var(--clr-complementary-dark-900);
-                }
-
-                p {
-                    line-height: 1.5;
-                    padding-right: 2rem;
-                }
-            }
-            .portfolio-image-wrapper {
-                border: 1px solid var(--primary-color-black);
-                border-radius: 2rem;
-                background: var(--primary-color-white);
-                width: fit-content;
-                padding: 4rem 2rem 2rem 2rem;
-                justify-self: center;
-
-                img {
-                    display: block;
-                    margin: auto;
-                    border-radius: 2rem;
-                    max-width: 90%;
-                    width: 100%;
-                    object-fit: contain;
-                }
-            }
-            .portfolio-details-wrapper {
-                border: 1px solid var(--clr-complementary-dark-900);
-                border-radius: 2rem;
-                background: var(--primary-color-white);
-                padding: 2rem;
-                margin: 4rem 2rem 2rem 2rem;
-                display: none;
-                grid-column: 1/-1;
-            }
         }
         .article-asset-wrapper {
             width: 100%;
@@ -575,18 +517,6 @@ aside .bgs-sidebar {
 
             &:hover {
                 color: var(--clr-complementary);
-            }
-        }
-        .page-portfolio & {
-
-            .bgs-sidebar-link-portfolio {
-                cursor: default;
-            }
-            svg {
-
-                &:hover {
-                    color: var(--clr-primary);
-                }
             }
         }
     }
