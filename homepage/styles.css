@@ -648,7 +648,7 @@ video {
 }
 /* Bootstrap Overrides */
 .list-group-item {
-    border-color: var(--clr-complementary-50);
+    border-color: var(--clr-complementary-500);
     background: var(--clr-complementary-50);
 }
 .list-group-item-action {
