@@ -591,7 +591,6 @@ video {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
-        "content image"
         "content image";
     gap: 20px;
 }
