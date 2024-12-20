@@ -657,7 +657,7 @@ video {
     &:hover,
     &:focus {
       color: var(--#{$prefix}list-group-action-hover-color);
-      text-decoration: underline;
+      text-decoration: none;
       background-color: var(--#{$prefix}list-group-action-hover-bg);
     }
 
