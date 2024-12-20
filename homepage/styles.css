@@ -228,7 +228,9 @@ header {
         display: inline-block;
     }
 }
-.maincontainer.page-portfolio,
+.maincontainer.page-homepage,
+.maincontainer.page-photos,
+.maincontainer.page-video,
 .maincontainer.page-contact {
 
     header {
