@@ -586,32 +586,34 @@ video {
     background: var(--clr-complementary-100);
 }
 
+
 .article-with-image {
     display: flex;
-    align-items: flex-start; /* Align the top of the text and image */
-    gap: 20px; /* Space between the figure and text */
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-}
-
-.article-with-image figure {
-    flex: 0 0 40%; /* Fix figure width to 40% and prevent it from shrinking */
-    max-width: 300px; /* Optional: Limit figure size for better visuals */
-    margin: 0; /* Remove default figure margins */
-}
-
-.article-with-image img {
-    width: 100%; /* Ensure the image fills the figure */
-    height: auto; /* Maintain aspect ratio */
-}
-
-.article-with-image figcaption {
-    font-style: italic;
-    text-align: center;
-    color: #555;
-    margin-top: 8px; /* Space between image and caption */
+    flex-direction: row; /* Ensures the figure and text are side by side */
+    align-items: flex-start; /* Aligns the text with the top of the image */
+    gap: 20px; /* Space between the text and the image */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 .article-with-image p {
-    flex: 1; /* Allow the paragraph to take the remaining space */
-    margin: 0; /* Ensure consistent spacing */
+    flex: 1; /* Makes the paragraph take up the remaining space */
+    margin: 0; /* Removes default margin */
+}
+
+.article-with-image figure {
+    flex: 0 0 40%; /* Fixes the width of the figure to 40% */
+    max-width: 300px; /* Optional: Prevents the figure from being too wide */
+    margin: 0; /* Removes default margin */
+}
+
+.article-with-image img {
+    width: 100%; /* Ensures the image fits the figure */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.article-with-image figcaption {
+    text-align: center;
+    font-style: italic;
+    color: #555;
+    margin-top: 8px; /* Adds space between the image and caption */
 }
