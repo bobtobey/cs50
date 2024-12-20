@@ -640,3 +640,9 @@ footer {
         }
     }
 }
+/* Video content */
+video {
+    max-width: 100%;  /* Scale down to fit the parent container */
+    height: auto;     /* Maintain aspect ratio */
+    display: block;   /* Remove default inline spacing */
+}
