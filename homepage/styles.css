@@ -598,5 +598,5 @@ video {
     background: var(--clr-complementary-100);
 }
 .list-group-flush li:hover {
-    background: gold;
+    background: var(--clr-complementary-100);
 }
