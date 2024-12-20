@@ -413,6 +413,9 @@ section {
                     font-size: 4rem;
                     padding-bottom: 4rem;
                     margin-bottom: 0;
+                    :not(.page-homepage) & {
+                        padding-bottom: 4rem;
+                    }
                 }
             }
         }
