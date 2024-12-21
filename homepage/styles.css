@@ -597,3 +597,6 @@ video {
     gap: 2rem;
     align-items: start;
 }
+.article-image-bloc1 {
+    display: none;
+}
