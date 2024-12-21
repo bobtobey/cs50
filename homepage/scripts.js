@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Document listeners
     document.body.addEventListener('click', function(event) {
         const evntTarget= event.target;
-        // console.log("Clicked element:", evntTarget);
+        console.log("Clicked element:", evntTarget);
 
         if(evntTarget.closest('[data-dialog-toggle="true"]')) {
             event.preventDefault();
