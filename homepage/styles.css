@@ -597,10 +597,3 @@ video {
     gap: 2rem;
     align-items: start;
 }
-
-.article-with-image-wrapper figure {
-    grid-row: span 2 / span 2;
-}
-.article-with-image .article-with-image-text-bloc {
-    grid-row: span 2 / span 2;
-}
