@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
+// Universal Event Listener
+document.addEventListener('DOMContentLoaded', function() {
     // Select the buttons and the dialog using querySelector
     const toggleButton = document.querySelector("#open-article-image-bloc1");
     const dialogBloc = document.querySelector("#article-image-bloc1");
