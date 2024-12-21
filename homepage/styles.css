@@ -604,13 +604,13 @@ video {
     left: 50%;
     z-index: 999;
     transform: translate(-50%, -50%); /* Adjust for perfect centering */
-    padding: 20px; /* Padding around the inner content */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 
     background: var(--primary-color-white);
     border: 2px solid var(--neutral-600);
     border-radius: 10px;
+    padding: 2rem 2rem 3rem 2rem;
     margin-bottom: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 
     .fnol-dashboard-header-bloc {
         background-color: var(--dialog-header-background-color);
