@@ -588,12 +588,12 @@ video {
     figcaption {
         text-align: center;
     }
-}
-.article-btn-bloc {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1rem;
+    .article-btn-bloc {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+    }
 }
 
 .btn-secondary {
