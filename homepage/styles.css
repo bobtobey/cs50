@@ -597,6 +597,12 @@ video {
     gap: 2rem;
     align-items: start;
 }
+.article-btn-bloc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
 
 .btn-secondary {
     border: 2px solid var(--neutral-600);
