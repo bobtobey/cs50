@@ -605,18 +605,18 @@ video {
     left: 50%;
     z-index: 999;
     transform: translate(-50%, -50%); /* Adjust for perfect centering */
-
     background: var(--primary-color-white);
     border: 2px solid var(--neutral-600);
     border-radius: 10px;
-    padding: 2rem 2rem 3rem 2rem;
-    margin-bottom: 2rem;
+    padding: 2rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 
     .dialog-footer-bloc {
+        display: flex;
+        align-items: center;
         background: pink;
     }
-    .fnol-dashboard-header-bloc {
+    .dialog-header-bloc {
         background-color: var(--dialog-header-background-color);
         border-radius: 10px 10px 0 0;
         padding: 0.5rem 1rem;
@@ -632,6 +632,6 @@ video {
         }
     }
     .dialog-content-bloc {
-        padding: 0.5rem 1rem;
+        padding: 0 0 1rem 0;
     }
 }
