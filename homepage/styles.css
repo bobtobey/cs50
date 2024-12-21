@@ -610,7 +610,7 @@ video {
     border-radius: 10px;
     padding: 2rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    
+
     .dialog-content-bloc {
         padding: 0 0 1rem 0;
     }
@@ -619,6 +619,6 @@ video {
         display: flex;
         align-items: center;
         justify-content: center;
-        background: pink;
+        background: var(--primary-color-white);
     }
 }
