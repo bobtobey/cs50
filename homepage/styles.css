@@ -621,14 +621,8 @@ video {
 
     .dialog-content-bloc {
         padding: 0 0 1rem 0;
-        
+
         img {
-            max-width: 100%; /* Image scales to fit the dialog's width */
-            max-height: 100%; /* Image scales to fit the dialog's height */
-            height: auto; /* Maintain aspect ratio */
-            width: auto; /* Maintain aspect ratio */
-            display: block; /* Removes inline gaps */
-            margin: 0 auto; /* Centers the image horizontally */
         }
     }
 
