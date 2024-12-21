@@ -610,28 +610,15 @@ video {
     border-radius: 10px;
     padding: 2rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    
+    .dialog-content-bloc {
+        padding: 0 0 1rem 0;
+    }
 
     .dialog-footer-bloc {
         display: flex;
         align-items: center;
+        justify-content: center;
         background: pink;
-    }
-    .dialog-header-bloc {
-        background-color: var(--dialog-header-background-color);
-        border-radius: 10px 10px 0 0;
-        padding: 0.5rem 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        .fnol-header {
-            color: var(--neutral20);
-        }
-        .btn-close {
-            cursor: pointer;
-        }
-    }
-    .dialog-content-bloc {
-        padding: 0 0 1rem 0;
     }
 }
