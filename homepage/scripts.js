@@ -21,13 +21,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 dialogToggle(btnClose);
             }
         }
-
-        // Scroll page to top
-        if(evntTarget.closest('[data-btn-backtop="true"')) {
-            window.scrollTo({
-              top: 0,
-              behavior: 'smooth' // Smooth scrolling
-            });
-        }
     })
 });
