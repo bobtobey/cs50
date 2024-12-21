@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeButton = document.querySelector("#article-image-bloc1 .btn-primary");
 
     // Toggle Dialog Display
-    function toggleDialog() {
+    function dialogToggle() {
         if (dialogBloc.style.display === "none" || dialogBloc.style.display === "") {
             dialogBloc.style.display = "block";
         } else {
@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Event listener for the open button
-    toggleButton.addEventListener("click", toggleDialog);
+    toggleButton.addEventListener("click", dialogToggle);
 
     // Event listener for the close button
-    closeButton.addEventListener("click", toggleDialog);
+    closeButton.addEventListener("click", dialogToggle);
 });
