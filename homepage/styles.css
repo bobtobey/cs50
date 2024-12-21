@@ -592,11 +592,22 @@ video {
 
 .article-with-image-wrapper {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: 2fr 1fr; /* sets 2 columns */
+    grid-template-rows: repeat(1, 1fr); /* sets 1 row */
     gap: 2rem;
     align-items: start;
 }
 .dialog-image-bloc {
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the viewport */
+    height: 100%; /* Full height of the viewport */
+    display: grid; /* Grid layout for centering */
+    place-items: center; /* Centers content horizontally and vertically */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background */
+    opacity: 0; /* Hidden by default */
+    pointer-events: none; /* Prevent interaction when hidden */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in */
 }
