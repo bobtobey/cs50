@@ -607,7 +607,5 @@ video {
     display: flex; /* Flexbox to center content */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background */
-    pointer-events: none; /* Prevent interaction when hidden */
-    transition: opacity 0.3s ease-in-out; /* Smooth fade-in */
+    background-color: rgba(0, 0, 0, 0.5); 
 }
