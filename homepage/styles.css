@@ -583,6 +583,7 @@ video {
     grid-template-rows: repeat(1, 1fr); /* sets 1 row */
     gap: 2rem;
     align-items: start;
+    justify-items: center;
 }
 .article-btn-bloc {
     display: flex;
