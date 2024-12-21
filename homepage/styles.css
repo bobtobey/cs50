@@ -611,10 +611,6 @@ video {
     z-index: 999;
 }
 
-.fnol-dashboard-container {
-    width: 70%;
-    height: auto;
-    background: var(--primary-color-white);
 
     .fnol-dashboard-bloc {
         background: var(--dialog-background-color);
@@ -642,4 +638,3 @@ video {
             padding: 0.5rem 1rem;
         }
     }
-}
