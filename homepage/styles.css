@@ -549,19 +549,6 @@ footer {
     }
 }
 
-.btn-backtotop-wrapper {
-    position: fixed;
-    bottom: 65px;
-    right: 245px;
-    z-index: 1001;
-    display: none;
-
-    button {
-        svg {
-            width: 45px;
-        }
-    }
-}
 /* Video content */
 video {
     max-width: 100%;  /* Scale down to fit the parent container */
