@@ -597,6 +597,7 @@ video {
     gap: 2rem;
     align-items: start;
 }
+
 .dialog-image-bloc {
     /* display: none; */
     position: fixed;
@@ -610,7 +611,7 @@ video {
     border-radius: 10px;
     padding: 2rem 2rem 3rem 2rem;
     margin-bottom: 2rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 
     .fnol-dashboard-header-bloc {
         background-color: var(--dialog-header-background-color);
