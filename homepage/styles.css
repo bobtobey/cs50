@@ -598,7 +598,7 @@ video {
     align-items: start;
 }
 
-.dialog-image-bloc {
+.dialog-wrapper {
     /* display: none; */
     position: fixed;
     top: 50%;
