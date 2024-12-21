@@ -604,8 +604,9 @@ video {
     left: 0;
     width: 100%; /* Full width of the viewport */
     height: 100%; /* Full height of the viewport */
-    display: grid; /* Grid layout for centering */
-    place-items: center; /* Centers content horizontally and vertically */
+    display: flex; /* Flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background */
     opacity: 0; /* Hidden by default */
     pointer-events: none; /* Prevent interaction when hidden */
