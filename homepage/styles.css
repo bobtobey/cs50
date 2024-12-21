@@ -615,7 +615,7 @@ video {
     .fnol-dashboard-header-bloc {
         background-color: var(--dialog-header-background-color);
         border-radius: 10px 10px 0 0;
-        padding: 0.5rem 1rem;
+        padding: 2rem 2rem 3rem 2rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
