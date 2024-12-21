@@ -63,10 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if(evntTarget.closest('[data-dialog-toggle="true"]')) {
             event.preventDefault();
-            dialogInitializer(event, {
-                alert: false,
-                update: false
-            });
+            dialogInitializer(event);
         };
 
         // Close dialog with button
