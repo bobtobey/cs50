@@ -1,4 +1,39 @@
 
+// Initialize Dialogs on the page
+function dialogInitializer(event) {
+
+    // Confirm closest element has the data-dialog-target attribute
+    const targetElement = event.target.closest('[data-dialog-target]');
+
+    // approach 2
+    if (!targetElement) {
+        console.error('No target element with data-dialog-target attribute found.');
+        return;
+    }
+    // Get dialog target id
+    const dialogTarget = targetElement.getAttribute('data-dialog-target');
+    if (!dialogTarget) {
+        console.error('No dialog ID specified.');
+        // console.log(dialogTarget);
+        return;
+    }
+    // Set dialog element
+    const dialog = document.querySelector(`[data-id="${dialogTarget}"]`);
+    if (!dialog) {
+        // console.error('Dialog element not found.');
+        // console.log(dialog);
+        return;
+    }
+
+    // Call Dialog functions
+    dialogToggle(dialog, targetElement);
+    // Check Dialog Display State
+    const dialogState = dialog.getAttribute('data-dialog-state');
+    // Run Alerts & Updates if needed
+    if ((alert || update) && dialogState === 'true') {
+        dialogAlertAndUpdate(dialog, { alert, update });
+    }
+}
 
 // Toggle Dialog Display
 function dialogToggle(dialog, dialogCaller) {
