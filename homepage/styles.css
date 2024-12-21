@@ -599,12 +599,10 @@ video {
 }
 .dialog-image-bloc {
     /* display: none; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
     z-index: 999;
-
-
-    position: fixed; /* Keeps it centered in the viewport */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Adjust for perfect centering */
     background-color: white; /* White background for the dialog */
     padding: 20px; /* Padding around the inner content */
@@ -612,7 +610,7 @@ video {
     border-radius: 8px; /* Rounded corners for a modern look */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 
-    background: var(--dialog-background-color);
+    background: gold;
     border: var(--dialog-border-width) solid var(--dialog-border-color);
     border-radius: 10px;
     margin-bottom: 2rem;
