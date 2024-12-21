@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Event listener for the open button
+    // Set event listener for toggle button
     toggleButton.addEventListener("click", dialogToggle);
 
-    // Event listener for the close button
+    // Set event listener for close button
     closeButton.addEventListener("click", dialogToggle);
 });
