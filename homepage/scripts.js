@@ -29,10 +29,6 @@ function dialogInitializer(event) {
     dialogToggle(dialog, targetElement);
     // Check Dialog Display State
     const dialogState = dialog.getAttribute('data-dialog-state');
-    // Run Alerts & Updates if needed
-    if ((alert || update) && dialogState === 'true') {
-        dialogAlertAndUpdate(dialog, { alert, update });
-    }
 }
 
 // Toggle Dialog Display
