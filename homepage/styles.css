@@ -598,7 +598,7 @@ video {
     align-items: start;
 }
 .dialog-image-bloc {
-    display: none;
+    /* display: none; */
     position: fixed;
     top: 0;
     left: 0;
