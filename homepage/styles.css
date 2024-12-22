@@ -251,7 +251,6 @@ nav ul {
 }
 
 nav li {
-    flex: 1; /* Distributes space evenly among list items */
     display: flex;
     justify-content: center; /* Center the link horizontally */
     align-items: center; /* Center the link vertically */
