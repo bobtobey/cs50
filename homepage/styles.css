@@ -209,7 +209,7 @@ header {
     }
 
     .logo {
-        color: #0395fe);
+        color: #0395fe;
         font-family: var(--text-logo-fontfamily);
         display: inline-block;
         position: relative;
