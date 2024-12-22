@@ -216,7 +216,7 @@ header {
         padding: 0 0 0 0px;
     }
     .application-name {
-        color: var(--clr-primary-700);
+        color: #0c75dc;
         display: inline-block;
     }
 }
