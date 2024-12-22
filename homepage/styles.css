@@ -315,7 +315,6 @@ article {
 }
 section {
     position: relative;
-    /* background: var(--neutral-50); */
     max-width: 70%;
     width: 100%;
     display: grid;
