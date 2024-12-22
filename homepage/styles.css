@@ -498,7 +498,7 @@ footer {
     &:focus {
       color: var(--#{$prefix}list-group-action-hover-color);
       background-color: var(--#{$prefix}list-group-action-hover-bg);
-      background-color: var(--clr-complementary-500);
+      background-color: #ffbe03;
     }
 }
 .list-group-item-action:hover,
