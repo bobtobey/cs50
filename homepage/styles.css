@@ -268,10 +268,6 @@ nav a {
     transition: background-color 0.3s; /* Adds a transition effect on hover */
 }
 
-nav a:hover {
-    background-color: #ccc; /* Changes background color on hover */
-}
-
 /* NAV Styles - additional */
 .maincontainer nav {
     display: block;
