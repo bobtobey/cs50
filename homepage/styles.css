@@ -114,7 +114,7 @@ html {
 }
 body {
     font-size: var(--default-text-size, 16px);
-    font-family: var(--base-font-family-sans-serif);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1; /* meyerweb reset */
     background: #ECEFF1;
 }
