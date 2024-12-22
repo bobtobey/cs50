@@ -8,4 +8,5 @@ Bootstrap features used: List Group, Buttons, Carousel
 I utilized bootstrap to create a photo carousel, list group to create a list of links on 2 separate pages, and used their buttons to toggle a dialog.
 
 JavaScript used
-I used 
+I used JavaScript addEventListeners to listen for DOMContentLoaded and click, which allowed me create a dialog toggle functions to open and close photo dialog
+and also add functionality to a button in the dialog to close itself.
