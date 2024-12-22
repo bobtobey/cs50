@@ -213,7 +213,6 @@ header {
     .logo {
         color: var(--clr-primary, #0395fe);
         font-family: var(--text-logo-fontfamily);
-        /* font-style: var(--text-logo-fontstyle); */
         display: inline-block;
         position: relative;
         padding: 0 0 0 0px;
