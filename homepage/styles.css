@@ -503,7 +503,7 @@ footer {
 }
 .list-group-item-action:hover,
 .list-group-flush li:hover {
-    background: var(--clr-complementary-100);
+    background: #ffebb2;
 }
 
 
