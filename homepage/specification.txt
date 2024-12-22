@@ -1,6 +1,6 @@
 Homepage assignment
 
-10+ html tags used: <section>, <article>, <figure>, <figcaption>, <p>, <div>, <nav>, <ul>, <li>, <footer>, <header>, <a>, <aside>, <video>
+10+ html tags used: <article>, <figure>, <figcaption>, <p>, <div>, <nav>, <ul>, <li>, <footer>, <header>, <a>, <aside>, <video>
 
 5 CSS+ properties used: background: / border: / border-radius: / font-size: / font-family: / margin: / padding: / color: / width: / height:
 
