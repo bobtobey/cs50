@@ -465,35 +465,25 @@ aside .bgs-sidebar {
     padding: 0;
     gap: 2rem;
 
-    .bgs-sidebar-item {
-        color: var(--clr-tertiary);
-        background: var(--clr-complementary-100);
-        border: 1px solid var(--clr-complementary-700);
-        border-radius: 1rem;
-        padding: 1.4rem 1rem;
-        text-align: center;
-        width: 10rem;
+    .gridItem-link-wrapper {
+        position: relative;
+
+        a {
+            display: inline-block;
+        }
     }
-        .gridItem-link-wrapper {
-            position: relative;
 
-            a {
-                display: inline-block;
-            }
+    img {
+        width: 64px;
+    }
+    svg {
+        width: 64px;
+        color: var(--clr-primary);
+
+        &:hover {
+            color: var(--clr-complementary);
         }
-
-        img {
-            width: 64px;
-        }
-        svg {
-            width: 64px;
-            color: var(--clr-primary);
-
-            &:hover {
-                color: var(--clr-complementary);
-            }
-        }
-
+    }
 }
 
 
