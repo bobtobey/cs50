@@ -459,60 +459,6 @@ video {
     display: block;   /* Remove default inline spacing */
 }
 
-/* FOOTER Styles */
-footer {
-    display: flex;
-    height: 42px;
-    justify-content: space-between;
-    align-items: center;
-    background: #e3f2ff;
-    border-top: 1px solid #000000;
-    padding: 2rem 8rem;
-    color: #9E9E9E;
-
-    p {
-        color: #9E9E9E;
-        margin: 0;
-    }
-
-    .footer-legal-wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: fit-content;
-        margin-right: 2rem;
-    }
-}
-
-/* Bootstrap Overrides */
-.list-group-item {
-    border-color: #ffbe03;
-    background: #fff8e1;
-}
-
-.list-group-item-action {
-
-    // Hover state
-    &:hover,
-    &:focus {
-      color: var(--#{$prefix}list-group-action-hover-color);
-      background-color: var(--#{$prefix}list-group-action-hover-bg);
-      background-color: #ffbe03;
-    }
-}
-.list-group-item-action:hover,
-.list-group-flush li:hover {
-    background: #ffebb2;
-}
-
-
-.btn-secondary {
-    border: 2px solid #757575;
-    background: #9E9E9E;
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-
 /* Dialog styles */
 .dialog-wrapper {
     display: none;
@@ -546,4 +492,47 @@ footer {
         justify-content: center;
         background: #ffffff;
     }
+}
+
+/* FOOTER Styles */
+footer {
+    display: flex;
+    height: 42px;
+    justify-content: space-between;
+    align-items: center;
+    background: #e3f2ff;
+    border-top: 1px solid #000000;
+    padding: 2rem 8rem;
+    color: #9E9E9E;
+
+    p {
+        color: #9E9E9E;
+        margin: 0;
+    }
+
+    .footer-legal-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: fit-content;
+        margin-right: 2rem;
+    }
+}
+
+/* Bootstrap Overrides */
+.list-group-item {
+    border-color: #ffbe03;
+    background: #fff8e1;
+}
+
+.list-group-item-action:hover,
+.list-group-flush li:hover {
+    background: #ffebb2;
+}
+
+.btn-secondary {
+    border: 2px solid #757575;
+    background: #9E9E9E;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
