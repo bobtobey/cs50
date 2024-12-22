@@ -310,7 +310,7 @@ article {
 }
 /* SECTION Styles */
 .maincontentwrapper {
-    background: var(--neutral-50);
+    background: #FAFAFA;
 }
 section {
     position: relative;
