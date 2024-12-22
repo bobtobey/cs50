@@ -283,12 +283,12 @@ nav a {
                 background: transparent;
             }
             & a.nav-link-active {
-                background: var(--clr-primary-100);
+                background: #badefe;
                 border-radius: 2rem;
                 cursor: default;
             }
             & a:hover {
-                background: var(--clr-primary-100);
+                background: #badefe;
                 border-radius: 2rem;
             }
         }
