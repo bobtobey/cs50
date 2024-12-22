@@ -116,8 +116,6 @@ body {
     font-size: var(--default-text-size, 16px);
     font-family: var(--base-font-family-sans-serif);
     line-height: 1; /* meyerweb reset */
-    background: var(--clr-primary-50);
-    background: var(--neutralbg-50);
     background: #ECEFF1;
 }
 .maincontainer {
