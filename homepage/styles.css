@@ -450,3 +450,22 @@ footer {
     padding-left: 2rem;
     padding-right: 2rem;
 }
+
+/* Media Queries Styles */
+/* Small devices and below (phones, tablets) */
+@media only screen and (max-width: 1200px) {
+    section {
+        max-width: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+
+        article {
+
+            &.article-100 {
+                grid-column: 1;
+            }
+        }
+    }
+
+}
