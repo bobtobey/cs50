@@ -457,7 +457,8 @@ footer {
 /* Media Queries Styles */
 /* Small devices and below (phones, tablets) */
 @media only screen and (max-width: 1200px) {
-    section {
+    section,
+    .section-wrapper {
         max-width: 100%;
         width: 100%;
         display: grid;
