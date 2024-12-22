@@ -461,6 +461,7 @@ aside .bgs-sidebar {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     grid-template-columns: repeat(auto-fit, minmax(120px, auto));
     justify-items: center;
+    justify-content: start;
     padding: 0;
     gap: 2rem;
 
@@ -492,7 +493,7 @@ aside .bgs-sidebar {
                 color: var(--clr-complementary);
             }
         }
-    
+
 }
 
 
