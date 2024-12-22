@@ -343,9 +343,6 @@ section {
         .article-list-wrapper {
             padding-bottom: 2rem;
 
-            ul {
-                padding-left: 0;
-            }
             & ul.style-list-flex {
                 display: flex;
                 flex-direction: column;
@@ -356,17 +353,6 @@ section {
                 & li {
                     margin: 0 2rem 2rem 0;
                     display: flex;
-                }
-                & .article-img-bloc {
-                    margin-right: 4rem;
-                }
-                & .article-title-bloc {
-                    a {
-                        color: var(--neutral-900);
-                        &:hover {
-                            color: var(--clr-primary-700);
-                        }
-                    }
                 }
             }
         }
