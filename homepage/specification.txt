@@ -4,4 +4,7 @@ Homepage assignment
 
 5 CSS+ properties used: background: / border: / border-radius: / font-size: / font-family: / margin: / padding: / color: / width: / height:
 
-5 CSS classes and selectors used: .maincontentwrapper / 
+5 CSS classes and selectors used: .maincontentwrapper /
+
+Bootstrap features used: List Group, Buttons, Carousel
+
