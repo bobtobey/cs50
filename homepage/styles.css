@@ -110,7 +110,7 @@ ol, ul, li {
 /* BASE Styles */
 html {
     /* The rem unit is relative to the root element's font size (html element) */
-    font-size: var(--default-font-size, 10px);
+    font-size: 10px;
 }
 body {
     font-size: 16px;
