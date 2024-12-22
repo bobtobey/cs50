@@ -290,6 +290,9 @@ section,
         &.article-100 {
             grid-column: 1 / span 2;
         }
+        &.article-50 {
+            grid-column: auto; /* Default for side-by-side */
+        }
     }
 }
 
