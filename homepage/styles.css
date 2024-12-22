@@ -468,6 +468,10 @@ footer {
             &.article-100 {
                 grid-column: 1;
             }
+
+            &.article-50 {
+                grid-column: 1; /* Each takes up own row */
+            }
         }
     }
 
