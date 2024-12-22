@@ -428,14 +428,9 @@ section {
 
 .subgrid-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    /* grid-template-columns: repeat(auto-fit, minmax(20px, 1fr)); */
-    gap: 5px;
-    /* color: var(--prime-color-white, #fff); */
 }
 .subgrid-wrapper > .gridItem {
     border: 1px solid #000;
-    /* background-color: rgb(40, 134, 134); */
     padding: 0.5rem;
     width: 16rem;
 }
@@ -446,7 +441,6 @@ aside {
     max-width: 70%;
     width: 100%;
     padding: 0 2rem 4rem 2rem;
-    /* background: var(--neutral-50); */
 }
 aside .bgs-sidebar-container {
     position: relative;
@@ -458,7 +452,6 @@ aside .bgs-sidebar-container {
     min-width: fit-content;
 }
 aside .bgs-sidebar {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     grid-template-columns: repeat(auto-fit, minmax(120px, auto));
     justify-items: center;
     justify-content: start;
