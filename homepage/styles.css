@@ -418,7 +418,7 @@ aside {
 aside .bgs-sidebar-container {
     position: relative;
     padding: 2rem;
-    background: var(--clr-complementary-50);
+    background:  #fff8e1;
     border: 1px solid #fe6b03;
     border-radius: 2rem;
     width: auto;
