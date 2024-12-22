@@ -447,7 +447,7 @@ aside .bgs-sidebar {
         color: var(--clr-primary);
 
         &:hover {
-            color: var(--clr-complementary);
+            color: #fe6b03;
         }
     }
 }
