@@ -491,7 +491,6 @@ footer {
 }
 
 .list-group-item-action {
-    color: var(--#{$prefix}list-group-action-color);
 
     // Hover state
     &:hover,
