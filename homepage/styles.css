@@ -472,7 +472,7 @@ aside .bgs-sidebar {
         padding: 1.4rem 1rem;
         text-align: center;
         width: 10rem;
-
+    }
         .gridItem-link-wrapper {
             position: relative;
 
@@ -492,7 +492,7 @@ aside .bgs-sidebar {
                 color: var(--clr-complementary);
             }
         }
-    }
+    
 }
 
 
