@@ -479,16 +479,6 @@ aside .bgs-sidebar {
     }
 }
 
-
-/* FOOTER Styles */
-footer {
-    height: 42px;
-
-    p {
-        margin: 0 0 0 0;
-    }
-}
-
 /* FOOTER Styles */
 footer {
     display: flex;
