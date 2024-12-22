@@ -191,7 +191,7 @@ a {
 /* HEADER Styles */
 header {
     background: #e3f2ff;
-    border-bottom: 1px solid var(--clr-primary);
+    border-bottom: 1px solid #0395fe;
     height: 60px;
     width: auto;
     display: flex;
@@ -209,7 +209,7 @@ header {
     }
 
     .logo {
-        color: var(--clr-primary, #0395fe);
+        color: #0395fe);
         font-family: var(--text-logo-fontfamily);
         display: inline-block;
         position: relative;
