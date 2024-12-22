@@ -322,7 +322,7 @@ section {
     padding: 4rem 2rem;
 
     article {
-        background: var(--clr-complementary-50);
+        background: #fff8e1;
         border: 1px solid #fe6b03;
         border-radius: 2rem;
         padding: 2rem;
