@@ -376,24 +376,6 @@ section {
         &.article-100 {
             grid-column: 1 / span 2;
         }
-        .article-asset-wrapper {
-            width: 100%;
-            margin: 0 0 2rem 0;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: space-between;
-
-            .article-asset-text-wrapper {
-                width: 50%;
-            }
-            .article-asset-image-wrapper {
-                width: fit-content;
-            }
-            img {
-                width: 100%;
-            }
-        }
     }
 }
 
