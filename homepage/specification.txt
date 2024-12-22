@@ -1,3 +1,3 @@
 Homepage assignment
 
-10 html tags used: <section>, <article>, 
+10 html tags used: <section>, <article>, <figure>, <figcaption>, <p>, <div>, <nav>, <ul>, <li>, <footer>, <header>, <a>, 
