@@ -284,7 +284,6 @@ nav a:hover {
 
         li {
             flex: 0;
-            border-right: none;
 
             & a {
                 padding: 1rem 2.5rem;
@@ -302,6 +301,7 @@ nav a:hover {
         }
     }
 }
+
 /* Base Semantic Tag Styles */
 section {
     padding: 2rem;
