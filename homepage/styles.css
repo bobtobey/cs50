@@ -262,7 +262,7 @@ nav li:last-child {
 
 nav a {
     text-decoration: none; /* Removes the underline from links */
-    color: #333; /* Sets the link color */
+    color: #333333; /* Sets the link color */
     display: block; /* Ensures the padding and clickable area is respected */
     transition: background-color 0.3s; /* Adds a transition effect on hover */
 }
