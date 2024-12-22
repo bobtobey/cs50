@@ -491,7 +491,7 @@ footer {
     height: 42px;
     justify-content: space-between;
     align-items: center;
-    background: var(--clr-primary-50);
+    background: #e3f2ff;
     border-top: 1px solid #000000;
     padding: 2rem 8rem;
     color: #9E9E9E;
