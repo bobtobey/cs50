@@ -486,7 +486,7 @@ footer {
 
 /* Bootstrap Overrides */
 .list-group-item {
-    border-color: var(--clr-complementary-500);
+    border-color: #ffbe03;
     background: #fff8e1;
 }
 
