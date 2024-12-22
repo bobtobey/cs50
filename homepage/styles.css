@@ -342,19 +342,6 @@ section {
         }
         .article-list-wrapper {
             padding-bottom: 2rem;
-
-            & ul.style-list-flex {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-start;
-                flex-wrap: wrap;
-
-                & li {
-                    margin: 0 2rem 2rem 0;
-                    display: flex;
-                }
-            }
         }
         &.article-nobgbdr {
             border: none;
