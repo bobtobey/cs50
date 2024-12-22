@@ -224,7 +224,8 @@ article {
 .maincontentwrapper {
     background: #FAFAFA;
 }
-section {
+section,
+.section-wrapper {
     position: relative;
     max-width: 70%;
     width: 100%;
