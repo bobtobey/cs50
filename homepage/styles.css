@@ -444,7 +444,7 @@ aside .bgs-sidebar {
     }
     svg {
         width: 64px;
-        color: var(--clr-primary);
+        color: #0395fe;
 
         &:hover {
             color: #fe6b03;
