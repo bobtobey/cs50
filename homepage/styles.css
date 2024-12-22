@@ -113,7 +113,7 @@ html {
     font-size: var(--default-font-size, 10px);
 }
 body {
-    font-size: var(--default-text-size, 16px);
+    font-size: 16px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1; /* meyerweb reset */
     background: #ECEFF1;
@@ -150,11 +150,11 @@ h5 {
 }
 p {
     color: #212121;
-    font-size: var(--default-text-size);
+    font-size: 16px;
     margin: 0.5rem 0 1rem 0;
 }
 a {
-    font-size: var(--default-text-size);
+    font-size: 16px;
 }
 
 /* Grid Styles START */
