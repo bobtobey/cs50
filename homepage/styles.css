@@ -210,7 +210,7 @@ header {
 
     .logo {
         color: #0395fe;
-        font-family: var(--text-logo-fontfamily);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
         display: inline-block;
         position: relative;
         padding: 0 0 0 0px;
