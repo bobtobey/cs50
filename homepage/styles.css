@@ -494,10 +494,10 @@ footer {
     background: var(--clr-primary-50);
     border-top: 1px solid #000000;
     padding: 2rem 8rem;
-    color: var(--neutral-500);
+    color: #9E9E9E;
 
     p {
-        color: var(--neutral-500);
+        color: #9E9E9E;
         margin: 0;
     }
 
