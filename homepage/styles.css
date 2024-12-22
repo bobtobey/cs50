@@ -492,6 +492,7 @@ footer {
 /* FOOTER Styles */
 footer {
     display: flex;
+    height: 42px;
     justify-content: space-between;
     align-items: center;
     background: var(--clr-primary-50);
@@ -501,6 +502,7 @@ footer {
 
     p {
         color: var(--neutral-500);
+        margin: 0;
     }
 
     .footer-legal-wrapper {
