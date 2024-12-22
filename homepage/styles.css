@@ -303,9 +303,7 @@ section {
 }
 
 article {
-    /* display: none; */
     padding: 2rem;
-    /* background: rgb(173, 240, 146); */
 
     p {
         width: calc(100% - 50px);
