@@ -3,9 +3,10 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+#  this route just serves index.html
 @app.route("/")
 def index():
-    return render_template("index.html", placeholder=name)
+    return render_template("index.html")
 
 # creating a second route
 @app.route("/greet")
