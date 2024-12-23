@@ -5,8 +5,10 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    if "name" in request.args:
-        name = request.args["name"]
-    else:
-        name = "world?"
     return render_template("index.html", placeholder=name)
+
+# creating a second route
+@app.route("/greet")
+def greet():
+    name = request.args.get("name", "world")
+    return render_template("greet.html", name=name)
