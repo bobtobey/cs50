@@ -8,5 +8,5 @@ def index():
     if "name" in request.args:
         name = request.args["name"]
     else:
-        name = "world"
+        name = "world?"
     return render_template("index.html", placeholder=name)
