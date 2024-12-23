@@ -11,5 +11,5 @@ def index():
 # creating a second route
 @app.route("/greet", methods=["POST"])
 def greet():
-    name = request.args.get("name", "world")
+    name = request.form.get("name", "world")
     return render_template("greet.html", name=name)
