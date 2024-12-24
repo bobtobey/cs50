@@ -9,7 +9,7 @@ def index():
     return render_template("index.html")
 
 # creating a second route
-@app.route("/greet", methods=["POST"])
+@app.route("/greet")
 def greet():
     name = request.form.get("name", "world")
     return render_template("greet.html", name=name)
