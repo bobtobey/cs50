@@ -13,6 +13,7 @@ def register():
 
     if not request.form.get("name") or request.form.get("sport") not in SPORTS:
         return render_template("failure.html")
-    for sport in request.form.getall("sport"):
-        
+    for sport in request.form.getlist("sport"):
+        if sport not in SPORTS:
+            return render_template("failure.html")
     return render_template("success.html")
