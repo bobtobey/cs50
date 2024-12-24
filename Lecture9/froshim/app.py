@@ -7,7 +7,7 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-@app.route("/register", ["POST"])
+@app.route("/register", methods=["POST"])
 def register():
 
     if not request.form.get("name"):
