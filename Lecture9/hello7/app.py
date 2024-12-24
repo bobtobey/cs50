@@ -1,15 +1,12 @@
-# Says hello to request.args["name"]
+# Consolidating routes
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-#  this route just serves index.html
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def index():
-    return render_template("index.html")
-
-# creating a second route
-@app.route("/greet", methods=["POST"])
-def greet():
-    name = request.form.get("name", "world")
-    return render_template("greet.html", name=name)
+    if request.method == "POST":
+        name = request.form.get("name", "world")
+        return render_template("greet.html", name=name)
+    else:
+        return render_template("index.html")
