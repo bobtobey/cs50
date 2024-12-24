@@ -16,7 +16,7 @@ Session(app)
 
 @app.route("/")
 def index():
-    # 
+    # db.execute, when using SELECT, returns just a list of dictionaries.
     books = db.execute("SELECT * FROM books")
     return render_template("books.html", books=books)
 
