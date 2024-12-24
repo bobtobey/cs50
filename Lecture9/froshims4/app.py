@@ -4,8 +4,10 @@ from flask import Flask, redirect, render_template, request
 
 app = Flask(__name__)
 
+# Dictionary
 REGISTRANTS = {}
 
+# LIST
 SPORTS = [
     "Basketball",
     "Soccer",
