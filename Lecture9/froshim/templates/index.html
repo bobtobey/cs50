@@ -13,7 +13,7 @@
         </select>
         {% for sport in sports %}
             <option value="{{sport}}">{{sport}}</option>
-            <input name="sport" type="radio" value="{{sport}}" 
+            <input name="sport" type="radio" value="{{sport}}"> {{sport}}
         {% endfor %}
         <button type="submit">Register</button>
     </form>
