@@ -16,8 +16,9 @@ Session(app)
 
 @app.route("/")
 def index():
-    # db.execute, when using SELECT, returns just a list of dictionaries.
+    # db.execute, when using SELECT, returns just a list of dictionaries. [{item},{item}]
     books = db.execute("SELECT * FROM books")
+    # passes var books in 
     return render_template("books.html", books=books)
 
 
