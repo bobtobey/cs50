@@ -31,6 +31,7 @@
                         <tr>
                             <th>Name</th>
                             <th>Birthday</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -38,8 +39,12 @@
                         {% for birthdays in bdays %}
                             <tr>
                                 <td>{{ birthdays["name"] }}</td>
-                                <td>{{ birthdays["month"] }}/{{ birthdays["day"] }}
-                                    | <input type="button" value=" Remove ">
+                                <td>{{ birthdays["month"] }}/{{ birthdays["day"] }}</td>
+                                <td>
+                                    <form action="/remove" method="post">
+                                        <input name="id" type="hidden" value"">
+                                        <input type="submit" value=" Remove ">
+                                    </form>
                                 </td>
                             </tr>
                         {% endfor %}
