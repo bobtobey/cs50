@@ -59,7 +59,7 @@ button, input[type="submit"] {
 
 button:hover, input[type="submit"]:hover {
     background-color: #69b0f1;
-    border-color: #d9edff;
+    border-color: #000000;
 }
 
 input[type="text"], input[type="number"] {
