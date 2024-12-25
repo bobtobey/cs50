@@ -51,7 +51,7 @@ def index():
         if day < 1 or day > 31:
             return redirect("/")
 
-        # Insert Name and Birthday to db
+        # Insert Name and Birthday to db (variables) and then (placeholders ?x3) and (arguments)
         db.execute("INSERT INTO birthdays (name, month, day) VALUES(?, ?, ?)", name, month, day)
         return redirect("/")
 
