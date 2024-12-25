@@ -30,6 +30,10 @@ def index():
         name = request.form.get("name")
         if not name:
             return redirect("/")
+        try:
+            name = isalpha(name)
+        except ValueError:
+            return redirect("/")
 
         month = request.form.get("month")
         if not month:
