@@ -28,6 +28,10 @@ def index():
 
         # TODO: Add the user's entry into the database
         name = request.form.get("name")
+        name = request.form.get("month")
+        name = request.form.get("day")
+        # Remember registrant
+        db.execute("INSERT INTO registrants (name, sport) VALUES(?, ?)", name, sport)
         return redirect("/")
 
     else:
