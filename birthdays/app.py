@@ -33,7 +33,7 @@ def index():
     else:
 
         # TODO: Display the entries in the database on index.html
-        bdays = db.execute("SELECT * FROM bdays WHERE title LIKE ?", "%" + request.args.get("q") + "%")
+        bdays = db.execute("SELECT * FROM bdays")
 
         return render_template("index.html", bdays=bdays)
 
