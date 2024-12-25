@@ -24,13 +24,13 @@ def after_request(response):
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    if request.method == "POST":
+    # if request.method == "POST":
 
-        # TODO: Add the user's entry into the database
+    #     # TODO: Add the user's entry into the database
 
-        return redirect("/")
+    #     return redirect("/")
 
-    else:
+    # else:
 
         # TODO: Display the entries in the database on index.html
         birthdays = db.execute("SELECT * FROM birthdays")
