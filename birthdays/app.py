@@ -64,4 +64,11 @@ def index():
         # pass birthdays into the index.html
         return render_template("index.html", bdays=birthdays)
 
+@app.route("/remove", methods=["POST"])
+def remove():
+    # Remove birthday info
+    id = request.form.get("id")
+    if id:
+        db.execute("DELETE FROM birthdays WHERE id = ?", id)
+    return redirect("/")
 
