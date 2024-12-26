@@ -133,6 +133,8 @@ def register():
     # Insert username and Birthday to db (variables) and then (placeholders ?x2) and (arguments)
     db.execute("INSERT INTO birthdays (username, hash) VALUES(?, ?)", username, hash)
 
+    return render_template("register.html")
+
     # return apology("TODO")
 
 
