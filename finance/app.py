@@ -36,6 +36,13 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     # return apology("TODO")
+
+
+@app.route("/buy", methods=["GET", "POST"])
+@login_required
+def buy():
+    """Buy shares of stock"""
+    # return apology("TODO")
     # User reached route via POST - lookup and purchase stock
     if request.method == "POST":
         # Ensure symbol was submitted
@@ -52,13 +59,6 @@ def index():
     # User reached route via GET - display stock quote form
     else:
         return render_template("buy.html")
-
-
-@app.route("/buy", methods=["GET", "POST"])
-@login_required
-def buy():
-    """Buy shares of stock"""
-    return apology("TODO")
 
 
 @app.route("/history")
