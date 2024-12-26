@@ -53,7 +53,7 @@ def buy():
 
         if not shares:
             return apology("must provide number of shares", 403)
-
+        print(f"Shares: {shares}")
         try:
             shares = int(shares)
         except ValueError:
