@@ -47,6 +47,7 @@ def buy():
     if request.method == "POST":
         # Ensure symbol was submitted
         symbol = request.form.get("symbol")
+        shares = request.form.get("shares")
         if not symbol:
             return apology("must provide symbol", 403)
 
