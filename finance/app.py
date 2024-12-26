@@ -112,6 +112,9 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
+    # Insert Name and Birthday to db (variables) and then (placeholders ?x3) and (arguments)
+    db.execute("INSERT INTO birthdays (name, month, day) VALUES(?, ?, ?)", name, month, day)
+
     return apology("TODO")
 
 
