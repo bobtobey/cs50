@@ -74,14 +74,14 @@ def buy():
         # Ensure funds are available
         moneyavailable = rows[0]['cash']
         stockprice = quote['price']
-        stocktotalcost = stockprice * shares
-        if moneyavailable < stockprice:
+        totalstockprice = stockprice * shares
+        if moneyavailable < totalstockprice:
             return apology("Add funds to your account.", 403)
 
-        print(f"$: {moneyavailable}")
-        print(f"$: {stockprice}")
-        print(f"Stock Cost $: {stocktotalcost}")
-        print(f"Available {moneyavailable - stockprice}")
+        print(f"Avail $: {moneyavailable}")
+        print(f"Stock $: {stockprice}")
+        print(f"Total Stock Cost $: {totalstockprice}")
+        print(f"Available {moneyavailable - totalstockprice}")
         print(f"Symbol: {symbol}")
         print(f"Shares: {shares}")
         return render_template("buy.html", quote=quote)
