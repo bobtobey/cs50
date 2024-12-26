@@ -126,7 +126,7 @@ def register():
             return apology("must provide valid password", 403)
 
         # Confirm password match
-        elif not confirmation:
+        elif not confirmation match password:
             return apology("must provide password", 403)
 
         # Generate hash for password
