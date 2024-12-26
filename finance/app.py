@@ -71,8 +71,8 @@ def buy():
             "SELECT cash FROM users WHERE id = ?", session["user_id"]
         )
         # Ensure username exists
-        if len(moneyavailable) != 0:
-            return apology("username already exists", 403)
+        if len(moneyavailable) > 0:
+            return apology("Add funds to your account.", 403)
 
         print(f"User Id: {moneyavailable}")
         print(f"$: {symbol}")
