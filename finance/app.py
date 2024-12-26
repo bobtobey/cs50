@@ -74,11 +74,13 @@ def buy():
         # Ensure funds are available
         moneyavailable = rows[0]['cash']
         stockprice = quote['price']
+        stocktotalcost = stockprice * shares
         if moneyavailable < stockprice:
             return apology("Add funds to your account.", 403)
 
         print(f"$: {moneyavailable}")
         print(f"$: {stockprice}")
+        print(f"Stock Cost $: {stocktotalcost}")
         print(f"Available {moneyavailable - stockprice}")
         print(f"Symbol: {symbol}")
         print(f"Shares: {shares}")
