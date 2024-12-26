@@ -75,7 +75,9 @@ def buy():
         moneyavailable = rows[0]['cash']
         stockprice = quote['price']
         totalstockprice = stockprice * shares
-        if moneyavailable < totalstockprice:
+        if moneyavailable > totalstockprice:
+            print("ALL GO")
+        else:
             return apology("Add funds to your account.", 403)
 
         print(f"Avail $: {moneyavailable}")
