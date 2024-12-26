@@ -76,16 +76,16 @@ def buy():
         stockprice = quote['price']
         totalstockprice = stockprice * shares
         if moneyavailable > totalstockprice:
+            print(f"Avail $: {moneyavailable}")
+            print(f"Stock $: {stockprice}")
+            print(f"Total Stock Cost $: {totalstockprice}")
+            print(f"Available {moneyavailable - totalstockprice}")
             print("ALL GO")
+            # subtract fund from user cash on successful purchase
+            # buy stock and shares and id
         else:
             return apology("Add funds to your account.", 403)
 
-        print(f"Avail $: {moneyavailable}")
-        print(f"Stock $: {stockprice}")
-        print(f"Total Stock Cost $: {totalstockprice}")
-        print(f"Available {moneyavailable - totalstockprice}")
-        print(f"Symbol: {symbol}")
-        print(f"Shares: {shares}")
         return render_template("buy.html", quote=quote)
     # User reached route via GET - display stock quote form
     else:
