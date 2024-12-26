@@ -133,6 +133,7 @@ def register():
         rows = db.execute(
             "SELECT * FROM users WHERE username = ?", request.form.get("username")
         )
+        print(rows)
 
         # Generate hash for password
         hash = generate_password_hash(password)
