@@ -6,16 +6,16 @@
 
 {% block main %}
     <div>
-        {{ name }}
-        {{ price }}
         {{ symbol }}
+        {{ symbol["name"] }}
+        {{ symbol["price"] }}
+        {{ symbol["symbol"] }}
         <p>
             <!-- Loop through the symbol results to display them -->
             {% for symbols in symbol %}
-            {{ symbol }}
-                {{ symbols["name"] }}
-                {{ symbols["price"] }}
-                {{ symbols["symbol"] }}
+                {{ symbol["name"] }}
+                {{ symbol["price"] }}
+                {{ symbol["symbol"] }}
             {% endfor %}
         </p>
     </div>
