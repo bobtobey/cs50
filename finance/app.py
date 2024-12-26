@@ -109,6 +109,8 @@ def quote():
     # return apology("TODO")
     # User reached route via POST - lookup stock symbol and result
     if request.method == "POST":
+        # Ensure symbol was submitted
+        symbol = request.form.get("symbol")
 
         return render_template("quote.html")
     # User reached route via GET - display stock quote form
