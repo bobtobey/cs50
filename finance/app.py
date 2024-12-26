@@ -115,6 +115,7 @@ def register():
     # Ensure username was submitted
     username = request.form.get("username")
     password = request.form.get("password")
+    confirmation = request.form.get("confirmation")
     if not username or not username.isalpha():
         return apology("must provide valid username", 403)
 
@@ -123,7 +124,7 @@ def register():
         return apology("must provide password", 403)
 
     # Confirm password match
-    elif not password:
+    elif not confirmation:
         return apology("must provide password", 403)
 
     # Generate hash for password
