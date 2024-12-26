@@ -6,7 +6,14 @@
 
 {% block main %}
     <div>
-        <p></p>
+        <p>
+            <!-- Loop through the symbol results to display them -->
+            {% for symbols in symbol %}
+                {{ symbols["name"] }}
+                {{ symbols["price"] }}
+                {{ symbols["symbol"] }}
+            {% endfor %}
+        </p>
     </div>
     <div>
         <a class="nav-link" href="/quote">Get a new quote</a>
