@@ -133,8 +133,13 @@ def register():
         rows = db.execute(
             "SELECT * FROM users WHERE username = ?", request.form.get("username")
         )
-        print(rows)
-
+        # Ensure username exists and password is correct
+        if len(rows) != 1):
+            print(rows)
+            return apology("invalid username and/or password", 403)
+        else:
+            print("JOE")
+            
         # Generate hash for password
         hash = generate_password_hash(password)
 
