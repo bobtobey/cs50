@@ -35,7 +35,23 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    return apology("TODO")
+    # return apology("TODO")
+    # User reached route via POST - lookup and purchase stock
+    if request.method == "POST":
+        # Ensure symbol was submitted
+        symbol = request.form.get("symbol")
+        if not symbol:
+            return apology("must provide symbol", 403)
+
+        # look up valid symbol
+        quote = lookup(symbol)
+        if not quote:
+            return apology("must provide valid symbol", 403)
+
+        return render_template("buy.html", quote=quote)
+    # User reached route via GET - display stock quote form
+    else:
+        return render_template("buy.html")
 
 
 @app.route("/buy", methods=["GET", "POST"])
@@ -114,12 +130,10 @@ def quote():
         if not symbol:
             return apology("must provide symbol", 403)
 
-        # look up symbol
+        # look up valid symbol
         quote = lookup(symbol)
         if not quote:
             return apology("must provide valid symbol", 403)
-
-        print(quote)
 
         return render_template("quoted.html", quote=quote)
     # User reached route via GET - display stock quote form
