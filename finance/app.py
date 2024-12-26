@@ -134,7 +134,7 @@ def register():
             "SELECT * FROM users WHERE username = ?", request.form.get("username")
         )
         # Ensure username exists
-        if len(usercheck) != 1:
+        if len(usercheck) != 0:
             return apology("username already exists", 403)
 
         # Generate hash for password
