@@ -123,7 +123,7 @@ def register():
 
         # Ensure password was submitted
         elif not password:
-            return apology("must provide password", 403)
+            return apology("must provide valid password", 403)
 
         # Confirm password match
         elif not confirmation:
