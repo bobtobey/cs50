@@ -71,8 +71,8 @@ def buy():
             "SELECT * FROM users WHERE id = ?", session["user_id"]
         )
         # Ensure username exists
-        # if moneyavailable > 0:
-        #     return apology("Add funds to your account.", 403)
+        if moneyavailable > 0:
+            return apology("Add funds to your account.", 403)
 
         print(f"Cash: {rows[0]['cash']}")
         print(f"Cash: {rows}")
