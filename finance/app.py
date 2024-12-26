@@ -48,6 +48,7 @@ def buy():
         # Ensure symbol was submitted
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
+        print("TEST")
         print(f"Symbol: {symbol}")
         print(f"Shares: {shares}")
         if not symbol:
