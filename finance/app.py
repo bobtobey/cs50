@@ -74,7 +74,7 @@ def buy():
         # if len(moneyavailable) != 0:
         #     return apology("username already exists", 403)
 
-        print(f"User Id: {session["user_id"]}")
+        print(f"User Id: {session["user_id"].cash}")
         print(f"Symbol: {symbol}")
         print(f"Shares: {shares}")
         return render_template("buy.html", quote=quote)
