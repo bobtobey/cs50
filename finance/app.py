@@ -116,6 +116,7 @@ def register():
     if request.method == "POST":
         # Ensure username was submitted
         username = request.form.get("username")
+        password = request.form.get("password")
         if not username or not username.isalpha():
             return apology("must provide valid username", 403)
         # Ensure password was submitted
