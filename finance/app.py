@@ -112,6 +112,7 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
+    # return apology("TODO")
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
         # Ensure username was submitted
@@ -147,12 +148,11 @@ def register():
         # Insert username and Birthday to db (variables) and then (placeholders ?x2) and (arguments)
         db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hash)
 
+        # Go to login page
         return render_template("login.html")
     # User reached route via GET and needs to register for site
     else:
         return render_template("register.html")
-
-    # return apology("TODO")
 
 
 @app.route("/sell", methods=["GET", "POST"])
