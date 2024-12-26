@@ -120,8 +120,8 @@ def register():
         if not username or not username.isalpha():
             return apology("must provide valid username", 403)
         # Ensure password was submitted
-        elif not request.form.get("password"):
-            return apology("must provide password", 403)
+        elif not password:
+            return apology("must provide valid password", 403)
 
     # Insert username and hash to db (variables) and then (placeholders ?x2) and (arguments)
     # db.execute("INSERT INTO finance (username, hash) VALUES(?, ?)", username, hash)
