@@ -112,27 +112,20 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
-    # User reached route via POST (as by submitting a form via POST)
-    if request.method == "POST":
-        # Ensure username was submitted
-        username = request.form.get("username")
-        password = request.form.get("password")
-        if not username or not username.isalpha():
-            return apology("must provide valid username", 403)
-        # Ensure password was submitted
-        elif not password:
-            return apology("must provide valid password", 403)
+    # Ensure username was submitted
+    username = request.form.get("username")
+    password = request.form.get("password")
+    if not username or not username.isalpha():
+        return apology("must provide valid username", 403)
+    # Ensure password was submitted
+    elif not password:
+        return apology("must provide valid password", 403)
 
-        # generate hash for password
-        hash = generate_password_hash(password)
-        
-        # Insert username and hash to db (variables) and then (placeholders ?x2) and (arguments)
-        db.execute("INSERT INTO finance (username, hash) VALUES(?, ?)", username, hash)
+    # generate hash for password
+    hash = generate_password_hash(password)
 
-    # User reached route via GET (as by clicking a link or via redirect)
-    else:
-        # return render_template("login.html")
-        return apology("TODO")
+    # Insert username and hash to db (variables) and then (placeholders ?x2) and (arguments)
+    db.execute("INSERT INTO finance (username, hash) VALUES(?, ?)", username, hash)
 
 
 @app.route("/sell", methods=["GET", "POST"])
