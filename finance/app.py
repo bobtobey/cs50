@@ -74,9 +74,8 @@ def buy():
         # if moneyavailable > 0:
         #     return apology("Add funds to your account.", 403)
 
+        print(f"Cash: {rows[0]['cash']}")
         print(f"Cash: {rows}")
-        print(f"Cash: {rows[0]["cash"]}")
-        print(f"Username: {rows[0]["username"]}")
         print(f"$: {symbol}")
         print(f"Symbol: {symbol}")
         print(f"Shares: {shares}")
