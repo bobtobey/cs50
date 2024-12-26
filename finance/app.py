@@ -139,7 +139,7 @@ def register():
         # db.execute("INSERT INTO birthdays (username, hash) VALUES(?, ?)", username, hash)
 
         return render_template("register.html")
-    # User reached route via GET (as by clicking a link or via redirect)
+    # User reached route via GET and needs to register for site
     else:
         return render_template("register.html")
 
