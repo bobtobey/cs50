@@ -67,13 +67,14 @@ def buy():
             return apology("must provide valid symbol", 403)
 
         # Check database for username
-        moneyavailable = db.execute(
-            "SELECT * FROM users WHERE username = ?", request.form.get("username")
-        )
+        # moneyavailable = db.execute(
+        #     "SELECT * FROM users WHERE username = ?", request.form.get("username")
+        # )
         # Ensure username exists
-        if len(moneyavailable) != 0:
-            return apology("username already exists", 403)
+        # if len(moneyavailable) != 0:
+        #     return apology("username already exists", 403)
 
+        print(f"User Id: {session["user_id"]}")
         print(f"Symbol: {symbol}")
         print(f"Shares: {shares}")
         return render_template("buy.html", quote=quote)
