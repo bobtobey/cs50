@@ -139,11 +139,12 @@ def register():
             return apology("invalid username and/or password", 403)
         else:
             print(len(rows))
-            print("JOE")
+            print("JOE?")
 
         # Generate hash for password
         hash = generate_password_hash(password)
 
+        print("test")
         print(username)
         print(password)
         print(hash)
