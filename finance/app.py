@@ -130,16 +130,13 @@ def register():
             return apology("must provide matching passwords", 403)
 
         # Check database for username
-        rows = db.execute(
+        user = db.execute(
             "SELECT * FROM users WHERE username = ?", request.form.get("username")
         )
         # Ensure username exists and password is correct
         if len(rows) != 1:
             print(len(rows))
             return apology("invalid username and/or password", 403)
-        else:
-            print(len(rows))
-            print("JOE?")
 
         # Generate hash for password
         hash = generate_password_hash(password)
