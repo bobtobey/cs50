@@ -50,7 +50,8 @@ def buy():
         shares = request.form.get("shares")
         if not symbol:
             return apology("must provide symbol", 403)
-        elif not shares:
+        
+        if not shares:
             return apology("must provide number of shares", 403)
 
         # look up valid symbol
