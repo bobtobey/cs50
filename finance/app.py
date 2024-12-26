@@ -113,7 +113,7 @@ def quote():
 def register():
     """Register user"""
     # Insert username and hash to db (variables) and then (placeholders ?x2) and (arguments)
-    db.execute("INSERT INTO finance (username, hash) VALUES(?, ?)", username, hash)
+    # db.execute("INSERT INTO finance (username, hash) VALUES(?, ?)", username, hash)
 
     return apology("TODO")
 
