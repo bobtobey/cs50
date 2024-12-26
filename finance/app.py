@@ -123,8 +123,8 @@ def register():
         elif not password:
             return apology("must provide valid password", 403)
 
-    # Insert username and hash to db (variables) and then (placeholders ?x2) and (arguments)
-    # db.execute("INSERT INTO finance (username, hash) VALUES(?, ?)", username, hash)
+        # Insert username and hash to db (variables) and then (placeholders ?x2) and (arguments)
+        db.execute("INSERT INTO finance (username, hash) VALUES(?, ?)", username, hash)
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
