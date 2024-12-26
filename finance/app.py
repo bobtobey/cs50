@@ -113,19 +113,8 @@ def quote():
 def register():
     """Register user"""
     # Ensure username was submitted
-    username = request.form.get("username")
-    password = request.form.get("password")
-    if not username or not username.isalpha():
-        return apology("must provide valid username", 403)
-    # Ensure password was submitted
-    elif not password:
-        return apology("must provide valid password", 403)
-
-    # generate hash for password
-    hash = generate_password_hash(password)
-
-    # Insert username and hash to db (variables) and then (placeholders ?x2) and (arguments)
-    db.execute("INSERT INTO finance (username, hash) VALUES(?, ?)", username, hash)
+    
+    # return apology("TODO")
 
 
 @app.route("/sell", methods=["GET", "POST"])
