@@ -66,11 +66,12 @@ def buy():
         if not quote:
             return apology("must provide valid symbol", 403)
 
-        # Check database for username
+        # Check database
         rows = db.execute(
             "SELECT * FROM users WHERE id = ?", session["user_id"]
         )
-        # Ensure username exists
+        
+        # Ensure funds are available
         if moneyavailable > 0:
             return apology("Add funds to your account.", 403)
 
