@@ -77,7 +77,7 @@ def buy():
             return apology("Add funds to your account.", 403)
 
         print(f"Cash: {rows[0]['cash']}")
-        print(f"quote: {quote}")
+        print(f"quote: {quote['price']}")
         print(f"$: {moneyavailable}")
         print(f"Symbol: {symbol}")
         print(f"Shares: {shares}")
