@@ -67,16 +67,16 @@ def buy():
             return apology("must provide valid symbol", 403)
 
         # Check database for username
-        moneyavailable = db.execute(
-            "SELECT cash, username FROM users WHERE id = ?", session["user_id"]
+        row = db.execute(
+            "SELECT * FROM users WHERE id = ?", session["user_id"]
         )
         # Ensure username exists
         # if moneyavailable > 0:
         #     return apology("Add funds to your account.", 403)
 
-        print(f"Cash: {moneyavailable}")
-        print(f"Cash: {moneyavailable[0]["cash"]}")
-        print(f"Username: {moneyavailable[0]["username"]}")
+        print(f"Cash: {row}")
+        print(f"Cash: {row[0]["cash"]}")
+        print(f"Username: {row[0]["username"]}")
         print(f"$: {symbol}")
         print(f"Symbol: {symbol}")
         print(f"Shares: {shares}")
