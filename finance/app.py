@@ -68,13 +68,14 @@ def buy():
 
         # Check database for username
         moneyavailable = db.execute(
-            "SELECT * FROM users WHERE username = ?", request.form.get("username")
+            "SELECT * FROM users WHERE username = session["user_id"]", request.form.get("username")
         )
         # Ensure username exists
         # if len(moneyavailable) != 0:
         #     return apology("username already exists", 403)
 
-        print(f"User Id: {session["user_id"]}")
+        print(f"User Id: {moneyavailable}")
+        print(f"$: {symbol}")
         print(f"Symbol: {symbol}")
         print(f"Shares: {shares}")
         return render_template("buy.html", quote=quote)
