@@ -112,12 +112,11 @@ def quote():
         # Ensure symbol was submitted
         symbol = request.form.get("symbol")
         if not symbol:
-            return apology("must provide valid symbol", 403)
+            return apology("must provide symbol", 403)
 
         # look up symbol
-        try:
-            quote = lookup(symbol)
-        except ValueError:
+        quote = lookup(symbol)
+        if not quote:
             return apology("must provide valid symbol", 403)
 
         print(quote)
