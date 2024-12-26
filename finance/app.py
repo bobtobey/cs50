@@ -118,7 +118,7 @@ def quote():
         quote = lookup(symbol)
         print(quote)
 
-        return render_template("quoted.html", symbol=quote)
+        return render_template("quoted.html", quote=quote)
     # User reached route via GET - display stock quote form
     else:
         return render_template("quote.html")
