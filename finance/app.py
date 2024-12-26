@@ -111,9 +111,12 @@ def quote():
     if request.method == "POST":
         # Ensure symbol was submitted
         symbol = request.form.get("symbol")
+        if not symbol:
             return apology("must provide valid symbol", 403)
 
         # look up symbol
+        quote = lookup(symbol)
+        print(quote)
 
         return render_template("quote.html")
     # User reached route via GET - display stock quote form
