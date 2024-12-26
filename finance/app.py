@@ -73,7 +73,7 @@ def buy():
 
         # Ensure funds are available
         moneyavailable = rows[0]['cash'];
-        if moneyavailable > 0:
+        if moneyavailable < 0:
             return apology("Add funds to your account.", 403)
 
         print(f"Cash: {rows[0]['cash']}")
