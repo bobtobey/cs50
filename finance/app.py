@@ -66,6 +66,14 @@ def buy():
         if not quote:
             return apology("must provide valid symbol", 403)
 
+        # Check database for username
+        moneyavailable = db.execute(
+            "SELECT * FROM users WHERE username = ?", request.form.get("username")
+        )
+        # Ensure username exists
+        if len(moneyavailable) != 0:
+            return apology("username already exists", 403)
+
         print(f"Symbol: {symbol}")
         print(f"Shares: {shares}")
         return render_template("buy.html", quote=quote)
@@ -186,10 +194,6 @@ def register():
         # Generate hash for password
         hash = generate_password_hash(password)
 
-        print("test")
-        print(username)
-        print(password)
-        print(hash)
         # Insert username and Birthday to db (variables) and then (placeholders ?x2) and (arguments)
         db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hash)
 
