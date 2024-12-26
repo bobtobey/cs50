@@ -68,13 +68,15 @@ def buy():
 
         # Check database for username
         moneyavailable = db.execute(
-            "SELECT cash FROM users WHERE id = ?", session["user_id"]
+            "SELECT * FROM users WHERE id = ?", session["user_id"]
         )
         # Ensure username exists
         # if moneyavailable > 0:
         #     return apology("Add funds to your account.", 403)
 
+        print(f"Cash: {moneyavailable}")
         print(f"Cash: {moneyavailable[0]["cash"]}")
+        print(f"Cash: {moneyavailable[0]["username"]}")
         print(f"$: {symbol}")
         print(f"Symbol: {symbol}")
         print(f"Shares: {shares}")
