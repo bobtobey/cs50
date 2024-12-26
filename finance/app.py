@@ -112,9 +112,13 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
-    username = request.form.get("username")
-    if not name or not name.isalpha():
+    # User reached route via POST (as by submitting a form via POST)
+    if request.method == "POST":
+        # Ensure username was submitted
+        username = request.form.get("username")
+        if not name or not name.isalpha():
         return redirect("/")
+    
     # Insert username and hash to db (variables) and then (placeholders ?x2) and (arguments)
     # db.execute("INSERT INTO finance (username, hash) VALUES(?, ?)", username, hash)
 
