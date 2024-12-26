@@ -68,7 +68,7 @@ def buy():
 
         # Check database for username
         moneyavailable = db.execute(
-            "SELECT * FROM users WHERE username = session["user_id"]", request.form.get("username")
+            "SELECT * FROM users WHERE username = session["user_id"]"
         )
         # Ensure username exists
         # if len(moneyavailable) != 0:
