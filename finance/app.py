@@ -79,7 +79,7 @@ def buy():
 
         print(f"$: {moneyavailable}")
         print(f"$: {stockprice}")
-        print(f"Available {Xx})
+        print(f"Available {moneyavailable - stockprice})
         print(f"Symbol: {symbol}")
         print(f"Shares: {shares}")
         return render_template("buy.html", quote=quote)
