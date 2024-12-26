@@ -123,6 +123,9 @@ def register():
         elif not password:
             return apology("must provide valid password", 403)
 
+        # generate hash for password
+        hash = generate_password_hash(password)
+        
         # Insert username and hash to db (variables) and then (placeholders ?x2) and (arguments)
         db.execute("INSERT INTO finance (username, hash) VALUES(?, ?)", username, hash)
 
