@@ -118,11 +118,14 @@ def register():
         username = request.form.get("username")
         if not name or not name.isalpha():
         return redirect("/")
-    
+
     # Insert username and hash to db (variables) and then (placeholders ?x2) and (arguments)
     # db.execute("INSERT INTO finance (username, hash) VALUES(?, ?)", username, hash)
 
-    return apology("TODO")
+    # User reached route via GET (as by clicking a link or via redirect)
+    else:
+        # return render_template("login.html")
+        return apology("TODO")
 
 
 @app.route("/sell", methods=["GET", "POST"])
