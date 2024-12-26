@@ -76,7 +76,7 @@ def buy():
 
         print(f"Cash: {moneyavailable}")
         print(f"Cash: {moneyavailable[0]["cash"]}")
-        print(f"Cash: {moneyavailable[0]["username"]}")
+        print(f"Username: {moneyavailable[0]["username"]}")
         print(f"$: {symbol}")
         print(f"Symbol: {symbol}")
         print(f"Shares: {shares}")
