@@ -113,25 +113,25 @@ def quote():
 def register():
     """Register user"""
     # Ensure username was submitted
-    username = request.form.get("username")
-    password = request.form.get("password")
-    confirmation = request.form.get("confirmation")
-    if not username or not username.isalpha():
-        return apology("must provide valid username", 403)
+    # username = request.form.get("username")
+    # password = request.form.get("password")
+    # confirmation = request.form.get("confirmation")
+    # if not username or not username.isalpha():
+    #     return apology("must provide valid username", 403)
 
-    # Ensure password was submitted
-    elif not password:
-        return apology("must provide password", 403)
+    # # Ensure password was submitted
+    # elif not password:
+    #     return apology("must provide password", 403)
 
-    # Confirm password match
-    elif not confirmation:
-        return apology("must provide password", 403)
+    # # Confirm password match
+    # elif not confirmation:
+    #     return apology("must provide password", 403)
 
-    # Generate hash for password
-    hash = generate_password_hash(password)
+    # # Generate hash for password
+    # hash = generate_password_hash(password)
 
-    # Insert username and Birthday to db (variables) and then (placeholders ?x2) and (arguments)
-    db.execute("INSERT INTO birthdays (username, hash) VALUES(?, ?)", username, hash)
+    # # Insert username and Birthday to db (variables) and then (placeholders ?x2) and (arguments)
+    # db.execute("INSERT INTO birthdays (username, hash) VALUES(?, ?)", username, hash)
 
     return render_template("register.html")
 
