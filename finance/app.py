@@ -113,7 +113,14 @@ def quote():
 def register():
     """Register user"""
     # Ensure username was submitted
-    
+    username = request.form.get("username")
+    name = request.form.get("name")
+    if not username or not username.isalpha():
+            return apology("must provide username", 403)
+
+    # Insert username and Birthday to db (variables) and then (placeholders ?x2) and (arguments)
+    db.execute("INSERT INTO birthdays (username, hash) VALUES(?, ?)", username, hash)
+
     # return apology("TODO")
 
 
