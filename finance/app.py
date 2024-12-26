@@ -48,13 +48,14 @@ def buy():
         # Ensure symbol was submitted
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
+        print(f"Symbol: {symbol}")
+        print(f"Shares: {shares}")
         if not symbol:
             return apology("must provide symbol", 403)
 
         if not shares:
             return apology("must provide number of shares", 403)
-        
-        print(f"Shares: {shares}")
+
 
         try:
             shares = int(shares)
