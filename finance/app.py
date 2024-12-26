@@ -111,7 +111,7 @@ def quote():
     if request.method == "POST":
         # Ensure symbol was submitted
         symbol = request.form.get("symbol")
-        if not symbol:
+        if not symbol or not symbol.isalpha():
             return apology("must provide valid symbol", 403)
 
         # look up symbol
