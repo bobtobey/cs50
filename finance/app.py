@@ -58,6 +58,8 @@ def buy():
             shares = int(shares)
         except ValueError:
             return apology("must provide number of shares", 403)
+        if shares < 1:
+            return apology("must provide positive amount of shares", 403)
 
         # look up valid symbol
         quote = lookup(symbol)
