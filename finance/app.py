@@ -133,7 +133,7 @@ def register():
         usercheck = db.execute(
             "SELECT * FROM users WHERE username = ?", request.form.get("username")
         )
-        # Ensure username exists and password is correct
+        # Ensure username exists
         if len(usercheck) != 1:
             print(len(usercheck))
             return apology("username already exists", 403)
