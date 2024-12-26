@@ -70,14 +70,15 @@ def buy():
         rows = db.execute(
             "SELECT * FROM users WHERE id = ?", session["user_id"]
         )
-        
+
         # Ensure funds are available
+        moneyavailable = rows[0]['cash'];
         if moneyavailable > 0:
             return apology("Add funds to your account.", 403)
 
         print(f"Cash: {rows[0]['cash']}")
         print(f"Cash: {rows}")
-        print(f"$: {symbol}")
+        print(f"$: {moneyavailable}")
         print(f"Symbol: {symbol}")
         print(f"Shares: {shares}")
         return render_template("buy.html", quote=quote)
