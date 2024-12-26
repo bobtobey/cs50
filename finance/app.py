@@ -129,6 +129,11 @@ def register():
         elif password != confirmation:
             return apology("must provide matching passwords", 403)
 
+        # Check database for username
+        rows = db.execute(
+            "SELECT * FROM users WHERE username = ?", request.form.get("username")
+        )
+
         # Generate hash for password
         hash = generate_password_hash(password)
 
