@@ -115,7 +115,11 @@ def quote():
             return apology("must provide valid symbol", 403)
 
         # look up symbol
-        quote = lookup(symbol)
+        try:
+            quote = lookup(symbol)
+        except ValueError:
+            return apology("must provide valid symbol", 403)
+
         print(quote)
 
         return render_template("quoted.html", quote=quote)
