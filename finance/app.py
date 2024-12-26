@@ -135,7 +135,6 @@ def register():
         )
         # Ensure username exists
         if len(usercheck) != 1:
-            print(len(usercheck))
             return apology("username already exists", 403)
 
         # Generate hash for password
