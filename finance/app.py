@@ -71,10 +71,10 @@ def buy():
             "SELECT cash FROM users WHERE id = ?", session["user_id"]
         )
         # Ensure username exists
-        if len(moneyavailable) > 0:
-            return apology("Add funds to your account.", 403)
+        # if moneyavailable > 0:
+        #     return apology("Add funds to your account.", 403)
 
-        print(f"User Id: {moneyavailable}")
+        print(f"Cash: {moneyavailable}")
         print(f"$: {symbol}")
         print(f"Symbol: {symbol}")
         print(f"Shares: {shares}")
