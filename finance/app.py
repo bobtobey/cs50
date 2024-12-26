@@ -53,7 +53,7 @@ def buy():
 
         if not shares:
             return apology("must provide number of shares", 403)
-        print(f"Shares: {shares}")
+
         try:
             shares = int(shares)
         except ValueError:
@@ -66,6 +66,8 @@ def buy():
         if not quote:
             return apology("must provide valid symbol", 403)
 
+        print(f"Symbol: {symbol}")
+        print(f"Shares: {shares}")
         return render_template("buy.html", quote=quote)
     # User reached route via GET - display stock quote form
     else:
