@@ -132,8 +132,11 @@ def register():
         # Generate hash for password
         hash = generate_password_hash(password)
 
+        print(username)
+        print(password)
+        print(hash)
         # Insert username and Birthday to db (variables) and then (placeholders ?x2) and (arguments)
-        db.execute("INSERT INTO birthdays (username, hash) VALUES(?, ?)", username, hash)
+        # db.execute("INSERT INTO birthdays (username, hash) VALUES(?, ?)", username, hash)
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
