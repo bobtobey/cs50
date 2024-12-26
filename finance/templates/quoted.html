@@ -6,11 +6,8 @@
 
 {% block main %}
     <div>
-        {{ symbol }}
-        {{ symbol["name"] }}
-        {{ symbol["price"] }}
-        {{ symbol["symbol"] }}
         <p>
+            A share of {{ symbol["name"] }}, {{ symbol["symbol"] }} costs {{ symbol["price"] }}.
         </p>
     </div>
     <div>
