@@ -18,16 +18,12 @@
             </thead>
             <tbody>
                 <!-- Loop through the database entries to display stock transactions in this table -->
-                {% for birthdays in transaction_list %}
+                {% for transactions in transaction_list %}
                     <tr>
-                        <td>{{ birthdays["name"] }}</td>
-                        <td>{{ birthdays["month"] }}/{{ birthdays["day"] }}</td>
-                        <td>
-                            <form action="/remove" method="post">
-                                <input name="id" type="hidden" value="{{ birthdays["id"] }}">
-                                <input type="submit" value="Remove">
-                            </form>
-                        </td>
+                        <td>{{ transactions.symbol }}</td>
+                        <td>{{ transactions.shares }}</td>
+                        <td>{{ transactions.price }}</td>
+                        <td>{{ transactions.total_cost }}</td>
                     </tr>
                 {% endfor %}
             </tbody>
