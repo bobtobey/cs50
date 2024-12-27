@@ -325,7 +325,7 @@ def sell():
 
                 # SELL stock and insert details into transactions db (variables) and then (placeholders ?x2) and (arguments)
                 db.execute("INSERT INTO transactions (symbol, shares, price, total_cost, transaction_type, user_id) VALUES(?, ?, ?, ?, ?, ?)"
-                        , symbol, shares, price, total_cost, transaction_type, session["user_id"])
+                        , symbol, -shares, price, total_cost, transaction_type, session["user_id"])
 
                 # SUBTRACT stock and shares details from portfolio db (variables) and then (placeholders ?x2) and (arguments)
 
@@ -343,7 +343,7 @@ def sell():
 
                 # Commit Transaction
                 db.execute("COMMIT")
-            except:
+            except Exception as e:
                 db.execute("ROLLBACK")
                 return apology("Transaction failed.", 403)
         else:
