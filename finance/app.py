@@ -317,38 +317,40 @@ def sell():
         print(f"total shares: {total_shares_owned} and {symbol} and {shares}")
         # Execute
         if total_shares_owned > shares:
-        try:
-            db.execute("BEGIN TRANSACTION")
-            transaction_type = "SELL"
+            try:
+                db.execute("BEGIN TRANSACTION")
+                transaction_type = "SELL"
 
-            # add funds to user cash on successful sell
-            db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", total_cost, session["user_id"])
+                # add funds to user cash on successful sell
+                db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", total_cost, session["user_id"])
 
-            # SELL stock and insert details into transactions db (variables) and then (placeholders ?x2) and (arguments)
-            db.execute("INSERT INTO transactions (symbol, shares, price, total_cost, transaction_type, user_id) VALUES(?, ?, ?, ?, ?, ?)"
-                    , symbol, shares, price, total_cost, transaction_type, session["user_id"])
+                # SELL stock and insert details into transactions db (variables) and then (placeholders ?x2) and (arguments)
+                db.execute("INSERT INTO transactions (symbol, shares, price, total_cost, transaction_type, user_id) VALUES(?, ?, ?, ?, ?, ?)"
+                        , symbol, shares, price, total_cost, transaction_type, session["user_id"])
 
-            # SUBTRACT stock and shares details from portfolio db (variables) and then (placeholders ?x2) and (arguments)
-            portfolio_row = db.execute("SELECT shares FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
-            print(f"Test: {portfolio_row} and {symbol}")
-            if len(portfolio_row) == 0:
-                print(f"len 1: {len(portfolio_row)}")
-                # Stock not in portfolio insert in db
-                db.execute("INSERT INTO portfolio (symbol, shares, user_id) VALUES(?, ?, ?)"
-                        , symbol, shares, session["user_id"])
-            else:
-                # Stock in portfolio update shares
-                print(f"len 4: {len(portfolio_row)}")
-                current_shares = portfolio_row[0]["shares"]
-                new_shares = current_shares - shares
-                db.execute("UPDATE portfolio SET shares = ? WHERE user_id = ? AND symbol = ?"
-                        , new_shares, session["user_id"], symbol)
+                # SUBTRACT stock and shares details from portfolio db (variables) and then (placeholders ?x2) and (arguments)
+                portfolio_row = db.execute("SELECT shares FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
+                print(f"Test: {portfolio_row} and {symbol}")
+                if len(portfolio_row) == 0:
+                    print(f"len 1: {len(portfolio_row)}")
+                    # Stock not in portfolio insert in db
+                    db.execute("INSERT INTO portfolio (symbol, shares, user_id) VALUES(?, ?, ?)"
+                            , symbol, shares, session["user_id"])
+                else:
+                    # Stock in portfolio update shares
+                    print(f"len 4: {len(portfolio_row)}")
+                    current_shares = portfolio_row[0]["shares"]
+                    new_shares = current_shares - shares
+                    db.execute("UPDATE portfolio SET shares = ? WHERE user_id = ? AND symbol = ?"
+                            , new_shares, session["user_id"], symbol)
 
-            # Commit Transaction
-            db.execute("COMMIT")
-        except:
-            db.execute("ROLLBACK")
-            return apology("Transaction failed.", 403)
+                # Commit Transaction
+                db.execute("COMMIT")
+            except:
+                db.execute("ROLLBACK")
+                return apology("Transaction failed.", 403)
+        else:
+            return apology("Add funds to your account.", 403)
 
         # return render_template("sell.html", symbols=symbols)
     # User reached route via GET - display stock sell form
