@@ -350,6 +350,8 @@ def sell():
         else:
             return apology("Not enough shares in your account.", 403)
 
+        # Redirect to homepage after successful buy
+        return redirect(url_for("index", success=True))
         # return render_template("sell.html", symbols=symbols)
     # User reached route via GET - display stock sell form
     else:
