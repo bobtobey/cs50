@@ -139,6 +139,7 @@ def buy():
         return redirect(url_for("index", success=True))
     # User reached route via GET - display stock buy form
     else:
+        symbol = 'T'
         portfolio_row = db.execute("SELECT shares FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
         print(f"Test: {portfolio_row}")
         return render_template("buy.html")
