@@ -101,7 +101,7 @@ def buy():
         else:
             return apology("Add funds to your account.", 403)
 
-        return render_template("buy.html", success=success)
+        return render_template("index.html", success=success)
     # User reached route via GET - display stock quote form
     else:
         return render_template("buy.html")
