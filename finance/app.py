@@ -350,7 +350,7 @@ def sell():
                 db.execute("ROLLBACK")
                 return apology("Transaction failed.", 403)
         else:
-            return apology("Add funds to your account.", 403)
+            return apology("Not enough shares in your account.", 403)
 
         # return render_template("sell.html", symbols=symbols)
     # User reached route via GET - display stock sell form
