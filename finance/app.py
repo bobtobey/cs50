@@ -304,6 +304,11 @@ def sell():
 
         # look up current stock info
         quote = lookup(symbol)
+        
+        price = quote['price']
+        # calculate total stock price
+        total_cost = price * shares
+        # Execute
 
     # User reached route via GET - display stock sell form
     else:
