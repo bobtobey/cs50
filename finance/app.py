@@ -311,7 +311,7 @@ def sell():
         total_cost = price * shares
         # Check database for total shares to sell
         total_shares = db.execute("SELECT shares FROM portfolio WHERE id = ? AND shares = ?", session["user_id"], shares)
-        print(f"total shares: {total_shares['shares']}")
+        print(f"total shares: {shares} and {symbol}")
         # Execute
         # try:
         #     db.execute("BEGIN TRANSACTION")
