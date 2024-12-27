@@ -323,7 +323,7 @@ def sell():
             db.execute("INSERT INTO transactions (symbol, shares, price, total_cost, transaction_type, user_id) VALUES(?, ?, ?, ?, ?, ?)"
                     , symbol, shares, price, total_cost, transaction_type, session["user_id"])
 
-            # ADD stock and shares details into portfolio db (variables) and then (placeholders ?x2) and (arguments)
+            # SUBTRACT stock and shares details from portfolio db (variables) and then (placeholders ?x2) and (arguments)
             portfolio_row = db.execute("SELECT shares FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
             print(f"Test: {portfolio_row} and {symbol}")
             if len(portfolio_row) == 0:
