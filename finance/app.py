@@ -36,7 +36,7 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     # return apology("TODO")
-    # SQL select all transactions from DB
+    # SQL select symbol, shares, current price, total value data from DB
     transactions = db.execute("SELECT * FROM transactions")
 
     success = request.args.get("success", False)
