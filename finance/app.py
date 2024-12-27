@@ -338,10 +338,8 @@ def sell():
                 else:
                     # Stock in portfolio update shares
                     print(f"len 4: {len(portfolio_row)}")
-                    current_shares = portfolio_row[0]["shares"]
-                    new_shares = current_shares - shares
                     db.execute("UPDATE portfolio SET shares = ? WHERE user_id = ? AND symbol = ?"
-                            , new_shares, session["user_id"], symbol)
+                            , total_shares_remaining, session["user_id"], symbol)
 
                 # Commit Transaction
                 db.execute("COMMIT")
