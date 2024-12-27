@@ -88,7 +88,7 @@ def buy():
             )
 
             # BUY stock and insert transaction details to db (variables) and then (placeholders ?x2) and (arguments)
-            db.execute("INSERT INTO transactions (symbol, shares, price, total_cost, transaction_type, timestamp, user_id) VALUES(?, ?, ?, ?, ?, ?, ?)"
+            db.execute("INSERT INTO transactions (symbol, shares, price, total_cost, transaction_type, user_id) VALUES(?, ?, ?, ?, ?, ?)"
                        , symbol
                        , shares
                        , price
