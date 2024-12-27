@@ -111,7 +111,7 @@ def buy():
 
         # Redirect to homepage after successful buy
         return redirect(url_for("index", success=True))
-    # User reached route via GET - display stock quote form
+    # User reached route via GET - display stock buy form
     else:
         return render_template("buy.html")
 
@@ -120,7 +120,14 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    return apology("TODO")
+    # return apology("TODO")
+    # SQL select symbol/shares/price/time-date transaction details from DB
+    transactions = db.execute("SELECT * FROM transactions")
+
+    # get db column names from table
+    headers = ["Symbol", "Shares", "Price", "Transacted"]
+    # pass transactions into the index.html
+    return render_template("history.html", transactions=transactions, headers=headers)
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -242,4 +249,23 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    return apology("TODO")
+    # return apology("TODO")
+    symbols = db.execute("SELECT symbol FROM portfolio")
+    print(symbols)
+    # User reached route via POST - lookup and purchase stock
+    if request.method == "POST":
+        # Ensure valid shares were submitted
+        shares = request.form.get("shares")
+        if not shares:
+            return apology("must provide number of shares", 403)
+
+        try:
+            shares = int(shares)
+        except ValueError:
+            return apology("must provide number of shares", 403)
+        if shares < 1:
+            return apology("must provide positive amount of shares", 403)
+
+    # User reached route via GET - display stock sell form
+    else:
+        return render_template("sell.html", symbols=symbols)
