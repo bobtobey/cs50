@@ -302,6 +302,9 @@ def sell():
         if shares < 1:
             return apology("must provide positive amount of shares", 403)
 
+        # look up current stock info
+        quote = lookup(symbol)
+
     # User reached route via GET - display stock sell form
     else:
         return render_template("sell.html", symbols=symbols)
