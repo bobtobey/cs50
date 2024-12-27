@@ -38,8 +38,16 @@ def index():
     # return apology("TODO")
     # SQL select symbol, shares, current price, total value data from DB
     portfolio_rows = db.execute("SELECT symbol, shares FROM portfolio")
+
+    # store current values by looping through db list
     stocks = []
-    current_price = lookup(symbol)
+    for portfolio_row in portfolio_rows:
+        symbol = portfolio_row["symbol"]
+        shares = portfolio_row["shares"]
+        current_price = lookup(symbol)
+        total_value = shares * current_price
+        stocks.append({"symbol": symbol, "shares": shares, "current_price": current_price, "total_value": total_value})
+    # hide buy success message when in POST
     success = request.args.get("success", False)
     # get db column names from table
     headers = ["Symbol", "Shares", "Price", "Total"]
