@@ -70,11 +70,11 @@ def buy():
         rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
 
         # Ensure funds are available
-        transaction_type = "BUY"
         moneyavailable = rows[0]['cash']
         price = quote['price']
         total_cost = price * shares
         if moneyavailable > total_cost:
+            transaction_type = "BUY"
             print(f"Avail $: {moneyavailable}")
             print(f"Stock $: {price}")
             print(f"Total Stock Cost $: {total_cost}")
