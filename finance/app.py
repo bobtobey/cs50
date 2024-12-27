@@ -40,7 +40,7 @@ def index():
     transactions = db.execute("SELECT * FROM transactions")
 
     # pass birthdays into the index.html
-    return render_template("index.html", transaction_list=transactions)
+    return render_template("index.html", transactions=transactions)
 
 
 @app.route("/buy", methods=["GET", "POST"])

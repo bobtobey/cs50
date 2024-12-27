@@ -18,7 +18,7 @@
             </thead>
             <tbody>
                 <!-- Loop through the database entries to display stock transactions in this table -->
-                {% for transactions in transaction_list %}
+                {% for transactions in transactions %}
                     <tr>
                         <td>{{ transactions.symbol }}</td>
                         <td>{{ transactions.shares }}</td>
