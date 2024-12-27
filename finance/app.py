@@ -310,7 +310,6 @@ def sell():
         # calculate total stock prices
         price = quote['price']
         total_price = price * shares
-        total_cost = price * shares
         # Check database for current total shares of stock to sell
         portfolio_row = db.execute("SELECT * FROM portfolio WHERE id = ? AND symbol = ?", session["user_id"], symbol)
         total_shares_owned = portfolio_row[0]["shares"]
@@ -322,11 +321,11 @@ def sell():
                 transaction_type = "SELL"
 
                 # add funds to user cash on successful sell
-                db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", total_cost, session["user_id"])
+                db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", total_price, session["user_id"])
 
                 # SELL stock and insert details into transactions db (variables) and then (placeholders ?x2) and (arguments)
-                db.execute("INSERT INTO transactions (symbol, shares, price, total_cost, transaction_type, user_id) VALUES(?, ?, ?, ?, ?, ?)"
-                        , symbol, shares, price, total_cost, transaction_type, session["user_id"])
+                db.execute("INSERT INTO transactions (symbol, shares, price, total_price, transaction_type, user_id) VALUES(?, ?, ?, ?, ?, ?)"
+                        , symbol, shares, price, total_price, transaction_type, session["user_id"])
 
                 # SUBTRACT stock and shares details from portfolio db (variables) and then (placeholders ?x2) and (arguments)
                 portfolio_row = db.execute("SELECT shares FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
