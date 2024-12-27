@@ -36,6 +36,8 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     # return apology("TODO")
+    # Capture USER cash balance
+    user_row = db.execute("SELECT cash FROM users WHERE id = ?", session['user_id'])
     # SQL select symbol, shares, current price, total value data from DB
     portfolio_rows = db.execute("SELECT symbol, shares FROM portfolio")
 
@@ -50,7 +52,6 @@ def index():
         stocks.append({"symbol": symbol, "shares": shares, "current_price": current_price, "total_value": total_value})
     # hide buy success message
     success = request.args.get("success", False)
-    print(type(current_price))
     # get db column names from table
     headers = ["Symbol", "Shares", "Price", "Total"]
     # pass Stock info into the index.html
