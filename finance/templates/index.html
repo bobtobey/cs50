@@ -7,7 +7,6 @@
 {% block main %}
     <div>
         <h2>Purchase was a {{success}}.</h2>
-        <h3>{{ transactions }}</h3>
         <table>
             <thead>
                 <tr>
@@ -23,8 +22,8 @@
                     <tr>
                         <td>{{ transaction.symbol }}</td>
                         <td>{{ transaction.shares }}</td>
-                        <td>{{ transaction.price }}</td>
-                        <td>{{ transaction.total_cost }}</td>
+                        <td>{{ transaction.price | usd }}</td>
+                        <td>{{ transaction.total_cost | usd }}</td>
                     </tr>
                 {% endfor %}
             </tbody>
