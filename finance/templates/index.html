@@ -18,7 +18,7 @@
             </thead>
             <tbody>
                 <!-- Loop through the database entries to display stock transactions in this table -->
-                {% for birthdays in bdays %}
+                {% for birthdays in transaction_list %}
                     <tr>
                         <td>{{ birthdays["name"] }}</td>
                         <td>{{ birthdays["month"] }}/{{ birthdays["day"] }}</td>

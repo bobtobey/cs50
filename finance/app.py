@@ -37,10 +37,10 @@ def index():
     """Show portfolio of stocks"""
     # return apology("TODO")
     # SQL select all transactions from DB
-    transactions = db.execute("SELECT * FROM birthdays")
+    transactions = db.execute("SELECT * FROM transactions")
 
     # pass birthdays into the index.html
-    return render_template("index.html", bdays=birthdays)
+    return render_template("index.html", transaction_list=transactions)
 
 
 @app.route("/buy", methods=["GET", "POST"])
