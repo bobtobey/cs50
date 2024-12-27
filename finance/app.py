@@ -67,9 +67,7 @@ def buy():
             return apology("must provide valid symbol", 403)
 
         # Check database
-        rows = db.execute(
-            "SELECT * FROM users WHERE id = ?", session["user_id"]
-        )
+        rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
 
         # Ensure funds are available
         transaction_type = buy
