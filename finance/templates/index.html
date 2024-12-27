@@ -7,8 +7,29 @@
 {% block main %}
     <div>
         <h2>Purchase was a {{success}}.</h2>
-        <p>
-            A share of .
-        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th class="name-theader">Name</th>
+                    <th class="bday-theader">Birthday</th>
+                    <th class="remove-theader"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- TODO: Loop through the database entries to display them in this table -->
+                {% for birthdays in bdays %}
+                    <tr>
+                        <td>{{ birthdays["name"] }}</td>
+                        <td>{{ birthdays["month"] }}/{{ birthdays["day"] }}</td>
+                        <td>
+                            <form action="/remove" method="post">
+                                <input name="id" type="hidden" value="{{ birthdays["id"] }}">
+                                <input type="submit" value="Remove">
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 {% endblock %}
