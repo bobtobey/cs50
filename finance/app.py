@@ -141,11 +141,11 @@ def buy():
 def history():
     """Show history of transactions"""
     # return apology("TODO")
-    # SQL select symbol/shares/price/time-date transaction details from DB
+    # SQL select symbol/shares/buy or sell/price/time-date transaction details from DB
     transactions = db.execute("SELECT * FROM transactions")
 
     # get db column names from table
-    headers = ["Symbol", "Shares", "Price", "Transacted"]
+    headers = ["Symbol", "Shares", "Type", "Price", "Transacted"]
     # pass transactions into the index.html
     return render_template("history.html", transactions=transactions, headers=headers)
 
