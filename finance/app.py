@@ -83,6 +83,10 @@ def buy():
             print("ALL GO")
             # subtract fund from user cash on successful purchase
             # buy stock and shares and id
+
+            # Insert username and Birthday to db (variables) and then (placeholders ?x2) and (arguments)
+            db.execute("INSERT INTO transactions (username, hash) VALUES(?, ?)", username, hash)
+
         else:
             return apology("Add funds to your account.", 403)
 
