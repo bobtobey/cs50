@@ -37,7 +37,7 @@ def index():
     """Show portfolio of stocks"""
     # return apology("TODO")
     # SQL select symbol, shares, current price, total value data from DB
-    transactions = db.execute("SELECT * FROM transactions")
+    transactions = db.execute("SELECT * FROM portfolio")
 
     success = request.args.get("success", False)
     # get db column names from table
@@ -251,7 +251,7 @@ def sell():
     """Sell shares of stock"""
     # return apology("TODO")
     symbols = db.execute("SELECT symbol FROM portfolio")
-    print(symbols)
+
     # User reached route via POST - lookup and purchase stock
     if request.method == "POST":
         # Ensure valid shares were submitted
