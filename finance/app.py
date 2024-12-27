@@ -40,10 +40,11 @@ def index():
     transactions = db.execute("SELECT * FROM transactions")
     print(transactions)
 
+    success = request.args.get("success", False)
     # get db column names from table
     headers = ["Symbol", "Shares", "Price", "Total"]
     # pass transactions into the index.html
-    return render_template("index.html", transactions=transactions, headers=headers)
+    return render_template("index.html", transactions=transactions, headers=headers, success=success)
 
 
 @app.route("/buy", methods=["GET", "POST"])
