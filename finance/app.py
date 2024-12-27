@@ -312,7 +312,7 @@ def sell():
         total_price = price * shares
         total_cost = price * shares
         # Check database for current total shares of stock to sell
-        total_shares = db.execute("SELECT shares FROM portfolio WHERE id = ? AND symbol = ?", session["user_id"], symbol)
+        portfolio_row = db.execute("SELECT * FROM portfolio WHERE id = ? AND symbol = ?", session["user_id"], symbol)
         print(f"total shares: {total_shares[0]['shares']} and {symbol}")
         # Execute
         if moneyavailable > shares:
