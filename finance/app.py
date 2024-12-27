@@ -45,7 +45,6 @@ def index():
 
     # store current values by looping through db list
     stocks = []
-    total_account_value = 0
     for portfolio_row in portfolio_rows:
         symbol = portfolio_row["symbol"]
         shares = portfolio_row["shares"]
@@ -53,6 +52,10 @@ def index():
         current_price = quote['price']
         total_value = shares * current_price
         stocks.append({"symbol": symbol, "shares": shares, "current_price": current_price, "total_value": total_value})
+    # Get total acct value ca
+    total_account_value = cash
+    for each stock in stocks:
+        total_account_value += stock['total_value']
     # hide buy success message
     success = request.args.get("success", False)
     # get db column names from table
