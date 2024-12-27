@@ -315,7 +315,7 @@ def sell():
         total_shares_owned = portfolio_row[0]["shares"]
         print(f"total shares: {total_shares_owned} and {symbol} and {shares}")
         # Execute
-        if total_shares_owned > shares:
+        if total_shares_owned >= shares:
             try:
                 db.execute("BEGIN TRANSACTION")
                 transaction_type = "SELL"
