@@ -38,7 +38,8 @@ def index():
     # return apology("TODO")
     # SQL select symbol, shares, current price, total value data from DB
     transactions = db.execute("SELECT * FROM portfolio")
-
+    stocks = []
+    current_price = lookup(symbol)
     success = request.args.get("success", False)
     # get db column names from table
     headers = ["Symbol", "Shares", "Price", "Total"]
