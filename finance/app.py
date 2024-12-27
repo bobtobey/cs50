@@ -84,8 +84,8 @@ def buy():
             # subtract fund from user cash on successful purchase
             # buy stock and shares and id
 
-            # Insert username and Birthday to db (variables) and then (placeholders ?x2) and (arguments)
-            db.execute("INSERT INTO transactions (symbol, shares, price, total_cost, transaction_type) VALUES(?, ?)", symbol, shares, price,)
+            # Insert transaction details to db (variables) and then (placeholders ?x2) and (arguments)
+            db.execute("INSERT INTO transactions (symbol, shares, price, total_cost, transaction_type, timestamp, ) VALUES(?, ?)", symbol, shares, price,)
 
         else:
             return apology("Add funds to your account.", 403)
