@@ -85,7 +85,7 @@ def buy():
             # buy stock and shares and id
 
             # Insert username and Birthday to db (variables) and then (placeholders ?x2) and (arguments)
-            db.execute("INSERT INTO transactions (symbol, shares, price, hash) VALUES(?, ?)", username, hash)
+            db.execute("INSERT INTO transactions (symbol, shares, price, total_cost, transaction_type) VALUES(?, ?)", symbol, shares, price,)
 
         else:
             return apology("Add funds to your account.", 403)
@@ -208,7 +208,7 @@ def register():
         # Generate hash for password
         hash = generate_password_hash(password)
 
-        # Insert username and Birthday to db (variables) and then (placeholders ?x2) and (arguments)
+        # Insert username and password to db (variables) and then (placeholders ?x2) and (arguments)
         db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hash)
 
         # Go to login page
