@@ -110,7 +110,8 @@ def buy():
         else:
             return apology("Add funds to your account.", 403)
 
-        return render_template("index.html", success=success)
+        # Redirect to homepage after successful buy
+        return redirect(url_for("index", success=True))
     # User reached route via GET - display stock quote form
     else:
         return render_template("buy.html")
