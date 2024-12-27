@@ -57,6 +57,7 @@ def index():
     total_account_value = cash
     for stock in stocks:
         total_account_value += stock['total_value']
+        
     # hide buy success message
     success = request.args.get("success", False)
     # get db column names from table
