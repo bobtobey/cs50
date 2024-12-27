@@ -37,14 +37,14 @@ def index():
     """Show portfolio of stocks"""
     # return apology("TODO")
     # SQL select symbol, shares, current price, total value data from DB
-    portfolio_rows = db.execute("SELECT * FROM portfolio")
-    # stocks = []
-    # current_price = lookup(symbol)
+    portfolio_rows = db.execute("SELECT symbol, shares FROM portfolio")
+    stocks = []
+    current_price = lookup(symbol)
     success = request.args.get("success", False)
     # get db column names from table
     headers = ["Symbol", "Shares", "Price", "Total"]
     # pass transactions into the index.html
-    return render_template("index.html", transactions=transactions, headers=headers, success=success)
+    return render_template("index.html", portfolio_rows=portfolio_rows, headers=headers, success=success)
 
 
 @app.route("/buy", methods=["GET", "POST"])
