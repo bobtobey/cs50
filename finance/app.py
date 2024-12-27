@@ -63,7 +63,7 @@ def index():
     # get db column names from table
     headers = ["Symbol", "Shares", "Price", "Total"]
     # pass Stock info into the index.html
-    return render_template("index.html", stocks=stocks, headers=headers, cash=cash, success=success)
+    return render_template("index.html", stocks=stocks, headers=headers, cash=cash, total_account_value=total_account_value, success=success)
 
 
 @app.route("/buy", methods=["GET", "POST"])
