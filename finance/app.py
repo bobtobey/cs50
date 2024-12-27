@@ -311,7 +311,7 @@ def sell():
         price = quote['price']
         total_cost = price * shares
         # Check database for current total shares of stock to sell
-        portfolio_row = db.execute("SELECT * FROM portfolio WHERE id = ? AND symbol = ?", session["user_id"], symbol)
+        portfolio_row = db.execute("SELECT * FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
         total_shares_owned = portfolio_row[0]["shares"]
         print(f"total shares: {total_shares_owned} and {symbol} and {shares}")
         # Execute
