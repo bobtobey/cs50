@@ -10,6 +10,9 @@
         <table>
             <thead>
                 <tr>
+                    {% for header in headers %}
+                        <th>{{ header }}</th>
+                    {% endfor %}
                     <th class="symbol-theader">Symbol</th>
                     <th class="shares-theader">Shares</th>
                     <th class="price-theader">Price</th>

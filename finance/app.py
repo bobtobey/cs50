@@ -39,8 +39,12 @@ def index():
     # SQL select all transactions from DB
     transactions = db.execute("SELECT * FROM transactions")
     print(transactions)
+    
+    # get db column names from table
+    headers = db.execute("PRAGMA table_info(transactions)")
+    headers = [header["name"] for header in headers]
     # pass birthdays into the index.html
-    return render_template("index.html", transactions=transactions)
+    return render_template("index.html", transactions=transactions, headers=headers)
 
 
 @app.route("/buy", methods=["GET", "POST"])
