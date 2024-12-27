@@ -285,9 +285,10 @@ def sell():
     # User reached route via POST - lookup and purchase stock
     if request.method == "POST":
         # Capture valid symbol and shares on submission
-        symbol = request.form.get("symbol").upper()
+        symbol = request.form.get("symbol")
         if not symbol:
             return apology("must provide a symbol", 403)
+        symbol = symbol.upper()
         shares = request.form.get("shares")
         if not shares:
             return apology("must provide number of shares", 403)
