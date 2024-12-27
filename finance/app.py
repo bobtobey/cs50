@@ -346,6 +346,7 @@ def sell():
         #     db.execute("ROLLBACK")
         #     return apology("Transaction failed.", 403)
 
+        return render_template("sell.html", symbols=symbols)
     # User reached route via GET - display stock sell form
     else:
         return render_template("sell.html", symbols=symbols)
