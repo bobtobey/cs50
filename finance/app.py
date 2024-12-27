@@ -47,12 +47,12 @@ def index():
         current_price = lookup(symbol)
         total_value = shares * current_price
         stocks.append({"symbol": symbol, "shares": shares, "current_price": current_price, "total_value": total_value})
-    # hide buy success message when in POST
+    # hide buy success message
     success = request.args.get("success", False)
     # get db column names from table
     headers = ["Symbol", "Shares", "Price", "Total"]
-    # pass transactions into the index.html
-    return render_template("index.html", portfolio_rows=portfolio_rows, headers=headers, success=success)
+    # pass Stock info into the index.html
+    return render_template("index.html", stocks=stocks, headers=headers, success=success)
 
 
 @app.route("/buy", methods=["GET", "POST"])
