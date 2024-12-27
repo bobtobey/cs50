@@ -328,7 +328,7 @@ def sell():
                         , symbol, shares, price, total_price, transaction_type, session["user_id"])
 
                 # SUBTRACT stock and shares details from portfolio db (variables) and then (placeholders ?x2) and (arguments)
-                portfolio_row = db.execute("SELECT shares FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
+                
                 print(f"Test: {portfolio_row} and {symbol}")
                 if len(portfolio_row) == 0:
                     print(f"len 1: {len(portfolio_row)}")
