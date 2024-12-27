@@ -291,6 +291,7 @@ def sell():
 
     # User reached route via POST - lookup and purchase stock
     if request.method == "POST":
+        symbol = request.form.get("symbol")
         # Ensure valid shares were submitted
         shares = request.form.get("shares")
         if not shares:
