@@ -225,7 +225,7 @@ def quote():
     # User reached route via POST - lookup stock symbol and result
     if request.method == "POST":
         # Ensure symbol was submitted
-        symbol = request.form.get("symbol")
+        symbol = request.form.get("symbol").upper()
         if not symbol:
             return apology("must provide symbol", 403)
 
@@ -287,7 +287,7 @@ def register():
 def sell():
     """Sell shares of stock"""
     # return apology("TODO")
-    symbols = db.execute("SELECT symbol FROM portfolio")
+    symbols = db.execute("SELECT symbol FROM portfolio").upper()
 
     # User reached route via POST - lookup and purchase stock
     if request.method == "POST":
