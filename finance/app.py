@@ -325,19 +325,19 @@ def sell():
 
             # ADD stock and shares details into portfolio db (variables) and then (placeholders ?x2) and (arguments)
             portfolio_row = db.execute("SELECT shares FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
-                print(f"Test: {total_shares} and {symbol}")
-                if len(total_shares) == 0:
-                    print(f"len 1: {len(total_shares)}")
-                    # Stock not in portfolio insert in db
-                    db.execute("INSERT INTO portfolio (symbol, shares, user_id) VALUES(?, ?, ?)"
-                            , symbol, shares, session["user_id"])
-                else:
-                    # Stock in portfolio update shares
-                    print(f"len 2: {len(portfolio_row)}")
-                    current_shares = portfolio_row[0]["shares"]
-                    new_shares = current_shares + shares
-                    db.execute("UPDATE portfolio SET shares = ? WHERE user_id = ? AND symbol = ?"
-                            , new_shares, session["user_id"], symbol)
+            print(f"Test: {portfolio_row} and {symbol}")
+            if len(portfolio_row) == 0:
+                print(f"len 1: {len(portfolio_row)}")
+                # Stock not in portfolio insert in db
+                db.execute("INSERT INTO portfolio (symbol, shares, user_id) VALUES(?, ?, ?)"
+                        , symbol, shares, session["user_id"])
+            else:
+                # Stock in portfolio update shares
+                print(f"len 2: {len(portfolio_row)}")
+                current_shares = portfolio_row[0]["shares"]
+                new_shares = current_shares + shares
+                db.execute("UPDATE portfolio SET shares = ? WHERE user_id = ? AND symbol = ?"
+                        , new_shares, session["user_id"], symbol)
 
             # Commit Transaction
             db.execute("COMMIT")
