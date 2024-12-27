@@ -287,7 +287,7 @@ def register():
 def sell():
     """Sell shares of stock"""
     # return apology("TODO")
-    symbols = db.execute("SELECT symbol FROM portfolio").upper()
+    symbols = db.execute("SELECT symbol FROM portfolio")
 
     # User reached route via POST - lookup and purchase stock
     if request.method == "POST":
@@ -295,7 +295,6 @@ def sell():
         shares = request.form.get("shares")
         if not shares:
             return apology("must provide number of shares", 403)
-
         try:
             shares = int(shares)
         except ValueError:
