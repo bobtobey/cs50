@@ -85,7 +85,7 @@ def buy():
             # buy stock and shares and id
 
             # Insert username and Birthday to db (variables) and then (placeholders ?x2) and (arguments)
-            db.execute("INSERT INTO transactions (username, hash) VALUES(?, ?)", username, hash)
+            db.execute("INSERT INTO transactions (symbol, shares, price, hash) VALUES(?, ?)", username, hash)
 
         else:
             return apology("Add funds to your account.", 403)
