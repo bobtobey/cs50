@@ -140,7 +140,7 @@ def buy():
             return apology("Add funds to your account.", 403)
 
         # Redirect to homepage after successful buy
-        return redirect(url_for("index", success=True))
+        return redirect(url_for("index", success="Your buy transaction was successful"))
     # User reached route via GET - display stock buy form
     else:
         return render_template("buy.html")
