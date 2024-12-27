@@ -130,7 +130,10 @@ def buy():
                             , symbol, shares, session["user_id"])
                 else:
                     # Stock in portfolio update shares
-                    current_shares = x
+                    current_shares = portfolio_row[0]["shares"]
+                    new_shares = current_shares + shares
+                    db.execute("UPDATE portfolio SET shares = ? WHERE user_id = ? AND symbol = ?"
+                            , new_shares, session["user_id"], symbol)
 
                 # Commit transaction
                 db.execute("COMMIT")
