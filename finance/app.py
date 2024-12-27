@@ -45,10 +45,11 @@ def index():
         symbol = portfolio_row["symbol"]
         shares = portfolio_row["shares"]
         current_price = lookup(symbol)
-        total_value = shares * current_price
+        total_value = 12
         stocks.append({"symbol": symbol, "shares": shares, "current_price": current_price, "total_value": total_value})
     # hide buy success message
     success = request.args.get("success", False)
+    print(type(current_price))
     # get db column names from table
     headers = ["Symbol", "Shares", "Price", "Total"]
     # pass Stock info into the index.html
