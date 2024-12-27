@@ -328,14 +328,13 @@ def sell():
                         , symbol, shares, price, total_price, transaction_type, session["user_id"])
 
                 # SUBTRACT stock and shares details from portfolio db (variables) and then (placeholders ?x2) and (arguments)
-                
+
                 print(f"Test: {portfolio_row} and {symbol}")
-                if len(portfolio_row) == 0:
+                total_shares_remaining =total_shares_owned - shares
+                if total_shares_remaining == 0:
                     print(f"len 1: {len(portfolio_row)}")
-                    # Stock not in portfolio insert in db
-                    db.execute("INSERT INTO portfolio (symbol, shares, user_id) VALUES(?, ?, ?)"
-                            , symbol, shares, session["user_id"])
-                else:
+                    # Action Sells all stock and delete from portfolio idb
+                    db.execute("DELETE FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)                else:
                     # Stock in portfolio update shares
                     print(f"len 4: {len(portfolio_row)}")
                     current_shares = portfolio_row[0]["shares"]
