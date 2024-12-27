@@ -61,7 +61,7 @@ def buy():
         if shares < 1:
             return apology("must provide positive amount of shares", 403)
 
-        # look up valid symbol
+        # look up valid stock symbol
         quote = lookup(symbol)
         if not quote:
             return apology("must provide valid symbol", 403)
@@ -170,7 +170,7 @@ def quote():
         if not symbol:
             return apology("must provide symbol", 403)
 
-        # look up valid symbol
+        # look up valid stock symbol
         quote = lookup(symbol)
         if not quote:
             return apology("must provide valid symbol", 403)
