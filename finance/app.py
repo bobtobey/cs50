@@ -122,10 +122,15 @@ def buy():
                         , symbol, shares, price, total_cost, transaction_type, session["user_id"])
 
                 # ADD stock and shares details into portfolio db (variables) and then (placeholders ?x2) and (arguments)
+                portfolio_row = db.execute("SELECT shares FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
+                print(portfolio_row)
+                if len(portfolio_row) == 0:
+                    db.execute("INSERT INTO portfolio (symbol, shares, user_id) VALUES(?, ?, ?)"
+                            , symbol, shares, session["user_id"])
+                else:
+                    # Stock in portfolio update shares
+                    current_shares = x
 
-
-                # db.execute("INSERT INTO portfolio (symbol, shares, user_id) VALUES(?, ?, ?)"
-                #         , symbol, shares, session["user_id"])
                 # Commit transaction
                 db.execute("COMMIT")
                 success = True
@@ -139,10 +144,6 @@ def buy():
         return redirect(url_for("index", success=True))
     # User reached route via GET - display stock buy form
     else:
-        symbol = 'T'
-        portfolio_row = db.execute("SELECT shares FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
-        print(f"Test: {portfolio_row}")
-        print(f"len: {len(portfolio_row)}")
         return render_template("buy.html")
 
 
