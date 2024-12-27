@@ -93,6 +93,7 @@ def buy():
                         , symbol, shares, price, total_cost, transaction_type, session["user_id"])
                 # Commit transaction
                 db.execute("COMMIT")
+                success = 
             except:
                 db.execute("ROLLBACK")
                 return apology("Transaction failed.", 403)
