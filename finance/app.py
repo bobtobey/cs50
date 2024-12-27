@@ -93,13 +93,14 @@ def buy():
                         , symbol, shares, price, total_cost, transaction_type, session["user_id"])
                 # Commit transaction
                 db.execute("COMMIT")
+                success = true
             except:
                 db.execute("ROLLBACK")
                 return apology("Transaction failed.", 403)
         else:
             return apology("Add funds to your account.", 403)
 
-        return render_template("buy.html", quote=quote)
+        return render_template("buy.html", success=success)
     # User reached route via GET - display stock quote form
     else:
         return render_template("buy.html")
