@@ -57,7 +57,6 @@ def index():
     total_account_value = cash
     for stock in stocks:
         total_account_value += stock['total_value']
-    print(total_account_value)
     # hide buy success message
     success = request.args.get("success", False)
     # get db column names from table
@@ -118,7 +117,7 @@ def buy():
 
                 # ADD stock and shares details into portfolio db (variables) and then (placeholders ?x2) and (arguments)
                 portfolio_row = db.execute("SELECT shares FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
-                print(f"Test: {portfolio_row} and {symbol}")
+
                 if len(portfolio_row) == 0:
                     # Stock not in portfolio insert in db
                     db.execute("INSERT INTO portfolio (symbol, shares, user_id) VALUES(?, ?, ?)"
@@ -306,7 +305,7 @@ def sell():
         # Check database for current total shares of stock to sell
         portfolio_row = db.execute("SELECT * FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
         total_shares_owned = portfolio_row[0]["shares"]
-        print(f"total shares: {total_shares_owned} and {symbol} and {shares}")
+        
         # Execute
         if total_shares_owned >= shares:
             try:
