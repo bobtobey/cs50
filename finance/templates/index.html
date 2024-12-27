@@ -19,12 +19,12 @@
             </thead>
             <tbody>
                 <!-- Loop through the database entries to display stock transactions in this table -->
-                {% for portfolio_row in portfolio_rows %}
+                {% for stock in stocks %}
                     <tr>
-                        <td class="symbol-data">{{ portfolio_row.symbol | upper }}</td>
-                        <td>{{ portfolio_row.shares }}</td>
-                        <td>tbd</td>
-                        <td>tbd</td>
+                        <td class="symbol-data">{{ stock.symbol | upper }}</td>
+                        <td>{{ stock.shares }}</td>
+                        <td>{{ stock.current_price }}</td>
+                        <td>{{ stock.total_value }}</td>
                     </tr>
                 {% endfor %}
             </tbody>
