@@ -95,7 +95,7 @@ def buy():
             return apology("must provide valid symbol", 403)
 
         # Check database for user funds
-        rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
+        rows = db.execute("SELECT shares FROM users WHERE id = ?", session["user_id"])
 
         portfolio_row = db.execute("SELECT * FROM portfolio WHERE user_id = ? AND symbol", session["user_id", symbol])
         print(portfolio_row)
