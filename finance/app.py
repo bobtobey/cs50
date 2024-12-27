@@ -344,6 +344,7 @@ def sell():
                 # Commit Transaction
                 db.execute("COMMIT")
             except Exception as e:
+                print(f"Error: {e}")
                 db.execute("ROLLBACK")
                 return apology("Transaction failed.", 403)
         else:
