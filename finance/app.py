@@ -41,7 +41,6 @@ def index():
     print(transactions)
 
     # get db column names from table
-    headers = db.execute("PRAGMA table_info(transactions)")
     headers = ["Symbol", "Shares", "Price", "Total"]
     # pass transactions into the index.html
     return render_template("index.html", transactions=transactions, headers=headers)
