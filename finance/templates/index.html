@@ -10,13 +10,14 @@
         <table>
             <thead>
                 <tr>
-                    <th class="name-theader">Name</th>
-                    <th class="bday-theader">Birthday</th>
-                    <th class="remove-theader"></th>
+                    <th class="symbol-theader">Symbol</th>
+                    <th class="shares-theader">Shares</th>
+                    <th class="price-theader">Price</th>
+                    <th class="total-theader">Total</th>
                 </tr>
             </thead>
             <tbody>
-                <!-- TODO: Loop through the database entries to display them in this table -->
+                <!-- Loop through the database entries to display stock transactions in this table -->
                 {% for birthdays in bdays %}
                     <tr>
                         <td>{{ birthdays["name"] }}</td>
