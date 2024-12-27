@@ -315,6 +315,7 @@ def sell():
         total_shares = db.execute("SELECT shares FROM portfolio WHERE id = ? AND symbol = ?", session["user_id"], symbol)
         print(f"total shares: {total_shares[0]['shares']} and {symbol}")
         # Execute
+        if moneyavailable > shares:
         # try:
         #     db.execute("BEGIN TRANSACTION")
         #     transaction_type = "SELL"
