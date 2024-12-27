@@ -333,8 +333,9 @@ def sell():
                 total_shares_remaining =total_shares_owned - shares
                 if total_shares_remaining == 0:
                     print(f"len 1: {len(portfolio_row)}")
-                    # Action Sells all stock and delete from portfolio idb
-                    db.execute("DELETE FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)                else:
+                    # Action Sells all stock and delete from portfolio db
+                    db.execute("DELETE FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
+                else:
                     # Stock in portfolio update shares
                     print(f"len 4: {len(portfolio_row)}")
                     current_shares = portfolio_row[0]["shares"]
