@@ -57,7 +57,7 @@ def index():
     total_account_value = cash
     for stock in stocks:
         total_account_value += stock['total_value']
-        
+
     # hide buy success message
     success = request.args.get("success", False)
     # get db column names from table
@@ -341,8 +341,8 @@ def sell():
         else:
             return apology("Not enough shares in your account.", 403)
 
-        # Redirect to homepage after successful buy
-        return redirect(url_for("index", success=True))
+        # Redirect to homepage after successful sell
+        return redirect(url_for("index", success="Your sell transaction was successful"))
         # return render_template("sell.html", symbols=symbols)
     # User reached route via GET - display stock sell form
     else:
