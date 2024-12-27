@@ -45,6 +45,7 @@ def index():
 
     # store current values by looping through db list
     stocks = []
+    total_account_value = 0
     for portfolio_row in portfolio_rows:
         symbol = portfolio_row["symbol"]
         shares = portfolio_row["shares"]
