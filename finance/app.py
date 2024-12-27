@@ -114,7 +114,7 @@ def buy():
                 print(f"Total Stock Cost $: {total_cost}")
                 print(f"Available {moneyavailable - total_cost}")
 
-                # subtract fund from user cash on successful purchase
+                # subtract funds from user cash on successful purchase
                 db.execute("UPDATE users SET cash = cash - ? WHERE id = ?", total_cost, session["user_id"])
 
                 # BUY stock and insert details into transactions db (variables) and then (placeholders ?x2) and (arguments)
@@ -304,11 +304,24 @@ def sell():
 
         # look up current stock info
         quote = lookup(symbol)
-        
+
         price = quote['price']
         # calculate total stock price
         total_cost = price * shares
         # Execute
+        try:
+            db.execute("BEGIN TRANSACTION")
+            transaction_type = "SELL"
+
+            # add funds to user cash on successful sell
+            db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", total_cost, session["user_id"])
+
+
+            # Commit Transaction
+            db.execute("COMMIT")
+        except:
+            db.execute("ROLLBACK")
+            return apology("Transaction failed.", 403)
 
     # User reached route via GET - display stock sell form
     else:
