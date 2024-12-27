@@ -97,7 +97,7 @@ def buy():
         # Check database for user funds
         rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
 
-        portfolio_row = db.execute("SELECT shares FROM portfolio WHERE user_id = ? AND symbol", session["user_id", symbol])
+        portfolio_row = db.execute("SELECT shares FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
         print(portfolio_row)
         # Ensure funds are available
         moneyavailable = rows[0]['cash']
