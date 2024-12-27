@@ -36,6 +36,11 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     # return apology("TODO")
+    # SQL select all transactions from DB
+    transactions = db.execute("SELECT * FROM birthdays")
+
+    # pass birthdays into the index.html
+    return render_template("index.html", bdays=birthdays)
 
 
 @app.route("/buy", methods=["GET", "POST"])
