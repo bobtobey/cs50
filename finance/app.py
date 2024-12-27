@@ -38,7 +38,8 @@ def index():
     # return apology("TODO")
     # Capture USER cash balance
     user_row = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-    
+    cash = user_row[0]["cash"]
+
     # SQL select symbol, shares, current price, total value data from DB
     portfolio_rows = db.execute("SELECT symbol, shares FROM portfolio")
 
@@ -56,7 +57,7 @@ def index():
     # get db column names from table
     headers = ["Symbol", "Shares", "Price", "Total"]
     # pass Stock info into the index.html
-    return render_template("index.html", stocks=stocks, headers=headers, success=success)
+    return render_template("index.html", stocks=stocks, headers=headers, cash=cash, success=success)
 
 
 @app.route("/buy", methods=["GET", "POST"])
