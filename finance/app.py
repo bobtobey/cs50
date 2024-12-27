@@ -76,32 +76,34 @@ def buy():
         total_cost = price * shares
         # Execute trade if funds available
         if moneyavailable > total_cost:
-            # Start transaction ensure both update and insert operations execute or fail as 1
-            db.execute("BEGIN TRANSACTION")
+            try:
+                # Start transaction ensure both update and insert operations execute or fail as 1
+                db.execute("BEGIN TRANSACTION")
+                transaction_type = "BUY"
+                print(f"Avail $: {moneyavailable}")
+                print(f"Stock $: {price}")
+                print(f"Total Stock Cost $: {total_cost}")
+                print(f"Available {moneyavailable - total_cost}")
+                # subtract fund from user cash on successful purchase
+                db.execute("UPDATE users SET cash = cash - ? WHERE id = ?"
+                            , total_cost
+                            , session["user_id"]
+                )
 
-            transaction_type = "BUY"
-            print(f"Avail $: {moneyavailable}")
-            print(f"Stock $: {price}")
-            print(f"Total Stock Cost $: {total_cost}")
-            print(f"Available {moneyavailable - total_cost}")
-            # subtract fund from user cash on successful purchase
-            db.execute("UPDATE users SET cash = cash - ? WHERE id = ?"
+                # BUY stock and insert transaction details to db (variables) and then (placeholders ?x2) and (arguments)
+                db.execute("INSERT INTO transactions (symbol, shares, price, total_cost, transaction_type, user_id) VALUES(?, ?, ?, ?, ?, ?)"
+                        , symbol
+                        , shares
+                        , price
                         , total_cost
+                        , transaction_type
                         , session["user_id"]
-            )
+                )
 
-            # BUY stock and insert transaction details to db (variables) and then (placeholders ?x2) and (arguments)
-            db.execute("INSERT INTO transactions (symbol, shares, price, total_cost, transaction_type, user_id) VALUES(?, ?, ?, ?, ?, ?)"
-                       , symbol
-                       , shares
-                       , price
-                       , total_cost
-                       , transaction_type
-                       , session["user_id"]
-            )
-
-            # Commit transaction
-            db.execute("COMMIT")
+                # Commit transaction
+                db.execute("COMMIT")
+            except:
+                db.execute("ROLLBACK")
         else:
             return apology("Add funds to your account.", 403)
 
