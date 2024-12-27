@@ -95,6 +95,7 @@ def buy():
                 db.execute("COMMIT")
             except:
                 db.execute("ROLLBACK")
+                return apology("Transaction failed.", 403)
         else:
             return apology("Add funds to your account.", 403)
 
