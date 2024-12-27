@@ -70,7 +70,7 @@ def buy():
         rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
 
         # Ensure funds are available
-        transaction_type = buy
+        transaction_type = "BUY"
         moneyavailable = rows[0]['cash']
         price = quote['price']
         total_cost = price * shares
@@ -84,8 +84,14 @@ def buy():
             # buy stock and shares and id
 
             # Insert transaction details to db (variables) and then (placeholders ?x2) and (arguments)
-            db.execute("INSERT INTO transactions (symbol, shares, price, total_cost, transaction_type, timestamp, user_id) VALUES(?, ?, ?, ?, ?, ?, ?)", symbol, shares, price,total_cost, transaction_type, timestamp, user_id)
-
+            db.execute("INSERT INTO transactions (symbol, shares, price, total_cost, transaction_type, timestamp, user_id) VALUES(?, ?, ?, ?, ?, ?, ?)"
+                       , symbol
+                       , shares
+                       , price
+                       , total_cost
+                       , transaction_type
+                       , session[user_id]
+                       )
         else:
             return apology("Add funds to your account.", 403)
 
