@@ -109,11 +109,6 @@ def buy():
                 # Start transaction ensure both update and insert operations execute or fail as 1
                 db.execute("BEGIN TRANSACTION")
                 transaction_type = "BUY"
-                print(f"Avail $: {moneyavailable}")
-                print(f"Stock $: {price}")
-                print(f"Total Stock Cost $: {total_cost}")
-                print(f"Available {moneyavailable - total_cost}")
-
                 # subtract funds from user cash on successful purchase
                 db.execute("UPDATE users SET cash = cash - ? WHERE id = ?", total_cost, session["user_id"])
 
@@ -125,13 +120,11 @@ def buy():
                 portfolio_row = db.execute("SELECT shares FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
                 print(f"Test: {portfolio_row} and {symbol}")
                 if len(portfolio_row) == 0:
-                    print(f"len 1: {len(portfolio_row)}")
                     # Stock not in portfolio insert in db
                     db.execute("INSERT INTO portfolio (symbol, shares, user_id) VALUES(?, ?, ?)"
                             , symbol, shares, session["user_id"])
                 else:
                     # Stock in portfolio update shares
-                    print(f"len 2: {len(portfolio_row)}")
                     current_shares = portfolio_row[0]["shares"]
                     new_shares = current_shares + shares
                     db.execute("UPDATE portfolio SET shares = ? WHERE user_id = ? AND symbol = ?"
@@ -328,16 +321,12 @@ def sell():
                         , symbol, -shares, price, total_cost, transaction_type, session["user_id"])
 
                 # SUBTRACT stock and shares details from portfolio db (variables) and then (placeholders ?x2) and (arguments)
-
-                print(f"Test: {portfolio_row} and {symbol}")
                 total_shares_remaining =total_shares_owned - shares
                 if total_shares_remaining == 0:
-                    print(f"len 1: {len(portfolio_row)}")
                     # Action Sells all stock and delete from portfolio db
                     db.execute("DELETE FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
                 else:
                     # Stock in portfolio update shares
-                    print(f"len 4: {len(portfolio_row)}")
                     db.execute("UPDATE portfolio SET shares = ? WHERE user_id = ? AND symbol = ?"
                             , total_shares_remaining, session["user_id"], symbol)
 
