@@ -97,8 +97,6 @@ def buy():
         # Check database for user funds
         rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
 
-        portfolio_row = db.execute("SELECT shares FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
-        print(portfolio_row)
         # Ensure funds are available
         moneyavailable = rows[0]['cash']
         price = quote['price']
@@ -125,6 +123,7 @@ def buy():
 
                 # ADD stock and shares details into portfolio db (variables) and then (placeholders ?x2) and (arguments)
 
+
                 # db.execute("INSERT INTO portfolio (symbol, shares, user_id) VALUES(?, ?, ?)"
                 #         , symbol, shares, session["user_id"])
                 # Commit transaction
@@ -140,6 +139,8 @@ def buy():
         return redirect(url_for("index", success=True))
     # User reached route via GET - display stock buy form
     else:
+        portfolio_row = db.execute("SELECT shares FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
+        print(f"Test: {portfolio_row}")
         return render_template("buy.html")
 
 
