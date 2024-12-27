@@ -44,8 +44,8 @@ def index():
     for portfolio_row in portfolio_rows:
         symbol = portfolio_row["symbol"]
         shares = portfolio_row["shares"]
-        current_price = lookup(symbol)
-        x = currentprice['price']
+        quote = lookup(symbol)
+        current_price = quote['price']
         total_value = shares * current_price
         stocks.append({"symbol": symbol, "shares": shares, "current_price": current_price, "total_value": total_value})
     # hide buy success message

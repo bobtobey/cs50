@@ -23,8 +23,8 @@
                     <tr>
                         <td class="symbol-data">{{ stock['symbol'] | upper }}</td>
                         <td>{{ stock['shares'] }}</td>
-                        <td>{{ stock['current_price'] }}</td>
-                        <td>{{ stock['total_value'] }}</td>
+                        <td>{{ stock['current_price'] | usd }}</td>
+                        <td>{{ stock['total_value'] | usd }}</td>
                     </tr>
                 {% endfor %}
             </tbody>
