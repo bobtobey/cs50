@@ -6,7 +6,9 @@
 
 {% block main %}
     <div>
-        <h2>Purchase was a {{success}}.</h2>
+        {% if success %}
+            <h2>Purchase was a {{success}}.</h2>
+        {% endif %}
         <table>
             <thead>
                 <tr>
