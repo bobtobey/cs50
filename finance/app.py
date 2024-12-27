@@ -66,20 +66,21 @@ def buy():
         if not quote:
             return apology("must provide valid symbol", 403)
 
-        # Check database funds
+        # Check database for user funds
         rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
 
         # Ensure funds are available
         moneyavailable = rows[0]['cash']
         price = quote['price']
+        # calculate total stock price
         total_cost = price * shares
+        # Execute trade if funds available
         if moneyavailable > total_cost:
             transaction_type = "BUY"
             print(f"Avail $: {moneyavailable}")
             print(f"Stock $: {price}")
             print(f"Total Stock Cost $: {total_cost}")
             print(f"Available {moneyavailable - total_cost}")
-            print("ALL GO")
             # subtract fund from user cash on successful purchase
             # buy stock and shares and id
 
