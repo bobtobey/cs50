@@ -73,11 +73,11 @@ def buy():
 
         # Ensure funds are available
         moneyavailable = rows[0]['cash']
-        stockprice = quote['price']
-        totalstockprice = stockprice * shares
+        price = quote['price']
+        totalstockprice = price * shares
         if moneyavailable > totalstockprice:
             print(f"Avail $: {moneyavailable}")
-            print(f"Stock $: {stockprice}")
+            print(f"Stock $: {price}")
             print(f"Total Stock Cost $: {totalstockprice}")
             print(f"Available {moneyavailable - totalstockprice}")
             print("ALL GO")
