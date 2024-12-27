@@ -76,7 +76,7 @@ def buy():
         total_cost = price * shares
         # Execute trade if funds available
         if moneyavailable > total_cost:
-            # Start transaction ensure both update and insert operations execute or fail as
+            # Start transaction ensure both update and insert operations execute or fail as 1
             db.execute("BEGIN TRANSACTION")
 
             transaction_type = "BUY"
