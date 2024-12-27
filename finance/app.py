@@ -94,7 +94,7 @@ def buy():
                        , price
                        , total_cost
                        , transaction_type
-                       , session[user_id]
+                       , session["user_id"]
             )
         else:
             return apology("Add funds to your account.", 403)
