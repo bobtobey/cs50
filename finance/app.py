@@ -314,7 +314,6 @@ def sell():
         portfolio_row = db.execute("SELECT * FROM portfolio WHERE id = ? AND symbol = ?", session["user_id"], symbol)
         total_shares_owned = portfolio_row[0]["shares"]
         print(f"total shares: {total_shares_owned} and {symbol} and {shares}")
-        print(f"total funds added: {total_price} and {total_price} and {cash}")
         # Execute
         if total_shares_owned > shares:
             try:
