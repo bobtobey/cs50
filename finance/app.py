@@ -123,10 +123,10 @@ def buy():
 
                 # ADD stock and shares details into portfolio db (variables) and then (placeholders ?x2) and (arguments)
                 portfolio_row = db.execute("SELECT * FROM portfolio WHERE user_id = ? AND symbol", session["user_id", symbol])
-                
+                print(portfolio_row)
 
-                db.execute("INSERT INTO portfolio (symbol, shares, user_id) VALUES(?, ?, ?)"
-                        , symbol, shares, session["user_id"])
+                # db.execute("INSERT INTO portfolio (symbol, shares, user_id) VALUES(?, ?, ?)"
+                #         , symbol, shares, session["user_id"])
                 # Commit transaction
                 db.execute("COMMIT")
                 success = True
