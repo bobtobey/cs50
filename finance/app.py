@@ -99,6 +99,9 @@ def buy():
                        , transaction_type
                        , session["user_id"]
             )
+
+            # Commit transaction
+            db.execute("COMMIT")
         else:
             return apology("Add funds to your account.", 403)
 
