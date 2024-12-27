@@ -123,8 +123,9 @@ def buy():
 
                 # ADD stock and shares details into portfolio db (variables) and then (placeholders ?x2) and (arguments)
                 portfolio_row = db.execute("SELECT shares FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
-                print(portfolio_row)
+                print(f"Test: {portfolio_row}")
                 if len(portfolio_row) == 0:
+                    # Stock not in portfolio insert in db
                     db.execute("INSERT INTO portfolio (symbol, shares, user_id) VALUES(?, ?, ?)"
                             , symbol, shares, session["user_id"])
                 else:
