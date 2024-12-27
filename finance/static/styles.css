@@ -45,7 +45,10 @@ tbody tr:nth-of-type(odd) {
     background-color: rgb(179, 208, 255, 0.3)
 }
 
+.alert {
+}
 .alert svg {
-    1rem;
-    1rem;
+    width: 1rem;
+    height: 1rem;
+    fill: currentcolor;
 }
