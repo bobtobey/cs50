@@ -316,6 +316,12 @@ def sell():
             # add funds to user cash on successful sell
             db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", total_cost, session["user_id"])
 
+            # BUY stock and insert details into transactions db (variables) and then (placeholders ?x2) and (arguments)
+            db.execute("INSERT INTO transactions (symbol, shares, price, total_cost, transaction_type, user_id) VALUES(?, ?, ?, ?, ?, ?)"
+                    , symbol, shares, price, total_cost, transaction_type, session["user_id"])
+
+            # ADD stock and shares details into portfolio db (variables) and then (placeholders ?x2) and (arguments)
+
 
             # Commit Transaction
             db.execute("COMMIT")
