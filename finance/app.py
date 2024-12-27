@@ -97,6 +97,8 @@ def buy():
         # Check database for user funds
         rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
 
+        portfolio_row = db.execute("SELECT * FROM portfolio WHERE user_id = ? AND symbol", session["user_id", symbol])
+        print(portfolio_row)
         # Ensure funds are available
         moneyavailable = rows[0]['cash']
         price = quote['price']
@@ -122,8 +124,6 @@ def buy():
                         , symbol, shares, price, total_cost, transaction_type, session["user_id"])
 
                 # ADD stock and shares details into portfolio db (variables) and then (placeholders ?x2) and (arguments)
-                portfolio_row = db.execute("SELECT * FROM portfolio WHERE user_id = ? AND symbol", session["user_id", symbol])
-                print(portfolio_row)
 
                 # db.execute("INSERT INTO portfolio (symbol, shares, user_id) VALUES(?, ?, ?)"
                 #         , symbol, shares, session["user_id"])
