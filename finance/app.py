@@ -305,9 +305,12 @@ def sell():
         # look up current stock info
         quote = lookup(symbol)
 
+        # calculate total stock prices
         price = quote['price']
-        # calculate total stock price
         total_cost = price * shares
+        # Check database for total shares to sell
+        rows = db.execute("SELECT shares FROM portfolio WHERE id = ? AND shares = ?", session["user_id"], shares)
+
         # Execute
         try:
             db.execute("BEGIN TRANSACTION")
