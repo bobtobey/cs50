@@ -20,7 +20,7 @@
                 <!-- Loop through the database entries to display stock transactions in this table -->
                 {% for transaction in transactions %}
                     <tr>
-                        <td>{{ transaction.symbol }}</td>
+                        <td>{{ transaction.symbol | upper }}</td>
                         <td>{{ transaction.shares }}</td>
                         <td>{{ transaction.price | usd }}</td>
                         <td>{{ transaction.total_cost | usd }}</td>
