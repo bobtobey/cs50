@@ -73,6 +73,7 @@ def buy():
     # User reached route via POST - lookup and purchase stock
     if request.method == "POST":
         # Ensure valid symbol and shares were submitted
+        symbol = request.form.get("symbol")
         symbol = request.form.get("symbol").upper()
         shares = request.form.get("shares")
         if not symbol:
