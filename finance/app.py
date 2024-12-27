@@ -38,7 +38,6 @@ def index():
     # return apology("TODO")
     # SQL select all transactions from DB
     transactions = db.execute("SELECT * FROM transactions")
-    print(transactions)
 
     success = request.args.get("success", False)
     # get db column names from table
