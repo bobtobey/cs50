@@ -38,7 +38,7 @@ def index():
     # return apology("TODO")
     # SQL select all transactions from DB
     transactions = db.execute("SELECT * FROM transactions")
-
+    print(transactions)
     # pass birthdays into the index.html
     return render_template("index.html", transactions=transactions)
 
