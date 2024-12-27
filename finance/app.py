@@ -286,6 +286,8 @@ def sell():
     if request.method == "POST":
         # Capture valid symbol and shares on submission
         symbol = request.form.get("symbol").upper()
+        if not symbol:
+            return apology("must provide a symbol", 403)
         shares = request.form.get("shares")
         if not shares:
             return apology("must provide number of shares", 403)
@@ -305,7 +307,7 @@ def sell():
         # Check database for current total shares of stock to sell
         portfolio_row = db.execute("SELECT * FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
         total_shares_owned = portfolio_row[0]["shares"]
-        
+
         # Execute
         if total_shares_owned >= shares:
             try:
