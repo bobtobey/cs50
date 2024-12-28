@@ -80,22 +80,22 @@ def buy():
         symbol = request.form.get("symbol").upper()
         shares = request.form.get("shares")
         if not symbol:
-            return apology("must provide symbol", 403)
+            return apology("must provide symbol", 400)
 
         if not shares:
-            return apology("must provide number of shares", 403)
+            return apology("must provide number of shares", 400)
 
         try:
             shares = int(shares)
         except ValueError:
-            return apology("must provide number of shares", 403)
+            return apology("must provide number of shares", 400)
         if shares < 1:
-            return apology("must provide positive amount of shares", 403)
+            return apology("must provide positive amount of shares", 400)
 
         # look up valid stock symbol
         quote = lookup(symbol)
         if not quote:
-            return apology("must provide valid symbol", 403)
+            return apology("must provide valid symbol", 400)
 
         # Check database for user funds
         rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
@@ -138,9 +138,9 @@ def buy():
                 db.execute("COMMIT")
             except:
                 db.execute("ROLLBACK")
-                return apology("Transaction failed.", 403)
+                return apology("Transaction failed.", 400)
         else:
-            return apology("Add funds to your account.", 403)
+            return apology("Add funds to your account.", 400)
 
         # Redirect to homepage after successful buy
         return redirect(url_for("index", success="Your buy transaction was successful"))
@@ -175,11 +175,11 @@ def login():
     if request.method == "POST":
         # Ensure username was submitted
         if not request.form.get("username"):
-            return apology("must provide username", 403)
+            return apology("must provide username", 400)
 
         # Ensure password was submitted
         elif not request.form.get("password"):
-            return apology("must provide password", 403)
+            return apology("must provide password", 400)
 
         # Query database for username
         rows = db.execute(
@@ -190,7 +190,7 @@ def login():
         if len(rows) != 1 or not check_password_hash(
             rows[0]["hash"], request.form.get("password")
         ):
-            return apology("invalid username and/or password", 403)
+            return apology("invalid username and/or password", 400)
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
@@ -292,17 +292,17 @@ def sell():
         # Capture valid symbol and shares on submission
         symbol = request.form.get("symbol")
         if not symbol:
-            return apology("must provide a symbol", 403)
+            return apology("must provide a symbol", 400)
         symbol = symbol.upper()
         shares = request.form.get("shares")
         if not shares:
-            return apology("must provide number of shares", 403)
+            return apology("must provide number of shares", 400)
         try:
             shares = int(shares)
         except ValueError:
-            return apology("must provide number of shares", 403)
+            return apology("must provide number of shares", 400)
         if shares < 1:
-            return apology("must provide positive amount of shares", 403)
+            return apology("must provide positive amount of shares", 400)
 
         # look up current stock info
         quote = lookup(symbol)
@@ -345,9 +345,9 @@ def sell():
             except Exception as e:
                 print(f"Error: {e}")
                 db.execute("ROLLBACK")
-                return apology("Transaction failed.", 403)
+                return apology("Transaction failed.", 400)
         else:
-            return apology("Not enough shares in your account.", 403)
+            return apology("Not enough shares in your account.", 400)
 
         # Redirect to homepage after successful sell
         return redirect(url_for("index", success="Your sell transaction was successful"))
@@ -372,13 +372,13 @@ def addfunds():
         # Ensure valid cash amount submitted
         funds_to_add = request.form.get("funds")
         if not funds_to_add:
-            return apology("must provide valid funds amount", 403)
+            return apology("must provide valid funds amount", 400)
         try:
             funds_to_add = int(funds_to_add)
         except ValueError:
-            return apology("must provide amount of funds to be added", 403)
+            return apology("must provide amount of funds to be added", 400)
         if funds_to_add < 20 or funds_to_add > 500:
-            return apology("must provide positive amount of funds to add", 403)
+            return apology("must provide positive amount of funds to add", 400)
 
         # Calculate total amount of funds to add
         total_funds_amount = funds_to_add + cash
@@ -392,7 +392,7 @@ def addfunds():
             db.execute("COMMIT")
         except:
             db.execute("ROLLBACK")
-            return apology("Transaction failed.", 403)
+            return apology("Transaction failed.", 400)
 
         return redirect(url_for("buy", success=f"You successfully added ${funds_to_add} to your account"))
     # User reached route via GET -
