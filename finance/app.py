@@ -381,7 +381,7 @@ def addfunds():
         except:
             db.execute("ROLLBACK")
             return apology("Transaction failed.", 403)
-
+        
         return redirect(url_for("buy", success=f"You successfully added ${funds_to_add} to your account"))
     # User reached route via GET -
     else:
