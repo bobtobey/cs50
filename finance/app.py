@@ -357,17 +357,21 @@ def addfunds():
     # User reached route via POST -
     if request.method == "POST":
         # Ensure valid cash amount submitted
-        cash = request.form.get("cash")
-        if not cash:
-            return apology("must provide cash amount", 403)
+        funds_to_add = request.form.get("funds")
+        if not funds_to_add:
+            return apology("must provide valid funds amount", 403)
         try:
-            cash = int(cash)
+            funds_to_add = int(funds_to_add)
         except ValueError:
             return apology("must provide amount of funds to be added", 403)
-        if cash < 20:
+        if funds_to_add < 20:
             return apology("must provide positive amount of funds to add", 403)
 
-        #  to do
+        # Capture USER cash balance
+        user_row = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        cash = user_row[0]["cash"]
+        print(f"Cash is: {cash}")
+
         return redirect(url_for("index", success="You successfully added funds to your account"))
     # User reached route via GET -
     else:
