@@ -382,7 +382,7 @@ def addfunds():
             db.execute("ROLLBACK")
             return apology("Transaction failed.", 403)
 
-        return redirect(url_for("index", success="You successfully added funds to your account"))
+        return redirect(url_for("index", success=f"You successfully added ${funds_to_add} to your account"))
     # User reached route via GET -
     else:
         return render_template("funds.html")
