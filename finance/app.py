@@ -372,6 +372,7 @@ def addfunds():
         cash = user_row[0]["cash"]
         total_funds_amount = funds_to_add + cash
         print(f"Cash is: {cash} plus {total_funds_amount}")
+        try:
 
         db.execute("UPDATE users SET cash = ? WHERE user_id = ?", total_funds_amount, session["user_id"])
 
