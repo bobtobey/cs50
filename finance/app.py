@@ -42,7 +42,7 @@ def index():
     name = user_row[0]["username"]
 
     # SQL select symbol, shares, current price, total value data from DB
-    portfolio_rows = db.execute("SELECT symbol, shares FROM portfolio")
+    portfolio_rows = db.execute("SELECT symbol, shares FROM portfolio WHERE user_id = ?", session["user_id"])
 
     # store current values by looping through db list
     stocks = []
