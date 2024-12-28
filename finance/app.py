@@ -138,6 +138,7 @@ def buy():
         else:
             return apology("Add funds to your account.", 403)
 
+        success = request.args.get("success")
         # Redirect to homepage after successful buy
         return redirect(url_for("index", success="Your buy transaction was successful"))
     # User reached route via GET - display stock buy form
@@ -381,7 +382,7 @@ def addfunds():
         except:
             db.execute("ROLLBACK")
             return apology("Transaction failed.", 403)
-        
+
         return redirect(url_for("buy", success=f"You successfully added ${funds_to_add} to your account"))
     # User reached route via GET -
     else:
