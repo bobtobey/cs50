@@ -272,7 +272,7 @@ def register():
         db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hash)
 
         # Go to login page
-        return render_template("login.html")
+        return redirect("/login")
     # User reached route via GET and needs to register for site
     else:
         return render_template("register.html")
