@@ -42,7 +42,8 @@ def index():
     name = user_row[0]["username"]
 
     # SQL select symbol, shares, current price, total value data from DB
-    portfolio_rows = db.execute("SELECT symbol, shares FROM portfolio WHERE user_id = ?", session["user_id"])
+    portfolio_rows = db.execute(
+        "SELECT symbol, shares FROM portfolio WHERE user_id = ?", session["user_id"])
 
     # store current values by looping through db list
     stocks = []
@@ -156,7 +157,8 @@ def history():
     """Show history of transactions"""
     # return apology("TODO")
     # SQL select symbol/shares/buy or sell/price/time-date transaction details from DB
-    transactions = db.execute("SELECT symbol, shares, transaction_type, price, timestamp FROM transactions WHERE user_id = ?", session["user_id"])
+    transactions = db.execute(
+        "SELECT symbol, shares, transaction_type, price, timestamp FROM transactions WHERE user_id = ?", session["user_id"])
 
     # get db column names from table
     headers = ["Symbol", "Shares", "Type", "Price", "Transacted"]
