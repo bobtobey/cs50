@@ -349,7 +349,7 @@ def sell():
         return render_template("sell.html", symbols=symbols)
 
 
-@app.route("/account", methods=["GET", "POST"])
+@app.route("/funds", methods=["GET", "POST"])
 @login_required
 def addfunds():
     """Add funds to cash account"""
