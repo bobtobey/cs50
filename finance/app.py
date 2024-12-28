@@ -111,25 +111,27 @@ def buy():
                 db.execute("BEGIN TRANSACTION")
                 transaction_type = "BUY"
                 # subtract funds from user cash on successful purchase
-                db.execute("UPDATE users SET cash = cash - ? WHERE id = ?", total_cost, session["user_id"])
+                db.execute("UPDATE users SET cash = cash - ? WHERE id = ?",
+                           total_cost, session["user_id"])
 
                 # BUY stock and insert details into transactions db (variables) and then (placeholders ?x2) and (arguments)
-                db.execute("INSERT INTO transactions (symbol, shares, price, total_cost, transaction_type, user_id) VALUES(?, ?, ?, ?, ?, ?)"
-                        , symbol, shares, price, total_cost, transaction_type, session["user_id"])
+                db.execute("INSERT INTO transactions (symbol, shares, price, total_cost, transaction_type, user_id) VALUES(?, ?, ?, ?, ?, ?)",
+                           symbol, shares, price, total_cost, transaction_type, session["user_id"])
 
                 # ADD stock and shares details into portfolio db (variables) and then (placeholders ?x2) and (arguments)
-                portfolio_row = db.execute("SELECT shares FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
+                portfolio_row = db.execute(
+                    "SELECT shares FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
 
                 if len(portfolio_row) == 0:
                     # Stock not in portfolio insert in db
-                    db.execute("INSERT INTO portfolio (symbol, shares, user_id) VALUES(?, ?, ?)"
-                            , symbol, shares, session["user_id"])
+                    db.execute("INSERT INTO portfolio (symbol, shares, user_id) VALUES(?, ?, ?)",
+                               symbol, shares, session["user_id"])
                 else:
                     # Stock in portfolio update shares
                     current_shares = portfolio_row[0]["shares"]
                     new_shares = current_shares + shares
-                    db.execute("UPDATE portfolio SET shares = ? WHERE user_id = ? AND symbol = ?"
-                            , new_shares, session["user_id"], symbol)
+                    db.execute("UPDATE portfolio SET shares = ? WHERE user_id = ? AND symbol = ?",
+                               new_shares, session["user_id"], symbol)
 
                 # Commit transaction
                 db.execute("COMMIT")
@@ -308,7 +310,8 @@ def sell():
         price = quote['price']
         total_cost = price * shares
         # Check database for current total shares of stock to sell
-        portfolio_row = db.execute("SELECT * FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
+        portfolio_row = db.execute(
+            "SELECT * FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
         total_shares_owned = portfolio_row[0]["shares"]
 
         # Execute
@@ -318,21 +321,23 @@ def sell():
                 transaction_type = "SELL"
 
                 # add funds to user cash on successful sell
-                db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", total_cost, session["user_id"])
+                db.execute("UPDATE users SET cash = cash + ? WHERE id = ?",
+                           total_cost, session["user_id"])
 
                 # SELL stock and insert details into transactions db (variables) and then (placeholders ?x2) and (arguments)
-                db.execute("INSERT INTO transactions (symbol, shares, price, total_cost, transaction_type, user_id) VALUES(?, ?, ?, ?, ?, ?)"
-                        , symbol, -shares, price, total_cost, transaction_type, session["user_id"])
+                db.execute("INSERT INTO transactions (symbol, shares, price, total_cost, transaction_type, user_id) VALUES(?, ?, ?, ?, ?, ?)",
+                           symbol, -shares, price, total_cost, transaction_type, session["user_id"])
 
                 # SUBTRACT stock and shares details from portfolio db (variables) and then (placeholders ?x2) and (arguments)
-                total_shares_remaining =total_shares_owned - shares
+                total_shares_remaining = total_shares_owned - shares
                 if total_shares_remaining == 0:
                     # Action Sells all stock and delete from portfolio db
-                    db.execute("DELETE FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
+                    db.execute("DELETE FROM portfolio WHERE user_id = ? AND symbol = ?",
+                               session["user_id"], symbol)
                 else:
                     # Stock in portfolio update shares
-                    db.execute("UPDATE portfolio SET shares = ? WHERE user_id = ? AND symbol = ?"
-                            , total_shares_remaining, session["user_id"], symbol)
+                    db.execute("UPDATE portfolio SET shares = ? WHERE user_id = ? AND symbol = ?",
+                               total_shares_remaining, session["user_id"], symbol)
 
                 # Commit Transaction
                 db.execute("COMMIT")
@@ -379,7 +384,8 @@ def addfunds():
         print(f"Cash is: {cash} plus {total_funds_amount}")
         try:
             db.execute("BEGIN TRANSACTION")
-            db.execute("UPDATE users SET cash = ? WHERE id = ?", total_funds_amount, session["user_id"])
+            db.execute("UPDATE users SET cash = ? WHERE id = ?",
+                       total_funds_amount, session["user_id"])
             # Commit transaction
             db.execute("COMMIT")
         except:
