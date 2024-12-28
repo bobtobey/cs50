@@ -370,10 +370,10 @@ def addfunds():
         # Capture and update USER cash balance
         user_row = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
         cash = user_row[0]["cash"]
-        print(f"Cash is: {cash}")
+        total_funds_amount = funds_to_add + cash
+        print(f"Cash is: {cash} plus {total_funds_amount}")
 
-        db.execute("UPDATE users SET cash = ? WHERE user_id = ? AND symbol = ?"
-                , new_shares, session["user_id"], symbol)
+        db.execute("UPDATE users SET cash = ? WHERE user_id = ?", total_funds_amount, session["user_id"])
 
         return redirect(url_for("index", success="You successfully added funds to your account"))
     # User reached route via GET -
