@@ -355,9 +355,5 @@ def addfunds():
     """Add funds to cash account"""
     # return apology("TODO")
     # User reached route via POST -
-    if request.method == "POST":
-        #  to do
-    # User reached route via GET -
-    else:
-        return render_template("funds.html")
+    return render_template("funds.html")
 
