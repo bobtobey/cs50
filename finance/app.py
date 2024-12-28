@@ -364,13 +364,13 @@ def addfunds():
             cash = int(cash)
         except ValueError:
             return apology("must provide amount of funds to be added", 403)
-        if shares < 1:
+        if cash < 20:
             return apology("must provide positive amount of funds to add", 403)
 
         #  to do
-        return render_template("funds.html")
+        return redirect(url_for("index", success="You successfully added funds to your account"))
     # User reached route via GET -
     else:
         #  to do
-    return render_template("funds.html")
+        return render_template("funds.html")
 
