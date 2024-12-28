@@ -347,3 +347,10 @@ def sell():
     # User reached route via GET - display stock sell form
     else:
         return render_template("sell.html", symbols=symbols)
+
+
+@app.route("/account", methods=["GET", "POST"])
+@login_required
+def addfunds():
+    """Add funds to cash account"""
+    # return apology("TODO")
