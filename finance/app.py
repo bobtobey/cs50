@@ -355,6 +355,10 @@ def sell():
 def addfunds():
     """Add funds to cash account"""
     # return apology("TODO")
+    # Capture and update USER cash balance
+    user_row = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+    cash = user_row[0]["cash"]
+
     # User reached route via POST -
     if request.method == "POST":
         # Ensure valid cash amount submitted
@@ -368,9 +372,7 @@ def addfunds():
         if funds_to_add < 20 or funds_to_add > 500:
             return apology("must provide positive amount of funds to add", 403)
 
-        # Capture and update USER cash balance
-        user_row = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-        cash = user_row[0]["cash"]
+        # Calculate total amount of funds to add
         total_funds_amount = funds_to_add + cash
 
         print(f"Cash is: {cash} plus {total_funds_amount}")
@@ -386,4 +388,4 @@ def addfunds():
         return redirect(url_for("buy", success=f"You successfully added ${funds_to_add} to your account"))
     # User reached route via GET -
     else:
-        return render_template("funds.html")
+        return render_template("funds.html", cash=cash)
