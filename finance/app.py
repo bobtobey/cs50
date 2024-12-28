@@ -142,7 +142,8 @@ def buy():
         return redirect(url_for("index", success="Your buy transaction was successful"))
     # User reached route via GET - display stock buy form
     else:
-        return render_template("buy.html")
+        success = request.args.get("success")
+        return render_template("buy.html", success=success)
 
 
 @app.route("/history")
