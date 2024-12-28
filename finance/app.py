@@ -51,7 +51,8 @@ def index():
         quote = lookup(symbol)
         current_price = quote['price']
         total_value = shares * current_price
-        stocks.append({"symbol": symbol, "shares": shares, "current_price": current_price, "total_value": total_value})
+        stocks.append({"symbol": symbol, "shares": shares,
+                      "current_price": current_price, "total_value": total_value})
 
     # Get total acct value cash plus each total_value
     total_account_value = cash
