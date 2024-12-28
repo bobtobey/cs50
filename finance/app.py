@@ -385,6 +385,4 @@ def addfunds():
         return redirect(url_for("index", success="You successfully added funds to your account"))
     # User reached route via GET -
     else:
-        #  to do
         return render_template("funds.html")
-
