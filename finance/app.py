@@ -224,12 +224,12 @@ def quote():
         # Ensure symbol was submitted
         symbol = request.form.get("symbol").upper()
         if not symbol:
-            return apology("must provide symbol", 403)
+            return apology("must provide symbol", 400)
 
         # look up valid stock symbol
         quote = lookup(symbol)
         if not quote:
-            return apology("must provide valid symbol", 403)
+            return apology("must provide valid symbol", 400)
 
         return render_template("quoted.html", quote=quote)
     # User reached route via GET - display stock quote form
