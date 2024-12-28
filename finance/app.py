@@ -37,8 +37,9 @@ def index():
     """Show portfolio of stocks"""
     # return apology("TODO")
     # Capture USER cash balance
-    user_row = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+    user_row = db.execute("SELECT cash, username FROM users WHERE id = ?", session["user_id"])
     cash = user_row[0]["cash"]
+    name = user_row[0]["username"]
 
     # SQL select symbol, shares, current price, total value data from DB
     portfolio_rows = db.execute("SELECT symbol, shares FROM portfolio")
