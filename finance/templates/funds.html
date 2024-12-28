@@ -6,7 +6,7 @@
 
 {% block main %}
     <div>
-        <p>Current cash balance is <strong>${{ cash }}</strong>.</p>
+        <p>{{ name }} your current cash balance is <strong>${{ cash }}</strong>.</p>
     </div>
     <form action="/funds" method="post">
         <div class="mb-3">

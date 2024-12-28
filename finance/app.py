@@ -362,8 +362,9 @@ def addfunds():
     """Add funds to cash account"""
     # return apology("TODO")
     # Capture and update USER cash balance
-    user_row = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+    user_row = db.execute("SELECT cash, username FROM users WHERE id = ?", session["user_id"])
     cash = user_row[0]["cash"]
+    name = user_row[0]["username"]
 
     # User reached route via POST -
     if request.method == "POST":
@@ -395,4 +396,4 @@ def addfunds():
         return redirect(url_for("buy", success=f"You successfully added ${funds_to_add} to your account"))
     # User reached route via GET -
     else:
-        return render_template("funds.html", cash=cash)
+        return render_template("funds.html", cash=cash, name=name)
