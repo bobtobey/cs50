@@ -356,7 +356,19 @@ def addfunds():
     # return apology("TODO")
     # User reached route via POST -
     if request.method == "POST":
+        # Ensure valid cash amount submitted
+        cash = request.form.get("cash")
+        if not cash:
+            return apology("must provide cash amount", 403)
+        try:
+            cash = int(cash)
+        except ValueError:
+            return apology("must provide amount of funds to be added", 403)
+        if shares < 1:
+            return apology("must provide positive amount of funds to add", 403)
+
         #  to do
+        return render_template("funds.html")
     # User reached route via GET -
     else:
         #  to do
