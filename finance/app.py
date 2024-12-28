@@ -156,7 +156,7 @@ def history():
     """Show history of transactions"""
     # return apology("TODO")
     # SQL select symbol/shares/buy or sell/price/time-date transaction details from DB
-    transactions = db.execute("SELECT * FROM transactions")
+    transactions = db.execute("SELECT symbol, shares, transaction_type, price, timestamp FROM transactions WHERE user_id = ?", session["user_id"])
 
     # get db column names from table
     headers = ["Symbol", "Shares", "Type", "Price", "Transacted"]
