@@ -246,7 +246,7 @@ def register():
         username = request.form.get("username")
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
-        if not username or not username.isalpha():
+        if not username:
             return apology("must provide valid username", 403)
 
         # Ensure password was submitted
