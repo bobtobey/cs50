@@ -374,7 +374,7 @@ def addfunds():
         print(f"Cash is: {cash} plus {total_funds_amount}")
         try:
             db.execute("BEGIN TRANSACTION")
-                db.execute("UPDATE users SET cash = ? WHERE user_id = ?", total_funds_amount, session["user_id"])
+                db.execute("UPDATE users SET cash = ? WHERE id = ?", total_funds_amount, session["user_id"])
             # Commit transaction
             db.execute("COMMIT")
         except:
