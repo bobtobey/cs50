@@ -7,7 +7,7 @@
 {% block main %}
     <form action="/funds" method="post">
         <div class="mb-3">
-            <input autocomplete="off" autofocus class="form-control mx-auto w-25" name="funds" placeholder="Add funds between $20 and $500" min="20" max="500" type="number">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-25" name="funds" placeholder="Add funds between $20 and $500" min="20" max="500" type="number" required>
         </div>
         <button class="btn btn-primary" type="submit">Add Funds</button>
     </form>
