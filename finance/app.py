@@ -367,10 +367,13 @@ def addfunds():
         if funds_to_add < 20:
             return apology("must provide positive amount of funds to add", 403)
 
-        # Capture USER cash balance
+        # Capture and update USER cash balance
         user_row = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
         cash = user_row[0]["cash"]
         print(f"Cash is: {cash}")
+
+        db.execute("UPDATE users SET cash = ? WHERE user_id = ? AND symbol = ?"
+                , new_shares, session["user_id"], symbol)
 
         return redirect(url_for("index", success="You successfully added funds to your account"))
     # User reached route via GET -
