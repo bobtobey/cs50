@@ -247,15 +247,15 @@ def register():
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
         if not username:
-            return apology("must provide valid username", 403)
+            return apology("must provide valid username", 400)
 
         # Ensure password was submitted
         elif not password:
-            return apology("must provide valid password", 403)
+            return apology("must provide valid password", 400)
 
         # Confirm password match
         elif password != confirmation:
-            return apology("must provide matching passwords", 403)
+            return apology("must provide matching passwords", 400)
 
         # Check database for username
         usercheck = db.execute(
@@ -263,7 +263,7 @@ def register():
         )
         # Ensure username exists
         if len(usercheck) != 0:
-            return apology("username already exists", 403)
+            return apology("username already exists", 400)
 
         # Generate hash for password
         hash = generate_password_hash(password)
