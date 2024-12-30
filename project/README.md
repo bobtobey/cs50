@@ -1,6 +1,6 @@
 # Blue Gorilla Studio Portfolio Website
 
-#### Video Demo: [Insert Video URL Here]
+#### Video Demo: [cs50_final_project-bobtobey.mp4](https://youtu.be/C2Bh4CzWIzE) 
 
 #### Description:
 
@@ -130,4 +130,3 @@ This project reflects my skills in UX design, frontend development, and technica
 
 This portfolio represents a collection of my work, my approach to problem-solving, and my passion for creating engaging, efficient, and user-friendly digital experiences.
 
-Note: This document was proofread and spell-checked using ChatGPT and Grammarly to ensure clarity and professionalism.
